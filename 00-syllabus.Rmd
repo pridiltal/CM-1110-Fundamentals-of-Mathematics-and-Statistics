@@ -32,7 +32,7 @@ On successful completion of this module, students will be able to apply fundamen
 - Mid-semester examination 
 - End-semester examination 
 
-## Lecturer
+## Lecturer {-}
 
 Dr. Priyanga Dilini Talagala
 
