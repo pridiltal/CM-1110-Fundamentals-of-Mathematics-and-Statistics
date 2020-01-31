@@ -1,0 +1,214 @@
+# Descriptive Statistics {#intro}
+
+
+## 	Introduction to Statistics
+
+###	Some Basic Terminologies Used in Statistics
+
+i	Population
+
+-	The set of **all** possible elements in the universe of interest to the researcher
+
+ii	Sample
+
+-	A Sample is a **subset** (a portion or part) of the population of interest
+-	The sample must be a representative of the population of interest
+
+iii	Element
+
+-	Element is an **entity or object** which the information is collected.
+-	Eg: Student, household, farm, company, tomato plant
+
+iv	Variable
+
+-	A variable is **a feature characteristic which has different ‘values’ or categories for different elements** (items/subjects/individuals)
+-	Eg: Gender of client, brand of mobile phones, risk level, number of emails received per day, age of client, income of client
+
+v	Data
+
+-	Data are **measurements or facts** that are collected from a statistical unit/entity of interest
+-	We collect data on variables
+-	Data are raw numbers or facts that must be processed (analysed) to get useful information.
+-	We get information from data.
+
+-	Eg: 
+*Variable: Age (in years) of client*
+
+*Data: 21, 45, 18, 32, 30, 22, 23, 27* 
+
+*Information:*  
+
+*The mean age is 27.25 years*
+
+*The minimum age is 18 years*
+
+*The range of ages is 18-45*
+
+*The percentage of clients below 25 years of age: 50%*
+
+vi	Statistic
+
+-	**Characteristic** of a **sample**
+-	The value which calculated based on sample data
+
+vii	Parameter
+
+-	**Characteristic** of a **population**
+-	The value which calculated based on population data
+
+viii Census
+
+-	When a researcher **gathers data from the whole population for a given measurement,** it is called a census
+
+ix	Sampling
+
+-	When a researcher **gathers data from a sample of the population for a given measurement,** it is called sampling
+-	The process of selecting a sample is also called sampling 
+
+
+Why take a sample instead of studying every member of the population ?
+
+1.	Prohibitive cost of census
+
+2.	Destruction of item being studied may be required
+
+3.	Not possible to test or inspect all members of a population being studied.
+
+
+###	Branches of Statistics 
+
+i	Descriptive Statistics
+
+-	Descriptive statistics consists of organizing, summarizing and presenting data in an informative way.
+-	The main purpose of descriptive statistics is to provide an overview of the data collected. 
+-	Descriptive statistics describes the data collected through frequency tables, graphs and summary measures (mean, variance, quartiles, etc.).
+
+ii	Inferential Statistics
+
+-	In inferential statistics sample data are used to draw inferences (i.e. derive conclusions) or make predictions about the populations from which the sample has been taken.
+-	This includes methods used to make decisions, estimates, predictions or generalizations about a population based on a sample. 
+-	This includes point estimations, interval estimation, test of hypotheses, regression analysis, time series analysis, multivariate analysis, etc. 
+
+
+### Types of Variables
+
+
+i	Qualitative / Quantitative Variables
+
+
+**Qualitative variable (Categorical variable)**
+
+-	The characteristic is a quality.
+-	The data are categories.
+-	They cannot be given numerical values. 
+-	However, it may be given a numerical label
+-	Qualitative variables are sometimes referred as categorical variables.
+-	*Eg: \newline 
+*Gender:* \newline
+*Age group:* \newline
+*Education level:* \newline
+*A/L stream:* \newline
+*Degree type:* \newline
+*Hair colour: * \newline
+*FIT student batch:* \newline
+*Undergraduate level:* \newline
+*Grade that you can obtain for CM 1110* \newline
+
+**Quantitative variable **
+
+-	The characteristic is a quantity
+-	The data are numbers
+-	Quantitative data require numeric values that indicate how much or how many.
+-	They are obtained by counting or measuring with some scale
+-	*Eg: * \newline
+*Number of family members:* \newline
+*Number of emails received per day:* \newline
+*Weight of a student:* \newline
+*Age:* \newline
+*Credit balance in the SIM card:*\newline
+*Time remaining in class:*\newline
+*Temperature:*\newline
+*Marks *\newline
+
+ii	Discrete/ Continuous Variables
+
+-	Quantitative variables can be classified as either discrete or continuous.
+
+**Discrete Variables**
+
+-	Quantitative
+-	Usually the data are obtained by counting
+-	There are impossible values between any two possible values 
+-	*Eg:* \newline
+*Number of family members:* \newline
+*Number of emails received per day:*
+
+**Continuous Variables**
+
+-	Quantitative
+-	Usually, the data are obtained by measuring with a scale
+-	There are no impossible values between any two possible values.(any value between any two possible values is also a possible value)
+-	i.e a continuous variable can take any value within a specified range.
+-	*Eg:*
+*Weight of a student:* \newline
+*Age:* \newline
+*Credit balance in the SIM card:* \newline
+*Time remaining in class:* \newline
+*Temperature:*\newline
+*Marks* \newline
+
+###	Scales of Measurements
+
+-	There are four levels of measurements called, nominal, ordinal, interval and ratio.
+-	Each levels has its own rules and restrictions
+-	Different levels of measurement contains different amount of information with respect to whatever the data are measuring
+
+
+
+
+i	Nominal Scale
+
+-	Qualitative
+-	No order or ranking in categories.
+-	These categories have to be mutually exclusive, i.e. it should not be possible to place an individual or object in more than one category
+-	A name of a category can be substituted by a number, but it will be mere label and have no numerical meaning
+
+
+ii	Ordinal Scale
+
+-	Qualitative
+-	Categories can be ordered or ranked
+-	A name of a category can be substituted by a number, but such a sequence does not indicate absolute quantities.
+-	Difference between any two numbers on the scale does not have a numerical meaningful.
+-	It cannot be assumed that the differences between adjacent numbers on the scale are equal.
+
+
+iii	Interval Scale
+
+-	Quantitative
+-	Data can be ordered or ranked
+-	There is no absolute zero point. Zero is only an arbitrary point with which other values can compare
+-	Difference between two numbers is a meaningful numerical value
+-	Ration of two numbers is not a meaningful numerical value.
+
+
+iv	Ratio Scale
+
+-	Quantitative
+-	Highest level of measurement
+-	There exist an absolute zero point  (It has a true zero point)
+-	Ratio between different measurements is meaningful
+
+
+## Presentation of Data
+
+### Tabular Presentations of Data 
+
+### Graphic Presentations of Data
+  
+## Summary Measures
+
+### Measures of Central Tendency
+### Measures of Dispersion
+### Measures of Skewness and Kurtosis
+### Measures of Association

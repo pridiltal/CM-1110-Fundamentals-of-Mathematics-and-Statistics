@@ -3,8 +3,17 @@ language:
   ui:
     chapter_name: "Chapter "
 rmd_files: ["index.Rmd",
-  "01-intro.Rmd",
-  "06-references.Rmd"]
+  "00-syllabus.Rmd",
+  "01-Number_Systems.Rmd",
+  "02-Sequence.Rmd",
+  "03-Logic.Rmd",
+  "04-Algebra.Rmd",
+  "05-Differentiation.Rmd",
+  "06-Descriptive_Statistics.Rmd",
+  "07-settheory.Rmd",
+  "08-Probability.Rmd",
+  "09-Regression.Rmd",
+  "10-references.Rmd"]
 delete_merged_file: true
 
 
