@@ -19,6 +19,8 @@ opts_chunk$set(
   out.width = "0.8\\textwidth",
   fig.pos = "h"
 )
+
+library(ggplot2)
 ```
 
 \pagenumbering{arabic}
@@ -302,7 +304,7 @@ Embarked      | Port of embarkation (S = Southampton, C = Cherbourg, Q = Queenst
 **Raw Data**
 
 -	Raw data are collected data that have not been organized numerically
--	Eg:   Passenger age
+-	Eg: Passenger age
 
 
 <!-- dataset is from : https://www.kaggle.com/varimp/a-mostly-tidyverse-tour-of-the-titanic --> 
@@ -313,7 +315,7 @@ titanic <- read.csv(loc)
 ```
 
 ```{r}
-print(head(titanic$Age, 40))
+print(titanic$Age[1:40])
 ```
 
 ```{r eval = FALSE}
@@ -331,12 +333,13 @@ print(data)
 **An array**
 
 -	An array is an arrangement of raw numerical data in ascending or descending order of magnitude.
--	Eg: Marks of 40 students
+-	Eg: Passenger age
+
 
 ```{r}
-print(sort(data))
-```
+print(sort(titanic$Age[1:40]))
 
+```
 **Frequency Table (Frequency Distributions)**
 
 -	A frequency table (frequency distribution) is  a listing of the values a variable takes in a data set, along with how often (frequently) each value occurs
