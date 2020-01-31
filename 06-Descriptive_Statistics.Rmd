@@ -14,7 +14,7 @@ opts_chunk$set(
   cache = TRUE,
   external = TRUE,
   dev = "png",
-  fig.height = 6,
+  fig.height = 16,
   fig.width = 10,
   out.width = "0.8\\textwidth",
   fig.pos = "h"
@@ -99,6 +99,15 @@ opts_chunk$set(
 ###	Branches of Statistics 
 
 
+```{r box1, fig.cap='', out.width='100%', fig.asp=.75, fig.align='center'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
+
+```
+
 **i	Descriptive Statistics**
 
 -	Descriptive statistics consists of organizing, summarizing and presenting data in an informative way.
@@ -114,7 +123,16 @@ opts_chunk$set(
 
 ### Types of Variables
 
- 
+```{r box2, fig.cap='', out.width='100%', fig.asp=.75, fig.align='center'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
+
+```
+
+
 ####	Qualitative / Quantitative Variables
 
 **i Qualitative variable (Categorical variable)**
@@ -177,9 +195,11 @@ opts_chunk$set(
 -	Quantitative
 -	Usually the data are obtained by counting
 -	There are impossible values between any two possible values 
--	*Eg:* \newline
-*Number of family members:* \newline
-*Number of emails received per day:*
+-	*Eg:* 
+
+   *Number of family members:*
+
+   *Number of emails received per day:*
 
 **ii Continuous Variables**
 
@@ -188,31 +208,55 @@ opts_chunk$set(
 -	There are no impossible values between any two possible values.(any value between any two possible values is also a possible value)
 -	i.e a continuous variable can take any value within a specified range.
 -	*Eg:*
-*Weight of a student:* \newline
-*Age:* \newline
-*Credit balance in the SIM card:* \newline
-*Time remaining in class:* \newline
-*Temperature:*\newline
-*Marks* \newline
+
+   *Weight of a student:* 
+
+   *Age:* 
+
+   *Credit balance in the SIM card:* 
+ 
+   *Time remaining in class:*
+
+   *Temperature:*
+
+   *Marks* 
 
 ###	Scales of Measurements
 
--	There are four levels of measurements called, nominal, ordinal, interval and ratio.
+
+```{r box3, fig.cap='', out.width='100%', fig.asp=.75, fig.align='center'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
+
+```
+
+-	There are four levels of measurements called, **nominal, ordinal, interval and ratio.**
 -	Each levels has its own rules and restrictions
 -	Different levels of measurement contains different amount of information with respect to whatever the data are measuring
 
 
 
 
-i	Nominal Scale
+**i	Nominal Scale**
 
 -	Qualitative
 -	No order or ranking in categories.
 -	These categories have to be mutually exclusive, i.e. it should not be possible to place an individual or object in more than one category
 -	A name of a category can be substituted by a number, but it will be mere label and have no numerical meaning
 
+```{r box4, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
 
-ii	Ordinal Scale
+
+ggplot()+
+  theme_void()
+
+```
+
+
+**ii	Ordinal Scale**
 
 -	Qualitative
 -	Categories can be ordered or ranked
@@ -220,8 +264,15 @@ ii	Ordinal Scale
 -	Difference between any two numbers on the scale does not have a numerical meaningful.
 -	It cannot be assumed that the differences between adjacent numbers on the scale are equal.
 
+```{r box5, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
 
-iii	Interval Scale
+
+ggplot()+
+  theme_void()
+
+```
+
+**iii	Interval Scale**
 
 -	Quantitative
 -	Data can be ordered or ranked
@@ -229,14 +280,28 @@ iii	Interval Scale
 -	Difference between two numbers is a meaningful numerical value
 -	Ration of two numbers is not a meaningful numerical value.
 
+```{r box6, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
 
-iv	Ratio Scale
+
+ggplot()+
+  theme_void()
+
+```
+
+**iv	Ratio Scale**
 
 -	Quantitative
 -	Highest level of measurement
 -	There exist an absolute zero point  (It has a true zero point)
 -	Ratio between different measurements is meaningful
 
+```{r box7, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
+
+
+ggplot()+
+  theme_void()
+
+```
 
 ## Presentation of Data
 
