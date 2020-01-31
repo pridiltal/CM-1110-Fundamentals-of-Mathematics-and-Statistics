@@ -1,5 +1,7 @@
+
 # Descriptive Statistics {#intro}
 
+\pagenumbering{arabic}
 
 ## 	Introduction to Statistics
 
