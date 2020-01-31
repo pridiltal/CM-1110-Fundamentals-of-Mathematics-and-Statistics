@@ -272,3 +272,76 @@ ggplot()+
 -	Ratio between different measurements is meaningful
 
 
+## Presentation of Data
+
+The sinking of the Titanic is one of the most infamous shipwrecks in history.
+
+On April 15, 1912, during her maiden voyage, the widely considered “unsinkable” RMS Titanic sank after colliding with an iceberg. Unfortunately, there weren’t enough lifeboats for everyone onboard, resulting in the death of 1502 out of 2224 passengers and crew 
+
+^[Data source: https://www.kaggle.com/varimp/a-mostly-tidyverse-tour-of-the-titanic]
+
+Here’s a quick summary of our variables:
+
+Variable Name | Description
+--------------|-------------
+PassengerID   | Passenger ID (just a row number, so obviously not useful for prediction) 
+Survived      | Survived (1) or died (0)
+Pclass        | Passenger class (first, second or third)
+Name          | Passenger name
+Gender        | Passenger Gender
+Age           | Passenger age
+SibSp         | Number of siblings/spouses aboard
+Parch         | Number of parents/children aboard
+Ticket        | Ticket number
+Fare          | Fare
+Cabin         | Cabin
+Embarked      | Port of embarkation (S = Southampton, C = Cherbourg, Q = Queenstown)
+
+### Tabular Presentations of Data 
+
+**Raw Data**
+
+-	Raw data are collected data that have not been organized numerically
+-	Eg:   Passenger age
+
+
+<!-- dataset is from : https://www.kaggle.com/varimp/a-mostly-tidyverse-tour-of-the-titanic --> 
+```{r}
+loc <- here::here("data", "titanic.csv" )
+titanic <- read.csv(loc)
+
+```
+
+```{r}
+print(head(titanic$Age, 40))
+```
+
+```{r eval = FALSE}
+
+data <- c(65,	50,	30,	100,	35,	65,	55,	75,	30,	65,45,	85,	40,	100,
+          45,	55,	55,	60,	65,	70,65,	90,	25,	75,	70,	90,	75,	40,	60,	55,
+          75,	70,	40,	50,	55,	60,	50,	70,	95,	85)
+
+```
+
+```{r eval = FALSE}
+print(data)
+```
+
+**An array**
+
+-	An array is an arrangement of raw numerical data in ascending or descending order of magnitude.
+-	Eg: Marks of 40 students
+
+```{r}
+print(sort(data))
+```
+
+**Frequency Table (Frequency Distributions)**
+
+-	A frequency table (frequency distribution) is  a listing of the values a variable takes in a data set, along with how often (frequently) each value occurs
+-	frequency can be recorded as a
+     - frequency or count: the number of times a value occurs, or
+     - percentage frequency: the percentage of times a value occurs
+-	Percentage frequency can be calculated as,
+ 
