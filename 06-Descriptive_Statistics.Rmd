@@ -248,10 +248,9 @@ ggplot()+
 -	A name of a category can be substituted by a number, but it will be mere label and have no numerical meaning
 
 ```{r box4, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
-
-
 ggplot()+
-  theme_void()
+  theme_void()+
+   theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
 
 ```
 
@@ -265,10 +264,9 @@ ggplot()+
 -	It cannot be assumed that the differences between adjacent numbers on the scale are equal.
 
 ```{r box5, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
-
-
 ggplot()+
-  theme_void()
+  theme_void()+
+   theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
 
 ```
 
@@ -282,9 +280,9 @@ ggplot()+
 
 ```{r box6, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
 
-
 ggplot()+
-  theme_void()
+  theme_void()+
+   theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
 
 ```
 
@@ -297,9 +295,9 @@ ggplot()+
 
 ```{r box7, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
 
-
 ggplot()+
-  theme_void()
+  theme_void()+
+   theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
 
 ```
 
