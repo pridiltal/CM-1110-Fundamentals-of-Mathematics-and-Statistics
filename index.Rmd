@@ -1,6 +1,12 @@
 --- 
 title: "CM 1110 Fundamentals of Mathematics and Statistics"
 author: "Dr. Priyanga D. Talagala"
+header-includes:
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+#- \fancyhead[CO,CE]{This is fancy header}
+- \fancyfoot[CO,CE]{Prepared by Dr. Priyanga D. Talagala}
+- \fancyfoot[LE,RO]{\thepage}
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook

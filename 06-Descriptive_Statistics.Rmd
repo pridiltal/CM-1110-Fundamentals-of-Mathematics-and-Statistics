@@ -160,7 +160,7 @@ ggplot()+
   
   *Undergraduate level:*
   
-  *Grade that you can obtain for CM 1110* 
+  *Grade that you can obtain for CM 1110/ CM1130* 
 
 **ii Quantitative variable **
 
@@ -238,21 +238,12 @@ ggplot()+
 -	Different levels of measurement contains different amount of information with respect to whatever the data are measuring
 
 
-
-
 **i	Nominal Scale**
 
 -	Qualitative
 -	No order or ranking in categories.
 -	These categories have to be mutually exclusive, i.e. it should not be possible to place an individual or object in more than one category
 -	A name of a category can be substituted by a number, but it will be mere label and have no numerical meaning
-
-```{r box4, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
-ggplot()+
-  theme_void()+
-   theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
-
-```
 
 
 **ii	Ordinal Scale**
@@ -263,12 +254,6 @@ ggplot()+
 -	Difference between any two numbers on the scale does not have a numerical meaningful.
 -	It cannot be assumed that the differences between adjacent numbers on the scale are equal.
 
-```{r box5, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
-ggplot()+
-  theme_void()+
-   theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
-
-```
 
 **iii	Interval Scale**
 
@@ -278,13 +263,6 @@ ggplot()+
 -	Difference between two numbers is a meaningful numerical value
 -	Ration of two numbers is not a meaningful numerical value.
 
-```{r box6, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
-
-ggplot()+
-  theme_void()+
-   theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
-
-```
 
 **iv	Ratio Scale**
 
@@ -293,23 +271,4 @@ ggplot()+
 -	There exist an absolute zero point  (It has a true zero point)
 -	Ratio between different measurements is meaningful
 
-```{r box7, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
 
-ggplot()+
-  theme_void()+
-   theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
-
-```
-
-## Presentation of Data
-
-### Tabular Presentations of Data 
-
-### Graphic Presentations of Data
-  
-## Summary Measures
-
-### Measures of Central Tendency
-### Measures of Dispersion
-### Measures of Skewness and Kurtosis
-### Measures of Association
