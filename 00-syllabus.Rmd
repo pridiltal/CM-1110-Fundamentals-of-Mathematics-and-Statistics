@@ -8,7 +8,7 @@ knit: "bookdown::render_book"
 
 None 
 
-## Learning Outcomes{-}
+## Learning Outcomes {-}
 
 On successful completion of this module, students will be able to apply fundamental concepts in Mathematics and Statistics for real world problem solving.
 
