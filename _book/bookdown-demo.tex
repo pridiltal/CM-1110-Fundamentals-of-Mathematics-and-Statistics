@@ -1368,15 +1368,20 @@ Third
 
 55.107
 
-\begin{center}\includegraphics[width=0.8\textwidth]{figure/passenger-1} \end{center}
-
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\textwidth]{figure/passengerP -1} 
+{\centering \includegraphics[width=1\linewidth]{figure/box8-1} 
 
 }
 
-\caption{Composition of the passengers by passenger class (Sample size = 891)}(\#fig:passengerP )
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/box9-1} 
+
+}
+
 \end{figure}
 
 \textbf{ii Component Bar Chart }
@@ -1409,12 +1414,104 @@ Third
 ## 2 Survived   136     87   119
 \end{verbatim}
 
-\begin{center}\includegraphics[width=0.8\textwidth]{figure/unnamed-chunk-19-1} \end{center}
+\begin{figure}
 
-**Percentage component bar chart
-- When sub-divided bar chart is drawn on percentage basis it is called percentage bar chart
-- The various components are expressed as percentage to the total
-- All bars are equal in height
+{\centering \includegraphics[width=1\linewidth]{figure/box10-1} 
+
+}
+
+\end{figure}
+
+\textbf{Percentage component bar chart}
+
+\begin{itemize}
+\tightlist
+\item
+  When sub-divided bar chart is drawn on percentage basis it is called percentage bar chart
+\item
+  The various components are expressed as percentage to the total
+\item
+  All bars are equal in height
+\end{itemize}
+
+\begin{verbatim}
+## # A tibble: 2 x 4
+##   Survived First Second Third
+##   <chr>    <dbl>  <dbl> <dbl>
+## 1 died     0.370  0.527 0.758
+## 2 Survived 0.630  0.473 0.242
+\end{verbatim}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/box11-1} 
+
+}
+
+\end{figure}
+
+\textbf{iii Multiple Bar Chart}
+
+\begin{itemize}
+\tightlist
+\item
+  Compound bar chart/ Cluster bar chart
+\item
+  Use to compare two or more qualitative variables (nominal or ordinal)
+\item
+  Often used in conjunction with two way tables
+\item
+  These bar charts are drawn side by side
+\end{itemize}
+
+\begin{verbatim}
+## # A tibble: 2 x 4
+##   Survived First Second Third
+##   <chr>    <dbl>  <dbl> <dbl>
+## 1 died      37.0   52.7  75.8
+## 2 Survived  63.0   47.3  24.2
+\end{verbatim}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/box12-1} 
+
+}
+
+\end{figure}
+
+\textbf{II Pie Chart}
+
+\begin{itemize}
+\tightlist
+\item
+  A pie chart is a circle divided into slices according to the percentage of the data values in each category
+\item
+  Each slice represents a category of a given variable
+\item
+  Pie chart can be used effectively to summarize a single categorical variable if there are not too many different categories
+\item
+  In this diagram, the total of all the given items is equated to 360 degrees and the angles representing different items are proportionately calculated.
+\item
+  The sum of the angles representing different items is equal to 360 degrees
+\end{itemize}
+
+\begin{verbatim}
+## # A tibble: 3 x 3
+##   `Passenger class` Count Percentage
+##   <chr>             <int>      <dbl>
+## 1 First               216       24.2
+## 2 Second              184       20.7
+## 3 Third               491       55.1
+\end{verbatim}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/box13-1} 
+
+}
+
+\end{figure}
 
 \hypertarget{sets-and-relations}{%
 \chapter{Sets and Relations}\label{sets-and-relations}}
