@@ -633,3 +633,118 @@ Less than 2000	|1
 Greater than or equal to 10000|	4
 Total|	60
 
+####	Two-way frequency table
+
+-	Cross tabulation, Cross classification table, Contingency table, Two-way table
+-	Display the relationship between two or more qualitative variables (categorical variables (nominal or ordinal)) 
+
+
+```{r}
+
+titanic %>%
+     mutate( Pclass = recode(Pclass, "1" = "First", "2" = "Second", "3"= "Third")) %>%
+       mutate( Survived = recode(Survived, "1" = "Survived", "0" = "died")) %>%
+count(Pclass,Survived) %>%
+  group_by(Pclass) %>%
+ # mutate(prop = n / sum(n)) %>%
+  #select(-n) %>%
+  spread(Pclass, n, fill = 0)
+
+
+```
+
+
+```{r}
+
+titanic %>%
+     mutate( Pclass = recode(Pclass, "1" = "First", "2" = "Second", "3"= "Third")) %>%
+       mutate( Survived = recode(Survived, "1" = "Survived", "0" = "died")) %>%
+count(Pclass,Survived) %>%
+  group_by(Pclass) %>%
+  mutate(prop = round(n / sum(n),2)) %>%
+  select(-n) %>%
+  spread(Pclass, prop, fill = 0)
+
+
+```
+
+
+### 	Graphic Presentations of Data
+
+-	A diagram is a visual form for presentation of statistical data.
+-	The form of the diagram varies according to the nature of the data
+
+#### Describing Qualitative Data
+
+
+-	Bar chart / Pie chart
+-	Suitable for 
+     - Qualitative variables (nominal or ordinal)
+     - Discrete variables (when the number of bars or number of different values is small)
+
+
+**I	Bar Chart**
+
+-	A bar graph uses bars to represent discrete categories of data
+-	It can be drawn either on horizontal (more common) or vertical base
+-	A rectangle of equal width is drawn for each category
+-	The height (in vertical bar chart) or the length (in horizontal bar chart) of the rectangle is equal to the category’s **frequency** or **percentage**.
+
+```{r box6, fig.cap='', out.width='100%', fig.asp=.75, fig.align='center'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
+
+```
+
+**i	Simple Bar Chart**
+
+-	Only one categorical variable can be presented
+-	Often used in conjunction with simple frequency tables
+-	The bars do not touch each other
+-	The gaps between adjacent bars are same in length
+
+
+```{r}
+
+s_table1<-titanic %>%
+     mutate( Pclass = recode(Pclass, "1" = "First", "2" = "Second", "3"= "Third"))  %>%
+count(Pclass) %>%
+  mutate(Percentage =     
+         round(prop.table(n),5)*100) %>%
+ # adorn_totals("row") %>%
+  setNames(c("Passenger class", "Count", "Percentage"))
+
+
+  kable(s_table1, caption = "The frequency distribution of the Passenger class")
+
+
+
+```
+
+```{r passenger , fig.cap="Composition of the passengers by passenger class"}
+
+
+
+ggplot(data=s_table1, aes(x=`Passenger class`, y=Count)) +
+  geom_bar(stat="identity", fill = "lightblue") +
+  geom_text(data=s_table1, aes(label=Count), vjust=-0.3, size=3.5)
+
+
+
+```
+
+
+```{r passengerP , fig.cap="Composition of the passengers by passenger class (Sample size = 891)"}
+
+
+
+p<-ggplot(data=s_table1, aes(x=`Passenger class`, y=`Percentage`)) +
+  geom_bar(stat="identity", fill = "lightblue") +
+  geom_text(data=s_table1, aes(label=`Percentage`), vjust=-0.3, size=3.5)
+print(p)
+
+```
+
