@@ -17,8 +17,9 @@ opts_chunk$set(
   fig.height = 16,
   fig.width = 10,
   out.width = "0.8\\textwidth",
-  fig.pos = "h"
+  fig.pos= 'h'
 )
+
 
 library(tidyverse)
 library(janitor)
@@ -398,14 +399,237 @@ BD- Bangladesh, IN-India, MD-Maldives, PK-Pakistan, SL- Sri Lanka
 
 Construct a frequency table
 
-```{r}
+```{r }
 data1 %>% as.tibble() %>%
    mutate( value = recode(value, BD = "Bangladesh", IN = "India", MD= "Maldives", PK = "Pakistan", SL= "Sri Lanka")) %>%
   count(value)  %>%
   mutate(Percentage =     
          round(prop.table(n),5)*100) %>%
-  adorn_totals("row") %>%
+  janitor::adorn_totals("row") %>%
   setNames(c("Native Country", "Count", "Percentage (%)")) %>%
   kable(caption = "The frequency distribution of native countries")
 ```
+
+
+**CASE II:**
+
+Example 2
+
+The grades of 30 students for Statistics are as follows:
+
+
+```{r}
+data2 <- c("B",	"C",	"B",	"D",	"B"	,"C",	"C",	"A",	"B"	,"C","C",	"B",	"E"	,"B",	"B",	"D"	,"D",	"F"	,"B",	"D","D"	,"A",	"B"	,"A",	"B",	"C"	,"E",	"A",	"A")
+
+print(data2)
+
+```
+
+
+Construct a frequency table
+
+```{r}
+data2 %>% as.tibble()  %>%
+  count(value)  %>%
+  mutate(Percentage =     
+         round(prop.table(n),5)*100) %>%
+  adorn_totals("row") %>%
+  setNames(c("Grade", "Count", "Percentage (%)")) %>%
+ kable(caption = "The frequency distribution of grades for Statistics")
+```
+
+**CASE III:**
+
+Example 3
+
+The number of family members of a sample of undergraduates of Batch 19 are as follows:
+
+```{r}
+data3 <- c(7,	5,	3,	4	,5,	4	,3,	6	,4,	4,5,	2,	7,	4,	5,	6,	4,	4,	3	,5)
+
+print(data3)
+```
+
+Construct a frequency table
+
+```{r}
+data2 %>% as.tibble()  %>%
+  count(value)  %>%
+  mutate(Percentage =     
+         round(prop.table(n),5)*100) %>%
+  adorn_totals("row") %>%
+  setNames(c("Number of family members", "Count", "Percentage (%)"))%>%
+  kable(caption = "The frequency distribution of the number of family members")
+
+```
+
+**CASE IV:**
+
+Example 4
+
+The ages (in years) of a sample of undergraduates of Batch 19 are as follows:
+
+```{r}
+data4 <- c(21 ,	22,	22,	23	,22	,24	,24,	23,	21,	22,23,	22,	22,	23,	21,	21,	22,	23,	22,	23)
+
+print(data4)
+
+```
+Construct a frequency table
+
+```{r}
+data2 %>% as.tibble()  %>%
+  count(value)  %>%
+  mutate(Percentage =     
+         round(prop.table(n),5)*100) %>%
+  adorn_totals("row") %>%
+  setNames(c("Age (years)", "Count", "Percentage (%)"))%>%
+  kable(caption = "The frequency distribution of ages of undergraduates of Batch 19")
+
+```
+
+
+####	Grouped frequency distribution
+
+-	A grouped frequency distribution (table) is obtained by constructing classes (or intervals) for the data and then listing the corresponding number of values in each interval. 
+-	Suitable for quantitative variables with large number of possible values in the range of data.
+-	Note that when items have been grouped in this way, their individual values are lost.
+-	When studying about frequency distributions it is very important to know the meaning of the following terms
+
+**i	Class intervals**
+
+-	In a frequency distribution the total range of the observations are divided into a number of classes. Those are called *class intervals*
+-	Eg: Class intervals: 10-14, 15-19, 20-24, …, 40-44
+
+**ii	Class limits**
+
+-	Class limits are the smallest and largest piece of data value that can fall into a given class. 
+-	In the class interval 10-14, the end numbers, 10 and 14, are called class limits
+-	The smaller number (10) is the *lower class limit*
+-	The larger  number (14) is the *upper class limit*
+
+
+**iii	Class boundaries**
+
+-	Class boundaries are obtained by adding the upper limit of one class interval to the lower limit of the next-higher class interval and dividing by 2.
+-	Class boundaries are also called **True class limits**
+-	Class boundaries **should not** *coincide with actual observations*
+
+
+Class interval |	Class boundaries
+---------------|--------------------
+10 - 14	 | 9.5 – 14.5
+15 - 19	| 14.5 – 19.5
+20 - 24	| 19.5 – 24.5
+25 - 29	| 24.5 – 29.5 
+30 - 34	| 29.5 – 34.5
+35 - 39	| 34.5 – 39.5
+40 - 44	| 39.5 – 44.5
+
+
+**iv	The size or width of a class interval**
+
+-	The size or width of a class interval is the difference between the *lower and upper class boundaries*
+-	It is also referred to as  the *class width, class size, or class length*
+-	Eg: The class width for the class 10-14 is = 14.5-9.5 = 5
+
+**v	The class mark ( Midpoint of the class)**
+
+-	Midpoint of the class 
+-	Also called as *class midpoint*
+- $\text{Midpoint of the class} = \frac{\text{Lower limit} + \text{Upper limit}}{2}$
+
+or
+
+- $\text{Midpoint of the class} = \frac{\text{Lower boundary} + \text{Upper boundary}}{2}$
+
+
+**vi	Open class intervals**
+
+-	A class interval that, at least theoretically, has either no upper class limit or no lower class limit indicated is called an *open class interval*
+
+-	For example, referring to age groups of individuals, the class interval "65 year and over" is an open class interval
+
+
+**Rules and Practices for constructing grouped frequency tables**
+
+-	Every data value should be in an interval
+-	The intervals should be mutually exclusive 
+-	The classes of the distribution must be arrayed in size order.
+-	The number of classes not less than 5 or not greater than 15 is recommended. 
+-	The following formula is often used to determine the  number of classes:
+If n is the number of observations, then 
+
+ 
+ $$\text{Number of classes} = \sqrt{n}$$
+ 
+  $$\text{Width of the class interval} = \frac{Range}{\sqrt{n}}= \frac{Min-Max}{\sqrt{n}}$$
+
+-	Data should be represented within classes having limits which the data can attain 
+-	Classes should be continuous
+-	By convention, the beginning of the interval is given the appropriate exact value, rather than the end.  
+Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50, 51-100, 101-150 etc. 
+-	The number f observations falling into each category or class interval (class frequency) can be easily found using *tally marks*.
+
+
+Examples:
+
+In a grouped frequency distribution, class intervals can be constructed in different ways
+
+Example 1
+
+Class interval |	Number of students
+---------------|----------------------
+10 - 14	|4
+15 - 19|	5
+20 - 24	|11
+25  - 29	|9
+30 - 34	|6
+35 - 39	|3
+40 - 44	|2
+
+
+Example 2
+
+Salary |	Number of employees
+-------|----------------------
+0 – 1999 |	1
+2000 – 3999	|31
+4000 – 5999	|18
+6000 – 7999	|4
+8000 – 9999	|2
+10000 - 11999	|1
+12000 – 13999	|0
+14000 – 15999|	0
+16000 – 17999	|1
+18000 -19999	|1
+20000-21999	|1
+
+
+
+
+Salary	| Number of employees
+--------|---------------------
+0 – 1999 |	1
+2000 – 3999|	31
+4000 – 5999	|18
+6000 – 7999	|4
+8000 – 9999	|2
+10000 - 15999	|1
+16000 – 21999	|3
+Total|	60
+
+
+**Example 3**
+
+
+Salary |	Number of employees
+-------|----------------------
+Less than 2000	|1
+2000 – 2999	|11
+3000 – 3999|	20
+4000 – 5999|	18
+6000 – 9999|	6
+Greater than or equal to 10000|	4
+Total|	60
 
