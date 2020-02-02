@@ -366,7 +366,7 @@ $$Percentage frequency = \frac{a}{b} \times100 \%$$
     - to facilitate computational procedures for measures of average and spread
     -	to make comparisons between different data sets
     
-- -	There are two basic types of frequency tables
+- There are two basic types of frequency tables
     1. Simple frequency tables (Ungrouped frequency distribution)
     2. Grouped frequency distribution
 
@@ -406,8 +406,9 @@ data1 %>% as.tibble() %>%
   mutate(Percentage =     
          round(prop.table(n),5)*100) %>%
   janitor::adorn_totals("row") %>%
-  setNames(c("Native Country", "Count", "Percentage (%)")) %>%
-  kable(caption = "The frequency distribution of native countries")
+  setNames(c("Native Country", "Count", "Percentage (%)")) 
+#%>%
+#  kable(caption = "The frequency distribution of native countries")
 ```
 
 
@@ -434,8 +435,10 @@ data2 %>% as.tibble()  %>%
   mutate(Percentage =     
          round(prop.table(n),5)*100) %>%
   adorn_totals("row") %>%
-  setNames(c("Grade", "Count", "Percentage (%)")) %>%
- kable(caption = "The frequency distribution of grades for Statistics")
+  setNames(c("Grade", "Count", "Percentage (%)"))
+
+#%>%
+#kable(caption = "The frequency distribution of grades for Statistics")
 ```
 
 **CASE III:**
@@ -458,8 +461,9 @@ data2 %>% as.tibble()  %>%
   mutate(Percentage =     
          round(prop.table(n),5)*100) %>%
   adorn_totals("row") %>%
-  setNames(c("Number of family members", "Count", "Percentage (%)"))%>%
-  kable(caption = "The frequency distribution of the number of family members")
+  setNames(c("Number of family members", "Count", "Percentage (%)"))
+#%>%
+#kable(caption = "The frequency distribution of the number of family members")
 
 ```
 
@@ -483,8 +487,9 @@ data2 %>% as.tibble()  %>%
   mutate(Percentage =     
          round(prop.table(n),5)*100) %>%
   adorn_totals("row") %>%
-  setNames(c("Age (years)", "Count", "Percentage (%)"))%>%
-  kable(caption = "The frequency distribution of ages of undergraduates of Batch 19")
+  setNames(c("Age (years)", "Count", "Percentage (%)"))
+#%>%
+#kable(caption = "The frequency distribution of ages of undergraduates of Batch 19")
 
 ```
 
@@ -718,7 +723,6 @@ count(Pclass) %>%
   setNames(c("Passenger class", "Count", "Percentage"))
 
 
-  kable(s_table1, caption = "The frequency distribution of the Passenger class")
 
 
 
@@ -873,3 +877,144 @@ ggplot(data=s_table1, aes(x="", y=Percentage, fill = `Passenger class`)) +
 
 
 ```
+
+
+#### Describing Quantitative Data
+
+-	Pictogram /Histogram/ Stem and leaf plot/ Dot plot / Box plot/ Scatter plot
+
+**I	Pictogram/ Pictograph**
+
+-	A pictogram uses picture symbols to convey the meaning of statistical information.
+-	A pictogram uses an icon to represent a quantity of data values in order to decrease the size of the graph
+-	A key must be used to explain the icon
+
+Example: Number of cars sold by ABC company from 2010 to 2012
+
+
+Year |	Number of cars  sold by ABC company
+-----|---------------------------------
+2017 |	3000
+2018 |	4500
+2019 | 6350
+
+
+```{r   out.width = "100%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/pictogram.png")
+```
+
+```{r box16, fig.cap='', out.width='100%', fig.asp=.75, fig.align='center'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+**II	Histogram**
+
+-	Histogram looks similar to bar chart since it also has bars. 
+-	However, it is different from a bar chart in a number of aspects. 
+-	One main difference is that in the histogram, the bars are drawn attached to each other; there are no gaps between bars like in a bar chart.
+-	Histogram is used to show the shape of the distribution of a **continuous variable**. 
+-	However, the histogram is also used for discrete variables when the data are grouped in to class intervals. 
+-	In a histogram, **the area of a bar should be proportional to the frequency of the corresponding class.**
+-	If all the bars have the same width, then the height of a bar can represent the frequency. 
+-	The bar corresponding to a class interval should be drawn from the lower class boundary to the upper class boundary. In this way there will be no gaps between the bars.
+
+
+Example:  The marks(out of 50) of a group of students are recorded in the accompanying table. Draw a histogram for the data
+
+Marks |	Number of students
+------|------------------
+10 - 14	| 4
+15 - 19	| 5
+20 - 24	| 11
+25  - 29 |	9
+30 - 34	| 6
+35 - 39 |	3
+40 - 44	| 2
+Total	 | 40
+
+```{r   out.width = "100%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/hist.png")
+```
+
+
+Example 2
+
+```{r box18, fig.cap='', out.width='100%', fig.asp=.75, fig.align='center'}
+#df<-data.frame(x = NULL, y = NULL)
+
+p<-ggplot(titanic, aes(x=Fare))+
+  geom_histogram(color="black", fill="white")+
+  facet_grid(Pclass ~ .)
+p
+
+```
+
+
+**III	Frequency polygon**
+
+-	If the mid-point of the top of each block in a histogram is joined by a straight line, a frequency polygon is produced. 
+-	This is done under the assumption that the frequencies in a class-interval are evenly distributed throughout the class 
+
+
+Example:  The marks(out of 50) of a group of students are recorded in the accompanying table. Draw a frequency polygon for the data
+
+
+Marks |	Number of students
+------|------------------
+10 - 14	| 4
+15 - 19	| 5
+20 - 24	| 11
+25  - 29 |	9
+30 - 34	| 6
+35 - 39 |	3
+40 - 44	| 2
+Total	 | 40
+
+```{r   out.width = "100%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/hist.png")
+```
+
+
+**IV	Frequency curve**
+
+-	A frequency curve is drawn by smoothing the frequency polygon.
+-	It is smooth in such a way that the sharp turns are avoided
+
+Example:  The marks(out of 50) of a group of students are recorded in the accompanying table. Draw a frequency curve for the data
+
+
+Marks |	Number of students
+------|------------------
+10 - 14	| 4
+15 - 19	| 5
+20 - 24	| 11
+25  - 29 |	9
+30 - 34	| 6
+35 - 39 |	3
+40 - 44	| 2
+Total	 | 40
+
+```{r   out.width = "100%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/hist.png")
+```
+
+frequency curves arising in practice take on certain characteristics shapes as shown bellow 
+
+```{r   out.width = "100%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/shapes.png")
+```
+
+1.	The **symmetrical** or **bell shaped** frequency curves are characterized by the fact that observations equidistant from the central maximum have the same frequency. An important example is the normal curve. 
+2.	In the **moderately asymmetrical** or **skewed** frequency curves the tail of the curve to one side of the central maximum is longer than that to the other. If the longer tail occurs to the right the curve is said to be **skewed to the right** or to have **positive skewness**.While if the reverse is true the curve is said to be **skewed to the left** or to have **negative skewness**.
+3.	In a **J shaped** or **reverse J shaped** curve a maximum occurs at one end. 
+4.	A **U shaped** frequency curve has maxima at both ends. 
+5.	A **bimodal** frequency curve has two maxima. These appear as two distinct peaks (local maxima) in the frequency curve.When the two modes are unequal the larger mode is known as the major mode and the other as the minor mode. 
+6.	A **multimodal** frequency curve has more than two maxima. 
+
+
