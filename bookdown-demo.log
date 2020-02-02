@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.2.2)  2 FEB 2020 05:28
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.2.2)  2 FEB 2020 05:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1025,7 +1025,7 @@ Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  24507 strings out of 494465
- 463735 string characters out of 6172083
+ 463752 string characters out of 6172083
  586703 words of memory out of 5000000
  28569 multiletter control sequences out of 15000+600000
  553116 words of font info for 69 fonts, out of 8000000 for 9000

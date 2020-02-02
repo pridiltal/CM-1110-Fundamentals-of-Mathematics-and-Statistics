@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Descriptive Statistics | CM 1110 Fundamentals of Mathematics and Statistics</title>
+  <meta name="description" content="Chapter 6 Descriptive Statistics | CM 1110 Fundamentals of Mathematics and Statistics" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Descriptive Statistics | CM 1110 Fundamentals of Mathematics and Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Descriptive Statistics | CM 1110 Fundamentals of Mathematics and Statistics" />
+  
+  
+  
+
+<meta name="author" content="Dr. Priyanga D. Talagala" />
+
+
+<meta name="date" content="2020-02-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="differentiation-and-integration.html"/>
+<link rel="next" href="sets-and-relations.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="course-syllabus.html"><a href="course-syllabus.html"><i class="fa fa-check"></i>Course Syllabus</a><ul>
+<li class="chapter" data-level="" data-path="course-syllabus.html"><a href="course-syllabus.html#pre-requisites"><i class="fa fa-check"></i>Pre-requisites</a></li>
+<li class="chapter" data-level="" data-path="course-syllabus.html"><a href="course-syllabus.html#learning-outcomes"><i class="fa fa-check"></i>Learning Outcomes</a></li>
+<li class="chapter" data-level="" data-path="course-syllabus.html"><a href="course-syllabus.html#outline-syllabus"><i class="fa fa-check"></i>Outline Syllabus</a></li>
+<li class="chapter" data-level="" data-path="course-syllabus.html"><a href="course-syllabus.html#method-of-assessment"><i class="fa fa-check"></i>Method of Assessment</a></li>
+<li class="chapter" data-level="" data-path="course-syllabus.html"><a href="course-syllabus.html#lecturer"><i class="fa fa-check"></i>Lecturer</a></li>
+<li class="chapter" data-level="" data-path="course-syllabus.html"><a href="course-syllabus.html#schedule"><i class="fa fa-check"></i>Schedule</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="number-systems.html"><a href="number-systems.html"><i class="fa fa-check"></i><b>1</b> Number Systems</a></li>
+<li class="chapter" data-level="2" data-path="sequence-and-series.html"><a href="sequence-and-series.html"><i class="fa fa-check"></i><b>2</b> Sequence and Series</a></li>
+<li class="chapter" data-level="3" data-path="introduction-to-logic.html"><a href="introduction-to-logic.html"><i class="fa fa-check"></i><b>3</b> Introduction to Logic</a></li>
+<li class="chapter" data-level="4" data-path="boolean-algebra.html"><a href="boolean-algebra.html"><i class="fa fa-check"></i><b>4</b> Boolean Algebra</a></li>
+<li class="chapter" data-level="5" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html"><i class="fa fa-check"></i><b>5</b> Differentiation and Integration</a></li>
+<li class="chapter" data-level="6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>6</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="6.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#introduction-to-statistics"><i class="fa fa-check"></i><b>6.1</b> Introduction to Statistics</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#some-basic-terminologies-used-in-statistics"><i class="fa fa-check"></i><b>6.1.1</b> Some Basic Terminologies Used in Statistics</a></li>
+<li class="chapter" data-level="6.1.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#branches-of-statistics"><i class="fa fa-check"></i><b>6.1.2</b> Branches of Statistics</a></li>
+<li class="chapter" data-level="6.1.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#types-of-variables"><i class="fa fa-check"></i><b>6.1.3</b> Types of Variables</a></li>
+<li class="chapter" data-level="6.1.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#scales-of-measurements"><i class="fa fa-check"></i><b>6.1.4</b> Scales of Measurements</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#presentation-of-data"><i class="fa fa-check"></i><b>6.2</b> Presentation of Data</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tabular-presentations-of-data"><i class="fa fa-check"></i><b>6.2.1</b> Tabular Presentations of Data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sets-and-relations.html"><a href="sets-and-relations.html"><i class="fa fa-check"></i><b>7</b> Sets and Relations</a></li>
+<li class="chapter" data-level="8" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>8</b> Probability</a></li>
+<li class="chapter" data-level="9" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html"><i class="fa fa-check"></i><b>9</b> Correlation and Regression</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">CM 1110 Fundamentals of Mathematics and Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="descriptive-statistics" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Descriptive Statistics</h1>
+
+<div id="introduction-to-statistics" class="section level2">
+<h2><span class="header-section-number">6.1</span> Introduction to Statistics</h2>
+<div id="some-basic-terminologies-used-in-statistics" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> Some Basic Terminologies Used in Statistics</h3>
+<p><strong>i Population</strong></p>
+<ul>
+<li>The set of <strong>all</strong> possible elements in the universe of interest to the researcher</li>
+</ul>
+<p><strong>ii Sample</strong></p>
+<ul>
+<li>A Sample is a <strong>subset</strong> (a portion or part) of the population of interest</li>
+<li>The sample must be a representative of the population of interest</li>
+</ul>
+<p><strong>iii Element</strong></p>
+<ul>
+<li>Element is an <strong>entity or object</strong> which the information is collected.</li>
+<li><em>Eg: Student, household, farm, company, tomato plant</em></li>
+</ul>
+<p><strong>iv Variable</strong></p>
+<ul>
+<li>A variable is <strong>a feature characteristic which has different ‘values’ or categories for different elements</strong> (items/subjects/individuals)</li>
+<li><em>Eg: Gender of client, brand of mobile phones, risk level, number of emails received per day, age of client, income of client</em></li>
+</ul>
+<p><strong>v Data</strong></p>
+<ul>
+<li>Data are <strong>measurements or facts</strong> that are collected from a statistical unit/entity of interest</li>
+<li>We collect data on variables</li>
+<li>Data are raw numbers or facts that must be processed (analysed) to get useful information.</li>
+<li><p>We get information from data.</p></li>
+<li><p><em>Eg:</em></p></li>
+</ul>
+<p><strong><em>Variable:</em></strong> <em>Age (in years) of client</em></p>
+<p><strong><em>Data:</em></strong> <em>21, 45, 18, 32, 30, 22, 23, 27</em></p>
+<p><strong><em>Information:</em></strong></p>
+<p><em>The mean age is 27.25 years</em></p>
+<p><em>The minimum age is 18 years</em></p>
+<p><em>The range of ages is 18-45</em></p>
+<p><em>The percentage of clients below 25 years of age: 50%</em></p>
+<p><strong>vi Statistic</strong></p>
+<ul>
+<li><strong>Characteristic</strong> of a <strong>sample</strong></li>
+<li>The value which calculated based on sample data</li>
+</ul>
+<p><strong>vii Parameter</strong></p>
+<ul>
+<li><strong>Characteristic</strong> of a <strong>population</strong></li>
+<li>The value which calculated based on population data</li>
+</ul>
+<p><strong>viii Census</strong></p>
+<ul>
+<li>When a researcher <strong>gathers data from the whole population for a given measurement,</strong> it is called a census</li>
+</ul>
+<p><strong>ix Sampling</strong></p>
+<ul>
+<li>When a researcher <strong>gathers data from a sample of the population for a given measurement,</strong> it is called sampling</li>
+<li>The process of selecting a sample is also called sampling</li>
+</ul>
+<p><strong>Why take a sample instead of studying every member of the population ?</strong></p>
+<ul>
+<li>Prohibitive cost of census</li>
+<li>Destruction of item being studied may be required</li>
+<li>Not possible to test or inspect all members of a population being studied.</li>
+</ul>
+</div>
+<div id="branches-of-statistics" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> Branches of Statistics</h3>
+<p><img src="figure/box1-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>i Descriptive Statistics</strong></p>
+<ul>
+<li>Descriptive statistics consists of organizing, summarizing and presenting data in an informative way.</li>
+<li>The main purpose of descriptive statistics is to provide an overview of the data collected.</li>
+<li>Descriptive statistics describes the data collected through frequency tables, graphs and summary measures (mean, variance, quartiles, etc.).</li>
+</ul>
+<p><strong>ii Inferential Statistics</strong></p>
+<ul>
+<li>In inferential statistics sample data are used to draw inferences (i.e. derive conclusions) or make predictions about the populations from which the sample has been taken.</li>
+<li>This includes methods used to make decisions, estimates, predictions or generalizations about a population based on a sample.</li>
+<li>This includes point estimations, interval estimation, test of hypotheses, regression analysis, time series analysis, multivariate analysis, etc.</li>
+</ul>
+</div>
+<div id="types-of-variables" class="section level3">
+<h3><span class="header-section-number">6.1.3</span> Types of Variables</h3>
+<p><img src="figure/box2-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div id="qualitative-quantitative-variables" class="section level4">
+<h4><span class="header-section-number">6.1.3.1</span> Qualitative / Quantitative Variables</h4>
+<p><strong>i Qualitative variable (Categorical variable)</strong></p>
+<ul>
+<li>The characteristic is a quality.</li>
+<li>The data are categories.</li>
+<li>They cannot be given numerical values.</li>
+<li>However, it may be given a numerical label</li>
+<li>Qualitative variables are sometimes referred as categorical variables.</li>
+<li><em>Eg:</em></li>
+</ul>
+<p><em>Gender:</em></p>
+<p><em>Age group:</em></p>
+<p><em>Education level:</em></p>
+<p><em>A/L stream:</em></p>
+<p><em>Degree type:</em></p>
+<p><em>Hair colour: </em></p>
+<p><em>FIT student batch:</em></p>
+<p><em>Undergraduate level:</em></p>
+<p><em>Grade that you can obtain for CM 1110/ CM1130</em></p>
+<p><strong>ii Quantitative variable </strong></p>
+<ul>
+<li>The characteristic is a quantity</li>
+<li>The data are numbers</li>
+<li>Quantitative data require numeric values that indicate how much or how many.</li>
+<li>They are obtained by counting or measuring with some scale</li>
+<li><em>Eg: </em></li>
+</ul>
+<p><em>Number of family members:</em></p>
+<p><em>Number of emails received per day:</em></p>
+<p><em>Weight of a student:</em></p>
+<p><em>Age:</em></p>
+<p><em>Credit balance in the SIM card:</em></p>
+<p><em>Time remaining in class:</em></p>
+<p><em>Temperature:</em></p>
+<p><em>Marks </em></p>
+</div>
+<div id="discrete-continuous-variables" class="section level4">
+<h4><span class="header-section-number">6.1.3.2</span> Discrete/ Continuous Variables</h4>
+<ul>
+<li>Quantitative variables can be classified as either discrete or continuous.</li>
+</ul>
+<p><strong>i Discrete Variables</strong></p>
+<ul>
+<li>Quantitative</li>
+<li>Usually the data are obtained by counting</li>
+<li>There are impossible values between any two possible values</li>
+<li><em>Eg:</em></li>
+</ul>
+<p><em>Number of family members:</em></p>
+<p><em>Number of emails received per day:</em></p>
+<p><strong>ii Continuous Variables</strong></p>
+<ul>
+<li>Quantitative</li>
+<li>Usually, the data are obtained by measuring with a scale</li>
+<li>There are no impossible values between any two possible values.(any value between any two possible values is also a possible value)</li>
+<li>i.e a continuous variable can take any value within a specified range.</li>
+<li><em>Eg:</em></li>
+</ul>
+<p><em>Weight of a student:</em></p>
+<p><em>Age:</em></p>
+<p><em>Credit balance in the SIM card:</em></p>
+<p><em>Time remaining in class:</em></p>
+<p><em>Temperature:</em></p>
+<p><em>Marks</em></p>
+</div>
+</div>
+<div id="scales-of-measurements" class="section level3">
+<h3><span class="header-section-number">6.1.4</span> Scales of Measurements</h3>
+<p><img src="figure/box3-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>There are four levels of measurements called, <strong>nominal, ordinal, interval and ratio.</strong></li>
+<li>Each levels has its own rules and restrictions</li>
+<li>Different levels of measurement contains different amount of information with respect to whatever the data are measuring</li>
+</ul>
+<p><strong>i Nominal Scale</strong></p>
+<ul>
+<li>Qualitative</li>
+<li>No order or ranking in categories.</li>
+<li>These categories have to be mutually exclusive, i.e. it should not be possible to place an individual or object in more than one category</li>
+<li>A name of a category can be substituted by a number, but it will be mere label and have no numerical meaning</li>
+</ul>
+<p><strong>ii Ordinal Scale</strong></p>
+<ul>
+<li>Qualitative</li>
+<li>Categories can be ordered or ranked</li>
+<li>A name of a category can be substituted by a number, but such a sequence does not indicate absolute quantities.</li>
+<li>Difference between any two numbers on the scale does not have a numerical meaningful.</li>
+<li>It cannot be assumed that the differences between adjacent numbers on the scale are equal.</li>
+</ul>
+<p><strong>iii Interval Scale</strong></p>
+<ul>
+<li>Quantitative</li>
+<li>Data can be ordered or ranked</li>
+<li>There is no absolute zero point. Zero is only an arbitrary point with which other values can compare</li>
+<li>Difference between two numbers is a meaningful numerical value</li>
+<li>Ration of two numbers is not a meaningful numerical value.</li>
+</ul>
+<p><strong>iv Ratio Scale</strong></p>
+<ul>
+<li>Quantitative</li>
+<li>Highest level of measurement</li>
+<li>There exist an absolute zero point (It has a true zero point)</li>
+<li>Ratio between different measurements is meaningful</li>
+</ul>
+</div>
+</div>
+<div id="presentation-of-data" class="section level2">
+<h2><span class="header-section-number">6.2</span> Presentation of Data</h2>
+<p>The sinking of the Titanic is one of the most infamous shipwrecks in history.</p>
+<p>On April 15, 1912, during her maiden voyage, the widely considered “unsinkable” RMS Titanic sank after colliding with an iceberg. Unfortunately, there weren’t enough lifeboats for everyone onboard, resulting in the death of 1502 out of 2224 passengers and crew</p>
+<p><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Here’s a quick summary of our variables:</p>
+<table>
+<colgroup>
+<col width="51%" />
+<col width="48%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PassengerID</td>
+<td>Passenger ID (just a row number, so obviously not useful for prediction)</td>
+</tr>
+<tr class="even">
+<td>Survived</td>
+<td>Survived (1) or died (0)</td>
+</tr>
+<tr class="odd">
+<td>Pclass</td>
+<td>Passenger class (first, second or third)</td>
+</tr>
+<tr class="even">
+<td>Name</td>
+<td>Passenger name</td>
+</tr>
+<tr class="odd">
+<td>Gender</td>
+<td>Passenger Gender</td>
+</tr>
+<tr class="even">
+<td>Age</td>
+<td>Passenger age</td>
+</tr>
+<tr class="odd">
+<td>SibSp</td>
+<td>Number of siblings/spouses aboard</td>
+</tr>
+<tr class="even">
+<td>Parch</td>
+<td>Number of parents/children aboard</td>
+</tr>
+<tr class="odd">
+<td>Ticket</td>
+<td>Ticket number</td>
+</tr>
+<tr class="even">
+<td>Fare</td>
+<td>Fare</td>
+</tr>
+<tr class="odd">
+<td>Cabin</td>
+<td>Cabin</td>
+</tr>
+<tr class="even">
+<td>Embarked</td>
+<td>Port of embarkation (S = Southampton, C = Cherbourg, Q = Queenstown)</td>
+</tr>
+</tbody>
+</table>
+<div id="tabular-presentations-of-data" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Tabular Presentations of Data</h3>
+<p><strong>Raw Data</strong></p>
+<ul>
+<li>Raw data are collected data that have not been organized numerically</li>
+<li>Eg: Passenger age</li>
+</ul>
+<!-- dataset is from : https://www.kaggle.com/varimp/a-mostly-tidyverse-tour-of-the-titanic -->
+<pre><code>##   PassengerId Pclass                                         Name    Sex  Age
+## 1         892      3                             Kelly, Mr. James   male 34.5
+## 2         893      3             Wilkes, Mrs. James (Ellen Needs) female 47.0
+## 3         894      2                    Myles, Mr. Thomas Francis   male 62.0
+## 4         895      3                             Wirz, Mr. Albert   male 27.0
+## 5         896      3 Hirvonen, Mrs. Alexander (Helga E Lindqvist) female 22.0
+## 6         897      3                   Svensson, Mr. Johan Cervin   male 14.0
+##   SibSp Parch  Ticket    Fare Cabin Embarked
+## 1     0     0  330911  7.8292              Q
+## 2     1     0  363272  7.0000              S
+## 3     0     0  240276  9.6875              Q
+## 4     0     0  315154  8.6625              S
+## 5     1     1 3101298 12.2875              S
+## 6     0     0    7538  9.2250              S</code></pre>
+<pre><code>##  [1] 34.5 47.0 62.0 27.0 22.0 14.0 30.0 26.0 18.0 21.0   NA 46.0 23.0 63.0 47.0
+## [16] 24.0 35.0 21.0 27.0 45.0 55.0  9.0   NA 21.0 48.0 50.0 22.0 22.5 41.0   NA
+## [31] 50.0 24.0 33.0   NA 30.0 18.5   NA 21.0 25.0   NA</code></pre>
+<p><strong>An array</strong></p>
+<ul>
+<li>An array is an arrangement of raw numerical data in ascending or descending order of magnitude.</li>
+<li>Eg: Passenger age</li>
+</ul>
+<pre><code>##  [1]  9.0 14.0 18.0 18.5 21.0 21.0 21.0 21.0 22.0 22.0 22.5 23.0 24.0 24.0 25.0
+## [16] 26.0 27.0 27.0 30.0 30.0 33.0 34.5 35.0 41.0 45.0 46.0 47.0 47.0 48.0 50.0
+## [31] 50.0 55.0 62.0 63.0</code></pre>
+<p><strong>Frequency Table (Frequency Distributions)</strong></p>
+<ul>
+<li>A frequency table (frequency distribution) is a listing of the values a variable takes in a data set, along with how often (frequently) each value occurs</li>
+<li>frequency can be recorded as a
+<ul>
+<li>frequency or count: the number of times a value occurs, or</li>
+<li>percentage frequency: the percentage of times a value occurs</li>
+</ul></li>
+<li>Percentage frequency can be calculated as,</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Data source: <a href="https://www.kaggle.com/varimp/a-mostly-tidyverse-tour-of-the-titanic" class="uri">https://www.kaggle.com/varimp/a-mostly-tidyverse-tour-of-the-titanic</a><a href="descriptive-statistics.html#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="differentiation-and-integration.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sets-and-relations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

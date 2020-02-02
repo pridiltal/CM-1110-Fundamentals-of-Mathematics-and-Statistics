@@ -1,5 +1,5 @@
 
-# Descriptive Statistics {#intro}
+# Descriptive Statistics 
 
 ```{r initial, echo = FALSE, cache = FALSE, include = FALSE}
 library(knitr)
