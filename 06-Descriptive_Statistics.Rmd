@@ -20,6 +20,9 @@ opts_chunk$set(
   fig.pos = "h"
 )
 
+library(tidyverse)
+library(janitor)
+
 ```
 
 \pagenumbering{arabic}
@@ -349,7 +352,60 @@ print(sort(titanic$Age[1:40]))
 
 -	A frequency table (frequency distribution) is  a listing of the values a variable takes in a data set, along with how often (frequently) each value occurs
 -	frequency can be recorded as a
-     - frequency or count: the number of times a value occurs, or
-     - percentage frequency: the percentage of times a value occurs
+     - **frequency or count:** the number of times a value occurs, or
+     - **percentage frequency:** the percentage of times a value occurs
 -	Percentage frequency can be calculated as,
  
+$$Percentage frequency = \frac{a}{b} \times100 \%$$
+
+-	The objective of constructing a frequency table are as follows
+    - to organize the data in a meaningful manner
+    - to determine the nature or shape of the distribution
+    -	to draw charts and graphs for the presentation of data
+    - to facilitate computational procedures for measures of average and spread
+    -	to make comparisons between different data sets
+    
+- -	There are two basic types of frequency tables
+    1. Simple frequency tables (Ungrouped frequency distribution)
+    2. Grouped frequency distribution
+
+
+#### Simple frequency table (Ungrouped frequency distribution)
+
+
+-	Each possible value or category is taken as a class
+-	More suitable for 
+     - Qualitative variables
+     - Discrete variables
+-	Sometimes construct for continuous variables when there is a small number of possible values between the minimum and maximum.
+
+
+Examples:
+
+**CASE I:**
+
+Example 1
+
+The native countries of 56 students from a certain education institute are as follows:
+
+```{r}
+data1 <- c("SL",	"BD",	"SL",	"SL",	"SL",	"SL",	"IN",	"SL",	"SL",	"SL",	"BD",	"SL",	"SL", "SL",	"IN",	"SL",	"SL",	"BD",	"SL",	"SL",	"SL",	"SL",	"SL",	"SL",	"SL",	"SL", "SL",	"MD",	"SL",	"SL",	"SL",	"SL",	"SL",	"SL",	"PK",	"MD",	"PK",	"SL",	"SL", "SL",	"SL",	"SL",	"PK",	"MD",	"SL",	"SL",	"SL",	"SL",	"SL",	"SL",	"SL",	"SL","SL",	"SL",	"MD",	"MD")
+
+print(data1)
+
+```
+BD- Bangladesh, IN-India, MD-Maldives, PK-Pakistan, SL- Sri Lanka
+
+Construct a frequency table
+
+```{r}
+data1 %>% as.tibble() %>%
+   mutate( value = recode(value, BD = "Bangladesh", IN = "India", MD= "Maldives", PK = "Pakistan", SL= "Sri Lanka")) %>%
+  count(value)  %>%
+  mutate(Percentage =     
+         round(prop.table(n),5)*100) %>%
+  adorn_totals("row") %>%
+  setNames(c("Native Country", "Count", "Percentage (%)")) %>%
+  kable(caption = "The frequency distribution of native countries")
+```
+

@@ -410,12 +410,94 @@
 <li>A frequency table (frequency distribution) is a listing of the values a variable takes in a data set, along with how often (frequently) each value occurs</li>
 <li>frequency can be recorded as a
 <ul>
-<li>frequency or count: the number of times a value occurs, or</li>
-<li>percentage frequency: the percentage of times a value occurs</li>
+<li><strong>frequency or count:</strong> the number of times a value occurs, or</li>
+<li><strong>percentage frequency:</strong> the percentage of times a value occurs</li>
 </ul></li>
 <li>Percentage frequency can be calculated as,</li>
 </ul>
+<p><span class="math display">\[Percentage frequency = \frac{a}{b} \times100 \%\]</span></p>
+<ul>
+<li>The objective of constructing a frequency table are as follows
+<ul>
+<li>to organize the data in a meaningful manner</li>
+<li>to determine the nature or shape of the distribution</li>
+<li>to draw charts and graphs for the presentation of data</li>
+<li>to facilitate computational procedures for measures of average and spread</li>
+<li>to make comparisons between different data sets</li>
+</ul></li>
+<li><ul>
+<li>There are two basic types of frequency tables
+<ol style="list-style-type: decimal">
+<li>Simple frequency tables (Ungrouped frequency distribution)</li>
+<li>Grouped frequency distribution</li>
+</ol></li>
+</ul></li>
+</ul>
+<div id="simple-frequency-table-ungrouped-frequency-distribution" class="section level4">
+<h4><span class="header-section-number">6.2.1.1</span> Simple frequency table (Ungrouped frequency distribution)</h4>
+<ul>
+<li>Each possible value or category is taken as a class</li>
+<li>More suitable for
+<ul>
+<li>Qualitative variables</li>
+<li>Discrete variables</li>
+</ul></li>
+<li>Sometimes construct for continuous variables when there is a small number of possible values between the minimum and maximum.</li>
+</ul>
+<p>Examples:</p>
+<p><strong>CASE I:</strong></p>
+<p>Example 1</p>
+<p>The native countries of 56 students from a certain education institute are as follows:</p>
+<pre><code>##  [1] &quot;SL&quot; &quot;BD&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;IN&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;BD&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;IN&quot;
+## [16] &quot;SL&quot; &quot;SL&quot; &quot;BD&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;MD&quot; &quot;SL&quot; &quot;SL&quot;
+## [31] &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;PK&quot; &quot;MD&quot; &quot;PK&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;PK&quot; &quot;MD&quot; &quot;SL&quot;
+## [46] &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;MD&quot; &quot;MD&quot;</code></pre>
+<p>BD- Bangladesh, IN-India, MD-Maldives, PK-Pakistan, SL- Sri Lanka</p>
+<p>Construct a frequency table</p>
+<table>
+<caption><span id="tab:unnamed-chunk-8">Table 6.1: </span>The frequency distribution of native countries</caption>
+<thead>
+<tr class="header">
+<th align="left">Native Country</th>
+<th align="right">Count</th>
+<th align="right">Percentage (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Bangladesh</td>
+<td align="right">3</td>
+<td align="right">5.357</td>
+</tr>
+<tr class="even">
+<td align="left">India</td>
+<td align="right">2</td>
+<td align="right">3.571</td>
+</tr>
+<tr class="odd">
+<td align="left">Maldives</td>
+<td align="right">5</td>
+<td align="right">8.929</td>
+</tr>
+<tr class="even">
+<td align="left">Pakistan</td>
+<td align="right">3</td>
+<td align="right">5.357</td>
+</tr>
+<tr class="odd">
+<td align="left">Sri Lanka</td>
+<td align="right">43</td>
+<td align="right">76.786</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="right">56</td>
+<td align="right">100.000</td>
+</tr>
+</tbody>
+</table>
 
+</div>
 </div>
 </div>
 </div>
@@ -478,6 +560,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
