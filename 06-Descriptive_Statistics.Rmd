@@ -16,8 +16,8 @@ opts_chunk$set(
   dev = "png",
   fig.height = 16,
   fig.width = 10,
-  out.width = "0.8\\textwidth",
-  fig.pos= 'h'
+  out.width = "0.8\\textwidth"
+ # fig.pos= 'h'
 )
 
 
@@ -724,13 +724,11 @@ count(Pclass) %>%
 
 ```
 
-```{r passenger ,fig.align='center'}
+```{r passenger }
 
-p <- ggplot(data=s_table1, aes(x=`Passenger class`, y=Count)) +
+ggplot(data=s_table1, aes(x=`Passenger class`, y=Count)) +
   geom_bar(stat="identity", fill = "lightblue") +
   geom_text(data=s_table1, aes(label=Count), vjust=-0.3, size=3.5)
-
-print(p)
 
 ```
 
@@ -739,10 +737,10 @@ print(p)
 
 
 
-p<-ggplot(data=s_table1, aes(x=`Passenger class`, y=`Percentage`)) +
+ggplot(data=s_table1, aes(x=`Passenger class`, y=Percentage)) +
   geom_bar(stat="identity", fill = "lightblue") +
-  geom_text(data=s_table1, aes(label=`Percentage`), vjust=-0.3, size=3.5)
-print(p)
+  geom_text(data=s_table1, aes(label=Percentage), vjust=-0.3, size=3.5)
+
 
 ```
 
