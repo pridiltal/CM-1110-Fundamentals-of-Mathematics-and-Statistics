@@ -724,15 +724,13 @@ count(Pclass) %>%
 
 ```
 
-```{r passenger , fig.cap="Composition of the passengers by passenger class"}
+```{r passenger ,fig.align='center'}
 
-
-
-ggplot(data=s_table1, aes(x=`Passenger class`, y=Count)) +
+p <- ggplot(data=s_table1, aes(x=`Passenger class`, y=Count)) +
   geom_bar(stat="identity", fill = "lightblue") +
   geom_text(data=s_table1, aes(label=Count), vjust=-0.3, size=3.5)
 
-
+print(p)
 
 ```
 
@@ -748,3 +746,45 @@ print(p)
 
 ```
 
+
+**ii	Component Bar Chart **
+
+-	**Sub divided bar chart/ Stacked bar chart**
+-	Use to compare two or more qualitative variables (nominal or ordinal) 
+-	Often used in conjunction with two way tables
+-	Start by drawing a simple bar chart with the total figures. 
+-	The bars are then divided into the component parts
+-	Can be drawn on absolute figures or percentages
+-	The various components should be kept in the same order in each bar
+-	To distinguish different components from one another, different colours or shades can be used
+
+```{r}
+
+datas<-titanic %>%
+     mutate( Pclass = recode(Pclass, "1" = "First", "2" = "Second", "3"= "Third")) %>%
+       mutate( Survived = recode(Survived, "1" = "Survived", "0" = "died")) %>%
+count(Pclass,Survived) %>%
+  group_by(Pclass) 
+  
+
+  
+ # mutate(prop = n / sum(n)) %>%
+  #select(-n) %>%
+ datas%>% spread(Pclass, n, fill = 0)
+```
+
+
+
+```{r}
+# Stacked barplot with multiple groups
+p <- ggplot(data=datas, aes(x=Pclass, y=n, fill=Survived)) +
+  geom_bar(stat="identity")
+
+print(p)
+```
+
+
+**Percentage component bar chart
+-	When sub-divided bar chart is drawn on percentage basis it is called percentage bar chart
+-	The various components are expressed as percentage to the total 
+-	All bars are equal in height
