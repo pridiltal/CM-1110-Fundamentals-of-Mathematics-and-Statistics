@@ -727,27 +727,31 @@ count(Pclass) %>%
   setNames(c("Passenger class", "Count", "Percentage"))
 ```
 
-```{r box8, out.width='100%', fig.asp=.75, fig.align='center' }
+```{r box8, out.width='80%', fig.asp=.75, fig.align='center' }
 
 kable(s_table1)
 ggplot(data=s_table1, aes(x=`Passenger class`, y=Count)) +
   geom_bar(stat="identity") +
-  geom_text(data=s_table1, aes(label=Count), vjust=-0.3, size=3.5)+
+  geom_text(data=s_table1, aes(label=Count), vjust=-0.3, size=4.5)+
   ggtitle("Composition of passengers by passenger class")+
-  scale_fill_grey()
+  scale_fill_grey()+
+  theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=16))
 
 ```
 
 
-```{r box9, out.width='100%', fig.asp=.75, fig.align='center' }
+```{r box9, out.width='80%', fig.asp=.75, fig.align='center' }
 
 kable(s_table1)
 
 ggplot(data=s_table1, aes(x=`Passenger class`, y=Percentage)) +
   geom_bar(stat="identity") +
-  geom_text(data=s_table1, aes(label=paste(Percentage, "%")), vjust=-0.3, size=3.5) +
+  geom_text(data=s_table1, aes(label=paste(Percentage, "%")), vjust=-0.3, size=4.5) +
   ggtitle("Composition of passengers by passenger class " )+
-  scale_fill_grey()
+  scale_fill_grey()+
+    theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=16))
 ```
 
 
@@ -779,12 +783,16 @@ kable( datas%>% spread(Pclass, n, fill = 0) )
 
 
 
-```{r box10, out.width='100%', fig.asp=.75, fig.align='center'}
+```{r box10, out.width='80%', fig.asp=.75, fig.align='center'}
 # Stacked barplot with multiple groups
 ggplot(data=datas, aes(x=Pclass, y=n, fill=Survived)) +
   geom_bar(stat="identity")+
   ggtitle("Composition of the passengers by passenger class and survival condition") +
-  scale_fill_grey()
+  scale_fill_grey()+
+    theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=16))+
+  xlab("Passenger Class")+
+  ylab("Count")
 ```
 
 
@@ -795,7 +803,7 @@ ggplot(data=datas, aes(x=Pclass, y=n, fill=Survived)) +
 -	All bars are equal in height
 
 
-```{r box11, out.width='100%', fig.asp=.75, fig.align='center'}
+```{r box11, out.width='80%', fig.asp=.75, fig.align='center'}
 
 
 datas<-titanic %>%
@@ -814,7 +822,11 @@ kable( datas%>% spread(Pclass, prop, fill = 0))
 ggplot(data=datas, aes(x=Pclass, y=prop, fill=Survived)) +
   geom_bar(stat="identity")+
   ggtitle("Composition of the passengers by passenger class and survival condition") +
-  scale_fill_grey()
+  scale_fill_grey()+
+    theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=16))+
+  xlab("Passenger Class")+
+  ylab("Percentage")
 
 
 ```
@@ -828,7 +840,7 @@ ggplot(data=datas, aes(x=Pclass, y=prop, fill=Survived)) +
 -	These bar charts are drawn side by side 
 
 
-```{r box12, out.width='100%', fig.asp=.75, fig.align='center'}
+```{r box12, out.width='80%', fig.asp=.75, fig.align='center'}
 
 
 datas<-titanic %>%
@@ -848,66 +860,21 @@ ggplot(data=datas, aes(x=Pclass, y=prop, fill=Survived)) +
   geom_bar(stat="identity", position=position_dodge())+
   ggtitle("Composition of the passengers by passenger class and survival condition")+
   geom_text(aes(label=prop), vjust=1.6, color="black",
-            position = position_dodge(0.9), size=3.5)+
-    scale_fill_grey()
+            position = position_dodge(0.9), size=4.5)+
+    scale_fill_grey()+
+    theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=16))+
+  xlab("Passenger Class")+
+  ylab("Percentage")
 
-
-```
-
-**II	Pie Chart**
-
--	A pie chart is a circle divided into slices according to the percentage of the data values in each category
--	Each slice represents a category of a given variable
--	Pie chart can be used effectively to summarize a single categorical variable if there are not too many different categories
--	In this diagram, the total of all the given items is equated to 360 degrees and the angles representing different items are proportionately calculated.
--	The sum of the angles representing different items is equal to 360 degrees
-
-
-```{r box13, out.width='100%', fig.asp=.75, fig.align='center' }
-
-kable(s_table1)
-
-ggplot(data=s_table1, aes(x="", y=Percentage, fill = `Passenger class`)) +
-  geom_bar(width = 1, stat = "identity")+
-   coord_polar("y", start=0)+
-   theme(axis.text.x=element_blank())+
-  geom_text( aes(label=paste(scales::percent(Percentage/100), "%")), position = position_stack(vjust = 0.5)) +
-  ggtitle("Composition of passengers by passenger class " )+
-  scale_fill_grey()
 
 ```
 
 
 #### Describing Quantitative Data
 
--	Pictogram /Histogram/ Stem and leaf plot/ Dot plot / Box plot/ Scatter plot
+-	Histogram/  Dot plot / Box plot/ Scatter plot
 
-**I	Pictogram/ Pictograph**
-
--	A pictogram uses picture symbols to convey the meaning of statistical information.
--	A pictogram uses an icon to represent a quantity of data values in order to decrease the size of the graph
--	A key must be used to explain the icon
-
-Example: Number of cars sold by ABC company from 2010 to 2012
-
-Year |	Number of cars  sold by ABC company
------|---------------------------------
-2017 |	3000
-2018 |	4500
-2019 | 6350
-
-```{r   out.width = "100%", echo = FALSE, fig.align='center'}
-knitr::include_graphics("figure/pictogram.png")
-```
-
-```{r box16, out.width='100%', fig.asp=.75, fig.align='center'}
-#df<-data.frame(x = NULL, y = NULL)
-
-ggplot()+
-  theme_void()+
-  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
-
-```
 
 
 **II	Histogram**
@@ -936,7 +903,7 @@ Marks |	Number of students
 Total	 | 40
 
 
-```{r hist, out.width='100%', fig.asp=.75, fig.align='center'}
+```{r hist, out.width='80%', fig.asp=.75, fig.align='center'}
 set.seed(123)
  data <- tibble(Marks = c(11,12,12,13,15,16,17,18,18, round(rnorm(11,22,1),0), round(rnorm(9,27,1),0), round(rnorm(6,32,1),0), 36,37,38,41,44))
 
@@ -950,7 +917,7 @@ ggplot(data, aes(Marks)) +
 
 Example 2
 
-```{r box18, out.width='100%', fig.asp=.75, fig.align='center'}
+```{r box18, out.width='80%', fig.asp=.75, fig.align='center'}
 #df<-data.frame(x = NULL, y = NULL)
 
 p<-ggplot(titanic, aes(x=Fare))+
@@ -981,14 +948,15 @@ Marks |	Number of students
 40 - 44	| 2
 Total	 | 40
 
-```{r hist2, out.width='100%', fig.asp=.75, fig.align='center'}
+```{r hist2, out.width='80%', fig.asp=.75, fig.align='center'}
 set.seed(123)
  data <- tibble(Marks = c(11,12,12,13,15,16,17,18,18, round(rnorm(11,22,1),0), round(rnorm(9,27,1),0), round(rnorm(6,32,1),0), 36,37,38,41,44))
 
  
 ggplot(data, aes(Marks)) +
   geom_histogram(binwidth = 5,  boundary = -0.5, pad = TRUE, col = "black", fill = "lightgray") +
-  ylab("Frequency")
+  ylab("Frequency") +
+  geom_freqpoly( binwidth = 5,  boundary = -0.5)
 ```
 
 **IV	Frequency curve**
@@ -1010,14 +978,16 @@ Marks |	Number of students
 40 - 44	| 2
 Total	 | 40
 
-```{r hist3, out.width='100%', fig.asp=.75, fig.align='center'}
+```{r hist3, out.width='80%', fig.asp=.75, fig.align='center'}
 set.seed(123)
  data <- tibble(Marks = c(11,12,12,13,15,16,17,18,18, round(rnorm(11,22,1),0), round(rnorm(9,27,1),0), round(rnorm(6,32,1),0), 36,37,38,41,44))
 
  
 ggplot(data, aes(Marks)) +
   geom_histogram(binwidth = 5,  boundary = -0.5, pad = TRUE, col = "black", fill = "lightgray") + 
-  ylab("Frequency")
+  ylab("Frequency")+
+ geom_density(aes(y=6* ..count..), bw = 5)
+
 ```
 
 frequency curves arising in practice take on certain characteristics shapes as shown bellow 
