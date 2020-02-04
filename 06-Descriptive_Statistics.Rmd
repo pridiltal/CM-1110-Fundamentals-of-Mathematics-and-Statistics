@@ -911,7 +911,9 @@ set.seed(123)
 ggplot(data, aes(Marks)) +
   geom_histogram(binwidth = 5,  boundary = -0.5, pad = TRUE, col = "black", fill = "lightgray") + 
    ggtitle("Histogram of Marks")+
-  ylab("Frequency")
+  ylab("Frequency")+
+      theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=16))
 ```
 
 
@@ -922,7 +924,9 @@ Example 2
 
 p<-ggplot(titanic, aes(x=Fare))+
   geom_histogram(color="black", fill="white")+
-  facet_grid(Pclass ~ .)
+  facet_grid(Pclass ~ .)+
+      theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=16))
 p
 
 ```
@@ -956,7 +960,9 @@ set.seed(123)
 ggplot(data, aes(Marks)) +
   geom_histogram(binwidth = 5,  boundary = -0.5, pad = TRUE, col = "black", fill = "lightgray") +
   ylab("Frequency") +
-  geom_freqpoly( binwidth = 5,  boundary = -0.5)
+  geom_freqpoly( binwidth = 5,  boundary = -0.5)+
+      theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=16))
 ```
 
 **IV	Frequency curve**
@@ -986,7 +992,9 @@ set.seed(123)
 ggplot(data, aes(Marks)) +
   geom_histogram(binwidth = 5,  boundary = -0.5, pad = TRUE, col = "black", fill = "lightgray") + 
   ylab("Frequency")+
- geom_density(aes(y=6* ..count..), bw = 5)
+ geom_density(aes(y=6* ..count..), bw = 5)+
+      theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=16))
 
 ```
 
@@ -1004,4 +1012,116 @@ knitr::include_graphics("figure/shapes.png")
 6.	A **multimodal** frequency curve has more than two maxima. 
 
 
+**V	Dot Plot**
 
+-	A dot plot is a method of presenting data which gives a rough but rapid visual appreciation of the way in which the data are distributed
+-	It consists of a horizontal line marked out with divisions of the scale on which the variable is being measured
+-This graph can be used to represent only the numerical data.
+
+
+```{r dotplot, out.width='80%', fig.asp=.75, fig.align='center'}
+
+
+ 
+ggplot(titanic, aes(Age)) +
+  geom_dotplot(dotsize = 0.3, method = "histodot") +
+      theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=16),
+        axis.text.y=element_blank())+
+  ylab("")+
+  ggtitle("Distribution of age of titanic passengers")
+
+
+```
+
+**VI	Box plot (Box and whisker plot)**
+
+-	Box plot is also a useful method of representing the behavior of a data set or comparing two or more data sets.
+- Box plot is constructed by identifying five statistics from the data set as largest value, smallest values, median, Q1 and Q3.
+
+
+```{r   out.width = "100%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/boxplot.png")
+```
+
+
+Example:
+
+Construct a box plot for the following data set (Marks of students)
+
+$\text{52, 88, 56, 79, 72, 91,  85, 88, 68, 63, 76, 73, 86, 95, 12, 69}$
+
+Xmin = 12	Xmax = 95	Q1 =64.25	Q2 = Median = 74.5	Q3 = 87.5
+
+```{r box61, out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
+
+```
+
+```{r boxplot, out.width='80%', fig.asp=.75, fig.align='center'}
+data <- tibble(Marks = c(52, 88, 56, 79, 72, 91,  85, 88, 68, 63, 76, 73, 86, 95, 12, 69) )
+
+ggplot(data, aes(y = Marks))+
+  geom_boxplot()+
+ scale_y_continuous(limits=c(5, 100), breaks = c(10,20,30,40,50,60,70,80,90,100)) +
+        theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=16))
+```
+
+```{r boxplot2, out.width='80%', fig.asp=.75, fig.align='center'}
+
+titanic %>%mutate(Pclass = factor(Pclass)) %>%
+  ggplot(aes(y = Fare, x = Pclass)) +
+  geom_boxplot() +
+  xlab("Passenger Class") +
+  theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=16))
+
+
+```
+
+```{r boxplot3, out.width='80%', fig.asp=.75, fig.align='center'}
+
+titanic %>%mutate(Pclass = factor(Pclass)) %>%
+  ggplot(aes(y = Fare, x = Pclass)) +
+  geom_boxplot() +
+  xlab("Passenger Class") +
+  theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=16))
+
+
+```
+
+**VII Violin plot**
+
+- A violin plot is a method of plotting quantitative data.
+- It is similar to a box plot, with the addition of a rotated kernel density plot on each side.
+- Violin plots are similar to box plots, except that they also show the probability density of the data at different values, usually smoothed by a kernel density estimator.
+
+```{r violin1, out.width='80%', fig.asp=.75, fig.align='center'}
+
+titanic %>%mutate(Survived = factor(Survived)) %>%
+  ggplot(aes(y = Age, x = Survived)) +
+  geom_violin() +
+  xlab("Survived") +
+  theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=16))
+
+
+```
+
+```{r violin2, out.width='80%', fig.asp=.75, fig.align='center'}
+
+titanic %>%mutate(Pclass = factor(Pclass)) %>%
+  ggplot(aes(y = Fare, x = Survived)) +
+  geom_violin() +
+  xlab("Passenger Class") +
+  theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=16))
+
+
+```
