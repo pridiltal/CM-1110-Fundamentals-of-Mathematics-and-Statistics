@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Priyanga D. Talagala" />
 
 
-<meta name="date" content="2020-02-03" />
+<meta name="date" content="2020-02-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -303,6 +303,7 @@
 <li>There exist an absolute zero point (It has a true zero point)</li>
 <li>Ratio between different measurements is meaningful</li>
 </ul>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 <div id="presentation-of-data" class="section level2">
@@ -485,26 +486,24 @@
 <pre><code>##  [1] 7 5 3 4 5 4 3 6 4 4 5 2 7 4 5 6 4 4 3 5</code></pre>
 <p>Construct a frequency table</p>
 <pre><code>##  Number of family members Count Percentage (%)
-##                         A     5         17.241
-##                         B    10         34.483
-##                         C     6         20.690
-##                         D     5         17.241
-##                         E     2          6.897
-##                         F     1          3.448
-##                     Total    29        100.000</code></pre>
+##                         2     1              5
+##                         3     3             15
+##                         4     7             35
+##                         5     5             25
+##                         6     2             10
+##                         7     2             10
+##                     Total    20            100</code></pre>
 <p><strong>CASE IV:</strong></p>
 <p>Example 4</p>
 <p>The ages (in years) of a sample of undergraduates of Batch 19 are as follows:</p>
 <pre><code>##  [1] 21 22 22 23 22 24 24 23 21 22 23 22 22 23 21 21 22 23 22 23</code></pre>
 <p>Construct a frequency table</p>
 <pre><code>##  Age (years) Count Percentage (%)
-##            A     5         17.241
-##            B    10         34.483
-##            C     6         20.690
-##            D     5         17.241
-##            E     2          6.897
-##            F     1          3.448
-##        Total    29        100.000</code></pre>
+##           21     4             20
+##           22     8             40
+##           23     6             30
+##           24     2             10
+##        Total    20            100</code></pre>
 </div>
 <div id="grouped-frequency-distribution" class="section level4">
 <h4><span class="header-section-number">6.2.1.2</span> Grouped frequency distribution</h4>
@@ -803,6 +802,7 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 ##   &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
 ## 1 died      0.37   0.53  0.76
 ## 2 Survived  0.63   0.47  0.24</code></pre>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 <div id="graphic-presentations-of-data" class="section level3">
@@ -836,7 +836,59 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 <li>The bars do not touch each other</li>
 <li>The gaps between adjacent bars are same in length</li>
 </ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Passenger class</th>
+<th align="right">Count</th>
+<th align="right">Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">First</td>
+<td align="right">216</td>
+<td align="right">24.242</td>
+</tr>
+<tr class="even">
+<td align="left">Second</td>
+<td align="right">184</td>
+<td align="right">20.651</td>
+</tr>
+<tr class="odd">
+<td align="left">Third</td>
+<td align="right">491</td>
+<td align="right">55.107</td>
+</tr>
+</tbody>
+</table>
 <p><img src="figure/box8-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Passenger class</th>
+<th align="right">Count</th>
+<th align="right">Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">First</td>
+<td align="right">216</td>
+<td align="right">24.242</td>
+</tr>
+<tr class="even">
+<td align="left">Second</td>
+<td align="right">184</td>
+<td align="right">20.651</td>
+</tr>
+<tr class="odd">
+<td align="left">Third</td>
+<td align="right">491</td>
+<td align="right">55.107</td>
+</tr>
+</tbody>
+</table>
 <p><img src="figure/box9-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p><strong>ii Component Bar Chart </strong></p>
 <ul>
@@ -849,11 +901,30 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 <li>The various components should be kept in the same order in each bar</li>
 <li>To distinguish different components from one another, different colours or shades can be used</li>
 </ul>
-<pre><code>## # A tibble: 2 x 4
-##   Survived First Second Third
-##   &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
-## 1 died        80     97   372
-## 2 Survived   136     87   119</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Survived</th>
+<th align="right">First</th>
+<th align="right">Second</th>
+<th align="right">Third</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">died</td>
+<td align="right">80</td>
+<td align="right">97</td>
+<td align="right">372</td>
+</tr>
+<tr class="even">
+<td align="left">Survived</td>
+<td align="right">136</td>
+<td align="right">87</td>
+<td align="right">119</td>
+</tr>
+</tbody>
+</table>
 <p><img src="figure/box10-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p><strong>Percentage component bar chart</strong></p>
 <ul>
@@ -861,11 +932,30 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 <li>The various components are expressed as percentage to the total</li>
 <li>All bars are equal in height</li>
 </ul>
-<pre><code>## # A tibble: 2 x 4
-##   Survived First Second Third
-##   &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
-## 1 died     0.370  0.527 0.758
-## 2 Survived 0.630  0.473 0.242</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Survived</th>
+<th align="right">First</th>
+<th align="right">Second</th>
+<th align="right">Third</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">died</td>
+<td align="right">0.3703704</td>
+<td align="right">0.5271739</td>
+<td align="right">0.7576375</td>
+</tr>
+<tr class="even">
+<td align="left">Survived</td>
+<td align="right">0.6296296</td>
+<td align="right">0.4728261</td>
+<td align="right">0.2423625</td>
+</tr>
+</tbody>
+</table>
 <p><img src="figure/box11-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p><strong>iii Multiple Bar Chart</strong></p>
 <ul>
@@ -874,11 +964,30 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 <li>Often used in conjunction with two way tables</li>
 <li>These bar charts are drawn side by side</li>
 </ul>
-<pre><code>## # A tibble: 2 x 4
-##   Survived First Second Third
-##   &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
-## 1 died      37.0   52.7  75.8
-## 2 Survived  63.0   47.3  24.2</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Survived</th>
+<th align="right">First</th>
+<th align="right">Second</th>
+<th align="right">Third</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">died</td>
+<td align="right">37.04</td>
+<td align="right">52.72</td>
+<td align="right">75.76</td>
+</tr>
+<tr class="even">
+<td align="left">Survived</td>
+<td align="right">62.96</td>
+<td align="right">47.28</td>
+<td align="right">24.24</td>
+</tr>
+</tbody>
+</table>
 <p><img src="figure/box12-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p><strong>II Pie Chart</strong></p>
 <ul>
@@ -888,12 +997,32 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 <li>In this diagram, the total of all the given items is equated to 360 degrees and the angles representing different items are proportionately calculated.</li>
 <li>The sum of the angles representing different items is equal to 360 degrees</li>
 </ul>
-<pre><code>## # A tibble: 3 x 3
-##   `Passenger class` Count Percentage
-##   &lt;chr&gt;             &lt;int&gt;      &lt;dbl&gt;
-## 1 First               216       24.2
-## 2 Second              184       20.7
-## 3 Third               491       55.1</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Passenger class</th>
+<th align="right">Count</th>
+<th align="right">Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">First</td>
+<td align="right">216</td>
+<td align="right">24.242</td>
+</tr>
+<tr class="even">
+<td align="left">Second</td>
+<td align="right">184</td>
+<td align="right">20.651</td>
+</tr>
+<tr class="odd">
+<td align="left">Third</td>
+<td align="right">491</td>
+<td align="right">55.107</td>
+</tr>
+</tbody>
+</table>
 <p><img src="figure/box13-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="describing-quantitative-data" class="section level4">
@@ -986,7 +1115,7 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 </tr>
 </tbody>
 </table>
-<p><img src="figure/hist.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="figure/hist-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Example 2</p>
 <p><img src="figure/box18-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p><strong>III Frequency polygon</strong></p>
@@ -1037,7 +1166,7 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 </tr>
 </tbody>
 </table>
-<p><img src="figure/hist.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="figure/hist2-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p><strong>IV Frequency curve</strong></p>
 <ul>
 <li>A frequency curve is drawn by smoothing the frequency polygon.</li>
@@ -1086,7 +1215,7 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 </tr>
 </tbody>
 </table>
-<p><img src="figure/hist.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="figure/hist3-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>frequency curves arising in practice take on certain characteristics shapes as shown bellow</p>
 <p><img src="figure/shapes.png" width="100%" style="display: block; margin: auto;" /></p>
 <ol style="list-style-type: decimal">

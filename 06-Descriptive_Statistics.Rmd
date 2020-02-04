@@ -11,13 +11,12 @@ opts_chunk$set(
   cache.path = 'cache/',
   fig.align = 'center',
   fig.show = 'hold',
-  cache = TRUE,
+  cache = FALSE,
   external = TRUE,
   dev = "png",
   fig.height = 16,
   fig.width = 10,
   out.width = "0.8\\textwidth"
- # fig.pos= 'h'
 )
 
 
@@ -277,6 +276,8 @@ ggplot()+
 -	Ratio between different measurements is meaningful
 
 
+\newpage
+
 ## Presentation of Data
 
 The sinking of the Titanic is one of the most infamous shipwrecks in history.
@@ -456,7 +457,7 @@ print(data3)
 Construct a frequency table
 
 ```{r}
-data2 %>% as.tibble()  %>%
+data3 %>% as.tibble()  %>%
   count(value)  %>%
   mutate(Percentage =     
          round(prop.table(n),5)*100) %>%
@@ -482,7 +483,7 @@ print(data4)
 Construct a frequency table
 
 ```{r}
-data2 %>% as.tibble()  %>%
+data4 %>% as.tibble()  %>%
   count(value)  %>%
   mutate(Percentage =     
          round(prop.table(n),5)*100) %>%
@@ -674,7 +675,9 @@ count(Pclass,Survived) %>%
 ```
 
 
-### 	Graphic Presentations of Data
+\newpage
+
+### Graphic Presentations of Data
 
 -	A diagram is a visual form for presentation of statistical data.
 -	The form of the diagram varies according to the nature of the data
@@ -695,7 +698,7 @@ count(Pclass,Survived) %>%
 -	A rectangle of equal width is drawn for each category
 -	The height (in vertical bar chart) or the length (in horizontal bar chart) of the rectangle is equal to the category’s **frequency** or **percentage**.
 
-```{r box6, fig.cap='', out.width='100%', fig.asp=.75, fig.align='center'}
+```{r box6, out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
 #df<-data.frame(x = NULL, y = NULL)
 
 ggplot()+
@@ -703,6 +706,7 @@ ggplot()+
   theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
 
 ```
+
 
 **i	Simple Bar Chart**
 
@@ -721,33 +725,29 @@ count(Pclass) %>%
          round(prop.table(n),5)*100) %>%
  # adorn_totals("row") %>%
   setNames(c("Passenger class", "Count", "Percentage"))
-
-
-
-
-
 ```
 
-```{r box8, fig.cap='', out.width='100%', fig.asp=.75, fig.align='center' }
+```{r box8, out.width='100%', fig.asp=.75, fig.align='center' }
 
+kable(s_table1)
 ggplot(data=s_table1, aes(x=`Passenger class`, y=Count)) +
-  geom_bar(stat="identity", fill = "lightblue") +
+  geom_bar(stat="identity") +
   geom_text(data=s_table1, aes(label=Count), vjust=-0.3, size=3.5)+
-  ggtitle("Composition of passengers by passenger class")
+  ggtitle("Composition of passengers by passenger class")+
+  scale_fill_grey()
 
 ```
 
 
-```{r box9, fig.cap='', out.width='100%', fig.asp=.75, fig.align='center' }
+```{r box9, out.width='100%', fig.asp=.75, fig.align='center' }
 
-
+kable(s_table1)
 
 ggplot(data=s_table1, aes(x=`Passenger class`, y=Percentage)) +
-  geom_bar(stat="identity", fill = "lightblue") +
-  geom_text(data=s_table1, aes(label=Percentage), vjust=-0.3, size=3.5) +
-  ggtitle("Composition of passengers by passenger class " )
-
-
+  geom_bar(stat="identity") +
+  geom_text(data=s_table1, aes(label=paste(Percentage, "%")), vjust=-0.3, size=3.5) +
+  ggtitle("Composition of passengers by passenger class " )+
+  scale_fill_grey()
 ```
 
 
@@ -774,12 +774,12 @@ count(Pclass,Survived) %>%
   
  # mutate(prop = n / sum(n)) %>%
   #select(-n) %>%
- datas%>% spread(Pclass, n, fill = 0)
+kable( datas%>% spread(Pclass, n, fill = 0) )
 ```
 
 
 
-```{r box10, fig.cap='', out.width='100%', fig.asp=.75, fig.align='center'}
+```{r box10, out.width='100%', fig.asp=.75, fig.align='center'}
 # Stacked barplot with multiple groups
 ggplot(data=datas, aes(x=Pclass, y=n, fill=Survived)) +
   geom_bar(stat="identity")+
@@ -795,7 +795,7 @@ ggplot(data=datas, aes(x=Pclass, y=n, fill=Survived)) +
 -	All bars are equal in height
 
 
-```{r box11, fig.cap='', out.width='100%', fig.asp=.75, fig.align='center'}
+```{r box11, out.width='100%', fig.asp=.75, fig.align='center'}
 
 
 datas<-titanic %>%
@@ -808,7 +808,7 @@ count(Pclass,Survived) %>%
 
 
   #select(-n) %>%
- datas%>% spread(Pclass, prop, fill = 0)
+kable( datas%>% spread(Pclass, prop, fill = 0))
 
 
 ggplot(data=datas, aes(x=Pclass, y=prop, fill=Survived)) +
@@ -828,7 +828,7 @@ ggplot(data=datas, aes(x=Pclass, y=prop, fill=Survived)) +
 -	These bar charts are drawn side by side 
 
 
-```{r box12, fig.cap='', out.width='100%', fig.asp=.75, fig.align='center'}
+```{r box12, out.width='100%', fig.asp=.75, fig.align='center'}
 
 
 datas<-titanic %>%
@@ -841,7 +841,7 @@ count(Pclass,Survived) %>%
 
 
   #select(-n) %>%
- datas%>% spread(Pclass, prop, fill = 0)
+kable(datas%>% spread(Pclass, prop, fill = 0))
 
 
 ggplot(data=datas, aes(x=Pclass, y=prop, fill=Survived)) +
@@ -863,18 +863,17 @@ ggplot(data=datas, aes(x=Pclass, y=prop, fill=Survived)) +
 -	The sum of the angles representing different items is equal to 360 degrees
 
 
-```{r box13, fig.cap='', out.width='100%', fig.asp=.75, fig.align='center' }
+```{r box13, out.width='100%', fig.asp=.75, fig.align='center' }
 
-print(s_table1)
+kable(s_table1)
 
 ggplot(data=s_table1, aes(x="", y=Percentage, fill = `Passenger class`)) +
   geom_bar(width = 1, stat = "identity")+
    coord_polar("y", start=0)+
    theme(axis.text.x=element_blank())+
-  geom_text(data=s_table1, aes(label=scales::percent(Percentage/100)), size = 5) +
+  geom_text( aes(label=paste(scales::percent(Percentage/100), "%")), position = position_stack(vjust = 0.5)) +
   ggtitle("Composition of passengers by passenger class " )+
   scale_fill_grey()
-
 
 ```
 
@@ -891,19 +890,17 @@ ggplot(data=s_table1, aes(x="", y=Percentage, fill = `Passenger class`)) +
 
 Example: Number of cars sold by ABC company from 2010 to 2012
 
-
 Year |	Number of cars  sold by ABC company
 -----|---------------------------------
 2017 |	3000
 2018 |	4500
 2019 | 6350
 
-
 ```{r   out.width = "100%", echo = FALSE, fig.align='center'}
 knitr::include_graphics("figure/pictogram.png")
 ```
 
-```{r box16, fig.cap='', out.width='100%', fig.asp=.75, fig.align='center'}
+```{r box16, out.width='100%', fig.asp=.75, fig.align='center'}
 #df<-data.frame(x = NULL, y = NULL)
 
 ggplot()+
@@ -938,14 +935,22 @@ Marks |	Number of students
 40 - 44	| 2
 Total	 | 40
 
-```{r   out.width = "100%", echo = FALSE, fig.align='center'}
-knitr::include_graphics("figure/hist.png")
+
+```{r hist, out.width='100%', fig.asp=.75, fig.align='center'}
+set.seed(123)
+ data <- tibble(Marks = c(11,12,12,13,15,16,17,18,18, round(rnorm(11,22,1),0), round(rnorm(9,27,1),0), round(rnorm(6,32,1),0), 36,37,38,41,44))
+
+ 
+ggplot(data, aes(Marks)) +
+  geom_histogram(binwidth = 5,  boundary = -0.5, pad = TRUE, col = "black", fill = "lightgray") + 
+   ggtitle("Histogram of Marks")+
+  ylab("Frequency")
 ```
 
 
 Example 2
 
-```{r box18, fig.cap='', out.width='100%', fig.asp=.75, fig.align='center'}
+```{r box18, out.width='100%', fig.asp=.75, fig.align='center'}
 #df<-data.frame(x = NULL, y = NULL)
 
 p<-ggplot(titanic, aes(x=Fare))+
@@ -976,10 +981,15 @@ Marks |	Number of students
 40 - 44	| 2
 Total	 | 40
 
-```{r   out.width = "100%", echo = FALSE, fig.align='center'}
-knitr::include_graphics("figure/hist.png")
-```
+```{r hist2, out.width='100%', fig.asp=.75, fig.align='center'}
+set.seed(123)
+ data <- tibble(Marks = c(11,12,12,13,15,16,17,18,18, round(rnorm(11,22,1),0), round(rnorm(9,27,1),0), round(rnorm(6,32,1),0), 36,37,38,41,44))
 
+ 
+ggplot(data, aes(Marks)) +
+  geom_histogram(binwidth = 5,  boundary = -0.5, pad = TRUE, col = "black", fill = "lightgray") +
+  ylab("Frequency")
+```
 
 **IV	Frequency curve**
 
@@ -1000,8 +1010,14 @@ Marks |	Number of students
 40 - 44	| 2
 Total	 | 40
 
-```{r   out.width = "100%", echo = FALSE, fig.align='center'}
-knitr::include_graphics("figure/hist.png")
+```{r hist3, out.width='100%', fig.asp=.75, fig.align='center'}
+set.seed(123)
+ data <- tibble(Marks = c(11,12,12,13,15,16,17,18,18, round(rnorm(11,22,1),0), round(rnorm(9,27,1),0), round(rnorm(6,32,1),0), 36,37,38,41,44))
+
+ 
+ggplot(data, aes(Marks)) +
+  geom_histogram(binwidth = 5,  boundary = -0.5, pad = TRUE, col = "black", fill = "lightgray") + 
+  ylab("Frequency")
 ```
 
 frequency curves arising in practice take on certain characteristics shapes as shown bellow 
@@ -1016,5 +1032,6 @@ knitr::include_graphics("figure/shapes.png")
 4.	A **U shaped** frequency curve has maxima at both ends. 
 5.	A **bimodal** frequency curve has two maxima. These appear as two distinct peaks (local maxima) in the frequency curve.When the two modes are unequal the larger mode is known as the major mode and the other as the minor mode. 
 6.	A **multimodal** frequency curve has more than two maxima. 
+
 
 

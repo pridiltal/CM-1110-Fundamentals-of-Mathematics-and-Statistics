@@ -7,15 +7,23 @@ header-includes:
 #- \fancyhead[CO,CE]{This is fancy header}
 - \fancyfoot[CO,CE]{Prepared by Dr. Priyanga D. Talagala}
 - \fancyfoot[LE,RO]{\thepage}
+- \usepackage{wrapfig}
+- \usepackage{float}
+- \usepackage{floatrow}
+- \floatplacement{figure}{H}
+- \floatplacement{table}{H}
+- \makeatletter\renewcommand*{\fps@figure}{H}\makeatother
 date: "`r Sys.Date()`"
+output: bookdown::pdf_book
 site: bookdown::bookdown_site
-output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: rstudio/bookdown-demo
+knit: "bookdown::render_book"
 #always_allow_html: true
 #description: "On successful completion of this module, students will be able to apply fundamental concepts in Mathematics and Statistics for real world problem solving."
 
 ---
+
