@@ -674,9 +674,6 @@ count(Pclass,Survived) %>%
 
 ```
 
-
-\newpage
-
 ### Graphic Presentations of Data
 
 -	A diagram is a visual form for presentation of statistical data.
