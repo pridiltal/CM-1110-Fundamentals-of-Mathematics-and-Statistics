@@ -743,8 +743,6 @@ ggplot(data=s_table1, aes(x=`Passenger class`, y=Count)) +
 
 ```{r box9, out.width='80%', fig.asp=.75, fig.align='center' }
 
-kable(s_table1)
-
 ggplot(data=s_table1, aes(x=`Passenger class`, y=Percentage)) +
   geom_bar(stat="identity") +
   geom_text(data=s_table1, aes(label=paste(Percentage, "%")), vjust=-0.3, size=4.5) +
@@ -1117,7 +1115,7 @@ titanic %>%mutate(Survived = factor(Survived)) %>%
 ```{r violin2, out.width='80%', fig.asp=.75, fig.align='center'}
 
 titanic %>%mutate(Pclass = factor(Pclass)) %>%
-  ggplot(aes(y = Fare, x = Survived)) +
+  ggplot(aes(y = Fare, x = Pclass)) +
   geom_violin() +
   xlab("Passenger Class") +
   theme(axis.text=element_text(size=16),
