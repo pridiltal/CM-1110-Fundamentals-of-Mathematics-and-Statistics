@@ -1,15 +1,26 @@
 --- 
-title: "A Minimal Book Example"
-author: "Yihui Xie"
+title: "CM 1110 Fundamentals of Mathematics and Statistics"
+author: "Dr. Priyanga D. Talagala"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
+output: bookdown::pdf_book
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: rstudio/bookdown-demo
-description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+header-includes:
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+#- \fancyhead[CO,CE]{This is fancy header}
+- \fancyfoot[CO,CE]{Prepared by Dr. Priyanga D. Talagala}
+- \fancyfoot[LE,RO]{\thepage}
+- \usepackage{wrapfig}
+- \usepackage{float}
+- \usepackage{floatrow}
+- \floatplacement{figure}{H}
+- \floatplacement{table}{H}
+- \makeatletter\renewcommand*{\fps@figure}{H}\makeatother
 ---
 
 # Prerequisites
