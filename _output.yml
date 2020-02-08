@@ -1,6 +1,7 @@
 bookdown::gitbook:
   css: style.css
   config:
+    baseurl: https://cm1110.netlify.com/
  #   edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
     download: ["pdf"]
 bookdown::pdf_book:
