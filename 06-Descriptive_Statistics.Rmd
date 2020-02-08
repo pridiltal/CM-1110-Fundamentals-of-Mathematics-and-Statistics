@@ -1047,7 +1047,7 @@ Example:
 
 Construct a box plot for the following data set (Marks of students)
 
-$\text{52, 88, 56, 79, 72, 91,  85, 88, 68, 63, 76, 73, 86, 95, 12, 69}$
+\[\text{52, 88, 56, 79, 72, 91,  85, 88, 68, 63, 76, 73, 86, 95, 12, 69}\]
 
 Xmin = 12	Xmax = 95	Q1 =64.25	Q2 = Median = 74.5	Q3 = 87.5
 
