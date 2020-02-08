@@ -1123,3 +1123,9 @@ titanic %>%mutate(Pclass = factor(Pclass)) %>%
 
 
 ```
+
+## Summary Measures
+###	Measures of Central Tendency
+###	Measures of Dispersion
+###	Measures of Skewness and Kurtosis
+###	Measures of Association
