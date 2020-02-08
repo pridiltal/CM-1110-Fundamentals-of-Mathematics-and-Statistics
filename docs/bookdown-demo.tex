@@ -84,7 +84,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2020-02-08}
+    \date{2020-02-09}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -127,7 +127,7 @@ On successful completion of this module, students will be able to apply fundamen
 \item
   Number Systems
 \item
-  Sequence and Series
+  Sequences and Series
 \item
   Introduction to Logic
 \item
@@ -217,7 +217,12 @@ Let \(x+iy\) be a complex number and \(x-iy\) its conjugate complex.
 \textbf{Multiplication} \((a+ib) \times (c+id)= ac-bd+i(ad+bc)\)
 
 \textbf{Addition.} \(\frac{a+ib}{c+id}= \frac{a+ib}{c+id}.\frac{c-id}{c-id}= \frac{ac+bd}{c^2+d^2}+i\frac{bc-ad}{c^2+d^2}\)
-- \(\mathbb{C}\)
+
+\begin{itemize}
+\tightlist
+\item
+  Complex numbers are denoted by \(\mathbb{C}\)
+\end{itemize}
 
 \hypertarget{imaginary-numbers}{%
 \subsection{Imaginary numbers}\label{imaginary-numbers}}
@@ -234,6 +239,26 @@ Let \(x+iy\) be a complex number and \(x-iy\) its conjugate complex.
   So there is no real number \(i\) that satisfies the above equation.
 \item
   The quantity \(i\) is called the unit imaginary number.
+\end{itemize}
+
+\textbf{Geometrical Representation of imaginary numbers}
+
+\begin{center}\includegraphics[width=0.5\linewidth]{figure/1-ImgNum} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  Let OA be positive numbers which is represented by \(x\) and \(OA^\prime\) by \(-x\)
+\item
+  And \(-x= (i)^2x=i(ix)\) is on \(OX^{\prime}\)
+\item
+  It means that the multiplication of the real number \(x\) by \(i\) twice amounts to the rotation of OA through two right angles to reach \(OA^\prime\).
+\item
+  Thus, it means that multiplication of \(x\) by \(i\) is equivalent to the rotation of \(x\) through one right angle to reach \(OA^{\prime\prime}\).
+\item
+  Hence, y-axis is known as imaginary axis.
+\item
+  Multiplication by \(i\) rotates its direction through right angle.
 \end{itemize}
 
 \hypertarget{real-numbers}{%
@@ -325,7 +350,7 @@ Let \(x+iy\) be a complex number and \(x-iy\) its conjugate complex.
 \begin{itemize}
 \tightlist
 \item
-  \(\mathbb{I}\)
+  Irrational numbers are denoted by \(\mathbb{I}\)
 \item
   An Irrational numbers are non terminating and non periodic fractions.
 \item
@@ -378,6 +403,10 @@ Let \(x+iy\) be a complex number and \(x-iy\) its conjugate complex.
 \item
   i.e \(\mathbb{N} =\{1,2,3,4,...\}\)
 \end{itemize}
+
+\textbf{Reading :}
+
+Dass, H. K. (2008). `Complex Numbers', \emph{Advanced Engineering Mathematics}. S. Chand Publishing. pp.~474-520.
 
 \hypertarget{number-representations}{%
 \section{Number representations}\label{number-representations}}
@@ -432,8 +461,75 @@ Knuth's up-arrow notation, Conway chained arrow notation, and Bowers's operators
   Number Systems \href{https://www.topperlearning.com/ncert-solutions/cbse-class-9-mathematics/mathematics-ix/number-systems}{Rational, irrational numbers}
 \end{itemize}
 
-\hypertarget{sequence-and-series}{%
-\chapter{Sequence and Series}\label{sequence-and-series}}
+\hypertarget{sequences-and-series}{%
+\chapter{Sequences and Series}\label{sequences-and-series}}
+
+\hypertarget{sequences}{%
+\section{Sequences}\label{sequences}}
+
+\begin{itemize}
+\tightlist
+\item
+  A \textbf{Sequence} can be thought of as a list of numbers written in a definite order:
+  \[a_{1}, a_{2}, a_{3}, a_{4}, ..., a_{n}, ...\]
+\item
+  The number \(a_{1}\) is called the \emph{first term}, \(a_{2}\) is the \emph{second term}, and in general \(a_{n}\) is called the \(n^{th}\) \emph{term}.
+\item
+  We will deal exclusively with infinite sequences and so each term \(a_{n}\) will have a successor \(a_{n+1}\)
+\item
+  Notice that for every positive integer \(n\) there is a corresponding number \(a_{n}\) and so a sequence can be defined as a function whose domain is the set of positive integers.
+\item
+  But we usually write \(a_{n}\) instead of the function notation \(f(n)\) for the value of the function at the number \(n\).
+\item
+  \textbf{Notation:} The sequence \(\{a_{1}, a_{2}, a_{3},...\}\) is also denoted by
+  \[\{a_{n}\}\] or \[\{a_{n}\}_{n=1}^{\infty}\]
+\item
+  Some sequences can be defined by giving a formula for the \(n\)th term.
+\item
+  In the following examples we give three descriptions of the sequences:
+
+  \begin{enumerate}
+  \def\labelenumi{\roman{enumi}.}
+  \tightlist
+  \item
+    by using the preceding notation
+  \item
+    by using the defining formula
+  \item
+    by writing out the terms of the sequence
+  \end{enumerate}
+\item
+  Notice that \(n\) doesn't have to start at 1.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  \(\{\frac{n}{n+1}\}_{n=1}^{\infty} \hspace{5em} a_{n} = \frac{n}{n+1}\hspace{5em}\{\frac{1}{2},\frac{2}{3}, \frac{3}{4}, \frac{4}{5},..., \frac{n}{n+1},... \}\)
+\item
+  \(\{\frac{(-1)^n(n+1)}{3^{n}}\}_{n=1}^{\infty} \hspace{5em} a_{n} = \frac{(-1)^n(n+1)}{3^{n}}\hspace{5em}\{-\frac{2}{3},\frac{3}{9}, -\frac{4}{27}, \frac{5}{81},..., \frac{(-1)^n(n+1)}{3^{n}},... \}\)
+\item
+  \(\{\sqrt{n-3}\}_{n=3}^{\infty} \hspace{5em} a_{n} = \sqrt{n-3}, n\geq3\hspace{5em}\{0,1,\sqrt{2}, \sqrt{3},..., \sqrt{n-3},...\}\)
+\item
+  \(\{cos\frac{n\pi}{6}\}_{n=0}^{\infty} \hspace{5em} a_{n} = cos\frac{n\pi}{6}, n\geq 0 \hspace{5em}\{1, \frac{\sqrt{3}}{2},\frac{1}{2}, 0,...,cos\frac{n\pi}{6},...\}\)
+\end{enumerate}
+
+\textbf{Example}
+
+Find a formula for the general term \(a_{n}\) of the sequence
+\[\{\frac{3}{5},-\frac{4}{25}, \frac{5}{125}, -\frac{6}{625}, \frac{7}{3125},...\}\]
+assuming that the pattern of the first few terms continues.
+
+\emph{SOLUTION}
+
+We are given that
+
+\hypertarget{series}{%
+\section{Series}\label{series}}
+
+Reading:
+
+Stewart, J., Clegg, D. K., \& Watson, S. (2020). `Infinite Sequences and Series', \emph{Calculus: early transcendentals}. Cengage Learning.
 
 \hypertarget{introduction-to-logic}{%
 \chapter{Introduction to Logic}\label{introduction-to-logic}}
