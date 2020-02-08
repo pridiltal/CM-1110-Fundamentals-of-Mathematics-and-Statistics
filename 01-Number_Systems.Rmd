@@ -39,7 +39,28 @@ knitr::include_graphics("figure/1-numbertypes.png")
 ### Complex numbers
 
 - Every number in number system taken as a complex number
-- $\mathbb{C}$
+- A number of the form $a+ib$ is called a complex number when $a$ and $b$ are real numbers and $i=\sqrt{-1}$.
+- We call '$a$' the real part and '$b$' the imaginary part of the complex number $a+ib$.
+- IF $a=0$ the number $ib$ is said to be purely imaginary, if $b=0$ the number $a$ is real.
+- A pair of complex number $a+ib$ and $a-ib$ are said to be conjugate of each other.
+- Show that the sum and product of a complex number and its conjugate complex are both real.
+
+Let $x+iy$ be a complex number and $x-iy$ its conjugate complex.
+
+\[Sum = (x+iy)+(x-iy) = 2x\]    
+\[Product = (x+iy).(x-iy) = x^{2}+y^{2}\]   
+
+- Let  $a+ib$ and  $c+id$  be two complex numbers. Then
+
+**Addition.** $(a+ib) +  (c+id)= (a+c)+i(b+d)$ 
+
+**Subtraction** $(a+ib) -  (c+id)= (a-c)+i(b-d)$ 
+
+**Multiplication** $(a+ib) \times (c+id)= ac-bd+i(ad+bc)$ 
+
+**Addition.** $\frac{a+ib}{c+id}= \frac{a+ib}{c+id}.\frac{c-id}{c-id}= \frac{ac+bd}{c^2+d^2}+i\frac{bc-ad}{c^2+d^2}$ 
+
+- Complex numbers are denoted by $\mathbb{C}$
 
 ### Imaginary numbers
 
@@ -49,6 +70,21 @@ i.e \[\sqrt{-1}=i\] \newline
     \[i^{2} = – 1\]
 - So there is no real number $i$ that satisfies the above equation. 
 - The quantity $i$ is called the unit imaginary number.
+
+**Geometrical Representation of imaginary numbers**
+
+```{r   out.width = "50%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/1-ImgNum.png")
+```
+
+
+- Let OA be positive numbers which is represented by $x$ and $OA^\prime$ by $-x$
+- And $-x= (i)^2x=i(ix)$ is on $OX^{\prime}$
+- It means that the multiplication of the real number $x$ by $i$ twice  amounts to the rotation of OA through two right angles to reach $OA^\prime$.
+- Thus, it means that multiplication of $x$ by $i$ is equivalent to the rotation of $x$ through one right angle to reach  $OA^{\prime\prime}$.
+- Hence, y-axis is known as imaginary axis.
+- Multiplication by $i$ rotates its direction through  right angle. 
+
 
 ### Real numbers
 
@@ -93,7 +129,7 @@ c. for example 6.789542587436512..........
 
 ### Irrational numbers
 
-- $\mathbb{I}$
+- Irrational numbers are denoted by $\mathbb{I}$
 - An Irrational numbers are non terminating and non periodic fractions.
 - i.e irrational number is a number that cannot be written as a ratio $x/y$ form (or fraction). 
 - In decimal form, is never ends or repeats.
@@ -114,10 +150,15 @@ c. for example 6.789542587436512..........
 - The set of whole numbers means narrator numbers and $0$
 - Whole numbers =  $\mathbb{W} = \{ 0,1,2,3,4,5,6,7,8,...\}$
 
+
 ### Natural numbers
 
 - The counting numbers start with 1 and their end is not defined. Generally it is denoted by “N”
 - i.e $\mathbb{N} =\{1,2,3,4,...\}$
+
+**Reading :**
+
+Dass, H. K. (2008). 'Complex Numbers', *Advanced Engineering Mathematics*. S. Chand Publishing.  pp. 474-520.
 
 ## Number representations
 
