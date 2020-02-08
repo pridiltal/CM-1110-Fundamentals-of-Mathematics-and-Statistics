@@ -11,7 +11,7 @@ opts_chunk$set(
   cache.path = 'cache/',
   fig.align = 'center',
   fig.show = 'hold',
-  cache = FALSE,
+  cache = TRUE,
   external = TRUE,
   dev = "png",
   fig.height = 16,

@@ -15,5 +15,5 @@ rmd_files: ["index.Rmd",
   "09-Regression.Rmd",
   "10-references.Rmd"]
 delete_merged_file: true
-
+output_dir: "docs" 
 
