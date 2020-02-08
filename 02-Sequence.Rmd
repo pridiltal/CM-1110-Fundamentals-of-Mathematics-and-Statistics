@@ -1,1 +1,47 @@
-# Sequence and Series
+# Sequences and Series
+
+## Sequences
+
+- A **Sequence** can be thought of as a list of numbers written in a definite order:
+ \[a_{1}, a_{2}, a_{3}, a_{4}, ..., a_{n}, ...\]
+- The number $a_{1}$ is called the *first term*, $a_{2}$ is  the *second term*, and in general $a_{n}$ is called the $n^{th}$ *term*.
+- We will deal exclusively with infinite sequences and so each term $a_{n}$ will have a successor $a_{n+1}$
+- Notice that for every positive integer $n$ there is a corresponding number $a_{n}$ and so a sequence can be defined as a function whose domain is the set of positive integers.
+- But we usually write $a_{n}$  instead of the function notation $f(n)$ for the value of the function at the number $n$.
+- **Notation:** The sequence $\{a_{1}, a_{2}, a_{3},...\}$ is also denoted by 
+\[\{a_{n}\}\]  or \[\{a_{n}\}_{n=1}^{\infty}\]
+- Some sequences can be defined by giving a formula for the $n$th term.
+- In the following examples we give three descriptions of the sequences:
+    i. by using the preceding notation
+    ii. by using the defining formula
+    iii. by writing out the terms of the sequence
+- Notice that $n$ doesn't have to start at 1.
+
+a) $\{\frac{n}{n+1}\}_{n=1}^\infty \hspace{5em} a_{n} = \frac{n}{n+1}\hspace{5em}\{\frac{1}{2},\frac{2}{3}, \frac{3}{4}, \frac{4}{5},..., \frac{n}{n+1},... \}$
+
+b) $\{\frac{(-1)^n(n+1)}{3^{n}}\}_{n=1}^\infty \hspace{5em} a_{n} = \frac{(-1)^n(n+1)}{3^{n}}\hspace{5em}\{-\frac{2}{3},\frac{3}{9}, -\frac{4}{27}, \frac{5}{81},..., \frac{(-1)^n(n+1)}{3^{n}},... \}$
+
+c) $\{\sqrt{n-3}\}_{n=3}^\infty \hspace{5em} a_{n} = \sqrt{n-3}, n\geq3\hspace{5em}\{0,1,\sqrt{2}, \sqrt{3},..., \sqrt{n-3},...\}$
+
+d) $\{cos\frac{n\pi}{6}\}_{n=0}^\infty \hspace{5em} a_{n} = cos\frac{n\pi}{6}, n\geq 0 \hspace{5em}\{1, \frac{\sqrt{3}}{2},\frac{1}{2}, 0,...,cos\frac{n\pi}{6},...\}$
+
+
+**Example**
+
+Find a formula for the general term $a_{n}$ of the sequence
+\[\{\frac{3}{5},-\frac{4}{25}, \frac{5}{125}, -\frac{6}{625}, \frac{7}{3125},...\}\]
+assuming that the pattern of the first few terms continues.
+
+
+*SOLUTION* 
+
+We are given that 
+
+
+
+
+## Series
+
+Reading:
+
+Stewart, J., Clegg, D. K., & Watson, S. (2020). 'Infinite Sequences and Series', *Calculus: early transcendentals*. Cengage Learning.

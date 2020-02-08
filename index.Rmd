@@ -37,7 +37,7 @@ On successful completion of this module, students will be able to apply fundamen
 ## Outline Syllabus {-}
 
 -	Number Systems
--	Sequence and Series
+-	Sequences and Series
 -	Introduction to Logic
 -	Boolean Algebra
 -	Differentiation and Integration
