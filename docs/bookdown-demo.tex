@@ -84,7 +84,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2020-02-09}
+    \date{2020-02-14}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -160,7 +160,7 @@ On successful completion of this module, students will be able to apply fundamen
 \section*{Lecturer}\label{lecturer}}
 \addcontentsline{toc}{section}{Lecturer}
 
-Dr.~Priyanga Dilini Talagala
+Dr.~Priyanga D. Talagala
 
 \hypertarget{schedule}{%
 \section*{Schedule}\label{schedule}}
@@ -1830,20 +1830,238 @@ Xmin = 12 Xmax = 95 Q1 =64.25 Q2 = Median = 74.5 Q3 = 87.5
 
 \begin{center}\includegraphics[width=0.8\linewidth]{figure/violin2-1} \end{center}
 
+\newpage
+
 \hypertarget{summary-measures}{%
 \section{Summary Measures}\label{summary-measures}}
 
 \hypertarget{measures-of-central-tendency}{%
 \subsection{Measures of Central Tendency}\label{measures-of-central-tendency}}
 
-\hypertarget{measures-of-dispersion}{%
-\subsection{Measures of Dispersion}\label{measures-of-dispersion}}
+\begin{itemize}
+\item
+  \textbf{Measure of central tendency} yield information about the center, or middle part, of a group of numbers.
+\item
+  Eg: Mode, Median, Arithmetic Mean, Geometric mean, Harmonic Mean, Quadratic Mean, Quartiles, Deciles, and Percentiles
+\end{itemize}
+
+\hypertarget{mode}{%
+\subsubsection{Mode}\label{mode}}
+
+\begin{itemize}
+\item
+  The Mode is the most frequently occuring value In a set of data
+\item
+  Organizing the data into an ordered array (an ordering of the numbers from smallest to largest) helps to locate the mode.
+\item
+  In the case of a tie for the most frequent occuring value, two modes are listed. Then the data are set to be \textbf{bimodal}
+\item
+  If a set of data is not exactly bimodal but contains two values that are more dominant than others, some researchers take the liberty of referring to the data set as bimodal even without an \emph{exact tie} for the mode.
+\item
+  Data sets with more than two modes are referred to as \textbf{multimodal}.
+\item
+  The mode is an appropriate measure of central tendency for nominal-level data.
+\item
+  The mode can be used to determine which category occurs most frequently.
+\item
+  Advantages and disadvantages of mode
+\end{itemize}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/box21-1} \end{center}
+
+\hypertarget{median}{%
+\subsubsection{Median}\label{median}}
+
+\begin{itemize}
+\item
+  The median is the middle value in an ordered array of numbers.
+\item
+  Median divides the series into equal parts
+\item
+  The following steps are used to determine the median.
+\item
+  STEP 1: Arrange the observations in an ordered data array.
+\item
+  STEP 2: For an \textbf{odd number} of terms, find the middle term of the ordered array. It is the median.
+\item
+  STEP 3: For an \textbf{even number} of terms, find the arithmetic mean of the middle two terms. This arithmetic mean is the median.
+\end{itemize}
+
+\[Median = \text{the }(\frac{n+1}{2})\text{th item in the data array} \]
+
+\begin{itemize}
+\item
+  The level of data measurement must be at least ordinal for a median to be meaningful.
+\item
+  Advantages and disadvantages of median
+\end{itemize}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/box22-1} \end{center}
+
+\hypertarget{arithmetic-mean}{%
+\subsubsection{Arithmetic Mean}\label{arithmetic-mean}}
+
+\begin{itemize}
+\item
+  The arithmetic mean (usually called mean) is the sum of all observations divided by the total number of observations.
+\item
+  Population Mean
+
+  \begin{itemize}
+  \item
+    The poupulation mean us represented by the Greek letter \(mu\) (\(\mu\)).
+  \item
+    Let, \(N\) is the number of terms in the population.
+  \end{itemize}
+\end{itemize}
+
+\[\mu = \frac{\sum{x}}{N}=\frac{x_1+x_2+x_3+...+x_N}{N}\]
+
+\begin{itemize}
+\item
+  Sample Mean
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The sample mean is represented by \(\bar{x}\)
+  \item
+    Let, \(n\) is the number of terms in the sample
+    \[\bar{x} = \frac{\sum{x}}{n}=\frac{x_1+x_2+x_3+...+x_n}{n}\]
+  \end{itemize}
+\item
+  It is appropriate to use the mean to analyse data that are not at least interval level in measurement.
+\item
+  Advantages and disadvantages of arithmetic mean
+\end{itemize}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/box23 -1} \end{center}
+
+\textbf{Empirical relationship between mean, mode, median}
+
+\begin{itemize}
+\tightlist
+\item
+  In case of symmetrical distribution, mean, median and mode coincide \((mean = meadian= mode)\)
+\end{itemize}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/box24 -1} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  For a moderately asymmetrical distribution, the following relationship exists \(Mean – Mode = 3(Mean - Median)\)
+\end{itemize}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/box25 -1} \end{center}
+
+\textbf{Choice between mean and median}
+
+\begin{itemize}
+\tightlist
+\item
+  Mean is very sensitive to outliers.Median is not sensitive to outliers
+\item
+  When there are outliers in a data set, median is more appropriate than mean
+\end{itemize}
+
+\hypertarget{quartiles-deciles-and-percentiles}{%
+\subsubsection{Quartiles, Deciles and Percentiles}\label{quartiles-deciles-and-percentiles}}
+
+\begin{itemize}
+\tightlist
+\item
+  Median divides the data set into two equal parts.
+\item
+  There are other values which divide the data set into a number of equal parts
+\item
+  Those are Quartiles, Deciles and Percentiles
+\end{itemize}
+
+\textbf{\emph{(a) Quartiles (Q) -- Quartiles divide an array into four equal parts}}
+
+\[Q_i = \text{the }\frac{i}{4}(n+1)\text{th item in the data array} \]
+
+\textbf{\emph{(b) Deciles (D) -- Deciles divide an array into ten equal parts}}
+
+\[D_i = \text{the }\frac{i}{10}(n+1)\text{th item in the data array} \]
+
+\textbf{\emph{(c) Percentiles (P) -- Percentiles divide an array into 100 equal parts}}
+
+\[P_i = \text{the }\frac{i}{100}(n+1)\text{th item in the data array} \]
+
+\hypertarget{measures-of-variability}{%
+\subsection{Measures of Variability}\label{measures-of-variability}}
+
+\begin{itemize}
+\item
+  Statistics that describe the spread or dispersion of a set of data.
+\item
+  Measure of central tendency yield information about particular points of a data set.
+\item
+  However, business researchers can use another group of analytic tools to describe a set of data.
+\item
+  These tools are measures of variability, which describe the spread of the dispersion of a set of data.
+\item
+  Using measures of variability in conjunction with measures of central tendency makes possible a more complete numerical description of the data.
+\item
+  This section focuses on seven measures of variability for ungrouped data: range, interquartile range, variance, standard deviation, z score and coefficient of variation.
+\end{itemize}
+
+\hypertarget{range}{%
+\subsubsection{Range}\label{range}}
+
+\begin{itemize}
+\tightlist
+\item
+  The range is the difference between the largest value of a data set and the smallest value.
+\end{itemize}
+
+\[Range = Maximum - Minimum\]
+
+\begin{itemize}
+\item
+  One important use of the range is in quality assurance, where the range is used to construct control charts
+\item
+  Advantages and disadvantages of range
+\end{itemize}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/box26 -1} \end{center}
+
+\hypertarget{interquartile-range-iqr}{%
+\subsubsection{Interquartile Range (IQR)}\label{interquartile-range-iqr}}
+
+\begin{itemize}
+\item
+  We use the interquartile range (IQR) to measure the spread of a data around the median (M).
+\item
+  The interquartile range is the range of values between the first and third quartile.
+\item
+  Essentially it is the range of the middle 50\% of the data and is determined by computing the value of \(Q_3 - Q_1\).
+\item
+  The interquartile range is especially useful in situations where data users are more interested in values towards the middle and less interested in extremes.
+\item
+  The interquartile range is used in the construction of box and whisker plots.
+\item
+  By eliminating the lowest 25\% and the highest 25\% of the items in a series, we are left with the central 50\% , which are ordinarily free of extreme values.
+\end{itemize}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/box27 -1} \end{center}
+
+\hypertarget{variance-and-standard-deviation}{%
+\subsubsection{Variance and Standard Deviation}\label{variance-and-standard-deviation}}
 
 \hypertarget{measures-of-skewness-and-kurtosis}{%
 \subsection{Measures of Skewness and Kurtosis}\label{measures-of-skewness-and-kurtosis}}
 
 \hypertarget{measures-of-association}{%
 \subsection{Measures of Association}\label{measures-of-association}}
+
+\hypertarget{references}{%
+\subsection*{References}\label{references}}
+\addcontentsline{toc}{subsection}{References}
+
+Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., \& Harris, M. (2007). \emph{Australasian business statistics}. John Wiley \& Sons.
 
 \hypertarget{sets-and-relations}{%
 \chapter{Sets and Relations}\label{sets-and-relations}}

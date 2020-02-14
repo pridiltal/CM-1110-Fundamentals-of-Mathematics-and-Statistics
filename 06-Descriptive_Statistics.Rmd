@@ -1124,12 +1124,229 @@ titanic %>%mutate(Pclass = factor(Pclass)) %>%
 
 ```
 
+\newpage 
+
 ## Summary Measures
 
 ###	Measures of Central Tendency
 
-###	Measures of Dispersion
+- **Measure of central tendency** yield information about the center, or middle part, of a group of numbers.
+
+- Eg: Mode, Median,  Arithmetic Mean, Geometric mean, Harmonic Mean, Quadratic Mean, Quartiles, Deciles, and Percentiles
+
+
+#### Mode
+
+- The Mode is the most frequently occuring value In a set of data 
+
+- Organizing the data into an ordered array (an ordering of the numbers from smallest to largest) helps to locate the mode.
+
+- In the case of a tie for the most frequent occuring value, two modes are listed. Then the data are set to be **bimodal**
+
+- If a set of data is not exactly bimodal but contains two values that are more dominant than others, some researchers take the liberty of referring to the data set as bimodal even without an *exact tie* for the mode.
+
+- Data sets with more than two modes are referred to as **multimodal**.
+
+- The mode is an appropriate measure of central tendency for nominal-level data.
+
+- The mode can be used to determine which category occurs most frequently.
+
+- Advantages and disadvantages of mode
+
+
+```{r box21, out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+
+#### Median 
+
+- The median is the middle value in an ordered array of numbers.
+
+- Median divides the series into equal parts
+
+- The following steps are used to determine the median.
+
+- STEP 1: Arrange the observations in an ordered data array.
+
+- STEP 2: For an **odd number** of terms, find the middle term of the ordered array. It is the median.
+
+- STEP 3: For an **even number** of terms, find the arithmetic mean of the middle two terms. This arithmetic mean is the median.
+
+\[Median = \text{the }(\frac{n+1}{2})\text{th item in the data array} \]
+
+- The level of data measurement must be at least ordinal for a median to be meaningful.
+
+- Advantages and disadvantages of median
+
+
+```{r box22, out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+####	Arithmetic Mean 
+
+- The arithmetic mean (usually called mean) is the sum of all observations divided by the total number of observations.
+
+- Population Mean
+    
+    - The poupulation mean us represented by the Greek letter $mu$ ($\mu$).
+    
+    - Let, $N$ is the number of terms in the population.
+    
+ \[\mu = \frac{\sum{x}}{N}=\frac{x_1+x_2+x_3+...+x_N}{N}\]
+ 
+- Sample Mean   
+
+    - The sample mean is represented by $\bar{x}$
+    - Let, $n$ is the number of terms in the sample
+ \[\bar{x} = \frac{\sum{x}}{n}=\frac{x_1+x_2+x_3+...+x_n}{n}\]
+ 
+- It is appropriate to use the mean to analyse data that are not at least interval level in measurement.
+
+- Advantages and disadvantages of arithmetic mean
+
+
+```{r box23 , out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+**Empirical relationship between mean, mode, median**
+
+- In case of symmetrical distribution, mean, median and mode coincide $(mean = meadian= mode)$
+
+```{r box24 , out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+-	For a moderately asymmetrical distribution, the following relationship exists $Mean – Mode = 3(Mean - Median)$
+
+```{r box25 , out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+**Choice between mean and median**
+
+-	Mean is very sensitive to outliers.Median is not sensitive to outliers
+-	When there are outliers in a data set, median is more appropriate than mean 
+
+#### Quartiles, Deciles and Percentiles
+
+- Median divides the data set into two equal parts.
+- There are other values which divide the data set into a number of equal parts
+- Those are Quartiles, Deciles and Percentiles
+
+***(a)	Quartiles (Q) – Quartiles divide an array into four equal parts***
+
+
+\[Q_i = \text{the }\frac{i}{4}(n+1)\text{th item in the data array} \]
+
+
+***(b)	Deciles (D) – Deciles divide an array into ten equal parts***
+
+\[D_i = \text{the }\frac{i}{10}(n+1)\text{th item in the data array} \]
+
+
+***(c) Percentiles (P) – Percentiles divide an array into 100 equal parts***
+
+\[P_i = \text{the }\frac{i}{100}(n+1)\text{th item in the data array} \]
+
+###	Measures of Variability
+
+- Statistics that describe the spread or dispersion of a set of data.
+
+- Measure of central tendency yield information about particular points of a data set.
+
+- However, business researchers can use another group of analytic tools to describe a set of data.
+
+- These tools are measures of variability, which describe the spread of the dispersion of a set of data. 
+
+- Using measures of variability in conjunction with measures of central tendency makes possible a more complete numerical description of the data.
+
+- This section focuses on seven measures of variability for ungrouped data: range, interquartile range, variance, standard deviation, z score and coefficient of variation. 
+
+#### Range
+
+- The range is the difference between the largest value of a data set and the smallest value.
+
+\[Range = Maximum - Minimum\]
+
+- One important use of the range is in quality assurance, where the range is used to construct control charts
+
+
+- Advantages and disadvantages of range
+
+```{r box26 , out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+####	Interquartile Range (IQR)
+
+- We use the interquartile range (IQR) to measure the spread of a data around the median (M).
+
+- The interquartile range is the range of values between the first and third quartile.
+
+- Essentially it is the range of the middle 50% of the data and is determined by computing the value of $Q_3 - Q_1$.
+
+- The interquartile range is especially useful in situations where data users are more interested in values towards the middle and less interested in extremes.
+
+- The interquartile range is used in the construction of box and whisker plots.
+
+- By eliminating the lowest 25% and the highest 25% of the items in a series, we are left with the central 50% , which are ordinarily free of extreme values.
+
+```{r box27 , out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+####	Variance and Standard Deviation
+
+
 
 ###	Measures of Skewness and Kurtosis
 
 ###	Measures of Association
+
+
+### References {-}
+
+Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., & Harris, M. (2007). *Australasian business statistics*. John Wiley & Sons.
