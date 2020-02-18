@@ -1340,7 +1340,35 @@ ggplot()+
 
 ####	Variance and Standard Deviation
 
+-	To measure the spread of data around the mean, we use the standard deviation (S).
+- The variance and standard deviation are two very popular measures of dispersion.
+- These measures are not meaningful unless the data are at least interval-level data.
+-	Their formulations are categorized into whether to evaluate from a population or from a sample.
 
+*NOTE*
+
+- Sum of deviations from the arithmetic mean is always zero.
+\[{\sum{(x-\mu)} = 0}\]
+
+- This property requires considering the alternative ways to obtain measure of variability.
+
+##### Variance 
+
+- The **variance** is the average of the squared deviations about the mean for a set of numbers.
+
+- The population variance is denoted by $\sigma^2$
+
+\[\sigma^2 = \frac{\sum(x-\mu)^2}{N}\]
+
+- *The sum of the squared deviations about the mean of a set of values* - called the **sum of squares of** $x$ and sometimes abbreviated as $SS_x$
+
+- Beacuse the varinace is computed from squared deviations, the final result is expressed in terms of squared units of measurments.
+
+- Statistics measured in squared units are problematic to interpret. 
+
+
+##### Standard Deviation
+- The standard deviation 
 
 ###	Measures of Skewness and Kurtosis
 
