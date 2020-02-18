@@ -1424,7 +1424,6 @@ $\mu\pm3\sigma$         |    $99.7\%$
 
  \[\sum{(x-\mu)^2}= \sum{x^2}- \frac{(\sum x)^2}{N}\]
  
- and
  
  
 ```{r variance1, out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
@@ -1432,9 +1431,11 @@ $\mu\pm3\sigma$         |    $99.7\%$
 
 ggplot()+
   theme_void()+
-  theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
 
 ```
+
+and 
 
   \[\sum{(x-\bar{x})^2}= \sum{x^2}- \frac{(\sum x)^2}{n}\]
 
@@ -1443,7 +1444,7 @@ ggplot()+
 
 ggplot()+
   theme_void()+
-  theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
 
 ```
 
@@ -1477,11 +1478,106 @@ ggplot()+
 
 - The coefficient of variation can be useful in comparing standard deviations that have been computed fro  data with different means.
 
-###	Measures of Skewness and Kurtosis
+- The choice of whether to use a coefficient of variation  or raw standard deviations to compare multiple standard deviations is a matter of preference
+- The coefficient of variation also provides and optional method of interpreting the value of a standard deviation.
 
-###	Measures of Association
+###	Measures of Shape
+
+- Measures of shape are tools that can be used to describe the shape of a distribution of data.
+
+- In this section, we examine two measures of shapes: skewness and Kurtosis.
+
+#### Skewness 
+
+- A distribution of data in which the right half is a mirror image of the left half is said to be *symmetrical.*
+
+- One example of a symmetrical distribution is the normal distribution, or bell curve. 
+
+- *Skewness* is when a distribution is asymmetrical or lacks symmetry. 
+
+- The skewed portion is the long, thin part of the curve
+
+**Skewness and the relationship of the mean, median and mode**
+
+- The concept of skewness helps us to understand the relationship between the mean, median and mode.
+
+- In a unimodal distribution (distribution with a single peak or mode) that is skewed, the mode is the apex (high point) of the curve and the median is the middle value. 
+
+- The mean tends to be located toward the tail of the distribution, because the mean is affected by all values, including the extreme ones. 
+
+- A bell-shaped or normal distribution with the mean, median and mode all at the centre of the distribution has no skewness.
+
+
+```{r    out.width = "100%", echo = FALSE, fig.align='center', fig.cap= "Relationship of mean, median and mode for different types of skewness"}
+knitr::include_graphics("figure/skewness.jpg")
+```
+
+##### Pearsonian Coefficient of skewness
+
+- This coefficient compares the mean and median in light of the magnitude of the standard deviation
+
+\[S_k = \frac{3(\mu-M_d)}{\sigma}\]
+
+where $S_k$ = coefficient of skewness, $M_d$ = median
+
+
+- Note that if the distribution is symmetrical, the mean and median are the same value and hence the coefficient of skewness is equal to zero.
+
+- If the value of $S_K$ is positive, the distribution is positively skewed.
+
+- If the value of $S_K$ is negative, the distribution is negatively skewed.
+
+- The greater the magnitude of $S_k$, the more skewed is the distribution.
+
+#### Kurtosis
+
+- Kurtosis describes the amount of peakedness of a distribution.
+
+**leptokurtic**
+
+- Distributions that are high and thin are referred to as leptokurtic distributions.
+
+
+**platykurtic**
+
+- Distributions that are flat and spread out  are referred to as platykurtic distributions.
+
+**mesokurtic**
+
+- Between the above two types are distributions that are more 'normal' in shape, referred to as mesokurtic distributions
+
+
+```{r    out.width = "100%", echo = FALSE, fig.align='center', fig.cap= "Types of kurtosis"}
+knitr::include_graphics("figure/kurtosis.png")
+```
 
 
 ### References {-}
 
 Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., & Harris, M. (2007). *Australasian business statistics*. John Wiley & Sons.
+
+
+\newpage
+
+### Tutorial {-}
+
+#### Chapter 6: Descriptive Statistics {-}
+
+
+1. A power company in Sri Lanka designs and manufactures power distribution switchboards and control centres for hospitals, bridges, airports, highways and water treatment plants. Power company director of marketing wants to determine client satisfaction with their products and services. He developed a questionnaire that yields a satisfaction score between 10 and 50 for participant responses. A random sample if 35 of the company's 900 clients is asked to complete a satisfaction survey. The satisfaction scores for the 35 participants are averaged to produce a mean satisfaction score.
+  
+  a. What is the population for this study?
+  b. What is the sample for this study?
+  c. What is the statistic for this study?
+  d. What would be a parameter for this study?
+
+2. Classify each of the following as nominal, ordinal, interval or ratio data
+
+  a. The time required to produce each type on an assembly line
+  b. the number of litres of milk a family drinks in a month
+  c. The ranking of four machines in your plan after they have been designated as excellent, good, satisfactory or poor
+  d. The telephone area code of clients in New Zealand
+  e. The age of each on your batch mates
+  f. The  sales at the local pizza restaurant each month 
+  g. A student index number
+  h. The response time of emergency services

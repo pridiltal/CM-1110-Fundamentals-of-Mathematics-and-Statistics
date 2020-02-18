@@ -166,9 +166,33 @@ Dr.~Priyanga D. Talagala
 \section*{Schedule}\label{schedule}}
 \addcontentsline{toc}{section}{Schedule}
 
-Lectures: TBA
+Lectures:
 
-Consultation times: TBA
+\begin{itemize}
+\tightlist
+\item
+  Monday {[}1.15 pm -3.15 pm{]}
+\item
+  Thursday {[}1.15 pm -3.15 pm{]}
+\end{itemize}
+
+Tutorial:
+
+\begin{itemize}
+\tightlist
+\item
+  Monday {[}3.15 pm -4.15 pm{]}
+\item
+  Thursday {[}3.15 pm -4.15 pm{]}
+\end{itemize}
+
+Consultation time:
+
+\begin{itemize}
+\tightlist
+\item
+  Tuesday {[}11.30 am to 12.30 pm{]}
+\end{itemize}
 
 \hypertarget{number-systems}{%
 \chapter{Number Systems}\label{number-systems}}
@@ -2177,9 +2201,9 @@ Distance from the mean & Values within distance\tabularnewline
 
 \[\sum{(x-\mu)^2}= \sum{x^2}- \frac{(\sum x)^2}{N}\]
 
-and
-
 \begin{center}\includegraphics[width=1\linewidth]{figure/variance1-1} \end{center}
+
+and
 
 \[\sum{(x-\bar{x})^2}= \sum{x^2}- \frac{(\sum x)^2}{n}\]
 
@@ -2229,19 +2253,188 @@ and
   The coefficient of variation essentially is a relative comparison of a standard deviation to its mean.
 \item
   The coefficient of variation can be useful in comparing standard deviations that have been computed fro data with different means.
+\item
+  The choice of whether to use a coefficient of variation or raw standard deviations to compare multiple standard deviations is a matter of preference
+\item
+  The coefficient of variation also provides and optional method of interpreting the value of a standard deviation.
 \end{itemize}
 
-\hypertarget{measures-of-skewness-and-kurtosis}{%
-\subsection{Measures of Skewness and Kurtosis}\label{measures-of-skewness-and-kurtosis}}
+\hypertarget{measures-of-shape}{%
+\subsection{Measures of Shape}\label{measures-of-shape}}
 
-\hypertarget{measures-of-association}{%
-\subsection{Measures of Association}\label{measures-of-association}}
+\begin{itemize}
+\item
+  Measures of shape are tools that can be used to describe the shape of a distribution of data.
+\item
+  In this section, we examine two measures of shapes: skewness and Kurtosis.
+\end{itemize}
+
+\hypertarget{skewness}{%
+\subsubsection{Skewness}\label{skewness}}
+
+\begin{itemize}
+\item
+  A distribution of data in which the right half is a mirror image of the left half is said to be \emph{symmetrical.}
+\item
+  One example of a symmetrical distribution is the normal distribution, or bell curve.
+\item
+  \emph{Skewness} is when a distribution is asymmetrical or lacks symmetry.
+\item
+  The skewed portion is the long, thin part of the curve
+\end{itemize}
+
+\textbf{Skewness and the relationship of the mean, median and mode}
+
+\begin{itemize}
+\item
+  The concept of skewness helps us to understand the relationship between the mean, median and mode.
+\item
+  In a unimodal distribution (distribution with a single peak or mode) that is skewed, the mode is the apex (high point) of the curve and the median is the middle value.
+\item
+  The mean tends to be located toward the tail of the distribution, because the mean is affected by all values, including the extreme ones.
+\item
+  A bell-shaped or normal distribution with the mean, median and mode all at the centre of the distribution has no skewness.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/skewness} 
+
+}
+
+\caption{Relationship of mean, median and mode for different types of skewness}\label{fig:unnamed-chunk-23}
+\end{figure}
+
+\hypertarget{pearsonian-coefficient-of-skewness}{%
+\paragraph{Pearsonian Coefficient of skewness}\label{pearsonian-coefficient-of-skewness}}
+
+\begin{itemize}
+\tightlist
+\item
+  This coefficient compares the mean and median in light of the magnitude of the standard deviation
+\end{itemize}
+
+\[S_k = \frac{3(\mu-M_d)}{\sigma}\]
+
+where \(S_k\) = coefficient of skewness, \(M_d\) = median
+
+\begin{itemize}
+\item
+  Note that if the distribution is symmetrical, the mean and median are the same value and hence the coefficient of skewness is equal to zero.
+\item
+  If the value of \(S_K\) is positive, the distribution is positively skewed.
+\item
+  If the value of \(S_K\) is negative, the distribution is negatively skewed.
+\item
+  The greater the magnitude of \(S_k\), the more skewed is the distribution.
+\end{itemize}
+
+\hypertarget{kurtosis}{%
+\subsubsection{Kurtosis}\label{kurtosis}}
+
+\begin{itemize}
+\tightlist
+\item
+  Kurtosis describes the amount of peakedness of a distribution.
+\end{itemize}
+
+\textbf{leptokurtic}
+
+\begin{itemize}
+\tightlist
+\item
+  Distributions that are high and thin are referred to as leptokurtic distributions.
+\end{itemize}
+
+\textbf{platykurtic}
+
+\begin{itemize}
+\tightlist
+\item
+  Distributions that are flat and spread out are referred to as platykurtic distributions.
+\end{itemize}
+
+\textbf{mesokurtic}
+
+\begin{itemize}
+\tightlist
+\item
+  Between the above two types are distributions that are more `normal' in shape, referred to as mesokurtic distributions
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/kurtosis} 
+
+}
+
+\caption{Types of kurtosis}\label{fig:unnamed-chunk-24}
+\end{figure}
 
 \hypertarget{references}{%
 \subsection*{References}\label{references}}
 \addcontentsline{toc}{subsection}{References}
 
 Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., \& Harris, M. (2007). \emph{Australasian business statistics}. John Wiley \& Sons.
+
+\newpage
+
+\hypertarget{tutorial}{%
+\subsection*{Tutorial}\label{tutorial}}
+\addcontentsline{toc}{subsection}{Tutorial}
+
+\hypertarget{chapter-6-descriptive-statistics}{%
+\subsubsection*{Chapter 6: Descriptive Statistics}\label{chapter-6-descriptive-statistics}}
+\addcontentsline{toc}{subsubsection}{Chapter 6: Descriptive Statistics}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  A power company in Sri Lanka designs and manufactures power distribution switchboards and control centres for hospitals, bridges, airports, highways and water treatment plants. Power company director of marketing wants to determine client satisfaction with their products and services. He developed a questionnaire that yields a satisfaction score between 10 and 50 for participant responses. A random sample if 35 of the company's 900 clients is asked to complete a satisfaction survey. The satisfaction scores for the 35 participants are averaged to produce a mean satisfaction score.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  What is the population for this study?
+\item
+  What is the sample for this study?
+\item
+  What is the statistic for this study?
+\item
+  What would be a parameter for this study?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Classify each of the following as nominal, ordinal, interval or ratio data
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The time required to produce each type on an assembly line
+\item
+  the number of litres of milk a family drinks in a month
+\item
+  The ranking of four machines in your plan after they have been designated as excellent, good, satisfactory or poor
+\item
+  The telephone area code of clients in New Zealand
+\item
+  The age of each on your batch mates
+\item
+  The sales at the local pizza restaurant each month
+\item
+  A student index number
+\item
+  The response time of emergency services
+\end{enumerate}
 
 \hypertarget{sets-and-relations}{%
 \chapter{Sets and Relations}\label{sets-and-relations}}
