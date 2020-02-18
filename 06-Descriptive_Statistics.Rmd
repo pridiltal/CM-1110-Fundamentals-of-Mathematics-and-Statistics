@@ -1362,13 +1362,120 @@ ggplot()+
 
 - *The sum of the squared deviations about the mean of a set of values* - called the **sum of squares of** $x$ and sometimes abbreviated as $SS_x$
 
-- Beacuse the varinace is computed from squared deviations, the final result is expressed in terms of squared units of measurments.
+- Because the variance is computed from squared deviations, the final result is expressed in terms of squared units of measurements.
 
 - Statistics measured in squared units are problematic to interpret. 
 
 
 ##### Standard Deviation
-- The standard deviation 
+- The standard deviation is the square root of the variance.
+
+- The population standard deviation  is denoted by $\sigma$
+
+\[\sigma = \sqrt{\frac{\sum(x-\mu)^2}{N}}=\sqrt{\sigma^2}\]
+
+- One feature of standard deviation that distinguishes it from a variance is that the standard deviation is expressed in the same units as the raw data, whereas the variance is expressed in those units squared.
+
+#### Empirical Rule
+
+- The empirical rule is an important rule of thumb that is used to state the approximate percentage of values that lie within a given number of standard deviations from the mean of a set of data **if the data are normally distributed**
+
+- The empirical rule is used only for three numbers of standard deviations: $1\sigma$, $2\sigma$, $3\sigma$
+
+
+Distance from the mean  | Values within distance
+------------------------|------------------------
+$\mu\pm1\sigma$         |    $68\%$
+$\mu\pm2\sigma$         |    $95\%$
+$\mu\pm3\sigma$         |    $99.7\%$
+
+
+
+- If a set of data is normally distributed, or bell shaped, approximately $68\%$ of the data values are within one standard deviation of the mean, $95\%$ are within two standard deviations, and almost $100\%$ are within three standard deviations.
+
+#### Population versus sample variance and standard deviations
+
+- The sample variance is denoted by $s^2$ and the sample standard deviation by $s$.
+
+- The main use for sample variances and standard deviations is as estimators of population variances and standard deviations. 
+
+- Thus, computation of the sample variance and standard deviation differs slightly from computation of the population variance and standard deviation. 
+
+- Both the sample variance and sample standard deviation use $n-1$int he denominator instead of $n$ because using $n$ in the denominator of a sample variance results in a statistic that tends to underestimate the population variance.
+
+- While discussion of the properties of *good estimator* is beyond the scope of this course, one of the properties of a good estimator  is being *unbiased*.
+
+- Whereas, using $n$ in the denominator of the sample variance makes it a *biased* estimator, using $n-1$ allows it to be an *unbiased* estimator, which is a desirable property in inferential statistics. 
+
+
+**Sample variance**
+
+\[s^2 = \frac{\sum{(x-\bar{x})^2}}{n-1}\]
+
+**Sample standard deviation**
+
+\[s = \sqrt{\frac{\sum{(x-\bar{x})^2}}{n-1}}= \sqrt{s^2}\]
+
+#### Computational formulas for variance and standard deviation
+
+- An alternative method  of computing variance and standard deviation, sometimes referred to as the computational method or shortcut method, is available.
+
+- Algebraically, 
+
+ \[\sum{(x-\mu)^2}= \sum{x^2}- \frac{(\sum x)^2}{N}\]
+ 
+ and
+ 
+ 
+```{r variance1, out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
+
+```
+
+  \[\sum{(x-\bar{x})^2}= \sum{x^2}- \frac{(\sum x)^2}{n}\]
+
+```{r variance2, out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
+
+```
+
+- Substituting these equivalent expressions into the original formulas for variance and standard deviation yields the following computational formulas.
+
+**Computational formula for population variance and standard deviation**
+
+\[\sigma^2 = \frac{\sum{x^2}- \frac{(\sum x)^2}{N}}{N}\]
+
+\[\sigma = \sqrt{\sigma^2}\]
+
+**Computational formula for sample variance and standard deviation**
+
+\[s^2 = \frac{\sum{x^2}- \frac{(\sum x)^2}{n}}{n-1}\]
+
+\[s = \sqrt{s^2}\]
+
+- For situations in which the mean is already computed or is given, alternative forms of these formulas are:
+
+\[\sigma^2 = \frac{\sum{x^2}-N\mu^2}{N}\]
+
+\[s^2 = \frac{\sum{x^2}-n(\bar{x})^2}{n-1}\]
+
+#### Coefficient of variation
+
+- The coefficient of variation is the ratio of the standard deviation to the mean, expressed as a percentage and is denoted CV.
+
+\[CV = \frac{\sigma}{\mu}(100)\]
+
+- The coefficient of variation essentially is a relative comparison of a standard deviation to its mean.
+
+- The coefficient of variation can be useful in comparing standard deviations that have been computed fro  data with different means.
 
 ###	Measures of Skewness and Kurtosis
 

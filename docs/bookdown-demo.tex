@@ -2073,11 +2073,163 @@ Xmin = 12 Xmax = 95 Q1 =64.25 Q2 = Median = 74.5 Q3 = 87.5
   This property requires considering the alternative ways to obtain measure of variability.
 \end{itemize}
 
-\hypertarget{variane}{%
-\paragraph{Variane}\label{variane}}
+\hypertarget{variance}{%
+\paragraph{Variance}\label{variance}}
+
+\begin{itemize}
+\item
+  The \textbf{variance} is the average of the squared deviations about the mean for a set of numbers.
+\item
+  The population variance is denoted by \(\sigma^2\)
+\end{itemize}
+
+\[\sigma^2 = \frac{\sum(x-\mu)^2}{N}\]
+
+\begin{itemize}
+\item
+  \emph{The sum of the squared deviations about the mean of a set of values} - called the \textbf{sum of squares of} \(x\) and sometimes abbreviated as \(SS_x\)
+\item
+  Because the variance is computed from squared deviations, the final result is expressed in terms of squared units of measurements.
+\item
+  Statistics measured in squared units are problematic to interpret.
+\end{itemize}
 
 \hypertarget{standard-deviation}{%
 \paragraph{Standard Deviation}\label{standard-deviation}}
+
+\begin{itemize}
+\item
+  The standard deviation is the square root of the variance.
+\item
+  The population standard deviation is denoted by \(\sigma\)
+\end{itemize}
+
+\[\sigma = \sqrt{\frac{\sum(x-\mu)^2}{N}}=\sqrt{\sigma^2}\]
+
+\begin{itemize}
+\tightlist
+\item
+  One feature of standard deviation that distinguishes it from a variance is that the standard deviation is expressed in the same units as the raw data, whereas the variance is expressed in those units squared.
+\end{itemize}
+
+\hypertarget{empirical-rule}{%
+\subsubsection{Empirical Rule}\label{empirical-rule}}
+
+\begin{itemize}
+\item
+  The empirical rule is an important rule of thumb that is used to state the approximate percentage of values that lie within a given number of standard deviations from the mean of a set of data \textbf{if the data are normally distributed}
+\item
+  The empirical rule is used only for three numbers of standard deviations: \(1\sigma\), \(2\sigma\), \(3\sigma\)
+\end{itemize}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Distance from the mean & Values within distance\tabularnewline
+\midrule
+\endhead
+\(\mu\pm1\sigma\) & \(68\%\)\tabularnewline
+\(\mu\pm2\sigma\) & \(95\%\)\tabularnewline
+\(\mu\pm3\sigma\) & \(99.7\%\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\tightlist
+\item
+  If a set of data is normally distributed, or bell shaped, approximately \(68\%\) of the data values are within one standard deviation of the mean, \(95\%\) are within two standard deviations, and almost \(100\%\) are within three standard deviations.
+\end{itemize}
+
+\hypertarget{population-versus-sample-variance-and-standard-deviations}{%
+\subsubsection{Population versus sample variance and standard deviations}\label{population-versus-sample-variance-and-standard-deviations}}
+
+\begin{itemize}
+\item
+  The sample variance is denoted by \(s^2\) and the sample standard deviation by \(s\).
+\item
+  The main use for sample variances and standard deviations is as estimators of population variances and standard deviations.
+\item
+  Thus, computation of the sample variance and standard deviation differs slightly from computation of the population variance and standard deviation.
+\item
+  Both the sample variance and sample standard deviation use \(n-1\)int he denominator instead of \(n\) because using \(n\) in the denominator of a sample variance results in a statistic that tends to underestimate the population variance.
+\item
+  While discussion of the properties of \emph{good estimator} is beyond the scope of this course, one of the properties of a good estimator is being \emph{unbiased}.
+\item
+  Whereas, using \(n\) in the denominator of the sample variance makes it a \emph{biased} estimator, using \(n-1\) allows it to be an \emph{unbiased} estimator, which is a desirable property in inferential statistics.
+\end{itemize}
+
+\textbf{Sample variance}
+
+\[s^2 = \frac{\sum{(x-\bar{x})^2}}{n-1}\]
+
+\textbf{Sample standard deviation}
+
+\[s = \sqrt{\frac{\sum{(x-\bar{x})^2}}{n-1}}= \sqrt{s^2}\]
+
+\hypertarget{computational-formulas-for-variance-and-standard-deviation}{%
+\subsubsection{Computational formulas for variance and standard deviation}\label{computational-formulas-for-variance-and-standard-deviation}}
+
+\begin{itemize}
+\item
+  An alternative method of computing variance and standard deviation, sometimes referred to as the computational method or shortcut method, is available.
+\item
+  Algebraically,
+\end{itemize}
+
+\[\sum{(x-\mu)^2}= \sum{x^2}- \frac{(\sum x)^2}{N}\]
+
+and
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/variance1-1} \end{center}
+
+\[\sum{(x-\bar{x})^2}= \sum{x^2}- \frac{(\sum x)^2}{n}\]
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/variance2-1} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  Substituting these equivalent expressions into the original formulas for variance and standard deviation yields the following computational formulas.
+\end{itemize}
+
+\textbf{Computational formula for population variance and standard deviation}
+
+\[\sigma^2 = \frac{\sum{x^2}- \frac{(\sum x)^2}{N}}{N}\]
+
+\[\sigma = \sqrt{\sigma^2}\]
+
+\textbf{Computational formula for sample variance and standard deviation}
+
+\[s^2 = \frac{\sum{x^2}- \frac{(\sum x)^2}{n}}{n-1}\]
+
+\[s = \sqrt{s^2}\]
+
+\begin{itemize}
+\tightlist
+\item
+  For situations in which the mean is already computed or is given, alternative forms of these formulas are:
+\end{itemize}
+
+\[\sigma^2 = \frac{\sum{x^2}-N\mu^2}{N}\]
+
+\[s^2 = \frac{\sum{x^2}-n(\bar{x})^2}{n-1}\]
+
+\hypertarget{coefficient-of-variation}{%
+\subsubsection{Coefficient of variation}\label{coefficient-of-variation}}
+
+\begin{itemize}
+\tightlist
+\item
+  The coefficient of variation is the ratio of the standard deviation to the mean, expressed as a percentage and is denoted CV.
+\end{itemize}
+
+\[CV = \frac{\sigma}{\mu}(100)\]
+
+\begin{itemize}
+\item
+  The coefficient of variation essentially is a relative comparison of a standard deviation to its mean.
+\item
+  The coefficient of variation can be useful in comparing standard deviations that have been computed fro data with different means.
+\end{itemize}
 
 \hypertarget{measures-of-skewness-and-kurtosis}{%
 \subsection{Measures of Skewness and Kurtosis}\label{measures-of-skewness-and-kurtosis}}
