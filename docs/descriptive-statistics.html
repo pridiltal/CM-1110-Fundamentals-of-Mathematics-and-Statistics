@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Priyanga D. Talagala" />
 
 
-<meta name="date" content="2020-02-18" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1193,6 +1193,16 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 </div>
 <div id="summary-measures" class="section level2">
 <h2><span class="header-section-number">6.3</span> Summary Measures</h2>
+<ul>
+<li><p>Although frequency distribution serves useful purpose, there are many situations that require other types of data summarization.</p></li>
+<li><p>What we need in many instances is the ability to summarize the data by means of a single number called a descriptive measure.</p></li>
+<li><p>Descriptive measures may be computed from the data of a sample or the data of a population. To distinguish between them we have the following definitions.</p></li>
+</ul>
+<p><strong>Definitions</strong></p>
+<ul>
+<li><p>A descriptive measure computed from the data of a sample is called a <strong>statistic</strong>.</p></li>
+<li><p>A descriptive measure computed from the data of a population is called a <strong>parameter</strong>.</p></li>
+</ul>
 <div id="measures-of-central-tendency" class="section level3">
 <h3><span class="header-section-number">6.3.1</span> Measures of Central Tendency</h3>
 <ul>
@@ -1204,14 +1214,74 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 <ul>
 <li><p>The Mode is the most frequently occuring value In a set of data</p></li>
 <li><p>Organizing the data into an ordered array (an ordering of the numbers from smallest to largest) helps to locate the mode.</p></li>
+<li><p>A series having only one mode is called as <strong>uni-modal</strong></p></li>
 <li><p>In the case of a tie for the most frequent occuring value, two modes are listed. Then the data are set to be <strong>bimodal</strong></p></li>
 <li><p>If a set of data is not exactly bimodal but contains two values that are more dominant than others, some researchers take the liberty of referring to the data set as bimodal even without an <em>exact tie</em> for the mode.</p></li>
 <li><p>Data sets with more than two modes are referred to as <strong>multimodal</strong>.</p></li>
 <li><p>The mode is an appropriate measure of central tendency for nominal-level data.</p></li>
 <li><p>The mode can be used to determine which category occurs most frequently.</p></li>
-<li><p>Advantages and disadvantages of mode</p></li>
 </ul>
-<p><img src="figure/box21-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>For ungrouped data</strong></p>
+<p><strong>Example 01:</strong> Find mode of the following datasets</p>
+<p>Dataset 1: 12, 14, 10, 8, 6, 8, 15, 8</p>
+<p><img src="figure/mode1-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Dataset 2: 40, 44, 57, 48, 78</p>
+<p><img src="figure/mode2-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Dataset 3: 42, 45, 55, 50, 45, 40, 55, 45, 52, 55, 54</p>
+<p><img src="figure/mode3-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>For grouped frequency data</strong></p>
+<p><strong>Example 02:</strong> Find mode of the following data</p>
+<table>
+<thead>
+<tr class="header">
+<th>Marks</th>
+<th>Number of students</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>20</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>40</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td>50</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>70</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Advantages and disadvantages of mode</li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>Easy to understand</li>
+<li>Easy to calculate</li>
+<li>Not affected by extreme values in the dataset</li>
+<li>Good for qualitative data</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>Not suitable for further mathematical calculations</li>
+<li>There may be more than one mode for a given dataset</li>
+<li>It is not based upon all the observations</li>
+<li>In some cases, we may not be able to find a mode for a given dataset</li>
+</ul>
 </div>
 <div id="median" class="section level4">
 <h4><span class="header-section-number">6.3.1.2</span> Median</h4>
@@ -1225,10 +1295,26 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 </ul>
 <p><span class="math display">\[Median = \text{the }(\frac{n+1}{2})\text{th item in the data array} \]</span></p>
 <ul>
-<li><p>The level of data measurement must be at least ordinal for a median to be meaningful.</p></li>
-<li><p>Advantages and disadvantages of median</p></li>
+<li>The level of data measurement must be at least ordinal for a median to be meaningful.</li>
 </ul>
-<p><img src="figure/box22-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 1:</strong> Find the median of the dataset 1, 8, 6, 3, 2</p>
+<p><img src="figure/median1-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 2:</strong> Find the median of the dataset 8, 9, 1, 2, 14, 12</p>
+<p><img src="figure/median2-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>Advantages and disadvantages of median</li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>Simple to understand</li>
+<li>Easy to calculate</li>
+<li>Not affected by extreme values in the dataset</li>
+<li>Can be calculated even for qualitative variables (ordinal scale data)</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>It is not based upon all the observations</li>
+</ul>
 </div>
 <div id="arithmetic-mean" class="section level4">
 <h4><span class="header-section-number">6.3.1.3</span> Arithmetic Mean</h4>
@@ -1248,10 +1334,57 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 <li>Let, <span class="math inline">\(n\)</span> is the number of terms in the sample
 <span class="math display">\[\bar{x} = \frac{\sum{x}}{n}=\frac{x_1+x_2+x_3+...+x_n}{n}\]</span></li>
 </ul></li>
-<li><p>It is appropriate to use the mean to analyse data that are not at least interval level in measurement.</p></li>
-<li><p>Advantages and disadvantages of arithmetic mean</p></li>
+<li><p>It is inappropriate to use the mean to analyse data that are not at least interval level in measurement.</p></li>
 </ul>
-<p><img src="figure/box23%20-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 1:</strong> Calculate the mean from the following data</p>
+<table>
+<thead>
+<tr class="header">
+<th>Student</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Marks</td>
+<td>40</td>
+<td>50</td>
+<td>53</td>
+<td>78</td>
+<td>58</td>
+<td>60</td>
+<td>73</td>
+<td>35</td>
+<td>43</td>
+<td>48</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Advantages and disadvantages of arithmetic mean</li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>Simple to understand</li>
+<li>Easy to calculate</li>
+<li>Based on all the observations</li>
+<li>Well defined</li>
+<li>Unique</li>
+<li>Can be used in further calculation</li>
+</ul>
+<p><strong>Disadvantages</strong>
+- Can be affected by extreme values in the dataset
+- May lead to false conclusions
+- Only applicable to quantitative data (not applicable to qualitative data)</p>
 <p><strong>Empirical relationship between mean, mode, median</strong></p>
 <ul>
 <li>In case of symmetrical distribution, mean, median and mode coincide <span class="math inline">\((mean = meadian= mode)\)</span></li>
@@ -1302,7 +1435,15 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 <li><p>One important use of the range is in quality assurance, where the range is used to construct control charts</p></li>
 <li><p>Advantages and disadvantages of range</p></li>
 </ul>
-<p><img src="figure/box26%20-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>Easy to understand and calculate</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>Consider only the highest and lowest values of the data and fails to take account of any other observations in the dataset</li>
+<li>Heavily influenced by extreme values</li>
+</ul>
 </div>
 <div id="interquartile-range-iqr" class="section level4">
 <h4><span class="header-section-number">6.3.2.2</span> Interquartile Range (IQR)</h4>
@@ -1314,7 +1455,15 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 <li><p>The interquartile range is used in the construction of box and whisker plots.</p></li>
 <li><p>By eliminating the lowest 25% and the highest 25% of the items in a series, we are left with the central 50% , which are ordinarily free of extreme values.</p></li>
 </ul>
-<p><img src="figure/box27%20-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>Easy to understand and calculate</li>
+<li>Not influenced by extreme values</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>Ignore the first <span class="math inline">\(25\%\)</span> and the last <span class="math inline">\(25\%\)</span> in the dataset</li>
+</ul>
 </div>
 <div id="variance-and-standard-deviation" class="section level4">
 <h4><span class="header-section-number">6.3.2.3</span> Variance and Standard Deviation</h4>
@@ -1353,6 +1502,17 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 <ul>
 <li>One feature of standard deviation that distinguishes it from a variance is that the standard deviation is expressed in the same units as the raw data, whereas the variance is expressed in those units squared.</li>
 </ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>Based on all the observations</li>
+<li>Since this is based on arithmetic mean, it has all the merits of it</li>
+<li>The most important and widely used measure of dispersion</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>Not easy to understand and difficult to calculate</li>
+<li>Gives more weight to extreme values, because the values are squared up</li>
+</ul>
 </div>
 </div>
 <div id="empirical-rule" class="section level4">
@@ -1383,6 +1543,7 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 </tr>
 </tbody>
 </table>
+<p><img src="figure/emp%20-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <ul>
 <li>If a set of data is normally distributed, or bell shaped, approximately <span class="math inline">\(68\%\)</span> of the data values are within one standard deviation of the mean, <span class="math inline">\(95\%\)</span> are within two standard deviations, and almost <span class="math inline">\(100\%\)</span> are within three standard deviations.</li>
 </ul>
@@ -1431,13 +1592,19 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 <div id="coefficient-of-variation" class="section level4">
 <h4><span class="header-section-number">6.3.2.7</span> Coefficient of variation</h4>
 <ul>
-<li>The coefficient of variation is the ratio of the standard deviation to the mean, expressed as a percentage and is denoted CV.</li>
+<li><p>In general, for two variables measured with he same units (eg: two groups of people both weighed in kg), the group with the larger variance and standard deviation has n=more variability among their scores.</p></li>
+<li><p>The unit of measure affects the size od the variance.</p></li>
+<li><p>The same population weights, expressed in ‘grams’ rather than kg would have a larger variance and standard deviation.</p></li>
+<li><p>The <em>coefficient of variation</em>, a measure of relative variability gets around this difficulty and makes it possible to compare variability across variables measured in different units.</p></li>
+<li><p>The coefficient of variation is the ratio of the standard deviation to the mean, expressed as a percentage and is denoted CV.</p></li>
 </ul>
 <p><span class="math display">\[CV = \frac{\sigma}{\mu}(100)\]</span></p>
+<p><strong>Using median and quartile deviation</strong></p>
+<p><span class="math display">\[CV = \frac{\frac{Q_3 - Q_1}{2}}{Median}(100)\]</span></p>
 <ul>
 <li><p>The coefficient of variation essentially is a relative comparison of a standard deviation to its mean.</p></li>
-<li><p>The coefficient of variation can be useful in comparing standard deviations that have been computed fro data with different means.</p></li>
-<li>The choice of whether to use a coefficient of variation or raw standard deviations to compare multiple standard deviations is a matter of preference</li>
+<li><p>The coefficient of variation can be useful in comparing standard deviations that have been computed from data with different means.</p></li>
+<li><p>The choice of whether to use a coefficient of variation or raw standard deviations to compare multiple standard deviations is a matter of preference</p></li>
 <li><p>The coefficient of variation also provides and optional method of interpreting the value of a standard deviation.</p></li>
 </ul>
 </div>
@@ -1453,7 +1620,8 @@ Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50,
 <ul>
 <li><p>A distribution of data in which the right half is a mirror image of the left half is said to be <em>symmetrical.</em></p></li>
 <li><p>One example of a symmetrical distribution is the normal distribution, or bell curve.</p></li>
-<li><p><em>Skewness</em> is when a distribution is asymmetrical or lacks symmetry.</p></li>
+<li><p><strong>Skewness</strong> is a measure of symmetry, or more precisely, the lack of symmetry</p></li>
+<li><p>The measures of asymmetry are called as measures of skewness.</p></li>
 <li><p>The skewed portion is the long, thin part of the curve</p></li>
 </ul>
 <p><strong>Skewness and the relationship of the mean, median and mode</strong></p>
@@ -1470,7 +1638,7 @@ Figure 6.1: Relationship of mean, median and mode for different types of skewnes
 </p>
 </div>
 <div id="pearsonian-coefficient-of-skewness" class="section level5">
-<h5><span class="header-section-number">6.3.3.1.1</span> Pearsonian Coefficient of skewness</h5>
+<h5><span class="header-section-number">6.3.3.1.1</span> Pearsonian coefficient of skewness</h5>
 <ul>
 <li>This coefficient compares the mean and median in light of the magnitude of the standard deviation</li>
 </ul>
@@ -1478,8 +1646,8 @@ Figure 6.1: Relationship of mean, median and mode for different types of skewnes
 <p>where <span class="math inline">\(S_k\)</span> = coefficient of skewness, <span class="math inline">\(M_d\)</span> = median</p>
 <ul>
 <li><p>Note that if the distribution is symmetrical, the mean and median are the same value and hence the coefficient of skewness is equal to zero.</p></li>
-<li><p>If the value of <span class="math inline">\(S_K\)</span> is positive, the distribution is positively skewed.</p></li>
-<li><p>If the value of <span class="math inline">\(S_K\)</span> is negative, the distribution is negatively skewed.</p></li>
+<li><p>If the value of <span class="math inline">\(S_k\)</span> is positive, the distribution is positively skewed.</p></li>
+<li><p>If the value of <span class="math inline">\(S_k\)</span> is negative, the distribution is negatively skewed.</p></li>
 <li><p>The greater the magnitude of <span class="math inline">\(S_k\)</span>, the more skewed is the distribution.</p></li>
 </ul>
 </div>
@@ -1487,19 +1655,11 @@ Figure 6.1: Relationship of mean, median and mode for different types of skewnes
 <div id="kurtosis" class="section level4">
 <h4><span class="header-section-number">6.3.3.2</span> Kurtosis</h4>
 <ul>
-<li>Kurtosis describes the amount of peakedness of a distribution.</li>
-</ul>
-<p><strong>leptokurtic</strong></p>
-<ul>
-<li>Distributions that are high and thin are referred to as leptokurtic distributions.</li>
-</ul>
-<p><strong>platykurtic</strong></p>
-<ul>
-<li>Distributions that are flat and spread out are referred to as platykurtic distributions.</li>
-</ul>
-<p><strong>mesokurtic</strong></p>
-<ul>
-<li>Between the above two types are distributions that are more ‘normal’ in shape, referred to as mesokurtic distributions</li>
+<li><p>Kurtosis describes the amount of peakedness of a distribution.</p></li>
+<li><p><strong>Kurtosis</strong> is a measure of whether the data are peaked or flat relative to a normal distribution</p></li>
+<li><p>Distributions that are high and thin are referred to as <strong>leptokurtic</strong> distributions.</p></li>
+<li><p>Distributions that are flat and spread out are referred to as <strong>platykurtic</strong> distributions.</p></li>
+<li><p>Between the above two types are distributions that are more ‘normal’ in shape, referred to as <strong>mesokurtic</strong> distributions</p></li>
 </ul>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-24"></span>
 <img src="figure/kurtosis.png" alt="Types of kurtosis" width="100%" />

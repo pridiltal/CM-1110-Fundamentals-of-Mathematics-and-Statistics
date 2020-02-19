@@ -84,7 +84,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2020-02-18}
+    \date{2020-02-19}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -1859,6 +1859,24 @@ Xmin = 12 Xmax = 95 Q1 =64.25 Q2 = Median = 74.5 Q3 = 87.5
 \hypertarget{summary-measures}{%
 \section{Summary Measures}\label{summary-measures}}
 
+\begin{itemize}
+\item
+  Although frequency distribution serves useful purpose, there are many situations that require other types of data summarization.
+\item
+  What we need in many instances is the ability to summarize the data by means of a single number called a descriptive measure.
+\item
+  Descriptive measures may be computed from the data of a sample or the data of a population. To distinguish between them we have the following definitions.
+\end{itemize}
+
+\textbf{Definitions}
+
+\begin{itemize}
+\item
+  A descriptive measure computed from the data of a sample is called a \textbf{statistic}.
+\item
+  A descriptive measure computed from the data of a population is called a \textbf{parameter}.
+\end{itemize}
+
 \hypertarget{measures-of-central-tendency}{%
 \subsection{Measures of Central Tendency}\label{measures-of-central-tendency}}
 
@@ -1878,6 +1896,8 @@ Xmin = 12 Xmax = 95 Q1 =64.25 Q2 = Median = 74.5 Q3 = 87.5
 \item
   Organizing the data into an ordered array (an ordering of the numbers from smallest to largest) helps to locate the mode.
 \item
+  A series having only one mode is called as \textbf{uni-modal}
+\item
   In the case of a tie for the most frequent occuring value, two modes are listed. Then the data are set to be \textbf{bimodal}
 \item
   If a set of data is not exactly bimodal but contains two values that are more dominant than others, some researchers take the liberty of referring to the data set as bimodal even without an \emph{exact tie} for the mode.
@@ -1887,11 +1907,75 @@ Xmin = 12 Xmax = 95 Q1 =64.25 Q2 = Median = 74.5 Q3 = 87.5
   The mode is an appropriate measure of central tendency for nominal-level data.
 \item
   The mode can be used to determine which category occurs most frequently.
+\end{itemize}
+
+\textbf{For ungrouped data}
+
+\textbf{Example 01:} Find mode of the following datasets
+
+Dataset 1: 12, 14, 10, 8, 6, 8, 15, 8
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/mode1-1} \end{center}
+
+Dataset 2: 40, 44, 57, 48, 78
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/mode2-1} \end{center}
+
+Dataset 3: 42, 45, 55, 50, 45, 40, 55, 45, 52, 55, 54
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/mode3-1} \end{center}
+
+\textbf{For grouped frequency data}
+
+\textbf{Example 02:} Find mode of the following data
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Marks & Number of students\tabularnewline
+\midrule
+\endhead
+20 & 8\tabularnewline
+30 & 10\tabularnewline
+40 & 16\tabularnewline
+50 & 8\tabularnewline
+60 & 5\tabularnewline
+70 & 3\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\tightlist
 \item
   Advantages and disadvantages of mode
 \end{itemize}
 
-\begin{center}\includegraphics[width=1\linewidth]{figure/box21-1} \end{center}
+\textbf{Advantages}
+
+\begin{itemize}
+\tightlist
+\item
+  Easy to understand
+\item
+  Easy to calculate
+\item
+  Not affected by extreme values in the dataset
+\item
+  Good for qualitative data
+\end{itemize}
+
+\textbf{Disadvantages}
+
+\begin{itemize}
+\tightlist
+\item
+  Not suitable for further mathematical calculations
+\item
+  There may be more than one mode for a given dataset
+\item
+  It is not based upon all the observations
+\item
+  In some cases, we may not be able to find a mode for a given dataset
+\end{itemize}
 
 \hypertarget{median}{%
 \subsubsection{Median}\label{median}}
@@ -1914,13 +1998,46 @@ Xmin = 12 Xmax = 95 Q1 =64.25 Q2 = Median = 74.5 Q3 = 87.5
 \[Median = \text{the }(\frac{n+1}{2})\text{th item in the data array} \]
 
 \begin{itemize}
+\tightlist
 \item
   The level of data measurement must be at least ordinal for a median to be meaningful.
+\end{itemize}
+
+\textbf{Example 1:} Find the median of the dataset 1, 8, 6, 3, 2
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/median1-1} \end{center}
+
+\textbf{Example 2:} Find the median of the dataset 8, 9, 1, 2, 14, 12
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/median2-1} \end{center}
+
+\begin{itemize}
+\tightlist
 \item
   Advantages and disadvantages of median
 \end{itemize}
 
-\begin{center}\includegraphics[width=1\linewidth]{figure/box22-1} \end{center}
+\textbf{Advantages}
+
+\begin{itemize}
+\tightlist
+\item
+  Simple to understand
+\item
+  Easy to calculate
+\item
+  Not affected by extreme values in the dataset
+\item
+  Can be calculated even for qualitative variables (ordinal scale data)
+\end{itemize}
+
+\textbf{Disadvantages}
+
+\begin{itemize}
+\tightlist
+\item
+  It is not based upon all the observations
+\end{itemize}
 
 \hypertarget{arithmetic-mean}{%
 \subsubsection{Arithmetic Mean}\label{arithmetic-mean}}
@@ -1954,12 +2071,48 @@ Xmin = 12 Xmax = 95 Q1 =64.25 Q2 = Median = 74.5 Q3 = 87.5
     \[\bar{x} = \frac{\sum{x}}{n}=\frac{x_1+x_2+x_3+...+x_n}{n}\]
   \end{itemize}
 \item
-  It is appropriate to use the mean to analyse data that are not at least interval level in measurement.
+  It is inappropriate to use the mean to analyse data that are not at least interval level in measurement.
+\end{itemize}
+
+\textbf{Example 1:} Calculate the mean from the following data
+
+\begin{longtable}[]{@{}lllllllllll@{}}
+\toprule
+Student & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\tabularnewline
+\midrule
+\endhead
+Marks & 40 & 50 & 53 & 78 & 58 & 60 & 73 & 35 & 43 & 48\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\tightlist
 \item
   Advantages and disadvantages of arithmetic mean
 \end{itemize}
 
-\begin{center}\includegraphics[width=1\linewidth]{figure/box23 -1} \end{center}
+\textbf{Advantages}
+
+\begin{itemize}
+\tightlist
+\item
+  Simple to understand
+\item
+  Easy to calculate
+\item
+  Based on all the observations
+\item
+  Well defined
+\item
+  Unique
+\item
+  Can be used in further calculation
+\end{itemize}
+
+\textbf{Disadvantages}
+- Can be affected by extreme values in the dataset
+- May lead to false conclusions
+- Only applicable to quantitative data (not applicable to qualitative data)
 
 \textbf{Empirical relationship between mean, mode, median}
 
@@ -2050,7 +2203,23 @@ Xmin = 12 Xmax = 95 Q1 =64.25 Q2 = Median = 74.5 Q3 = 87.5
   Advantages and disadvantages of range
 \end{itemize}
 
-\begin{center}\includegraphics[width=1\linewidth]{figure/box26 -1} \end{center}
+\textbf{Advantages}
+
+\begin{itemize}
+\tightlist
+\item
+  Easy to understand and calculate
+\end{itemize}
+
+\textbf{Disadvantages}
+
+\begin{itemize}
+\tightlist
+\item
+  Consider only the highest and lowest values of the data and fails to take account of any other observations in the dataset
+\item
+  Heavily influenced by extreme values
+\end{itemize}
 
 \hypertarget{interquartile-range-iqr}{%
 \subsubsection{Interquartile Range (IQR)}\label{interquartile-range-iqr}}
@@ -2070,7 +2239,23 @@ Xmin = 12 Xmax = 95 Q1 =64.25 Q2 = Median = 74.5 Q3 = 87.5
   By eliminating the lowest 25\% and the highest 25\% of the items in a series, we are left with the central 50\% , which are ordinarily free of extreme values.
 \end{itemize}
 
-\begin{center}\includegraphics[width=1\linewidth]{figure/box27 -1} \end{center}
+\textbf{Advantages}
+
+\begin{itemize}
+\tightlist
+\item
+  Easy to understand and calculate
+\item
+  Not influenced by extreme values
+\end{itemize}
+
+\textbf{Disadvantages}
+
+\begin{itemize}
+\tightlist
+\item
+  Ignore the first \(25\%\) and the last \(25\%\) in the dataset
+\end{itemize}
 
 \hypertarget{variance-and-standard-deviation}{%
 \subsubsection{Variance and Standard Deviation}\label{variance-and-standard-deviation}}
@@ -2136,6 +2321,28 @@ Xmin = 12 Xmax = 95 Q1 =64.25 Q2 = Median = 74.5 Q3 = 87.5
   One feature of standard deviation that distinguishes it from a variance is that the standard deviation is expressed in the same units as the raw data, whereas the variance is expressed in those units squared.
 \end{itemize}
 
+\textbf{Advantages}
+
+\begin{itemize}
+\tightlist
+\item
+  Based on all the observations
+\item
+  Since this is based on arithmetic mean, it has all the merits of it
+\item
+  The most important and widely used measure of dispersion
+\end{itemize}
+
+\textbf{Disadvantages}
+
+\begin{itemize}
+\tightlist
+\item
+  Not easy to understand and difficult to calculate
+\item
+  Gives more weight to extreme values, because the values are squared up
+\end{itemize}
+
 \hypertarget{empirical-rule}{%
 \subsubsection{Empirical Rule}\label{empirical-rule}}
 
@@ -2156,6 +2363,8 @@ Distance from the mean & Values within distance\tabularnewline
 \(\mu\pm3\sigma\) & \(99.7\%\)\tabularnewline
 \bottomrule
 \end{longtable}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/emp -1} \end{center}
 
 \begin{itemize}
 \tightlist
@@ -2241,18 +2450,29 @@ and
 \subsubsection{Coefficient of variation}\label{coefficient-of-variation}}
 
 \begin{itemize}
-\tightlist
+\item
+  In general, for two variables measured with he same units (eg: two groups of people both weighed in kg), the group with the larger variance and standard deviation has n=more variability among their scores.
+\item
+  The unit of measure affects the size od the variance.
+\item
+  The same population weights, expressed in `grams' rather than kg would have a larger variance and standard deviation.
+\item
+  The \emph{coefficient of variation}, a measure of relative variability gets around this difficulty and makes it possible to compare variability across variables measured in different units.
 \item
   The coefficient of variation is the ratio of the standard deviation to the mean, expressed as a percentage and is denoted CV.
 \end{itemize}
 
 \[CV = \frac{\sigma}{\mu}(100)\]
 
+\textbf{Using median and quartile deviation}
+
+\[CV = \frac{\frac{Q_3 - Q_1}{2}}{Median}(100)\]
+
 \begin{itemize}
 \item
   The coefficient of variation essentially is a relative comparison of a standard deviation to its mean.
 \item
-  The coefficient of variation can be useful in comparing standard deviations that have been computed fro data with different means.
+  The coefficient of variation can be useful in comparing standard deviations that have been computed from data with different means.
 \item
   The choice of whether to use a coefficient of variation or raw standard deviations to compare multiple standard deviations is a matter of preference
 \item
@@ -2278,7 +2498,9 @@ and
 \item
   One example of a symmetrical distribution is the normal distribution, or bell curve.
 \item
-  \emph{Skewness} is when a distribution is asymmetrical or lacks symmetry.
+  \textbf{Skewness} is a measure of symmetry, or more precisely, the lack of symmetry
+\item
+  The measures of asymmetry are called as measures of skewness.
 \item
   The skewed portion is the long, thin part of the curve
 \end{itemize}
@@ -2306,7 +2528,7 @@ and
 \end{figure}
 
 \hypertarget{pearsonian-coefficient-of-skewness}{%
-\paragraph{Pearsonian Coefficient of skewness}\label{pearsonian-coefficient-of-skewness}}
+\paragraph{Pearsonian coefficient of skewness}\label{pearsonian-coefficient-of-skewness}}
 
 \begin{itemize}
 \tightlist
@@ -2322,9 +2544,9 @@ where \(S_k\) = coefficient of skewness, \(M_d\) = median
 \item
   Note that if the distribution is symmetrical, the mean and median are the same value and hence the coefficient of skewness is equal to zero.
 \item
-  If the value of \(S_K\) is positive, the distribution is positively skewed.
+  If the value of \(S_k\) is positive, the distribution is positively skewed.
 \item
-  If the value of \(S_K\) is negative, the distribution is negatively skewed.
+  If the value of \(S_k\) is negative, the distribution is negatively skewed.
 \item
   The greater the magnitude of \(S_k\), the more skewed is the distribution.
 \end{itemize}
@@ -2333,33 +2555,16 @@ where \(S_k\) = coefficient of skewness, \(M_d\) = median
 \subsubsection{Kurtosis}\label{kurtosis}}
 
 \begin{itemize}
-\tightlist
 \item
   Kurtosis describes the amount of peakedness of a distribution.
-\end{itemize}
-
-\textbf{leptokurtic}
-
-\begin{itemize}
-\tightlist
 \item
-  Distributions that are high and thin are referred to as leptokurtic distributions.
-\end{itemize}
-
-\textbf{platykurtic}
-
-\begin{itemize}
-\tightlist
+  \textbf{Kurtosis} is a measure of whether the data are peaked or flat relative to a normal distribution
 \item
-  Distributions that are flat and spread out are referred to as platykurtic distributions.
-\end{itemize}
-
-\textbf{mesokurtic}
-
-\begin{itemize}
-\tightlist
+  Distributions that are high and thin are referred to as \textbf{leptokurtic} distributions.
 \item
-  Between the above two types are distributions that are more `normal' in shape, referred to as mesokurtic distributions
+  Distributions that are flat and spread out are referred to as \textbf{platykurtic} distributions.
+\item
+  Between the above two types are distributions that are more `normal' in shape, referred to as \textbf{mesokurtic} distributions
 \end{itemize}
 
 \begin{figure}

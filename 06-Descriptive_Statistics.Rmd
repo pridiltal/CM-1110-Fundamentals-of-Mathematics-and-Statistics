@@ -1128,6 +1128,18 @@ titanic %>%mutate(Pclass = factor(Pclass)) %>%
 
 ## Summary Measures
 
+- Although frequency distribution serves useful purpose, there are many situations that require other types of data summarization.
+
+- What we need in many instances is the ability to summarize the data by means of a single number called a descriptive measure.
+
+- Descriptive measures may be computed from the data of a sample or the data of a population. To distinguish between them we have the following definitions.
+
+**Definitions**
+
+- A descriptive measure computed from the data of a sample is called a **statistic**.
+
+- A descriptive measure computed from the data of a population is called a **parameter**.
+
 ###	Measures of Central Tendency
 
 - **Measure of central tendency** yield information about the center, or middle part, of a group of numbers.
@@ -1141,6 +1153,8 @@ titanic %>%mutate(Pclass = factor(Pclass)) %>%
 
 - Organizing the data into an ordered array (an ordering of the numbers from smallest to largest) helps to locate the mode.
 
+- A series having only one mode is called as **uni-modal**
+
 - In the case of a tie for the most frequent occuring value, two modes are listed. Then the data are set to be **bimodal**
 
 - If a set of data is not exactly bimodal but contains two values that are more dominant than others, some researchers take the liberty of referring to the data set as bimodal even without an *exact tie* for the mode.
@@ -1151,10 +1165,13 @@ titanic %>%mutate(Pclass = factor(Pclass)) %>%
 
 - The mode can be used to determine which category occurs most frequently.
 
-- Advantages and disadvantages of mode
+**For ungrouped data**
 
+**Example 01:** Find mode of the following datasets
 
-```{r box21, out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
+Dataset 1: 12, 14, 10, 8, 6, 8, 15, 8 
+
+```{r mode1, out.width='100%', fig.asp=.25, fig.align='center', fig.pos='h'}
 #df<-data.frame(x = NULL, y = NULL)
 
 ggplot()+
@@ -1163,6 +1180,57 @@ ggplot()+
 
 ```
 
+Dataset 2: 40, 44, 57, 48, 78
+
+```{r mode2, out.width='100%', fig.asp=.25, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+Dataset 3: 42, 45, 55, 50, 45, 40, 55, 45, 52, 55, 54
+
+```{r mode3, out.width='100%', fig.asp=.25, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+**For grouped frequency data**
+
+**Example 02:** Find mode of the following data
+
+Marks                     |  Number of students
+--------------------------|---------------------
+20                        | 8
+30                        | 10
+40                        | 16
+50                        | 8
+60                        | 5
+70                        | 3
+
+
+- Advantages and disadvantages of mode
+
+**Advantages**
+
+- Easy to understand 
+- Easy to calculate 
+- Not affected by extreme values in the dataset
+- Good for qualitative data
+
+**Disadvantages**
+
+- Not suitable for further mathematical calculations
+- There may be more than one mode for a given dataset
+- It is not based upon all the observations
+- In some cases, we may not be able to find a mode for a given dataset
 
 
 #### Median 
@@ -1183,10 +1251,9 @@ ggplot()+
 
 - The level of data measurement must be at least ordinal for a median to be meaningful.
 
-- Advantages and disadvantages of median
+**Example 1:** Find the median of the dataset 1, 8, 6, 3, 2
 
-
-```{r box22, out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
+```{r median1, out.width='100%', fig.asp=.25, fig.align='center', fig.pos='h'}
 #df<-data.frame(x = NULL, y = NULL)
 
 ggplot()+
@@ -1194,6 +1261,30 @@ ggplot()+
   theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
 
 ```
+
+**Example 2:** Find the median of the dataset 8, 9, 1, 2, 14, 12
+
+```{r median2, out.width='100%', fig.asp=.25, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+- Advantages and disadvantages of median
+
+**Advantages**
+
+- Simple to understand 
+- Easy to calculate 
+- Not affected by extreme values in the dataset
+- Can be calculated even for qualitative variables (ordinal scale data)
+
+**Disadvantages**
+
+- It is not based upon all the observations
 
 
 ####	Arithmetic Mean 
@@ -1214,19 +1305,31 @@ ggplot()+
     - Let, $n$ is the number of terms in the sample
  \[\bar{x} = \frac{\sum{x}}{n}=\frac{x_1+x_2+x_3+...+x_n}{n}\]
  
-- It is appropriate to use the mean to analyse data that are not at least interval level in measurement.
+- It is inappropriate to use the mean to analyse data that are not at least interval level in measurement.
+
+**Example 1:** Calculate the mean from the following data
+
+Student  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+---------|---|---|---|---|---|---|---|---|---|---
+Marks    |40 |50 |53 |78 |58 |60 |73 |35 |43 |48
 
 - Advantages and disadvantages of arithmetic mean
 
+**Advantages**
 
-```{r box23 , out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
-#df<-data.frame(x = NULL, y = NULL)
+- Simple to understand 
+- Easy to calculate 
+- Based on all the observations
+- Well defined
+- Unique
+- Can be used in further calculation
 
-ggplot()+
-  theme_void()+
-  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
 
-```
+**Disadvantages**
+- Can be affected by extreme values in the dataset
+- May lead to false conclusions
+- Only applicable to quantitative data (not applicable to qualitative data)
+
 
 **Empirical relationship between mean, mode, median**
 
@@ -1304,15 +1407,14 @@ ggplot()+
 
 - Advantages and disadvantages of range
 
-```{r box26 , out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
-#df<-data.frame(x = NULL, y = NULL)
+**Advantages**
 
-ggplot()+
-  theme_void()+
-  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+- Easy to understand and calculate
 
-```
+**Disadvantages**
 
+- Consider only the highest and lowest values of the data and fails to take account of any other observations in the dataset
+- Heavily influenced by extreme values
 
 ####	Interquartile Range (IQR)
 
@@ -1328,14 +1430,14 @@ ggplot()+
 
 - By eliminating the lowest 25% and the highest 25% of the items in a series, we are left with the central 50% , which are ordinarily free of extreme values.
 
-```{r box27 , out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
-#df<-data.frame(x = NULL, y = NULL)
+**Advantages**
 
-ggplot()+
-  theme_void()+
-  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+- Easy to understand and calculate
+- Not influenced by extreme values
 
-```
+**Disadvantages**
+
+- Ignore the first $25\%$ and the last $25\%$ in the dataset
 
 
 ####	Variance and Standard Deviation
@@ -1376,6 +1478,20 @@ ggplot()+
 
 - One feature of standard deviation that distinguishes it from a variance is that the standard deviation is expressed in the same units as the raw data, whereas the variance is expressed in those units squared.
 
+
+**Advantages**
+
+- Based on all the observations
+- Since this is based on arithmetic mean, it has all the merits of it
+- The most important and widely used measure of dispersion
+
+**Disadvantages**
+
+- Not easy to understand and difficult to calculate
+- Gives more weight to extreme values, because the values are squared up
+
+
+
 #### Empirical Rule
 
 - The empirical rule is an important rule of thumb that is used to state the approximate percentage of values that lie within a given number of standard deviations from the mean of a set of data **if the data are normally distributed**
@@ -1389,7 +1505,14 @@ $\mu\pm1\sigma$         |    $68\%$
 $\mu\pm2\sigma$         |    $95\%$
 $\mu\pm3\sigma$         |    $99.7\%$
 
+```{r  emp , out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
 
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
 
 - If a set of data is normally distributed, or bell shaped, approximately $68\%$ of the data values are within one standard deviation of the mean, $95\%$ are within two standard deviations, and almost $100\%$ are within three standard deviations.
 
@@ -1470,15 +1593,29 @@ ggplot()+
 
 #### Coefficient of variation
 
+
+- In general, for two variables measured with he same units (eg: two groups of people both weighed in kg), the group with the larger variance and standard deviation has n=more variability among their scores.
+
+- The unit of measure affects the size od the variance.
+
+- The same population weights, expressed in 'grams' rather than kg would have a larger variance and standard deviation.
+
+- The *coefficient of variation*, a measure of relative variability gets around this difficulty and makes it possible to compare variability across variables measured in different units.
+
 - The coefficient of variation is the ratio of the standard deviation to the mean, expressed as a percentage and is denoted CV.
 
 \[CV = \frac{\sigma}{\mu}(100)\]
 
+**Using median and quartile deviation**
+
+\[CV = \frac{\frac{Q_3 - Q_1}{2}}{Median}(100)\]
+
 - The coefficient of variation essentially is a relative comparison of a standard deviation to its mean.
 
-- The coefficient of variation can be useful in comparing standard deviations that have been computed fro  data with different means.
+- The coefficient of variation can be useful in comparing standard deviations that have been computed from  data with different means.
 
 - The choice of whether to use a coefficient of variation  or raw standard deviations to compare multiple standard deviations is a matter of preference
+
 - The coefficient of variation also provides and optional method of interpreting the value of a standard deviation.
 
 ###	Measures of Shape
@@ -1493,7 +1630,9 @@ ggplot()+
 
 - One example of a symmetrical distribution is the normal distribution, or bell curve. 
 
-- *Skewness* is when a distribution is asymmetrical or lacks symmetry. 
+- **Skewness** is a measure of symmetry, or more precisely, the lack of symmetry
+
+- The measures of asymmetry are called as measures of skewness.
 
 - The skewed portion is the long, thin part of the curve
 
@@ -1512,7 +1651,7 @@ ggplot()+
 knitr::include_graphics("figure/skewness.jpg")
 ```
 
-##### Pearsonian Coefficient of skewness
+##### Pearsonian coefficient of skewness
 
 - This coefficient compares the mean and median in light of the magnitude of the standard deviation
 
@@ -1523,9 +1662,9 @@ where $S_k$ = coefficient of skewness, $M_d$ = median
 
 - Note that if the distribution is symmetrical, the mean and median are the same value and hence the coefficient of skewness is equal to zero.
 
-- If the value of $S_K$ is positive, the distribution is positively skewed.
+- If the value of $S_k$ is positive, the distribution is positively skewed.
 
-- If the value of $S_K$ is negative, the distribution is negatively skewed.
+- If the value of $S_k$ is negative, the distribution is negatively skewed.
 
 - The greater the magnitude of $S_k$, the more skewed is the distribution.
 
@@ -1533,18 +1672,13 @@ where $S_k$ = coefficient of skewness, $M_d$ = median
 
 - Kurtosis describes the amount of peakedness of a distribution.
 
-**leptokurtic**
+- **Kurtosis** is a measure of whether the data are peaked or flat relative to a  normal distribution
 
-- Distributions that are high and thin are referred to as leptokurtic distributions.
+- Distributions that are high and thin are referred to as **leptokurtic** distributions.
 
+- Distributions that are flat and spread out  are referred to as **platykurtic** distributions.
 
-**platykurtic**
-
-- Distributions that are flat and spread out  are referred to as platykurtic distributions.
-
-**mesokurtic**
-
-- Between the above two types are distributions that are more 'normal' in shape, referred to as mesokurtic distributions
+- Between the above two types are distributions that are more 'normal' in shape, referred to as **mesokurtic** distributions
 
 
 ```{r    out.width = "100%", echo = FALSE, fig.align='center', fig.cap= "Types of kurtosis"}
