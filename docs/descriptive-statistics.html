@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Priyanga D. Talagala" />
 
 
-<meta name="date" content="2020-02-20" />
+<meta name="date" content="2020-02-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -112,6 +112,7 @@
 <li class="chapter" data-level="6.3.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-central-tendency"><i class="fa fa-check"></i><b>6.3.1</b> Measures of Central Tendency</a></li>
 <li class="chapter" data-level="6.3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-variability"><i class="fa fa-check"></i><b>6.3.2</b> Measures of Variability</a></li>
 <li class="chapter" data-level="6.3.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-shape"><i class="fa fa-check"></i><b>6.3.3</b> Measures of Shape</a></li>
+<li class="chapter" data-level="6.3.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-association"><i class="fa fa-check"></i><b>6.3.4</b> Measures of Association</a></li>
 <li class="chapter" data-level="" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#references"><i class="fa fa-check"></i>References</a></li>
 <li class="chapter" data-level="" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tutorial"><i class="fa fa-check"></i>Tutorial</a></li>
 </ul></li>
@@ -1669,6 +1670,61 @@ Figure 6.1: Relationship of mean, median and mode for different types of skewnes
 Figure 6.2: Types of kurtosis
 </p>
 </div>
+</div>
+</div>
+<div id="measures-of-association" class="section level3">
+<h3><span class="header-section-number">6.3.4</span> Measures of Association</h3>
+<ul>
+<li>Many times in business it is important to explore the relationship between two numerical variables</li>
+<li>Measures of association are statistics that yeild information about the relatedness of numerical variables.</li>
+<li>In this section, we discuss only one measure of association, correlation, and d so only for two numerical variables.</li>
+</ul>
+<div id="scatter-plot" class="section level4">
+<h4><span class="header-section-number">6.3.4.1</span> Scatter plot</h4>
+<ul>
+<li>A scatter plot is a two dimensional graph of pairs of points from <strong>two numerical</strong> variables</li>
+<li>In a quantitative bi-variate dataset, we have a <span class="math inline">\((x,y)\)</span> pair for each sampling unit, where <span class="math inline">\(x\)</span> denotes the independent variable and <span class="math inline">\(y\)</span> denotes the dependent variable.</li>
+<li>Each <span class="math inline">\((x,y)\)</span> pair can be considered as a point on the Cartesian plan.</li>
+<li>Scatter plot is a plot of all the <span class="math inline">\((x,y)\)</span> pairs in the dataset.</li>
+<li>The purpose of scatter plot is to illustrate any relationship between two quantitative variables.
+<ul>
+<li>If the variables are related, what kind of relationship it is, linear or nonlinear?</li>
+<li>If the relationship is linear, the scatter plot will show whether it is negative or positive.</li>
+</ul></li>
+</ul>
+<p><strong>Example:</strong> <em>Edgar Anderson’s Iris Data</em></p>
+<p>This famous (Fisher’s or Anderson’s) iris data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica.</p>
+<p><img src="figure/scatterplot-1.png" width="80%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="correlation" class="section level4">
+<h4><span class="header-section-number">6.3.4.2</span> Correlation</h4>
+<ul>
+<li>Correlation is a measure of the degree of relatedness of two or more variables.</li>
+<li>Several measures of correlation are available , the selection of which depends mostly on the level of data being analysed.</li>
+<li>Ideally, researchers would like to calculate <span class="math inline">\(\rho\)</span>, the <strong>population</strong> coefficient of correlation.</li>
+<li>However, because researchers virtually always deal with sample data, this section introduces a widely used sample coefficient of correlation, <span class="math inline">\(r\)</span>.</li>
+<li>This measure is applicable <strong>only if both variables being analysed have at least an interval level of data</strong></li>
+</ul>
+<p><strong>Pearson product-moment correlation coefficient</strong> (<span class="math inline">\(r\)</span>)</p>
+<ul>
+<li>The statistic <span class="math inline">\(r\)</span> is the Pearson product-moment correlation coefficient, named after Karl Pearson (1857 - 1936).</li>
+<li>The tern <span class="math inline">\(r\)</span> is a measure of the <strong>linear</strong> correlation of two variables.</li>
+<li>It is a number that ranges from -1 to 0 to +1, representing th strength of the linear relationship between the variables.</li>
+<li>An <span class="math inline">\(r\)</span> value of <span class="math inline">\(+1\)</span> denotes a perfect <strong>linear</strong> positive relationship between two variables.</li>
+<li>An <span class="math inline">\(r\)</span> value of <span class="math inline">\(-1\)</span> denotes a perfect <strong>linear</strong> negative relationship between two variables, which indicates an inverse relationship between two variables: as one variable gets larger, the other gets smaller.</li>
+<li>An <span class="math inline">\(r\)</span> value of 0 means no <strong>linear</strong> relationship is present between the two variables.</li>
+</ul>
+<p><span class="math display">\[ r = \frac{\sum(x-\bar{x})(y-\bar{y})}{\sqrt{\sum(x-\bar{x})^2\sum(y-\bar{y})^2}}\]</span></p>
+<p><span class="math display">\[ r = \frac{\sum{xy} - \frac{(\sum x\sum y)}{n}}{\sqrt{[\sum{x^2- \frac{(\sum{x})^2}{n}}][\sum y^2-\frac{(\sum y)^2}{n}]}}\]</span></p>
+<ul>
+<li>Examples: Following figure shows five different degrees of correlation:</li>
+</ul>
+<p><img src="figure/cor-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>NOTE</strong></p>
+<ul>
+<li>When <span class="math inline">\(r=0\)</span>, it signifies there is <strong>no linear</strong> relationship between the two variables. (There can be a non-linear relationship, Figure (e))</li>
+<li>Figure (e): There is a very strong curvilinear relationship. But there is <strong>no linear</strong> relationship.</li>
+</ul>
 </div>
 </div>
 <div id="references" class="section level3 unnumbered">

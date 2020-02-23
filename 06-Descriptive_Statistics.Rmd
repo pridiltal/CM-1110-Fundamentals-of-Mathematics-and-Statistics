@@ -1695,6 +1695,131 @@ knitr::include_graphics("figure/kurtosis.png")
 ```
 
 
+###	Measures of Association
+
+- Many times in business it is important to explore the relationship  between two numerical variables 
+- Measures of association are statistics that yeild information about the relatedness of numerical variables.
+- In this section, we discuss only one measure of association, correlation, and d so only for two numerical variables.
+
+#### Scatter plot
+
+- A scatter plot is a two dimensional graph of pairs of points from **two numerical** variables
+-  In a quantitative bi-variate dataset, we have a $(x,y)$ pair for each sampling unit, where $x$ denotes the independent variable and $y$ denotes the dependent variable.
+- Each $(x,y)$ pair can be considered as a point on the Cartesian plan.
+- Scatter plot is a plot of all the $(x,y)$ pairs in the dataset.
+- The purpose of scatter plot is to illustrate any relationship between  two quantitative variables.
+   - If the variables are related, what kind of relationship it is, linear or nonlinear?
+   - If the relationship is linear, the scatter plot will show whether it is negative or positive. 
+   
+**Example:** *Edgar Anderson's Iris Data*
+
+This famous (Fisher's or Anderson's) iris data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica.
+
+```{r scatterplot, out.width='80%', fig.asp=.75, fig.align='center' }
+
+ggplot(iris, aes(Petal.Width, Petal.Length))+
+  geom_point()+
+  theme(aspect.ratio = 1)
+```
+
+
+#### Correlation
+
+- Correlation is a measure of the degree of relatedness of two or more variables. 
+- Several measures of correlation are available , the selection of which depends mostly on the level of data being analysed. 
+- Ideally, researchers would like to calculate $\rho$, the **population** coefficient of correlation. 
+- However, because researchers virtually always deal with sample data, this section introduces a widely used sample coefficient of correlation, $r$.
+- This measure is applicable **only if both variables being analysed have at least an interval level of data**
+
+
+**Pearson product-moment correlation coefficient** ($r$)
+
+- The statistic $r$ is the Pearson product-moment correlation coefficient, named after Karl Pearson (1857 - 1936).
+- The tern $r$ is a measure of the **linear** correlation of two variables.
+- It is a number that ranges from -1 to 0 to +1, representing th strength of the linear relationship between the variables. 
+- An $r$ value of $+1$ denotes a perfect **linear** positive relationship between two variables.
+- An $r$ value of $-1$ denotes a perfect **linear** negative relationship between two variables, which indicates an inverse relationship between two variables: as one variable gets larger, the other gets smaller.
+- An $r$ value of 0 means no **linear** relationship is present between the two variables. 
+
+
+
+\[ r = \frac{\sum(x-\bar{x})(y-\bar{y})}{\sqrt{\sum(x-\bar{x})^2\sum(y-\bar{y})^2}}\]
+
+\[ r = \frac{\sum{xy} - \frac{(\sum x\sum y)}{n}}{\sqrt{[\sum{x^2- \frac{(\sum{x})^2}{n}}][\sum y^2-\frac{(\sum y)^2}{n}]}}\]
+
+- Examples:  Following figure shows five different degrees of correlation: 
+
+```{r cor, out.width='100%', fig.asp=1, fig.align='center'}
+set.seed(123)
+x <- rnorm(100,0,4)
+y <- (2 - 3*x) + rnorm(100, 0, 2)
+data1 <- data.frame(x, y ) 
+r1 <- round(cor(data1$x, data1$y),3)
+p1 <- ggplot(data1, aes(x,y))+
+  geom_point()+
+  theme(aspect.ratio = 1) +
+  ggtitle(paste("(a) Strong negative correlation (r=", r1, ")"))
+
+
+x <- rnorm(100,0,4)
+y <- (2 - 3*x) + rnorm(100, 0, 15)
+data2 <- data.frame(x, y ) 
+r2 <- round(cor(data2$x, data2$y),3)
+p2 <- ggplot(data2, aes(x,y))+
+  geom_point()+
+  theme(aspect.ratio = 1) +
+  ggtitle(paste("(b) Moderate negative correlation (r=", r2, ")"))
+
+
+x <- rnorm(100,0,4)
+y <- (2 + 3*x) + rnorm(100, 0, 3)
+data3 <- data.frame(x, y ) 
+r3 <- round(cor(data3$x, data3$y),3)
+p3 <- ggplot(data3, aes(x,y))+
+  geom_point()+
+  theme(aspect.ratio = 1) +
+  ggtitle(paste("(c) Strong positive correlation (r=", r3, ")"))
+
+
+x <- rnorm(100,0,4)
+y <- (2 + 3*x) + rnorm(100, 0, 15)
+data4 <- data.frame(x, y ) 
+r4 <- round(cor(data4$x, data4$y),3)
+p4 <- ggplot(data4, aes(x,y))+
+  geom_point()+
+  theme(aspect.ratio = 1) +
+  ggtitle(paste("(d) Moderate positive correlation (r=", r4, ")"))
+
+
+x <- rnorm(100,0,15)
+y <- rnorm(100,0,15)
+data5 <- data.frame(x, y ) 
+r5 <- round(cor(data5$x, data5$y),3)
+p5 <- ggplot(data5, aes(x,y))+
+  geom_point()+
+  theme(aspect.ratio = 1) +
+  ggtitle(paste("(e) Virtually no correlation (r=", r5, ")"))
+
+x <- rnorm(1000,0,4)
+y <- -(3*x^2) + rnorm(100, 0, 15)
+data6 <- data.frame(x, y ) 
+r6 <- round(cor(data6$x, data6$y),3)
+p6 <- ggplot(data6, aes(x,y))+
+  geom_point()+
+  theme(aspect.ratio = 1) +
+  ggtitle(paste("(e) Curvilinear relationship. (r=", r6, ")"))
+
+gridExtra::grid.arrange(p1,p2,p3,p4,p5,p6, ncol=2)
+
+
+```
+
+
+**NOTE**
+
+- When $r=0$, it signifies there is **no linear** relationship between the two variables. (There can be a non-linear relationship, Figure (e))
+- Figure (e): There is a very strong curvilinear relationship. But there is **no linear** relationship.
+
 ### References {-}
 
 Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., & Harris, M. (2007). *Australasian business statistics*. John Wiley & Sons.

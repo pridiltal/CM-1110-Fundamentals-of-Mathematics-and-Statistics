@@ -84,7 +84,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2020-02-20}
+    \date{2020-02-23}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -2578,6 +2578,107 @@ where \(S_k\) = coefficient of skewness, \(M_d\) = median
 
 \caption{Types of kurtosis}\label{fig:unnamed-chunk-24}
 \end{figure}
+
+\hypertarget{measures-of-association}{%
+\subsection{Measures of Association}\label{measures-of-association}}
+
+\begin{itemize}
+\tightlist
+\item
+  Many times in business it is important to explore the relationship between two numerical variables
+\item
+  Measures of association are statistics that yeild information about the relatedness of numerical variables.
+\item
+  In this section, we discuss only one measure of association, correlation, and d so only for two numerical variables.
+\end{itemize}
+
+\hypertarget{scatter-plot}{%
+\subsubsection{Scatter plot}\label{scatter-plot}}
+
+\begin{itemize}
+\tightlist
+\item
+  A scatter plot is a two dimensional graph of pairs of points from \textbf{two numerical} variables
+\item
+  In a quantitative bi-variate dataset, we have a \((x,y)\) pair for each sampling unit, where \(x\) denotes the independent variable and \(y\) denotes the dependent variable.
+\item
+  Each \((x,y)\) pair can be considered as a point on the Cartesian plan.
+\item
+  Scatter plot is a plot of all the \((x,y)\) pairs in the dataset.
+\item
+  The purpose of scatter plot is to illustrate any relationship between two quantitative variables.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    If the variables are related, what kind of relationship it is, linear or nonlinear?
+  \item
+    If the relationship is linear, the scatter plot will show whether it is negative or positive.
+  \end{itemize}
+\end{itemize}
+
+\textbf{Example:} \emph{Edgar Anderson's Iris Data}
+
+This famous (Fisher's or Anderson's) iris data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica.
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/scatterplot-1} \end{center}
+
+\hypertarget{correlation}{%
+\subsubsection{Correlation}\label{correlation}}
+
+\begin{itemize}
+\tightlist
+\item
+  Correlation is a measure of the degree of relatedness of two or more variables.
+\item
+  Several measures of correlation are available , the selection of which depends mostly on the level of data being analysed.
+\item
+  Ideally, researchers would like to calculate \(\rho\), the \textbf{population} coefficient of correlation.
+\item
+  However, because researchers virtually always deal with sample data, this section introduces a widely used sample coefficient of correlation, \(r\).
+\item
+  This measure is applicable \textbf{only if both variables being analysed have at least an interval level of data}
+\end{itemize}
+
+\textbf{Pearson product-moment correlation coefficient} (\(r\))
+
+\begin{itemize}
+\tightlist
+\item
+  The statistic \(r\) is the Pearson product-moment correlation coefficient, named after Karl Pearson (1857 - 1936).
+\item
+  The tern \(r\) is a measure of the \textbf{linear} correlation of two variables.
+\item
+  It is a number that ranges from -1 to 0 to +1, representing th strength of the linear relationship between the variables.
+\item
+  An \(r\) value of \(+1\) denotes a perfect \textbf{linear} positive relationship between two variables.
+\item
+  An \(r\) value of \(-1\) denotes a perfect \textbf{linear} negative relationship between two variables, which indicates an inverse relationship between two variables: as one variable gets larger, the other gets smaller.
+\item
+  An \(r\) value of 0 means no \textbf{linear} relationship is present between the two variables.
+\end{itemize}
+
+\[ r = \frac{\sum(x-\bar{x})(y-\bar{y})}{\sqrt{\sum(x-\bar{x})^2\sum(y-\bar{y})^2}}\]
+
+\[ r = \frac{\sum{xy} - \frac{(\sum x\sum y)}{n}}{\sqrt{[\sum{x^2- \frac{(\sum{x})^2}{n}}][\sum y^2-\frac{(\sum y)^2}{n}]}}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Examples: Following figure shows five different degrees of correlation:
+\end{itemize}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/cor-1} \end{center}
+
+\textbf{NOTE}
+
+\begin{itemize}
+\tightlist
+\item
+  When \(r=0\), it signifies there is \textbf{no linear} relationship between the two variables. (There can be a non-linear relationship, Figure (e))
+\item
+  Figure (e): There is a very strong curvilinear relationship. But there is \textbf{no linear} relationship.
+\end{itemize}
 
 \hypertarget{references}{%
 \subsection*{References}\label{references}}
