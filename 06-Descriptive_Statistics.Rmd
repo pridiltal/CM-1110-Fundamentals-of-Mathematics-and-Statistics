@@ -1849,3 +1849,131 @@ Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., & Harris, M. (20
   f. The  sales at the local pizza restaurant each month 
   g. A student index number
   h. The response time of emergency services
+
+
+3. The grades of 30 students for Statistics are as follows:
+
+    B,	C,	B,	D,	B,	C,	C,	A	, B,	C,
+
+    C,	B,	E,	B,	B,	D,	D,	F,	B,	D,
+
+    D,	A,	B,	A,	B,	C,	E,	A,	A,	E
+
+i.	Construct a frequency table
+ii.	Find the absolute frequency, relative frequency and cumulative frequency of each class
+
+4. In a study conducted to investigate the relationship between delivery time and computer- assisted ordering, the following data were gathered from a sample of 40 firms, that 16 use computer-assisted ordering, while 24 do not. Furthermore, past data are used to categorize each firm's delivery times below the industry average, equal to the industry average, or above the industry average. The results obtained are given in the table below.
+
+
+Computer Assisted Ordering | Delivery Time Below Industry Average | Delivery Time Equal to Industry Average | Delivery Time Above industry Average |Row Total
+------------------|---------------------| ----------------------|-----------------|---------------------
+No |4 |12|8| 24
+Yes | 10 | 4 | 2 | 16
+Column Total | 14|16|10|40
+
+a) For each row and column total, calculate the corresponding row or column percentage.
+b) For each cell, calculate the corresponding cell, row, and column percentages.
+c) Carry out graphical analysis to investigate the relationship between delivery-time performance and computer-assisted ordering.
+d) What conclusions can be made about the nature of the relationship?
+
+5. 
+a) Giving suitable examples distinguish between multiple bar chart and a component bar chart.
+b) Write down advantages and disadvantages of each chart and when they should be used
+
+6. In a study conducted to investigate the effect of wearing helmets in riding motorcycles to reduce the head injuries, the following data were gathered by investigating 151 motorcycle accidents reported during last 10 month period. Out of the total number of cases (151) investigated, only 102 people were wearing helmets properly at the time of the accidents. Out of them, only 9 got severe head injuries. The rest got either minor head injuries or no head injuries at all. Among 49 who were not wearing helmets at the time of the accident, 15 got server head injuries and the rest got minor head injuries or no head injuries at all.
+
+a) Use an appropriate table to represent the above data and state what conclusions can be drawn from it
+
+b) Carry out a suitable graphical analysis to investigate the effect of wearing helmets in riding motorcycles to reduce the head injuries.
+
+7. The table below shows a frequency distribution of the weekly wages of 65 employees at the ABC Company. With reference to this table,
+
+Wages (in $) | Number of Employees
+-------------|--------------------
+250.00 - 259.99 | 8
+260.00 - 269.99 | 10
+270.00 - 279.99 | 16
+280.00 - 289.99 | 14
+290.00 - 299.99 | 10
+300.00 - 309.99 | 5
+310.00 - 319.99 | 2
+Total           | 65
+
+a) Construct a histogram
+b) Construct a frequency polygon
+c) Construct a frequency curve
+d) State what conclusions can be drawn from the above graphical analysis
+
+
+8. The contribution of the agriculture, industrial, and service sector to the Gross Domestic Product (GDP) for each province in Sri Lanka is given in the table below. It is required to investigate whether the contributions are varying from province to province. What kind of graph you would suggest for representing data to serve the purpose. Justify your answer. Sketch the proposed graph.
+
+```{r   out.width = "100%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/C6T1.png")
+```
+
+
+9.  Marks of 16 students are given below. 
+
+\[\text{52, 88, 56, 79, 72, 91,  85, 88, 68, 63, 76, 73, 86, 95, 12, 69}\]
+
+(a)	Find the quartile of the ditribution and interpret the values
+(b)	Construct a box plot for the data set 
+(c)	Are there outliers in the data set? 
+
+10. Listed below, ordered from smallest to largest, is the time in days the customers take to pay their invoices. 
+
+\[13, 13, 13, 20, 26, 27, 31, 34, 34, 34, 35, 35, 36, 37, 38, 41, 41, 41, 45, 47, 47, 47, 50, 51, 53, 54, 56, 62, 67, 82\]
+
+(a) Determine the median 
+(b) Determine the first and third quartiles
+(c) Determine the 2nd decile and the 8th decile
+(d) Determine the 67th percentile
+
+11. 
+
+(a)	What are outliers?
+(b)	Which of the following is/are unaffected by outliers? Underline the correct answer/ answers.
+a.	Mean 
+b.	Median 
+c.	Mode 
+d.	Range
+e.	Standard deviation 
+f.	Inter-quartile range
+
+(c)	Some summary measures of a variable is given below.
+Descriptive Statistics: 
+
+N |  Mean | StDev|  Minimum | Q1 | Median  | Q3| Maximum
+----|----|----|----|----|----|----|----
+50|5.389| 0.997 |3.150 |4.658|5.350  |     6.020 |  8.600
+
+(d)	Are there outliers in this data set? YES/NO
+Justify your answer using a box plot
+
+
+12. The mean and the standard deviation of 250 observations of a variable X are 62.1 and 4.3 respectively. However, in a re-scrutinizing process, it was found that the observations 72 and 81 were incorrectly recorded as 92 and 87. Find the correct mean and standard deviation of the data set.
+
+
+13. Marks for the course module AB and the corresponding lecture attendence of 10 students are given below 
+
+Student Number |	1	|2|	3|	4|	5	|6|	7	|8|	9|	10
+-------------|---|---|---|---|---|---|---|---|---|---
+Marks in course  module AB|	84|	51|	91	|60	|68|	89|	98|	58|	53|	47
+Lecture attendence |	13| 6	| 15 |	4	 |12|14|	15|	10|	11|	6
+
+(a)	Draw a scatter plot for the above data
+(b)	Calculate the coefficient of correlation
+(c)	Comment on the relationship between the marks and the lecture attendence
+
+14. Compare the variation of the annual incomes of executives with the variation of the incomes of unskilled employees. The sample information is given below.
+
+Type |  $\bar{x}$ | $SD$
+-----|------------|--------
+Executives |   500,000 | 50,000
+Unskilled employees | 22,000 | 2,200
+
+
+15. The weekly sales from a sample of Hi-Tec electronic supply stores were organized into a frequency distribution. The mean of weekly sales was computed to be \$105,900, the median \$105,000, and the mode \$104,500
+
+(a)  Sketch the sales in the form of a smoothed frequency polygon. Note the location of the mean, median and mode on the X-axis
+(b) Is the ditribution symmetrical, positively skewed, or negatively skewed? Explain.
