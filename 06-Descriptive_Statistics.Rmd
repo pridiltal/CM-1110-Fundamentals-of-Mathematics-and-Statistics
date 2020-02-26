@@ -1827,9 +1827,11 @@ Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., & Harris, M. (20
 
 \newpage
 
-### Tutorial {-}
+\pagenumbering{arabic}
 
-#### Chapter 6: Descriptive Statistics {-}
+## Tutorial 
+
+### Chapter 6: Descriptive Statistics {-}
 
 
 1. A power company in Sri Lanka designs and manufactures power distribution switchboards for hospitals, bridges, airports, highways and water treatment plants. Power company marketing director wants to determine client satisfaction with their products and services. He developed a questionnaire that yields a satisfaction score between 0 and 100 for participant responses. A random sample of 50 of the company's 1000 clients is asked to complete a satisfaction survey. The satisfaction scores for the 50 participants are averaged to produce a mean satisfaction score.
@@ -1963,7 +1965,19 @@ Justify your answer using a box plot
 13. The mean and the standard deviation of 250 observations of a variable X are 62.1 and 4.3 respectively. However, in a re-scrutinizing process, it was found that the observations 72 and 81 were incorrectly recorded as 92 and 87. Find the correct mean and standard deviation of the data set.
 
 
-14. Marks for the course module AB and the corresponding lecture attendance of 10 students are given below 
+14. The weekly sales from a sample of AB company were organized into a frequency distribution. The mean of weekly sales was computed to be \$105,900, the median \$105,000, and the mode \$104,500
+
+(a)  Sketch the sales in the form of a smoothed frequency polygon. Note the location of the mean, median and mode on the X-axis
+(b) Is the distribution symmetrical, positively skewed, or negatively skewed? Explain.
+
+15. Compare the variation of the annual incomes of executives with the variation of the incomes of unskilled employees. The sample information is given below.
+
+Type |  $\bar{x}$ | $SD$
+-----|------------|--------
+Executives |   500,000 | 50,000
+Unskilled employees | 22,000 | 2,200
+
+16. Marks for the course module AB and the corresponding lecture attendance of 10 students are given below 
 
 Student Number |	1	|2|	3|	4|	5	|6|	7	|8|	9|	10
 -------------|---|---|---|---|---|---|---|---|---|---
@@ -1973,17 +1987,3 @@ Lecture attendance |	13| 6	| 15 |	4	 |12|14|	15|	10|	11|	6
 (a)	Draw a scatter plot for the above data
 (b)	Calculate the coefficient of correlation
 (c)	Comment on the relationship between the marks and the lecture attendance
-
-15. Compare the variation of the annual incomes of executives with the variation of the incomes of unskilled employees. The sample information is given below.
-
-Type |  $\bar{x}$ | $SD$
------|------------|--------
-Executives |   500,000 | 50,000
-Unskilled employees | 22,000 | 2,200
-
-
-16. The weekly sales from a sample of Hi-Tec electronic supply stores were organized into a frequency distribution. The mean of weekly sales was computed to be \$105,900, the median \$105,000, and the mode \$104,500
-
-(a)  Sketch the sales in the form of a smoothed frequency polygon. Note the location of the mean, median and mode on the X-axis
-(b) Is the distribution symmetrical, positively skewed, or negatively skewed? Explain.
-
