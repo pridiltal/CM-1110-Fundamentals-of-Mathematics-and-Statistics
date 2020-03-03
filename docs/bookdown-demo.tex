@@ -84,7 +84,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2020-02-26}
+    \date{2020-03-03}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -212,7 +212,7 @@ Numbers can be classified according to how they are represented or according to 
 \item
   We call `\(a\)' the real part and `\(b\)' the imaginary part of the complex number \(a+ib\).
 \item
-  IF \(a=0\) the number \(ib\) is said to be purely imaginary, if \(b=0\) the number \(a\) is real.
+  If \(a=0\) the number \(ib\) is said to be purely imaginary, if \(b=0\) the number \(a\) is real.
 \item
   A pair of complex number \(a+ib\) and \(a-ib\) are said to be conjugate of each other.
 \item
@@ -376,7 +376,7 @@ Let \(x+iy\) be a complex number and \(x-iy\) its conjugate complex.
 \item
   i.e irrational number is a number that cannot be written as a ratio \(x/y\) form (or fraction).
 \item
-  In decimal form, is never ends or repeats.
+  In decimal form, it never ends or repeats.
 \item
   Examples for irrational numbers are \(\sqrt{2} = 1.414213......\), \(\pi = 3.14159265.......\), \(\sqrt{3}\), \(\sqrt{5}\) etc.
 \end{itemize}
@@ -431,6 +431,412 @@ Dass, H. K. (2008). `Complex Numbers', \emph{Advanced Engineering Mathematics}. 
 \hypertarget{number-representations}{%
 \section{Number representations}\label{number-representations}}
 
+\hypertarget{glossary-of-terms-used-in-the-positional-numeral-systems}{%
+\subsection{Glossary of terms used in the positional numeral systems}\label{glossary-of-terms-used-in-the-positional-numeral-systems}}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox1-1} \end{center}
+
+\begin{itemize}
+\item
+  There are various types of the number system in mathematics.
+\item
+  The four most common number system types are:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Decimal number system (Base- 10)
+  \item
+    Binary number system (Base- 2)
+  \item
+    Octal number system (Base-8)
+  \item
+    Hexadecimal number system (Base- 16)
+  \end{itemize}
+\end{itemize}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+System & Radix/ Base & Digits\tabularnewline
+\midrule
+\endhead
+Binary & 2 & 0 1\tabularnewline
+Octal & 8 & 0 1 2 3 4 5 6 7\tabularnewline
+Decimal & 10 & 0 1 2 3 4 5 6 7 8 9\tabularnewline
+Hexadecimal & 16 & 0 1 2 3 4 5 6 7 8 9 A B C D E F\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{decimal-number-system}{%
+\subsection{Decimal number system}\label{decimal-number-system}}
+
+\begin{itemize}
+\item
+  The Decimal number system is a number of base or radix equal to 10.
+\item
+  To determine the actual number in each position , take the number that appears in the position and multiply it by \(10^x\), where \(x\) is the power representation.
+\end{itemize}
+
+Example 1: The value of the combination of symbols 453 is determined by adding the weights of each position as
+
+\[4\times10^2+5\times10^1+3\times10^0\]
+\[= 4\times100 + 5\times10+3\times1\]
+Or \[= 400+50+3 = 453\]
+
+Example 2: The value of the combination of symbols 369.54 is determined by adding the weights of each position as
+
+\[3\times10^2+6\times10^1+9\times10^0+5\times10^{-1}+4\times10^{-2}\]
+Or \[= 300 + 60+9+\frac{5}{10}+\frac{4}{100}\]
+Or \[= 300 + 60+9+0.5+0.04= 369.54\]
+
+\hypertarget{binary-number-system}{%
+\subsection{Binary number system}\label{binary-number-system}}
+
+\begin{itemize}
+\tightlist
+\item
+  The binary number system is a number system of base or radix equal to 2.
+\item
+  In the binary number system there are two symbols to represent number: 0 and 1
+\item
+  When the symbols 0 an 1 are used to represent binary number, each symbol is called a binary digit or a bit.
+\item
+  Therefore, the binary number 1011 is a four-digit number or a 4-bit binary number
+\end{itemize}
+
+\hypertarget{binary-to-decimal-conversion}{%
+\subsubsection{Binary-to-Decimal Conversion}\label{binary-to-decimal-conversion}}
+
+\begin{itemize}
+\tightlist
+\item
+  Multiply binary digit (1 or 0) in each position by the weight of the position and add the results.
+\end{itemize}
+
+\textbf{Example 1: Convert the binary number 11010 to its decimal equivalent}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox2-1} \end{center}
+
+\textbf{Example 2: Convert the binary number 0.011 to its decimal equivalent}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox3-1} \end{center}
+
+\textbf{Example 3: Convert the binary number 110.011 to its decimal equivalent}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox4-1} \end{center}
+
+\hypertarget{decimal-to-binary-conversion}{%
+\subsubsection{Decimal-to-Binary Conversion}\label{decimal-to-binary-conversion}}
+
+\begin{itemize}
+\tightlist
+\item
+  To convert decimal numbers to their binary equivalent, the following procedures are employed:
+\end{itemize}
+
+\hypertarget{whole-number-conversion-repeated-division-by-2}{%
+\paragraph{Whole number conversion : Repeated division by 2}\label{whole-number-conversion-repeated-division-by-2}}
+
+\begin{itemize}
+\tightlist
+\item
+  The remainder resulting from each division forms binary number.
+\item
+  The first remainder to be produced is called the least significant bit (LSB) and the last remainder is called most significant bit (MSB)
+\end{itemize}
+
+\textbf{Example 1: Convert the decimal number 17 to binary}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox5-1} \end{center}
+
+\hypertarget{fractional-number-conversion-repeated-multiplication-by-2}{%
+\paragraph{Fractional number conversion : Repeated multiplication by 2}\label{fractional-number-conversion-repeated-multiplication-by-2}}
+
+\begin{itemize}
+\tightlist
+\item
+  Multiply repeatedly by 2 any factional part
+\item
+  The equivalent binary number is formed from the 1 or 0 in the units position (\(10^0\) position).
+\end{itemize}
+
+\textbf{Example 1: Convert the decimal number 0.625 to binary}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox6-1} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  Sometimes it will be necessary to terminate the multiplication when an acceptable degree of accuracy is obtained. Then the resulted binary number will be an approximation.
+\end{itemize}
+
+\textbf{Example 2: Convert the decimal number 0.6 to binary}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox7-1} \end{center}
+
+\textbf{Example 3: Convert the decimal number 49.683 to binary}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox8-1} \end{center}
+
+\hypertarget{octal-number-system}{%
+\subsection{Octal number system}\label{octal-number-system}}
+
+\begin{itemize}
+\tightlist
+\item
+  The octal system is a number system of base or radix equal to 8.
+\end{itemize}
+
+\hypertarget{octal-to-decimal-conversion}{%
+\subsubsection{Octal-to-decimal conversion}\label{octal-to-decimal-conversion}}
+
+\textbf{Example 1: Convert the following octal numbers to their decimal equivalent}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(35_8\)
+\item
+  \(100_8\)
+\item
+  \(0.24_8\)
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox9-1} \end{center}
+
+\hypertarget{decimal-to-octal-conversion}{%
+\subsubsection{Decimal-to-octal conversion}\label{decimal-to-octal-conversion}}
+
+\begin{itemize}
+\tightlist
+\item
+  To convert decimal numbers to their octal equivalent, the following procedures are employed:
+\end{itemize}
+
+\hypertarget{whole-number-conversion-repeated-division-by-8}{%
+\paragraph{Whole number conversion : Repeated division by 8}\label{whole-number-conversion-repeated-division-by-8}}
+
+\textbf{Example 1: Convert the decimal number 245 to octal equivalent}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox10-1} \end{center}
+
+\hypertarget{fractional-number-conversion-repeated-multiplication-by-8}{%
+\paragraph{Fractional number conversion : Repeated multiplication by 8}\label{fractional-number-conversion-repeated-multiplication-by-8}}
+
+\textbf{Example 2: Convert the decimal fraction 0.432 to octal equivalent}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox11-1} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  This conversion to octal is not precise as there is a remainder.
+\item
+  If greater accuracy is required, continue multiplying by 8 to obtain more octal digits.
+\end{itemize}
+
+\textbf{Example 3: Convert the decimal number 419.95 to octal equivalent}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox12-1} \end{center}
+
+\hypertarget{octal-to-binary-conversion}{%
+\subsubsection{Octal-to-binary conversion}\label{octal-to-binary-conversion}}
+
+** Octal and binary number correspondence**
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Octal & Binary\tabularnewline
+\midrule
+\endhead
+0 & 000\tabularnewline
+1 & 001\tabularnewline
+2 & 010\tabularnewline
+3 & 011\tabularnewline
+4 & 100\tabularnewline
+5 & 101\tabularnewline
+6 & 110\tabularnewline
+7 & 111\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\tightlist
+\item
+  To convert from octal to binary, simply replace each octal digit with the corresponding three-digit binary number.
+\end{itemize}
+
+\textbf{Example 1: Convert the following octal numbers to their binary equivalent}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(247_8\)
+\item
+  \(124.375_8\)
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox131-1} \end{center}
+
+\hypertarget{binary-to-octal-conversion}{%
+\subsubsection{Binary-to-octal conversion}\label{binary-to-octal-conversion}}
+
+\begin{itemize}
+\tightlist
+\item
+  To convert from binary to octal,the binary number is divided into groups of three bits and then each group of three bits is replaced by an octal digit.
+\end{itemize}
+
+\textbf{Example 1: Convert the binary number 11010101.01101 to its octal equivalent}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox13-1} \end{center}
+
+\hypertarget{hexadecimal-number-system}{%
+\subsection{Hexadecimal number system}\label{hexadecimal-number-system}}
+
+\begin{itemize}
+\tightlist
+\item
+  The Hexadecimal system is a number system of base or radix equal to 816.
+\item
+  Hexadecimal is similar to the octal numeral system because each can be easily compared to the binary numeral system.
+\item
+  Example values of hexadecimal numbers converted into binary, octal and decimal.
+\end{itemize}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+Hexadecimal & Binary & Octal & Decimal\tabularnewline
+\midrule
+\endhead
+0 & 0000 & 0 & 0\tabularnewline
+1 & 0001 & 1 & 1\tabularnewline
+2 & 0010 & 2 & 2\tabularnewline
+3 & 0011 & 3 & 3\tabularnewline
+4 & 0100 & 4 & 4\tabularnewline
+5 & 0101 & 5 & 5\tabularnewline
+6 & 0110 & 6 & 6\tabularnewline
+7 & 0111 & 7 & 7\tabularnewline
+8 & 1000 & 10 & 8\tabularnewline
+9 & 1001 & 11 & 9\tabularnewline
+A & 1010 & 12 & 10\tabularnewline
+B & 1011 & 13 & 11\tabularnewline
+C & 1100 & 14 & 12\tabularnewline
+D & 1101 & 15 & 13\tabularnewline
+E & 1110 & 16 & 14\tabularnewline
+F & 1111 & 17 & 15\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{hexadecimal-to-decimal-conversion}{%
+\subsubsection{Hexadecimal-to-decimal conversion}\label{hexadecimal-to-decimal-conversion}}
+
+\textbf{Example 1: Convert the following octal numbers to their decimal equivalent}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(C7_{16}\)
+\item
+  \(2F_{16}\)
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox14-1} \end{center}
+
+\hypertarget{decimal-to-hexadecimal-conversion}{%
+\subsubsection{Decimal-to-Hexadecimal conversion}\label{decimal-to-hexadecimal-conversion}}
+
+\begin{itemize}
+\tightlist
+\item
+  To convert decimal numbers to their hexadecimal equivalent, the following procedures are employed:
+\end{itemize}
+
+\hypertarget{whole-number-conversion-repeated-division-by-16}{%
+\paragraph{Whole number conversion : Repeated division by 16}\label{whole-number-conversion-repeated-division-by-16}}
+
+\textbf{Example 1: Convert the decimal number 245 to Hexadecimal equivalent}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox15-1} \end{center}
+
+\hypertarget{fractional-number-conversion-repeated-multiplication-by-16}{%
+\paragraph{Fractional number conversion : Repeated multiplication by 16}\label{fractional-number-conversion-repeated-multiplication-by-16}}
+
+\textbf{Example 2: Convert the decimal fraction 0.0738 to Hexadecimal equivalent}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox16-1} \end{center}
+
+\textbf{Example 3: Convert the decimal number 420.0095 to Hexadecimal equivalent}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox17-1} \end{center}
+
+\hypertarget{hexadecimal-to-binary-conversion}{%
+\subsubsection{Hexadecimal-to-binary conversion}\label{hexadecimal-to-binary-conversion}}
+
+\begin{itemize}
+\tightlist
+\item
+  To convert from Hexadecimal to binary, simply replace each Hexadecimal digit with the corresponding four-digit binary number.
+\end{itemize}
+
+\textbf{Example 1: Convert the following Hexadecimal numbersto their binary equivalent}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(7B_{16}\)
+\item
+  \(6D.8C_{16}\)
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox18-1} \end{center}
+
+\hypertarget{binary-to-hexadecimal-conversion}{%
+\subsubsection{Binary-to-Hexadecimal conversion}\label{binary-to-hexadecimal-conversion}}
+
+\begin{itemize}
+\tightlist
+\item
+  To convert from binary to Hexadecimal, the binary number is divided into groups of four bits and then each group of four bits is replaced by an Hexadecimal digit.
+\end{itemize}
+
+\textbf{Example 1: Convert the binary number 11010101.01101 to its Hexadecimal equivalent}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox19-1} \end{center}
+
+\hypertarget{octal-to-hexadecimal-conversion}{%
+\subsubsection{Octal-to-Hexadecimal conversion}\label{octal-to-hexadecimal-conversion}}
+
+\begin{itemize}
+\tightlist
+\item
+  First convert octal to binary, and then convert binary to hexadecimal.
+\end{itemize}
+
+\textbf{Example 1: Convert the octal number 365.52 to its Hexadecimal equivalent}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox20-1} \end{center}
+
+\hypertarget{hexadecimal-to-octal-conversion}{%
+\subsubsection{Hexadecimal-to-octal conversion}\label{hexadecimal-to-octal-conversion}}
+
+\begin{itemize}
+\tightlist
+\item
+  First convert Hexadecimal to binary, and then convert binary to octal
+\end{itemize}
+
+\textbf{Example 1: Convert the octal number D2B.284 to its Hexadecimal equivalent}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox21-1} \end{center}
+
+\hypertarget{binary-arithmetic}{%
+\subsection{Binary Arithmetic}\label{binary-arithmetic}}
+
 Decimal: The standard Hindu--Arabic numeral system using base ten.
 
 Binary: The base-two numeral system used by computers.
@@ -466,7 +872,7 @@ Knuth's up-arrow notation, Conway chained arrow notation, and Bowers's operators
 \url{http://www.compsci.hunter.cuny.edu/~sweiss/resources/BinaryNumbers.pdf}
 
 \url{https://www.cs.bu.edu/courses/cs101a1/slides/CS101.Lect15.BinaryNumbers.ppt.pdf}
-
+4
 \url{https://www.eecs.wsu.edu/~ee314/handouts/numsys.pdf}
 
 \url{http://www.uobabylon.edu.iq/eprints/publication_3_8400_6187.pdf}

@@ -10,7 +10,7 @@ opts_chunk$set(
   cache.path = 'cache/',
   fig.align = 'center',
   fig.show = 'hold',
-  cache = TRUE,
+  cache = FALSE,
   external = TRUE,
   dev = "png",
   fig.height = 16,
@@ -41,7 +41,7 @@ knitr::include_graphics("figure/1-numbertypes.png")
 - Every number in number system taken as a complex number
 - A number of the form $a+ib$ is called a complex number when $a$ and $b$ are real numbers and $i=\sqrt{-1}$.
 - We call '$a$' the real part and '$b$' the imaginary part of the complex number $a+ib$.
-- IF $a=0$ the number $ib$ is said to be purely imaginary, if $b=0$ the number $a$ is real.
+- If $a=0$ the number $ib$ is said to be purely imaginary, if $b=0$ the number $a$ is real.
 - A pair of complex number $a+ib$ and $a-ib$ are said to be conjugate of each other.
 - Show that the sum and product of a complex number and its conjugate complex are both real.
 
@@ -132,7 +132,7 @@ c. for example 6.789542587436512..........
 - Irrational numbers are denoted by $\mathbb{I}$
 - An Irrational numbers are non terminating and non periodic fractions.
 - i.e irrational number is a number that cannot be written as a ratio $x/y$ form (or fraction). 
-- In decimal form, is never ends or repeats.
+- In decimal form, it never ends or repeats.
 - Examples for irrational numbers are $\sqrt{2} = 1.414213......$, $\pi = 3.14159265.......$, $\sqrt{3}$, $\sqrt{5}$ etc.
 
 ### Integers
@@ -161,6 +161,434 @@ c. for example 6.789542587436512..........
 Dass, H. K. (2008). 'Complex Numbers', *Advanced Engineering Mathematics*. S. Chand Publishing.  pp. 474-520.
 
 ## Number representations
+
+
+### Glossary of terms used in the positional numeral systems
+
+```{r NSbox1, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+- There are various types of the number system in mathematics.
+
+- The four most common number system types are:
+
+  - Decimal number system (Base- 10)
+  - Binary number system (Base- 2)
+  - Octal number system (Base-8)
+  - Hexadecimal number system (Base- 16)
+  
+System      | Radix/  Base | Digits
+------------|--------------|-------------------------------
+Binary      | 2            | 0 1
+Octal       | 8            | 0 1 2 3 4 5 6 7
+Decimal     | 10           | 0 1 2 3 4 5 6 7 8 9
+Hexadecimal | 16           | 0 1 2 3 4 5 6 7 8 9 A B C D E F 
+### Decimal number system
+
+- The Decimal number system is a number of base or radix equal to 10.
+
+- To determine the actual number in each position , take the number that appears in the position and multiply it by $10^x$, where $x$ is the power representation.
+
+Example 1: The value of the combination of symbols 453 is determined by adding the weights of each position as
+
+\[4\times10^2+5\times10^1+3\times10^0\]
+\[= 4\times100 + 5\times10+3\times1\]
+Or \[= 400+50+3 = 453\]
+
+
+Example 2: The value of the combination of symbols 369.54 is determined by adding the weights of each position as
+
+\[3\times10^2+6\times10^1+9\times10^0+5\times10^{-1}+4\times10^{-2}\]
+Or \[= 300 + 60+9+\frac{5}{10}+\frac{4}{100}\]
+Or \[= 300 + 60+9+0.5+0.04= 369.54\]
+
+### Binary number system
+
+- The binary number system is a number system of base or radix equal to 2.
+- In the binary number system  there are two symbols to represent number: 0 and 1
+- When the symbols 0 an 1 are used to represent binary number, each symbol is called a binary digit or a bit.
+- Therefore, the binary number 1011 is a four-digit number or a 4-bit binary number
+
+#### Binary-to-Decimal Conversion
+
+- Multiply binary digit (1 or 0) in each position by the weight of the position and add the results. 
+
+**Example 1: Convert the  binary number  11010 to its decimal equivalent**
+
+
+```{r NSbox2, out.width='100%', fig.asp=.5, fig.align='center',  fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+**Example 2: Convert the  binary number 0.011  to its decimal equivalent**
+
+
+```{r NSbox3,  out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+**Example 3: Convert the  binary number 110.011 to its decimal equivalent**
+
+
+```{r NSbox4,  out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+####  Decimal-to-Binary Conversion
+
+- To convert decimal numbers to their binary equivalent, the following procedures are employed:
+
+##### Whole number conversion : Repeated division by 2        
+
+- The remainder resulting from each division forms binary number.
+- The first remainder to be produced is called the least significant bit (LSB) and the last remainder is called most significant bit (MSB)
+
+**Example 1: Convert the decimal number 17 to binary**
+
+
+```{r NSbox5,  out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+       
+         
+##### Fractional number conversion : Repeated multiplication by 2
+
+- Multiply repeatedly by 2 any factional part
+- The equivalent binary number is formed from the 1 or 0 in the units position ($10^0$ position).
+
+**Example 1: Convert the decimal number 0.625 to binary**
+
+
+```{r NSbox6, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+- Sometimes it will be necessary to terminate the multiplication when an acceptable degree of accuracy is obtained. Then the resulted binary number will be an approximation.
+
+**Example 2: Convert the decimal number 0.6 to binary**
+
+
+```{r NSbox7, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+**Example 3: Convert the decimal number 49.683 to binary**
+
+```{r NSbox8, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+###  Octal number system 
+
+- The octal system is a number system of base or radix equal to 8.
+
+#### Octal-to-decimal conversion
+
+**Example 1: Convert the following octal numbers to their decimal equivalent**
+
+(a) $35_8$
+(b) $100_8$
+(c) $0.24_8$
+
+```{r NSbox9,  out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+#### Decimal-to-octal conversion
+
+- To convert decimal numbers to their octal equivalent, the following procedures are employed:
+
+##### Whole number conversion : Repeated division by 8
+
+**Example 1: Convert the  decimal number 245 to octal equivalent**
+
+```{r NSbox10, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+##### Fractional number conversion : Repeated multiplication by 8
+
+**Example 2: Convert the  decimal fraction 0.432 to octal equivalent**
+
+```{r NSbox11, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+- This conversion to octal is not precise as there is a remainder.
+- If greater accuracy is required, continue multiplying by 8 to obtain more octal digits.
+
+**Example 3: Convert the  decimal number 419.95 to octal equivalent**
+
+```{r NSbox12,  out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+#### Octal-to-binary conversion
+
+** Octal and binary number correspondence**
+
+Octal  | Binary
+-------|-----------
+0      |  000
+1      |  001
+2      |  010
+3      |  011
+4      |  100
+5      |  101
+6      |  110
+7      |  111
+
+
+- To convert from octal to binary, simply replace each octal digit with the corresponding three-digit binary number.
+
+**Example 1: Convert the following octal numbers  to their binary equivalent**
+
+(a) $247_8$
+(b)  $124.375_8$
+
+```{r NSbox131, out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+#### Binary-to-octal conversion
+
+- To convert from binary to octal,the binary number is divided into groups of three bits and then each group of three bits is replaced by an octal digit.
+
+**Example 1: Convert the binary number 11010101.01101  to its octal equivalent**
+
+```{r NSbox13,  out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+### Hexadecimal number system
+
+- The Hexadecimal system is a number system of base or radix equal to 816.
+- Hexadecimal is similar to the octal numeral system  because each can be easily compared to the binary numeral system.
+- Example values of hexadecimal numbers converted into binary, octal and decimal.
+
+Hexadecimal	| Binary  | 	Octal	| Decimal
+------------|---------|---------|-----------
+0	          |   0000	|   0     | 	0
+1           |  	0001  |  	1     |  	1
+2	          |   0010  |  	2	    |   2
+3           |  	0011  |  	3     |  	3
+4	          |   0100	|   4     |  	4
+5           |  	0101	|   5	    |   5
+6           |  	0110  |  	6     |  	6
+7	          |   0111	|   7     |  	7
+8           |  	1000  |  	10    |  	8
+9	          |   1001  |  	11    |  	9
+A	          |   1010  |  	12	  |   10
+B           |  	1011	|   13    |  	11
+C	          |   1100  |  	14    |  	12
+D           |  	1101  |  	15    |  	13
+E	          |   1110  |  	16    |  	14
+F	          |   1111  |  	17    |  	15
+
+#### Hexadecimal-to-decimal conversion
+
+**Example 1: Convert the following octal numbers to their decimal equivalent**
+
+(a) $C7_{16}$
+(b) $2F_{16}$
+
+```{r NSbox14,  out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+#### Decimal-to-Hexadecimal conversion
+
+- To convert decimal numbers to their hexadecimal equivalent, the following procedures are employed:
+
+##### Whole number conversion : Repeated division by 16
+
+**Example 1: Convert the  decimal number 245 to Hexadecimal equivalent**
+
+```{r NSbox15, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+##### Fractional number conversion : Repeated multiplication by 16
+
+**Example 2: Convert the  decimal fraction 0.0738 to Hexadecimal equivalent**
+
+```{r NSbox16, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+**Example 3: Convert the  decimal number 420.0095 to Hexadecimal equivalent**
+
+```{r NSbox17, out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+#### Hexadecimal-to-binary conversion
+
+- To convert from Hexadecimal to binary, simply replace each Hexadecimal digit with the corresponding four-digit binary number.
+
+**Example 1: Convert the following Hexadecimal numbersto their binary equivalent**
+
+(a) $7B_{16}$
+(b)  $6D.8C_{16}$
+
+```{r NSbox18, out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+#### Binary-to-Hexadecimal conversion
+
+- To convert from binary to Hexadecimal, the binary number is divided into groups of four bits and then each group of four bits is replaced by an Hexadecimal digit.
+
+**Example 1: Convert the binary number 11010101.01101  to its Hexadecimal equivalent**
+
+```{r NSbox19,out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+#### Octal-to-Hexadecimal conversion
+
+- First convert octal to binary, and then convert binary to hexadecimal.
+
+**Example 1: Convert the octal number 365.52 to its Hexadecimal equivalent**
+
+```{r NSbox20, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+#### Hexadecimal-to-octal conversion
+
+- First convert Hexadecimal to binary, and then convert binary to octal
+
+**Example 1: Convert the octal number D2B.284 to its Hexadecimal equivalent**
+
+```{r NSbox21, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+### Binary Arithmetic
+
+The arithmetic operations: addition, subtraction, multiplication and division of binary numbers follow the rules as summarized below 
+
 
 Decimal: The standard Hindu–Arabic numeral system using base ten.
 
@@ -198,7 +626,7 @@ https://www.researchgate.net/publication/320677641_Number_System
 http://www.compsci.hunter.cuny.edu/~sweiss/resources/BinaryNumbers.pdf
 
 https://www.cs.bu.edu/courses/cs101a1/slides/CS101.Lect15.BinaryNumbers.ppt.pdf
-
+4
 https://www.eecs.wsu.edu/~ee314/handouts/numsys.pdf
 
 http://www.uobabylon.edu.iq/eprints/publication_3_8400_6187.pdf
