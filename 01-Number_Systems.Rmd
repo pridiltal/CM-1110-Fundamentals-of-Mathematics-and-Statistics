@@ -39,17 +39,23 @@ knitr::include_graphics("figure/1-numbertypes.png")
 
 ### Complex numbers
 
-- Every number in number system taken as a complex number
+- Every number in number system is considered as a complex number
 - A number of the form $a+ib$ is called a complex number when $a$ and $b$ are real numbers and $i=\sqrt{-1}$.
-- We call '$a$' the real part and '$b$' the imaginary part of the complex number $a+ib$.
-- If $a=0$ the number $ib$ is said to be purely imaginary, if $b=0$ the number $a$ is real.
+- For a given complex number, $a+ib$, '$a$' is  known as the real part and '$b$' is known as the imaginary part.
+- If $a=0$, the number $ib$ is said to be purely imaginary, if $b=0$ the number $a$ is real.
 - A pair of complex number $a+ib$ and $a-ib$ are said to be conjugate of each other.
-- Show that the sum and product of a complex number and its conjugate complex are both real.
 
-Let $x+iy$ be a complex number and $x-iy$ its conjugate complex.
+**Show that the sum and product of a complex number and its conjugate complex are both real.**
 
-\[Sum = (x+iy)+(x-iy) = 2x\]    
-\[Product = (x+iy).(x-iy) = x^{2}+y^{2}\]   
+```{r NSbox1a, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
 
 - Let  $a+ib$ and  $c+id$  be two complex numbers. Then
 
@@ -61,16 +67,16 @@ Let $x+iy$ be a complex number and $x-iy$ its conjugate complex.
 
 **Addition.** $\frac{a+ib}{c+id}= \frac{a+ib}{c+id}.\frac{c-id}{c-id}= \frac{ac+bd}{c^2+d^2}+i\frac{bc-ad}{c^2+d^2}$ 
 
-- Complex numbers are denoted by $\mathbb{C}$
+- Complex numbers are denoted by $\mathbb{C}$.
 
 ### Imaginary numbers
 
-- A number does not exist in the number line is called imaginary number. 
-- For example square root of negative numbers are imaginary numbers. It is denoted by $i$.
+- A number that does not exist in the number line is known as imaginary number. 
+- For example, square root of negative numbers are imaginary numbers. It is denoted by $i$.
 i.e \[\sqrt{-1}=i\] \newline
     \[i^{2} = – 1\]
 - So there is no real number $i$ that satisfies the above equation. 
-- The quantity $i$ is called the unit imaginary number.
+- The quantity, $i$ is called the unit imaginary number.
 
 **Geometrical Representation of imaginary numbers**
 
@@ -79,31 +85,29 @@ knitr::include_graphics("figure/1-ImgNum.png")
 ```
 
 
-- Let OA be positive numbers which is represented by $x$ and $OA^\prime$ by $-x$
-- And $-x= (i)^2x=i(ix)$ is on $OX^{\prime}$
-- It means that the multiplication of the real number $x$ by $i$ twice  amounts to the rotation of OA through two right angles to reach $OA^\prime$.
-- Thus, it means that multiplication of $x$ by $i$ is equivalent to the rotation of $x$ through one right angle to reach  $OA^{\prime\prime}$.
-- Hence, y-axis is known as imaginary axis.
-- Multiplication by $i$ rotates its direction through  right angle. 
+- Let OA be positive numbers which is represented by $x$ and $OA^\prime$ by $-x$.
+- And $-x= (i)^2x=i(ix)$ is on $OX^{\prime}$.
+- According to the above expression, the multiplication of the real number $x$ by $i$ twice  amounts is equivalent  to the rotation of OA through two right angles to reach $OA^\prime$.
+- Therefore, the multiplication of $x$ by $i$ is equivalent to the rotation of $x$ through one right angle to reach  $OA^{\prime\prime}$.
+- Therefore, y-axis is known as imaginary axis.
+- Multiplication by $i$ rotates its direction through right angle. 
 
 
 ### Real numbers
 
-- All numbers that can be represented on the number line are called real numbers.
+- All numbers that can be represented on the number line are known as real numbers.
 - The real numbers is the set of numbers containing all of the rational numbers and all of the irrational numbers. 
-- The real numbers are "all the numbers" on the number line.
 - Real Numbers are denoted by $\mathbb{R}$.
 
 ### Rational numbers
 
-- $\mathbb{Q}$
+- Rational Numbers are denoted by $\mathbb{Q}$
 - A rational number is defined as number of the form $x/y$ where $x$ and $y$ are integers and $y \neq 0$.
-- i.e Any number which can be expressed as in the form of $p/q$ where $p$ and $q$ are the integers and $q \neq 0$.
 - The set of rational numbers encloses the set of integers and fractions.
 - The rational numbers that are not integral will have decimal values. These values can be of two types
  
     - Terminating decimal fractions (finite decimal factors): For example $1/5 = 0.5$ , $13/5 = 2.6$.
-    - Non Terminating decimal fractions : The non terminating decimal fractions having two types.
+    - Non Terminating decimal fractions. The non terminating decimal fractions having two types:
          i) Non terminating periodic fractions
          ii) Non terminating non periodic fractions
 
@@ -131,20 +135,19 @@ c. for example 6.789542587436512..........
 ### Irrational numbers
 
 - Irrational numbers are denoted by $\mathbb{I}$
-- An Irrational numbers are non terminating and non periodic fractions.
+- Irrational numbers are consisted with **non terminating and non periodic fractions**.
 - i.e irrational number is a number that cannot be written as a ratio $x/y$ form (or fraction). 
 - In decimal form, it never ends or repeats.
 - Examples for irrational numbers are $\sqrt{2} = 1.414213......$, $\pi = 3.14159265.......$, $\sqrt{3}$, $\sqrt{5}$ etc.
 
 ### Integers
 
-- All numbers that do not having the decimal places in them are called integers. 
-- All whole numbers including Negative number + Positive number
+- All numbers that do not have the decimal places in them are called integers. 
 - $\mathbb{Z} = \{...,-5,-4,-3,-2,-1,0,1,2,3,4,5,...\}$
-- i.e the integer it may positive or negative or zero.
-- The set of integers generally written $\mathbb{Z}$for short.
+- i.e it may be positive or negative or zero.
+- Integers are denoted by $\mathbb{Z}$.
 - Any integers are added, subtracted, or multiplied the result is always is an integer.
-- When any integers multiplied , each of the multiplied integer is called a factor or divisor of the resulting product
+- When any integers multiplied , each of the multiplied integer is called a factor or divisor of the resulting product.
 
 ### Whole numbers
 
@@ -154,7 +157,7 @@ c. for example 6.789542587436512..........
 
 ### Natural numbers
 
-- The counting numbers start with 1 and their end is not defined. Generally it is denoted by “N”
+- The counting numbers start with 1 and their end is not defined. 
 - i.e $\mathbb{N} =\{1,2,3,4,...\}$
 
 **Reading :**
@@ -191,31 +194,32 @@ Binary      | 2            | 0 1
 Octal       | 8            | 0 1 2 3 4 5 6 7
 Decimal     | 10           | 0 1 2 3 4 5 6 7 8 9
 Hexadecimal | 16           | 0 1 2 3 4 5 6 7 8 9 A B C D E F 
-### Decimal number system
+
+### Decimal Number System
 
 - The Decimal number system is a number of base or radix equal to 10.
 
-- To determine the actual number in each position , take the number that appears in the position and multiply it by $10^x$, where $x$ is the power representation.
+- To determine the actual number in each position, take the number that appears in the position and multiply it by $10^x$, where $x$ is the power representation.
 
-Example 1: The value of the combination of symbols 453 is determined by adding the weights of each position as
+**Example 1: The value of the combination of symbols 453 is determined by adding the weights of each position as**
 
 \[4\times10^2+5\times10^1+3\times10^0\]
 \[= 4\times100 + 5\times10+3\times1\]
 Or \[= 400+50+3 = 453\]
 
 
-Example 2: The value of the combination of symbols 369.54 is determined by adding the weights of each position as
+**Example 2: The value of the combination of symbols 369.54 is determined by adding the weights of each position as**
 
 \[3\times10^2+6\times10^1+9\times10^0+5\times10^{-1}+4\times10^{-2}\]
 Or \[= 300 + 60+9+\frac{5}{10}+\frac{4}{100}\]
 Or \[= 300 + 60+9+0.5+0.04= 369.54\]
 
-### Binary number system
+### Binary Number System
 
 - The binary number system is a number system of base or radix equal to 2.
-- In the binary number system  there are two symbols to represent number: 0 and 1
+- In the binary number system, there are two symbols to represent number: 0 and 1
 - When the symbols 0 an 1 are used to represent binary number, each symbol is called a binary digit or a bit.
-- Therefore, the binary number 1011 is a four-digit number or a 4-bit binary number
+- Therefore, the binary number 1011 is a four-digit number or a 4-bit binary number.
 
 #### Binary-to-Decimal Conversion
 
@@ -263,10 +267,10 @@ ggplot()+
 
 - To convert decimal numbers to their binary equivalent, the following procedures are employed:
 
-##### Whole number conversion : Repeated division by 2        
+##### Whole number conversion: Repeated division by 2        
 
 - The remainder resulting from each division forms binary number.
-- The first remainder to be produced is called the least significant bit (LSB) and the last remainder is called most significant bit (MSB)
+- The first remainder to be produced is called the least significant bit (LSB) and the last remainder is called most significant bit (MSB).
 
 **Example 1: Convert the decimal number 17 to binary**
 
@@ -281,9 +285,9 @@ ggplot()+
 ```
        
          
-##### Fractional number conversion : Repeated multiplication by 2
+##### Fractional number conversion: Repeated multiplication by 2
 
-- Multiply repeatedly by 2 any factional part
+- Multiply any factional part repeatedly by 2.
 - The equivalent binary number is formed from the 1 or 0 in the units position ($10^0$ position).
 
 **Example 1: Convert the decimal number 0.625 to binary**
@@ -312,17 +316,13 @@ ggplot()+
 
 ```
 
-
-
-
 - We see that it continues in this way and does not terminate.
 - So, $0.6375_{10} = (0.1010001101....)_{2}$.
 - If we discard all the bits after the 7th bit, then we get the approximate representation $0.6375_{10} \approx (0.1010001)_{2},$ committing an error amounting to 
-
 \[0.6375_{10} -(0.1010001)_{2}= 0.6375_{10} -0.6328125_{10}= (.0046875)_{10},\]
-which is the ***round-off error***
+which is known as  ***round-off error***.
 
-- Although, strictly, this is *chopping-off error*, it is generally, termed as round-off.
+- Although, strictly, this is *chopping-off error*, it is generally, termed as *round-off error*.
 
 **Example 3: Convert the decimal number 49.683 to binary**
 
@@ -335,12 +335,11 @@ ggplot()+
 
 ```
 
-###  Octal number system 
+###  Octal Number System 
 
-- 
 - The octal system is a number system of base or radix equal to 8.
 
-#### Octal-to-decimal conversion
+#### Octal-to-Decimal Conversion
 
 **Example 1: Convert the following octal numbers to their decimal equivalent**
 
@@ -357,11 +356,11 @@ ggplot()+
 
 ```
 
-#### Decimal-to-octal conversion
+#### Decimal-to-Octal Conversion
 
 - To convert decimal numbers to their octal equivalent, the following procedures are employed:
 
-##### Whole number conversion : Repeated division by 8
+##### Whole number conversion: Repeated division by 8
 
 **Example 1: Convert the  decimal number 245 to octal equivalent**
 
@@ -374,7 +373,7 @@ ggplot()+
 
 ```
 
-##### Fractional number conversion : Repeated multiplication by 8
+##### Fractional number conversion: Repeated multiplication by 8
 
 **Example 2: Convert the  decimal fraction 0.432 to octal equivalent**
 
@@ -404,9 +403,9 @@ ggplot()+
 ```
 
 
-#### Octal-to-binary conversion
+#### Octal-to-Binary Conversion
 
-** Octal and binary number correspondence**
+**Octal and binary number correspondence**
 
 Octal  | Binary
 -------|-----------
@@ -436,9 +435,9 @@ ggplot()+
 
 ```
 
-#### Binary-to-octal conversion
+#### Binary-to-Octal Conversion
 
-- To convert from binary to octal, subdivide the number into groups of three bits , proceeding both left and right from the binary point, and if necessary padding the last group with zero. The octal representation of each group gives the required octal number.
+- To convert from binary to octal, subdivide the number into groups of three bits, proceeding both left and right from the binary point, and if necessary padding the last group with zero. The octal representation of each group gives the required octal number.
 
 **Example 1: Convert the binary number 11010101.01101  to its octal equivalent**
 
@@ -452,9 +451,9 @@ ggplot()+
 ```
 
 
-### Hexadecimal number system
+### Hexadecimal Number System
 
-- The Hexadecimal system is a number system of base or radix equal to 816.
+- The Hexadecimal system is a number system of base or radix equal to 16.
 - Hexadecimal is similar to the octal numeral system  because each can be easily compared to the binary numeral system.
 - Example values of hexadecimal numbers converted into binary, octal and decimal.
 
@@ -477,7 +476,7 @@ D           |  	1101  |  	15    |  	13
 E	          |   1110  |  	16    |  	14
 F	          |   1111  |  	17    |  	15
 
-#### Hexadecimal-to-decimal conversion
+#### Hexadecimal-to-Decimal Conversion
 
 **Example 1: Convert the following octal numbers to their decimal equivalent**
 
@@ -493,11 +492,11 @@ ggplot()+
 
 ```
 
-#### Decimal-to-Hexadecimal conversion
+#### Decimal-to-Hexadecimal Conversion
 
 - To convert decimal numbers to their hexadecimal equivalent, the following procedures are employed:
 
-##### Whole number conversion : Repeated division by 16
+##### Whole number conversion: Repeated division by 16
 
 **Example 1: Convert the  decimal number 245 to Hexadecimal equivalent**
 
@@ -510,7 +509,7 @@ ggplot()+
 
 ```
 
-##### Fractional number conversion : Repeated multiplication by 16
+##### Fractional number conversion: Repeated multiplication by 16
 
 **Example 2: Convert the  decimal fraction 0.0738 to Hexadecimal equivalent**
 
@@ -536,7 +535,7 @@ ggplot()+
 ```
 
 
-#### Hexadecimal-to-binary conversion
+#### Hexadecimal-to-Binary Conversion
 
 - To convert from Hexadecimal to binary, simply replace each Hexadecimal digit with the corresponding four-digit binary number.
 
@@ -554,7 +553,7 @@ ggplot()+
 
 ```
 
-#### Binary-to-Hexadecimal conversion
+#### Binary-to-Hexadecimal Conversion
 
 - To convert from binary to Hexadecimal, subdivide the number into groups of four bits. The hexadecimal representation of each group then gives the hexadecimal representation. 
 
@@ -570,7 +569,7 @@ ggplot()+
 ```
 
 
-#### Octal-to-Hexadecimal conversion
+#### Octal-to-Hexadecimal Conversion
 
 - First convert octal to binary, and then convert binary to hexadecimal.
 
@@ -588,7 +587,7 @@ ggplot()+
 
 #### Hexadecimal-to-octal conversion
 
-- First convert Hexadecimal to binary, and then convert binary to octal
+- First convert Hexadecimal to binary, and then convert binary to octal.
 
 **Example 1: Convert the octal number D2B.284 to its Hexadecimal equivalent**
 
@@ -692,6 +691,7 @@ ggplot()+
 #### Binary Division
 
 **Example 1: Perform the following binary division** 
+
 (a) $110\div11$ (b) $1100\div11$ (c) $1111\div110$  (d) $1100\div101$
 
 
