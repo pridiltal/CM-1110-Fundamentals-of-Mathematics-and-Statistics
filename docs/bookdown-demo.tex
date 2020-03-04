@@ -84,7 +84,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2020-03-03}
+    \date{2020-03-04}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -192,6 +192,8 @@ Consultation time:
 
 \hypertarget{number-systems}{%
 \chapter{Number Systems}\label{number-systems}}
+
+\pagenumbering{arabic}
 
 Numbers can be classified according to how they are represented or according to the properties that they have.
 
@@ -570,9 +572,28 @@ Or \[= 300 + 60+9+0.5+0.04= 369.54\]
   Sometimes it will be necessary to terminate the multiplication when an acceptable degree of accuracy is obtained. Then the resulted binary number will be an approximation.
 \end{itemize}
 
-\textbf{Example 2: Convert the decimal number 0.6 to binary}
+\textbf{Example 2: Convert the decimal number 0.6375 to binary}
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/NSbox7-1} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  We see that it continues in this way and does not terminate.
+\item
+  So, \(0.6375_{10} = (0.1010001101....)_{2}\).
+\item
+  If we discard all the bits after the 7th bit, then we get the approximate representation \(0.6375_{10} \approx (0.1010001)_{2},\) committing an error amounting to
+\end{itemize}
+
+\[0.6375_{10} -(0.1010001)_{2}= 0.6375_{10} -0.6328125_{10}= (.0046875)_{10},\]
+which is the \textbf{\emph{round-off error}}
+
+\begin{itemize}
+\tightlist
+\item
+  Although, strictly, this is \emph{chopping-off error}, it is generally, termed as round-off.
+\end{itemize}
 
 \textbf{Example 3: Convert the decimal number 49.683 to binary}
 
@@ -582,7 +603,7 @@ Or \[= 300 + 60+9+0.5+0.04= 369.54\]
 \subsection{Octal number system}\label{octal-number-system}}
 
 \begin{itemize}
-\tightlist
+\item
 \item
   The octal system is a number system of base or radix equal to 8.
 \end{itemize}
@@ -686,7 +707,7 @@ Octal & Binary\tabularnewline
 \begin{itemize}
 \tightlist
 \item
-  To convert from binary to octal,the binary number is divided into groups of three bits and then each group of three bits is replaced by an octal digit.
+  To convert from binary to octal, subdivide the number into groups of three bits , proceeding both left and right from the binary point, and if necessary padding the last group with zero. The octal representation of each group gives the required octal number.
 \end{itemize}
 
 \textbf{Example 1: Convert the binary number 11010101.01101 to its octal equivalent}
@@ -782,7 +803,7 @@ F & 1111 & 17 & 15\tabularnewline
   To convert from Hexadecimal to binary, simply replace each Hexadecimal digit with the corresponding four-digit binary number.
 \end{itemize}
 
-\textbf{Example 1: Convert the following Hexadecimal numbersto their binary equivalent}
+\textbf{Example 1: Convert the following Hexadecimal numbers to their binary equivalent}
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
@@ -801,7 +822,7 @@ F & 1111 & 17 & 15\tabularnewline
 \begin{itemize}
 \tightlist
 \item
-  To convert from binary to Hexadecimal, the binary number is divided into groups of four bits and then each group of four bits is replaced by an Hexadecimal digit.
+  To convert from binary to Hexadecimal, subdivide the number into groups of four bits. The hexadecimal representation of each group then gives the hexadecimal representation.
 \end{itemize}
 
 \textbf{Example 1: Convert the binary number 11010101.01101 to its Hexadecimal equivalent}
@@ -837,55 +858,88 @@ F & 1111 & 17 & 15\tabularnewline
 \hypertarget{binary-arithmetic}{%
 \subsection{Binary Arithmetic}\label{binary-arithmetic}}
 
-Decimal: The standard Hindu--Arabic numeral system using base ten.
+The arithmetic operations: addition, subtraction, multiplication and division of binary numbers follow the rules as summarized below
 
-Binary: The base-two numeral system used by computers.
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+Addition & Subtraction & Multiplication & Division\tabularnewline
+\midrule
+\endhead
+\(0+0 = 0\) & \(0-0=0\) & \(0\times0=0\) & \(\frac{0}{1} = 0\)\tabularnewline
+\(0+1 = 1\) & \(1-0=1\) & \(0\times1=0\) & \(\frac{1}{1} = 1\)\tabularnewline
+\(1+0 = 1\) & \(1-1 = 0\) & \(1\times0=0\) & \(\frac{0}{0} = undefined\)\tabularnewline
+\(1+1 = 10\) & \(1-0 = 10-1 =1\) & \(1\times1=1\) & \(\frac{1}{0} = undefined\)\tabularnewline
+\bottomrule
+\end{longtable}
 
-Hexadecimal: Widely used by computer system designers and programmers, as they provide a more human-friendly representation of binary-coded values.
+\hypertarget{binary-addition}{%
+\subsubsection{Binary Addition}\label{binary-addition}}
 
-Octal: Occasionally used by computer system designers and programmers.
+\textbf{Example 1: Add (a) 111 and 101 (b) 1010, 1001 and 1101}
 
-Duodecimal: The most convenient numeral system, due to twelve's divisibility by a wide range of the most elemental numbers \{1, 2, 3, 4\}.
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox22-1} \end{center}
 
-Sexagesimal: Originated with the ancient Sumerians in the 3rd millennium BC, was passed down to the ancient Babylonians
+\hypertarget{binary-subtraction}{%
+\subsubsection{Binary Subtraction}\label{binary-subtraction}}
 
-(See positional notation for information on other bases)
+\textbf{Example 1: Perform the following subtractions}
 
-Roman numerals: The numeral system of ancient Rome, still occasionally used today.
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(11- 01\) (b) \(11-10\) (c) \(100-011\)
+\end{enumerate}
 
-Tally marks: usually used for counting things that increase by small amounts and don't change very quickly.
-
-Fractions: A representation of a non-integer as a ratio of two integers. These include improper fractions as well as mixed numbers.
-
-Continued fraction: An expression obtained through an iterative process of representing a number as the sum of its integer part and the reciprocal of another number, then writing this other number as the sum of its integer part and another reciprocal, and so on.
-
-Scientific notation: A method for writing very small and very large numbers using powers of 10. When used in science, such a number also conveys the precision of measurement using significant figures.
-
-Knuth's up-arrow notation, Conway chained arrow notation, and Bowers's operators : Notations that allow the concise representation of some extremely large integers such as Graham's number.
-
-\url{https://en.wikipedia.org/wiki/List_of_types_of_numbers}
-
-\url{https://byjus.com/maths/number-system/}
-
-\url{https://www.researchgate.net/publication/320677641_Number_System}
-
-\url{http://www.compsci.hunter.cuny.edu/~sweiss/resources/BinaryNumbers.pdf}
-
-\url{https://www.cs.bu.edu/courses/cs101a1/slides/CS101.Lect15.BinaryNumbers.ppt.pdf}
-4
-\url{https://www.eecs.wsu.edu/~ee314/handouts/numsys.pdf}
-
-\url{http://www.uobabylon.edu.iq/eprints/publication_3_8400_6187.pdf}
-
-\url{https://www.cs.princeton.edu/courses/archive/spr15/cos217/lectures/03_NumberSystems.pdf}
-
-\href{https://www.ukessays.com/essays/social-work/number-system-is-used-in-it-applications-social-work-essay.php}{Number system is used in IT applications}
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox23-1} \end{center}
 
 \begin{itemize}
 \tightlist
 \item
-  Number Systems \href{https://www.topperlearning.com/ncert-solutions/cbse-class-9-mathematics/mathematics-ix/number-systems}{Rational, irrational numbers}
+  When subtracting a larger number from a smaller number, the output will be negative.
+\item
+  To perform this subtraction, subtract the smaller number from the larger number and prefix the output with the sign of the larger number.
 \end{itemize}
+
+\textbf{Example 2: Perform the following subtraction 101 - 111}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox24-1} \end{center}
+
+\hypertarget{binary-multiplication}{%
+\subsubsection{Binary multiplication}\label{binary-multiplication}}
+
+\textbf{Example 1: Multiply the following binary numbers}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(101\times11\) (b) \(1101\times10\) (c) \(1010\times101\)
+\item
+  \(1011\times1010\)
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox25-1} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  Multiplication of factional numbers is perform in the same manner as with decimal factional numbers.
+\end{itemize}
+
+\textbf{Example 2: Perform the binary multiplication} \(0.01\times11\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox26-1} \end{center}
+
+\hypertarget{binary-division}{%
+\subsubsection{Binary Division}\label{binary-division}}
+
+\textbf{Example 1: Perform the following binary division}
+(a) \(110\div11\) (b) \(1100\div11\) (c) \(1111\div110\) (d) \(1100\div101\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox27-1} \end{center}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/NSbox28-1} \end{center}
 
 \hypertarget{sequences-and-series}{%
 \chapter{Sequences and Series}\label{sequences-and-series}}

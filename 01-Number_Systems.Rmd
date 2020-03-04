@@ -24,6 +24,7 @@ library(janitor)
 
 ```
 
+\pagenumbering{arabic}
 
 Numbers can be classified according to how they are represented or according to the properties that they have.
 
@@ -299,7 +300,7 @@ ggplot()+
 
 - Sometimes it will be necessary to terminate the multiplication when an acceptable degree of accuracy is obtained. Then the resulted binary number will be an approximation.
 
-**Example 2: Convert the decimal number 0.6 to binary**
+**Example 2: Convert the decimal number 0.6375 to binary**
 
 
 ```{r NSbox7, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
@@ -310,6 +311,18 @@ ggplot()+
   theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
 
 ```
+
+
+
+
+- We see that it continues in this way and does not terminate.
+- So, $0.6375_{10} = (0.1010001101....)_{2}$.
+- If we discard all the bits after the 7th bit, then we get the approximate representation $0.6375_{10} \approx (0.1010001)_{2},$ committing an error amounting to 
+
+\[0.6375_{10} -(0.1010001)_{2}= 0.6375_{10} -0.6328125_{10}= (.0046875)_{10},\]
+which is the ***round-off error***
+
+- Although, strictly, this is *chopping-off error*, it is generally, termed as round-off.
 
 **Example 3: Convert the decimal number 49.683 to binary**
 
@@ -324,6 +337,7 @@ ggplot()+
 
 ###  Octal number system 
 
+- 
 - The octal system is a number system of base or radix equal to 8.
 
 #### Octal-to-decimal conversion
@@ -376,6 +390,8 @@ ggplot()+
 - This conversion to octal is not precise as there is a remainder.
 - If greater accuracy is required, continue multiplying by 8 to obtain more octal digits.
 
+
+
 **Example 3: Convert the  decimal number 419.95 to octal equivalent**
 
 ```{r NSbox12,  out.width='100%', fig.asp=.75, fig.align='center', fig.pos='h'}
@@ -422,7 +438,7 @@ ggplot()+
 
 #### Binary-to-octal conversion
 
-- To convert from binary to octal,the binary number is divided into groups of three bits and then each group of three bits is replaced by an octal digit.
+- To convert from binary to octal, subdivide the number into groups of three bits , proceeding both left and right from the binary point, and if necessary padding the last group with zero. The octal representation of each group gives the required octal number.
 
 **Example 1: Convert the binary number 11010101.01101  to its octal equivalent**
 
@@ -524,7 +540,7 @@ ggplot()+
 
 - To convert from Hexadecimal to binary, simply replace each Hexadecimal digit with the corresponding four-digit binary number.
 
-**Example 1: Convert the following Hexadecimal numbersto their binary equivalent**
+**Example 1: Convert the following Hexadecimal numbers to their binary equivalent**
 
 (a) $7B_{16}$
 (b)  $6D.8C_{16}$
@@ -540,7 +556,7 @@ ggplot()+
 
 #### Binary-to-Hexadecimal conversion
 
-- To convert from binary to Hexadecimal, the binary number is divided into groups of four bits and then each group of four bits is replaced by an Hexadecimal digit.
+- To convert from binary to Hexadecimal, subdivide the number into groups of four bits. The hexadecimal representation of each group then gives the hexadecimal representation. 
 
 **Example 1: Convert the binary number 11010101.01101  to its Hexadecimal equivalent**
 
@@ -589,50 +605,111 @@ ggplot()+
 
 The arithmetic operations: addition, subtraction, multiplication and division of binary numbers follow the rules as summarized below 
 
-
-Decimal: The standard Hindu–Arabic numeral system using base ten.
-
-Binary: The base-two numeral system used by computers.
-
-Hexadecimal: Widely used by computer system designers and programmers, as they provide a more human-friendly representation of binary-coded values.
-
-Octal: Occasionally used by computer system designers and programmers.
-
-Duodecimal: The most convenient numeral system, due to twelve's divisibility by a wide range of the most elemental numbers {1, 2, 3, 4}.
-
-Sexagesimal: Originated with the ancient Sumerians in the 3rd millennium BC, was passed down to the ancient Babylonians
-
-(See positional notation for information on other bases)
-
-Roman numerals: The numeral system of ancient Rome, still occasionally used today.
-
-Tally marks: usually used for counting things that increase by small amounts and don't change very quickly.
-
-Fractions: A representation of a non-integer as a ratio of two integers. These include improper fractions as well as mixed numbers.
-
-Continued fraction: An expression obtained through an iterative process of representing a number as the sum of its integer part and the reciprocal of another number, then writing this other number as the sum of its integer part and another reciprocal, and so on.
-
-Scientific notation: A method for writing very small and very large numbers using powers of 10. When used in science, such a number also conveys the precision of measurement using significant figures.
-
-Knuth's up-arrow notation, Conway chained arrow notation, and Bowers's operators : Notations that allow the concise representation of some extremely large integers such as Graham's number.
+Addition | Subtraction  | Multiplication  | Division
+---------|---------------|-----------------|------------
+$0+0 = 0$| $0-0=0$       |  $0\times0=0$  | $\frac{0}{1} = 0$
+$0+1 = 1$| $1-0=1$       | $0\times1=0$   | $\frac{1}{1} = 1$
+$1+0 = 1$| $1-1 = 0$     | $1\times0=0$   | $\frac{0}{0} = undefined$
+$1+1 = 10$|$1-0 = 10-1 =1$ | $1\times1=1$   |  $\frac{1}{0} = undefined$
 
 
-https://en.wikipedia.org/wiki/List_of_types_of_numbers
+#### Binary Addition
 
-https://byjus.com/maths/number-system/
+**Example 1: Add (a) 111 and 101 (b) 1010, 1001 and 1101**
 
-https://www.researchgate.net/publication/320677641_Number_System
+```{r NSbox22, out.width='100%', fig.asp=.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
 
-http://www.compsci.hunter.cuny.edu/~sweiss/resources/BinaryNumbers.pdf
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
 
-https://www.cs.bu.edu/courses/cs101a1/slides/CS101.Lect15.BinaryNumbers.ppt.pdf
-4
-https://www.eecs.wsu.edu/~ee314/handouts/numsys.pdf
+```
 
-http://www.uobabylon.edu.iq/eprints/publication_3_8400_6187.pdf
 
-https://www.cs.princeton.edu/courses/archive/spr15/cos217/lectures/03_NumberSystems.pdf
+#### Binary Subtraction
 
-[Number system is used in IT applications](https://www.ukessays.com/essays/social-work/number-system-is-used-in-it-applications-social-work-essay.php)
+**Example 1: Perform the following subtractions**
 
-- Number Systems [ Rational, irrational numbers](https://www.topperlearning.com/ncert-solutions/cbse-class-9-mathematics/mathematics-ix/number-systems)
+(a) $11- 01$ (b) $11-10$  (c) $100-011$
+
+```{r NSbox23, out.width='100%', fig.asp=.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+- When subtracting a larger number from a smaller number, the output will be negative.
+- To perform this subtraction, subtract the smaller number from the larger number and prefix the output with the sign of the larger number.
+
+
+**Example 2: Perform the following subtraction 101 - 111**
+
+```{r NSbox24, out.width='100%', fig.asp=.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+#### Binary multiplication
+
+**Example 1: Multiply the following binary numbers**
+
+(a) $101\times11$ (b) $1101\times10$  (c) $1010\times101$
+ (d) $1011\times1010$
+
+```{r NSbox25, out.width='100%', fig.asp=.8, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+- Multiplication of factional numbers is perform in the same manner as with decimal factional numbers. 
+
+**Example 2: Perform the binary multiplication** $0.01\times11$
+
+```{r NSbox26, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+#### Binary Division
+
+**Example 1: Perform the following binary division** 
+(a) $110\div11$ (b) $1100\div11$ (c) $1111\div110$  (d) $1100\div101$
+
+
+```{r NSbox27, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+```{r NSbox28, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+

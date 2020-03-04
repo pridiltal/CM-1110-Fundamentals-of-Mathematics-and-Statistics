@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Priyanga D. Talagala" />
 
 
-<meta name="date" content="2020-03-03" />
+<meta name="date" content="2020-03-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -106,13 +106,20 @@
 <li class="chapter" data-level="5" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html"><i class="fa fa-check"></i><b>5</b> Differentiation and Integration</a></li>
 <li class="chapter" data-level="6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>6</b> Descriptive Statistics</a><ul>
 <li class="chapter" data-level="6.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#introduction-to-statistics"><i class="fa fa-check"></i><b>6.1</b> Introduction to Statistics</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#types-of-variables"><i class="fa fa-check"></i><b>6.1.1</b> Types of Variables</a></li>
+<li class="chapter" data-level="6.1.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#some-basic-terminologies-used-in-statistics"><i class="fa fa-check"></i><b>6.1.1</b> Some Basic Terminologies Used in Statistics</a></li>
+<li class="chapter" data-level="6.1.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#branches-of-statistics"><i class="fa fa-check"></i><b>6.1.2</b> Branches of Statistics</a></li>
+<li class="chapter" data-level="6.1.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#types-of-variables"><i class="fa fa-check"></i><b>6.1.3</b> Types of Variables</a></li>
+<li class="chapter" data-level="6.1.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#scales-of-measurements"><i class="fa fa-check"></i><b>6.1.4</b> Scales of Measurements</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#presentation-of-data"><i class="fa fa-check"></i><b>6.2</b> Presentation of Data</a><ul>
 <li class="chapter" data-level="6.2.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tabular-presentations-of-data"><i class="fa fa-check"></i><b>6.2.1</b> Tabular Presentations of Data</a></li>
 <li class="chapter" data-level="6.2.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#graphic-presentations-of-data"><i class="fa fa-check"></i><b>6.2.2</b> Graphic Presentations of Data</a></li>
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#summary-measures"><i class="fa fa-check"></i><b>6.3</b> Summary Measures</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-central-tendency"><i class="fa fa-check"></i><b>6.3.1</b> Measures of Central Tendency</a></li>
+<li class="chapter" data-level="6.3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-variability"><i class="fa fa-check"></i><b>6.3.2</b> Measures of Variability</a></li>
+<li class="chapter" data-level="6.3.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-shape"><i class="fa fa-check"></i><b>6.3.3</b> Measures of Shape</a></li>
+<li class="chapter" data-level="6.3.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-association"><i class="fa fa-check"></i><b>6.3.4</b> Measures of Association</a></li>
 <li class="chapter" data-level="" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#references"><i class="fa fa-check"></i>References</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tutorial"><i class="fa fa-check"></i><b>6.4</b> Tutorial</a><ul>
@@ -142,6 +149,7 @@
             <section class="normal" id="section-">
 <div id="number-systems" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Number Systems</h1>
+
 <p>Numbers can be classified according to how they are represented or according to the properties that they have.</p>
 <div id="main-types" class="section level2">
 <h2><span class="header-section-number">1.1</span> Main types</h2>
@@ -381,8 +389,18 @@ Or <span class="math display">\[= 300 + 60+9+0.5+0.04= 369.54\]</span></p>
 <ul>
 <li>Sometimes it will be necessary to terminate the multiplication when an acceptable degree of accuracy is obtained. Then the resulted binary number will be an approximation.</li>
 </ul>
-<p><strong>Example 2: Convert the decimal number 0.6 to binary</strong></p>
+<p><strong>Example 2: Convert the decimal number 0.6375 to binary</strong></p>
 <p><img src="figure/NSbox7-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>We see that it continues in this way and does not terminate.</li>
+<li>So, <span class="math inline">\(0.6375_{10} = (0.1010001101....)_{2}\)</span>.</li>
+<li>If we discard all the bits after the 7th bit, then we get the approximate representation <span class="math inline">\(0.6375_{10} \approx (0.1010001)_{2},\)</span> committing an error amounting to</li>
+</ul>
+<p><span class="math display">\[0.6375_{10} -(0.1010001)_{2}= 0.6375_{10} -0.6328125_{10}= (.0046875)_{10},\]</span>
+which is the <strong><em>round-off error</em></strong></p>
+<ul>
+<li>Although, strictly, this is <em>chopping-off error</em>, it is generally, termed as round-off.</li>
+</ul>
 <p><strong>Example 3: Convert the decimal number 49.683 to binary</strong></p>
 <p><img src="figure/NSbox8-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
@@ -391,6 +409,7 @@ Or <span class="math display">\[= 300 + 60+9+0.5+0.04= 369.54\]</span></p>
 <div id="octal-number-system" class="section level3">
 <h3><span class="header-section-number">1.2.4</span> Octal number system</h3>
 <ul>
+<li></li>
 <li>The octal system is a number system of base or radix equal to 8.</li>
 </ul>
 <div id="octal-to-decimal-conversion" class="section level4">
@@ -483,7 +502,7 @@ Or <span class="math display">\[= 300 + 60+9+0.5+0.04= 369.54\]</span></p>
 <div id="binary-to-octal-conversion" class="section level4">
 <h4><span class="header-section-number">1.2.4.4</span> Binary-to-octal conversion</h4>
 <ul>
-<li>To convert from binary to octal,the binary number is divided into groups of three bits and then each group of three bits is replaced by an octal digit.</li>
+<li>To convert from binary to octal, subdivide the number into groups of three bits , proceeding both left and right from the binary point, and if necessary padding the last group with zero. The octal representation of each group gives the required octal number.</li>
 </ul>
 <p><strong>Example 1: Convert the binary number 11010101.01101 to its octal equivalent</strong></p>
 <p><img src="figure/NSbox13-1.png" width="100%" style="display: block; margin: auto;" /></p>
@@ -636,7 +655,7 @@ Or <span class="math display">\[= 300 + 60+9+0.5+0.04= 369.54\]</span></p>
 <ul>
 <li>To convert from Hexadecimal to binary, simply replace each Hexadecimal digit with the corresponding four-digit binary number.</li>
 </ul>
-<p><strong>Example 1: Convert the following Hexadecimal numbersto their binary equivalent</strong></p>
+<p><strong>Example 1: Convert the following Hexadecimal numbers to their binary equivalent</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(7B_{16}\)</span></li>
 <li><span class="math inline">\(6D.8C_{16}\)</span></li>
@@ -646,7 +665,7 @@ Or <span class="math display">\[= 300 + 60+9+0.5+0.04= 369.54\]</span></p>
 <div id="binary-to-hexadecimal-conversion" class="section level4">
 <h4><span class="header-section-number">1.2.5.4</span> Binary-to-Hexadecimal conversion</h4>
 <ul>
-<li>To convert from binary to Hexadecimal, the binary number is divided into groups of four bits and then each group of four bits is replaced by an Hexadecimal digit.</li>
+<li>To convert from binary to Hexadecimal, subdivide the number into groups of four bits. The hexadecimal representation of each group then gives the hexadecimal representation.</li>
 </ul>
 <p><strong>Example 1: Convert the binary number 11010101.01101 to its Hexadecimal equivalent</strong></p>
 <p><img src="figure/NSbox19-1.png" width="100%" style="display: block; margin: auto;" /></p>
@@ -671,33 +690,83 @@ Or <span class="math display">\[= 300 + 60+9+0.5+0.04= 369.54\]</span></p>
 <div id="binary-arithmetic" class="section level3">
 <h3><span class="header-section-number">1.2.6</span> Binary Arithmetic</h3>
 <p>The arithmetic operations: addition, subtraction, multiplication and division of binary numbers follow the rules as summarized below</p>
-<p>Decimal: The standard Hindu–Arabic numeral system using base ten.</p>
-<p>Binary: The base-two numeral system used by computers.</p>
-<p>Hexadecimal: Widely used by computer system designers and programmers, as they provide a more human-friendly representation of binary-coded values.</p>
-<p>Octal: Occasionally used by computer system designers and programmers.</p>
-<p>Duodecimal: The most convenient numeral system, due to twelve’s divisibility by a wide range of the most elemental numbers {1, 2, 3, 4}.</p>
-<p>Sexagesimal: Originated with the ancient Sumerians in the 3rd millennium BC, was passed down to the ancient Babylonians</p>
-<p>(See positional notation for information on other bases)</p>
-<p>Roman numerals: The numeral system of ancient Rome, still occasionally used today.</p>
-<p>Tally marks: usually used for counting things that increase by small amounts and don’t change very quickly.</p>
-<p>Fractions: A representation of a non-integer as a ratio of two integers. These include improper fractions as well as mixed numbers.</p>
-<p>Continued fraction: An expression obtained through an iterative process of representing a number as the sum of its integer part and the reciprocal of another number, then writing this other number as the sum of its integer part and another reciprocal, and so on.</p>
-<p>Scientific notation: A method for writing very small and very large numbers using powers of 10. When used in science, such a number also conveys the precision of measurement using significant figures.</p>
-<p>Knuth’s up-arrow notation, Conway chained arrow notation, and Bowers’s operators : Notations that allow the concise representation of some extremely large integers such as Graham’s number.</p>
-<p><a href="https://en.wikipedia.org/wiki/List_of_types_of_numbers" class="uri">https://en.wikipedia.org/wiki/List_of_types_of_numbers</a></p>
-<p><a href="https://byjus.com/maths/number-system/" class="uri">https://byjus.com/maths/number-system/</a></p>
-<p><a href="https://www.researchgate.net/publication/320677641_Number_System" class="uri">https://www.researchgate.net/publication/320677641_Number_System</a></p>
-<p><a href="http://www.compsci.hunter.cuny.edu/~sweiss/resources/BinaryNumbers.pdf" class="uri">http://www.compsci.hunter.cuny.edu/~sweiss/resources/BinaryNumbers.pdf</a></p>
-<p><a href="https://www.cs.bu.edu/courses/cs101a1/slides/CS101.Lect15.BinaryNumbers.ppt.pdf" class="uri">https://www.cs.bu.edu/courses/cs101a1/slides/CS101.Lect15.BinaryNumbers.ppt.pdf</a>
-4
-<a href="https://www.eecs.wsu.edu/~ee314/handouts/numsys.pdf" class="uri">https://www.eecs.wsu.edu/~ee314/handouts/numsys.pdf</a></p>
-<p><a href="http://www.uobabylon.edu.iq/eprints/publication_3_8400_6187.pdf" class="uri">http://www.uobabylon.edu.iq/eprints/publication_3_8400_6187.pdf</a></p>
-<p><a href="https://www.cs.princeton.edu/courses/archive/spr15/cos217/lectures/03_NumberSystems.pdf" class="uri">https://www.cs.princeton.edu/courses/archive/spr15/cos217/lectures/03_NumberSystems.pdf</a></p>
-<p><a href="https://www.ukessays.com/essays/social-work/number-system-is-used-in-it-applications-social-work-essay.php">Number system is used in IT applications</a></p>
+<table>
+<thead>
+<tr class="header">
+<th>Addition</th>
+<th>Subtraction</th>
+<th>Multiplication</th>
+<th>Division</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(0+0 = 0\)</span></td>
+<td><span class="math inline">\(0-0=0\)</span></td>
+<td><span class="math inline">\(0\times0=0\)</span></td>
+<td><span class="math inline">\(\frac{0}{1} = 0\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(0+1 = 1\)</span></td>
+<td><span class="math inline">\(1-0=1\)</span></td>
+<td><span class="math inline">\(0\times1=0\)</span></td>
+<td><span class="math inline">\(\frac{1}{1} = 1\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(1+0 = 1\)</span></td>
+<td><span class="math inline">\(1-1 = 0\)</span></td>
+<td><span class="math inline">\(1\times0=0\)</span></td>
+<td><span class="math inline">\(\frac{0}{0} = undefined\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1+1 = 10\)</span></td>
+<td><span class="math inline">\(1-0 = 10-1 =1\)</span></td>
+<td><span class="math inline">\(1\times1=1\)</span></td>
+<td><span class="math inline">\(\frac{1}{0} = undefined\)</span></td>
+</tr>
+</tbody>
+</table>
+<div id="binary-addition" class="section level4">
+<h4><span class="header-section-number">1.2.6.1</span> Binary Addition</h4>
+<p><strong>Example 1: Add (a) 111 and 101 (b) 1010, 1001 and 1101</strong></p>
+<p><img src="figure/NSbox22-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="binary-subtraction" class="section level4">
+<h4><span class="header-section-number">1.2.6.2</span> Binary Subtraction</h4>
+<p><strong>Example 1: Perform the following subtractions</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(11- 01\)</span> (b) <span class="math inline">\(11-10\)</span> (c) <span class="math inline">\(100-011\)</span></li>
+</ol>
+<p><img src="figure/NSbox23-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <ul>
-<li>Number Systems <a href="https://www.topperlearning.com/ncert-solutions/cbse-class-9-mathematics/mathematics-ix/number-systems">Rational, irrational numbers</a></li>
+<li>When subtracting a larger number from a smaller number, the output will be negative.</li>
+<li>To perform this subtraction, subtract the smaller number from the larger number and prefix the output with the sign of the larger number.</li>
 </ul>
+<p><strong>Example 2: Perform the following subtraction 101 - 111</strong></p>
+<p><img src="figure/NSbox24-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="binary-multiplication" class="section level4">
+<h4><span class="header-section-number">1.2.6.3</span> Binary multiplication</h4>
+<p><strong>Example 1: Multiply the following binary numbers</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(101\times11\)</span> (b) <span class="math inline">\(1101\times10\)</span> (c) <span class="math inline">\(1010\times101\)</span></li>
+<li><span class="math inline">\(1011\times1010\)</span></li>
+</ol>
+<p><img src="figure/NSbox25-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>Multiplication of factional numbers is perform in the same manner as with decimal factional numbers.</li>
+</ul>
+<p><strong>Example 2: Perform the binary multiplication</strong> <span class="math inline">\(0.01\times11\)</span></p>
+<p><img src="figure/NSbox26-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="binary-division" class="section level4">
+<h4><span class="header-section-number">1.2.6.4</span> Binary Division</h4>
+<p><strong>Example 1: Perform the following binary division</strong>
+(a) <span class="math inline">\(110\div11\)</span> (b) <span class="math inline">\(1100\div11\)</span> (c) <span class="math inline">\(1111\div110\)</span> (d) <span class="math inline">\(1100\div101\)</span></p>
+<p><img src="figure/NSbox27-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="figure/NSbox28-1.png" width="100%" style="display: block; margin: auto;" /></p>
 
+</div>
 </div>
 </div>
 </div>
