@@ -84,7 +84,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2020-03-04}
+    \date{2020-03-10}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -3560,6 +3560,366 @@ Lecture attendance & 13 & 6 & 15 & 4 & 12 & 14 & 15 & 10 & 11 & 6\tabularnewline
 
 \hypertarget{sets-and-relations}{%
 \chapter{Sets and Relations}\label{sets-and-relations}}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+\begin{itemize}
+\tightlist
+\item
+  Everyday we hear, or make statements to convey ideas about possibilities of occurring events.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Which lottery gives me the highest \textbf{chance} of winning?
+  \item
+    What are \textbf{odds} of our cricket team winning the next world cup?
+  \item
+    What is the \textbf{chance} of getting an A+ for CM1110?
+  \end{itemize}
+\item
+  In order to make decisions or take actions, we need to \textbf{quantify the possibility} of occurrence of an event. For this, we use the term \textbf{probability}.
+\item
+  Probability is a \textbf{quantitative measure} of uncertainty, a \textbf{number} that conveys the strength of our belief in the occurrence of an uncertain event.
+\item
+  The likelihood of an outcome is quantified by assigning a number from the interval {[}0, 1{]} to the outcome (or a percentage from 0 to 100\%).
+\item
+  Higher numbers indicate that the outcome is more likely than lower numbers.
+\item
+  A probability of 0 indicates an outcome will not occur.
+\item
+  A probability of 1 indicates that an outcome will occur with certainty.
+\end{itemize}
+
+\hypertarget{sample-spaces-and-events}{%
+\section{Sample Spaces and Events}\label{sample-spaces-and-events}}
+
+\hypertarget{random-experiments}{%
+\subsection{Random Experiments}\label{random-experiments}}
+
+\begin{itemize}
+\tightlist
+\item
+  Statisticians use the word \textbf{experiment} to describe any process that generates a set of data.
+\item
+  An experiment usually involves observing or counting or measuring. For example;
+
+  \begin{itemize}
+  \tightlist
+  \item
+    we might classify items coming off an assembly line as defective or non-defective
+  \item
+    we may record the number of accidents that occur monthly at the Katubedda junction, hoping to justify the installation of a traffic light;
+  \item
+    or we may be interested in the volume of gas released in a chemical reaction when the concentration of an acid is varied.
+  \end{itemize}
+\item
+  An experiment that is repeatable in an identical fashion is called a \textbf{random experiment} or a \textbf{probability experiment}.
+\item
+  Random experiment is an activity that leads to the occurrence of one of several possible outcomes which is not likely to be known until its completion, that is, the outcome is not perfectly predictable. This process has the properties that,
+
+  \begin{itemize}
+  \tightlist
+  \item
+    All possible outcomes can be specified in advance.
+  \item
+    It can be repeated in an \textbf{identical manner.}
+  \item
+    The same outcome may not occur on various repetitions so that the actual outcome is not known in advance.
+  \end{itemize}
+\end{itemize}
+
+\emph{Examples}
+
+\begin{itemize}
+\tightlist
+\item
+  Tossing a coin.
+\item
+  Throwing a die (or several dice)
+\item
+  Drawing cards from a pack
+\item
+  Launching of missile and observing its velocity at specified times.
+\end{itemize}
+
+\hypertarget{outcomes}{%
+\subsection{Outcomes}\label{outcomes}}
+
+\begin{itemize}
+\tightlist
+\item
+  The result of a \textbf{single experiment} is called an outcome.
+\item
+  It can be instrument reading, counts, ``yes'' or ``no'' answers, values obtained through extensive calculations etc.
+\item
+  To model and analyze a random experiment, we must understand the set of possible outcomes from the experiment.
+\end{itemize}
+
+\hypertarget{sample-space}{%
+\subsection{Sample space}\label{sample-space}}
+
+\begin{itemize}
+\tightlist
+\item
+  The set of all possible outcomes of a random experiment is called the \textbf{sample space} of the experiment.
+\item
+  We denote the sample space by \(\Omega\).
+\item
+  Each outcome in a sample space is called an \textbf{element} of the sample space or simply a \textbf{sample point}.
+\end{itemize}
+
+\textbf{Activity 01}
+\emph{Write down the corresponding sample space of the following experiments?}
+
+\textbf{Example I:} A player rolls a die.
+
+\textbf{Example II:} A player rolls two dice.
+
+\textbf{Example III:} A quality control engineer of a certain company takes a random sample of 4 products as the products come off its production line and counts the number of defective products in the sample.
+
+\textbf{Example IV:} A quality control engineer of a certain company takes a random sample of 4 products as products come off its production line and determines whether each product is defective or non-defective
+
+\textbf{Example V:} A company produces a certain type of car batteries. If a battery has a voltage that is outside certain limits, that battery is characterized as bad (B); if the battery has a voltage within the prescribed limits it is characterized as good (G). A quality inspector selects batteries one by one as they come off the production line and tests them until he gets a bad battery. He uses this data to estimate the proportion of bad batteries produced by the company.
+
+\textbf{Example VI:} An experiment consists of measuring the lifetime of a bulb.
+
+\begin{itemize}
+\tightlist
+\item
+  A sample space is often defined based on the objectives of the analysis.
+\item
+  The following example illustrates several alternatives
+\end{itemize}
+
+\textbf{Example:}
+
+Consider an experiment that selects a digital camera and records the recycle time of a flash (the time taken t ready the camera for another flash). The possible values for recycle time can vary according to the resolution of the timer and on the minimum and maximum recycle times.
+
+However, since the time is positive we can define the sample space as simply the positive real line
+
+\textbf{\emph{Case I}}
+
+\textbf{\emph{Case II}} If it is known that all recycle times are between 1.0 and 5.5 seconds, the sample space can be written as
+
+\textbf{\emph{Case III}} If the objective of the analysis is to consider only whether the recycle time is low, medium or high, the sample space can be written as a set of three outcomes
+
+\textbf{\emph{Case IV}} If the objective is only to evaluate whether or not a particular camera confirms to a minimum recycle time specification, the sample space can be written as a set of two outcomes
+
+\begin{itemize}
+\tightlist
+\item
+  The number of outcomes in the sample space can be \textbf{finite} or \textbf{infinite}.
+\item
+  Infinite sample spaces can be \textbf{countable} or \textbf{uncountable}.
+\item
+  A sample space is countable if the outcomes can be associated with the integers 1, 2, \ldots{}.
+\item
+  If the sample space contains a finite number of elements or an infinite though countable number of elements, it is said to be \textbf{discrete}.
+\item
+  The outcomes of some experiments are neither finite nor countably infinite, it is said to be \textbf{continuous}.\\
+\item
+  In the above Example, the choice \(\Omega = {x | x \geq 0}\) is an example of a continuous sample space,
+\item
+  \(\Omega = {yes, no}\) is a discrete sample space.
+\item
+  As mentioned, the best choice of a sample space depends on the objectives of the study.
+\end{itemize}
+
+\hypertarget{events-as-subsets-of-sample-spaces}{%
+\subsection{Events as subsets of sample spaces}\label{events-as-subsets-of-sample-spaces}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{An event is a subset of the sample space of a random experiment}
+\item
+  Events are usually denoted by capital English letters A, B, C, D, E etc.
+\item
+  An event containing only one outcome is called a \textbf{simple event}.
+\item
+  An event containing more than one outcome is called a \textbf{compound event}.
+\end{itemize}
+
+\textbf{Activity 02}
+\emph{Express the following events as subsets of the sample spaces. Decide whether each event is simple or compound. (No need to calculate probabilities yet.)}
+
+\textbf{Example I:} A player rolls a die.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  A = the event of getting 3
+\item
+  B = the event of getting an even number
+\item
+  C = the event of getting a number less than 4
+\item
+  D = the event of getting 2 or 5
+\end{enumerate}
+
+\textbf{Example II:} A player rolls two dice.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  The event that one number is even.
+\item
+  The event that sum of the two numbers is odd
+\item
+  The event that the numbers are equal
+\item
+  The event of getting 2 and 5
+\item
+  The event of getting 2 or 5
+\end{enumerate}
+
+\textbf{Example III:} Consider Example III in Activity 01,
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  E = the event that sample contains more than 2 defective products.
+\item
+  F = the event that the sample contains only two defective products.
+\end{enumerate}
+
+\textbf{Example IV:} Consider Example IV in Activity 01
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  G = the event that sample contains more than 2 defective products.
+\item
+  H = the event that the sample contains two defective products.
+\end{enumerate}
+
+\textbf{Example V:} Consider Example V in Activity 01,
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  I = the event that number of good batteries before a bad battery is 3.
+\item
+  J = the event that the number of good batteries before a bad battery is less than 3.
+\end{enumerate}
+
+\textbf{Example VI:} Consider Example VI in Activity 01,
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  A = the event that bulb burns for at least 25 hours but burns out before 50 hours.
+\end{enumerate}
+
+\hypertarget{event-operations}{%
+\section{Event Operations}\label{event-operations}}
+
+\begin{itemize}
+\tightlist
+\item
+  We can describe new events from combinations of existing events.
+\item
+  Because events are subsets, we can use basic set operations to form other events of interest.
+\item
+  Some of the basic set operations are summarized here in terms of events:
+\end{itemize}
+
+\textbf{Venn diagrams}
+
+\begin{itemize}
+\tightlist
+\item
+  Diagrams are often used to portray relationships between sets, and these diagrams are also used to describe relationships between events.
+\item
+  We can use Venn diagrams to represent a sample space and events in a sample space.
+\end{itemize}
+
+\hypertarget{union}{%
+\subsection{Union}\label{union}}
+
+\begin{itemize}
+\tightlist
+\item
+  Let A and B be two events.
+\item
+  The set of outcomes that belong to \textbf{either only A or only B or to both A and B,} is called the \textbf{union} of the two events.
+\item
+  It is denoted by \(A \cup B\).
+\end{itemize}
+
+\[A \cup B = \{\omega\in \Omega: \omega \in A \text{ or } \omega\in B\}\]
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/box71-1} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  Shaded set in the Venn diagram represents the event \(A \cup B\)
+\end{itemize}
+
+\hypertarget{intersection}{%
+\subsection{Intersection}\label{intersection}}
+
+\begin{itemize}
+\tightlist
+\item
+  Let A and B be two sets.
+\item
+  The set of outcomes that belong to \textbf{sets A and B both} is called the intersection of the two events.
+\item
+  It is denoted by \(A \cap B\).
+\end{itemize}
+
+\[A \cap B = \{\omega\in \Omega: \omega \in A \text{ and } \omega\in B\}\]
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/box72-1} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  Shaded set in the Venn diagram represents the event \(A \cap B\)
+\end{itemize}
+
+\hypertarget{mutually-exclusive-events}{%
+\subsubsection{Mutually exclusive events}\label{mutually-exclusive-events}}
+
+\begin{itemize}
+\tightlist
+\item
+  If the events A and B cannot occur together, in other words if \(A \cap B\) cannot occur, then the events A and B are said to be \textbf{disjoint} or \textbf{mutually exclusive}.
+\end{itemize}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/box73-1} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  If A and B are mutually exclusive, then we denote the intersection as
+  \[A \cap B = \{\} \text { or }  A \cap B = \Phi.\]
+\end{itemize}
+
+\hypertarget{complement}{%
+\subsection{Complement}\label{complement}}
+
+\begin{itemize}
+\tightlist
+\item
+  The set of outcomes that are in sample space \((\Omega)\) but not in A is called the compliment of A.
+\item
+  It is denoted by \(A^\prime\) or \(A^c\) or \(\bar{A}\)
+\end{itemize}
+
+\[A^\prime = \{\omega \in \Omega: \omega \notin A\}.\]
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/box74-1} \end{center}
 
 \hypertarget{probability}{%
 \chapter{Probability}\label{probability}}
