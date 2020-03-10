@@ -112,11 +112,11 @@ However, since the time is positive we can define the sample space as simply the
 
 - The number of outcomes in the sample space can be **finite** or **infinite**.
 - Infinite sample spaces can be **countable** or **uncountable**.
-- A sample space is countable if the outcomes can be associated with the integers 1, 2, ….
+- A sample space is countable if the outcomes can be associated with the integers $1, 2,3,\dots$.
 - If the sample space contains a finite number of elements or an infinite though countable number of elements, it is said to be **discrete**. 
 - The outcomes of some experiments are neither finite nor countably infinite, it is said to be **continuous**.  
-- In the above Example, the choice $\Omega = {x | x \geq   0}$ is an example of a continuous sample space,
--  $\Omega = {yes, no}$ is a discrete sample space.
+- In the above Example, the choice $\Omega = \{x | x \geq   0\}$ is an example of a continuous sample space,
+-  $\Omega = \{yes, no\}$ is a discrete sample space.
 - As mentioned, the best choice of a sample space depends on the objectives of the study.
 
 ### Events as subsets of sample spaces

@@ -1,1 +1,381 @@
 # Probability
+
+```{r initial8, echo = FALSE, cache = FALSE, include = FALSE}
+library(knitr)
+opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE,
+  fig.path = 'figure/',
+  cache.path = 'cache/',
+  fig.align = 'center',
+  fig.show = 'hold',
+  cache = TRUE,
+  external = TRUE,
+  dev = "png",
+  fig.height = 16,
+  fig.width = 10,
+  out.width = "0.8\\textwidth"
+)
+
+
+library(tidyverse)
+library(janitor)
+
+```
+
+\pagenumbering{arabic}
+
+## Counting Techniques
+
+- This section develops some techniques for determining, without direct enumeration, the number of possible outcomes of a particular experiment or event or the number of elements in a particular set. 
+- These methods are referred to as **counting techniques**. 
+
+###  Basic Counting Principles
+-	Sum Rule Principle
+- Product Rule Principle / Multiplication Rule Principle
+
+#### Sum Rule Principle 
+
+**Example 1:** Suppose there are 8 male professors (say A, B, C, D, E, F, G and H) and 5 female professors (say J, K, L, M, N) teaching a language class. How many ways are there, a student can choose a language professor?
+
+```{r box81, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+**Example 2:** Suppose there are 3 different mystery novels, 5 different romance novels, and 4 different adventure novels on a bookshelf. How many different ways are there to choose one of the novels? 
+
+```{r box82, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+**Sum Rule Principle:** Suppose an event $E_1$ can occur in $n_1$ ways, a second event $E_2$ can occur in $n_2$ ways, a third event $E_3$ can occur in $n_3$ ways and so on, and suppose no two of the events can occur simultaneously (at the same time). Then one of the events can occur in $n_1 + n_2 + n_3 + \dots$ ways
+
+*This principle can be stated in terms of sets as follows,*
+
+**Sum Rule Principle:** Suppose $A$ and $B$ are mutually exclusive events (disjoint events). Then:      $$n(A \cup B)   = n(A) + n(B)$$
+
+#### Product Rule Principle / Multiplication Rule
+
+**Example 3:** The design for a Website is to consist of four colors, three fonts, and three positions for an image. Draw a tree diagram for the different types of designs.
+
+```{r box83, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+- How many different designs are possible?
+
+- The above tree diagram describes the sample space of all possible designs. 
+- The size of the sample space equals the number of branches in the last level of the tree, and this quantity equals $4 \times 3 \times 3 = 36$. - This leads to the following useful result.
+
+
+**Product Rule Principle / Multiplication Rule:** Assume an operation can be described as a sequence of k steps, and
+-	the number of ways of completing step 1 is $n_1$, and
+-	the number of ways of completing step 2 is $n_2$ for each way of completing step 1, and
+-	the number of ways of completing step 3 is $n_3$ for each way of completing step 2, and so forth.
+The total number of ways of completing the operation is $n_1\times n_2 \times \dots \times n_k$
+
+
+**Example  4:** Suppose a password consists of 4 characters, the first 2 being simple letters in the English alphabet and the last 2 being digits. Find the number of 
+
+(a)	Passwords
+
+
+(b)	Passwords beginning with a vowel
+
+
+**Example 5:** There are 5 bus lines from city A to city B, 2 bus lines from city B to city C and  3 bus lines from city C to city D. Find the number of ways a person can travel by bus from city A to city D.
+
+
+**Example 6:** There are five gates in a school. No student leaves the school from the gate he entered. Find the number of ways a student can enter and leave the school
+
+
+### Factorial Notation
+
+- The product of the positive integers from 1 to n inclusive occurs very often in mathematics and hence it is denoted by the special symbol $n!$, read "n factorial". That is
+$$n! = 1\times2\times3\times \dots \times(n-2)\times(n-1)\times n = n\times (n-1)\times(n-2)\times\dots \times 3 \times 2 \times 1 $$
+
+**NOTE**
+
+$$0! = 1$$
+$$1! = 1$$
+**Examples 7:** 
+(a) $2!=$	 
+(b) $4!=$	 
+(c) $\frac{8!}{6!}$ 
+(d) Represent  $\frac{12.11.10}{3.2.1}$  in terms of factorial notation.
+
+
+### Permutations
+
+Permutation is an arrangement of all or part of a set of objects. Here the order is important
+
+
+```{r   out.width = "100%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/Permutations.png")
+```
+
+#### Case I: Permutations of n distinct objects (taken all at a time)
+
+
+**Example 8:** Find the number of "three-letter words (not necessary to have a meaning)" that can be formed using the letters of the word "TWO", without repetitions.
+
+
+```{r box84, out.width='100%', fig.asp=.25, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+Using multiplication rule:
+
+
+```{r box85, out.width='100%', fig.asp=.25, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+**Permutations of n distinct objects (taken all at time): **
+
+*The number of permutations of n different elements is* $n!$ *where*
+$$n! = n \times (n-1)\times(n-2)\times \dots \times 2 \times1$$
+
+**NOTE**
+
+- This result follows from the multiplication rule. - A permutation can be constructed by selecting the element to be placed in the first position of the sequence from the n elements, then selecting the element for the second position from the remaining $(n-1)$ elements, then selecting the element for the third position from the remaining $(n-2)$ elements, and so forth.
+
+
+**Example 9:** Find the number of ways that 4 people can sit in a row of 4 seats 
+
+
+```{r box86, out.width='100%', fig.asp=.25, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+#### Case II: Permutations of similar objects (taken all at a time)
+
+**Example 10:** Find the number of "three-letter words (not necessary to have a meaning)" that can be formed using the letters of the word "TOO".
+
+```{r box87, out.width='100%', fig.asp=.25, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+**Permutations of Similar Objects (taken all at a time):**
+
+*The number of permutations of n* $(=n_1 + n_2 + n_3 + \dots + n_k)$ objects in which $n_1$ are alike, $n_2$ are alike, $\dots$, $n_k$ are alike, is 
+ $$\frac{n!}{n_1!n_2!\dots n_k!}$$
+
+**Example 11:** Find the number of "ten-letter words (not necessary to have a meaning)" that can be formed using the letters of the word "STATISTICS".
+
+```{r box88, out.width='100%', fig.asp=.25, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+- In some situations, we are interested in the number of arrangements of only some of the elements of a set. 
+- Case III and Case IV address this particular situation.
+
+#### Case III: Permutations of n objects taken r at a time (where $r\leq n$) (WITH Replacement) 
+
+- Here the element is replaced in the set before the next element is chosen. 
+- Since there are $n$ different ways to choose each element (repetitions are allowed), the product rule principle tells us that there are 
+$$n.n.n\dots n = n^r$$
+different ordered possibilities of size $r$.  
+
+
+**Example 12:** How many "three digit numbers" can be made with the four digits 3, 5, 7 and 8 (A digit can be used as much as you can)
+
+```{r box89, out.width='100%', fig.asp=.25, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+#### Case IV: Permutations of n objects taken r at a time (where $r \leq n$) (WITHOUT Replacement) 
+
+
+- Here the element is not replaced in the set before the next element is chosen. 
+- Thus, there are no repetitions in the ordered sample.
+- Accordingly, an ordered sample of size $r4 without replacement is simply an $r$ permutation of the elements in the set with $n$ elements. 
+- In other words, by the product rule, the first element can be chosen in $n$ ways, the second in $(n-1)$ ways, and so on
+$$n.(n-1)(n-2)\dots (n-r+1) = \frac{n.(n-1)(n-2)\dots (n-r+1).(n-r)!}{(n-r)!} = \frac{n!}{(n-r)!} = ^nP_r$$
+
+
+**NOTE**
+
+Consider the case that $n = r$. we get
+
+$$^nP_r=\frac{n!}{(n-n)!} = \frac{n!}{0!} = \frac{n!}{1}=n!$$
+
+**Example 13:** How many "three digit numbers" can be made with the four digits 3, 5, 7 and 8 (without repetition)
+
+**Example 14:** A printed circuit board has eight different locations in which a component can be placed. If four different components are to be placed on the board, how many different designs are possible?
+
+
+### Combinations
+
+- Another counting problem of interest is the number of subsets of $r$ elements that can be selected from a set of $n$ elements. 
+- These are called **combinations**. 
+- Here, **order is not important**.
+
+- For example, the combinations of the letters a, b, c, d taken three at a time are $\{a,b,c\}, \{a,b,d\}, \{a,c,d\}, \{b,c,d\}$  or simply $abc, abd, acd, bcd$
+- Observe that the following combinations are equal:
+$$abc, acb, bac, bca, cab, cba$$
+- That is, each denotes the same set $\{a, b, c\}$.
+- The number of combinations of $n$ objects taken $r$ at a time will be denoted by  $^nC_r$.
+
+Before we derive the general formula for $^nC_r$ , we consider a particular case.
+
+
+**Example:** Find the number of combinations of four objects a, b, c, d taken three at a time.
+
+Combinations | Permutations
+-------------|---------------------------
+$\{a,b,c\}$  | 
+$\{a,b,d\}$  | 
+$\{a,c,d\}$  | 
+$\{b,c,d\}$  |
+
+- As can be seen in the above table, each combination consisting of three objects determines $3! = 6$ permutations of the objects in the combination. 
+- Thus, the number of combinations multiplied by $3!$ equals the number of permutations.
+- That is,
+$$^4C_3\times 3! = ^4P_3$$
+$$^4C_3 = \frac{^4P_3}{3!}$$
+But we know $^4p_3 = \frac{4!}{(4-3)!}=\frac{4!}{1!} = 2.3.4 = 24$ and $3!=6$.
+
+Thus
+$$^4C_3 = \frac{24}{6} = 4$$
+which is noted in the above table.
+
+
+**Formula for** $^nC_r$
+
+Since any combination of $n$ objects taken $r$ at a time determines $r!$ permutations of the objects in the combination, we can conclude that
+$$^nC_r\times r! = ^nP_r.$$
+
+Thus we obtain the following formula for $^nC_r$  as
+
+$$^nC_r\times = \frac{^nP_r}{r!} = \frac{\frac{n!}{(n-r)!}}{r!} = \frac{n!}{r!(n-r)!}.$$
+
+**Example 15:** In a small company there are 8 executive managers. How many ways are there to select 3 executive managers to form a new committee? 
+
+```{r box891, out.width='100%', fig.asp=.25, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+If Mr. Perera must be one of the 3, how many ways are there to form a new committee of 3?
+
+```{r box891a, out.width='100%', fig.asp=.25, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+**Example 16:**  A printed circuit board has eight different locations in which a component can be placed. If five identical components are to be placed on the board, how many different designs are possible?
+
+```{r box892, out.width='100%', fig.asp=.25, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+**Example 17:**  In a small company there are 7 women and 5 men. A committee of 3 women and 2 men are to be selected. How many different possibilities are there to select a committee?
+
+```{r box893, out.width='100%', fig.asp=.25, fig.align='center', fig.pos='h'}
+#df<-data.frame(x = NULL, y = NULL)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+**Example 18:** In a small company there are 5 executive managers. Two of them are males and 3 are females. Three executive managers are to be selected for a committee.
+
+a.	How many different ways are there to select three executive managers for the committee?
+b.	How many different ways are there to select three executive managers for the committee while satisfying the following conditions?
+   i.	All in the committee will be females
+   ii. Two will be females and one will be     a male
+   iii.	Two will be males and one will be a female
+
+\newpage
+
+### Summary {-}
+
+**Sum Rule Principle:**
+
+Suppose an event $E_1$ can occur in $n_1$ ways, a second event $E_2$ can occur in $n_2$ ways, a third event $E_3$ can occur in $n_3$ ways and so on, and suppose no two of the events can occur simultaneously (at the same time ).
+Then one of the events can occur in $n_1 + n_2 + n_3 + \dots$ ways
+
+
+**Product Rule Principle / Multiplication Rule**
+
+Assume an operation can be described as a sequence of $k$ steps, and
+-	the number of ways of completing step 1 is $n_1$, and
+-	the number of ways of completing step 2 is $n_2$ for each way of completing step 1, and
+- the number of ways of completing step 3 is $n_3$ for each way of completing step 2, and so forth.
+
+The total number of ways of completing the operation is $n_1 \times n_2 \times \dots \times n_k$
+
+**Permutations**
+
+```{r   out.width = "100%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/Permutations.png")
+```
+
+$$n!\quad\quad \quad \quad \quad \quad  \frac{n!}{n_1!n_2!\dots n_k!}\quad\quad \quad \quad \quad \quad n^r\quad \quad \quad \quad  \quad \quad ^nP_r = \frac{n!}{(n-r)!}$$
+
+**Number of combinations of $n$ objects taken** $r$ **at a time** $( r \leq n)$
+
+$$^nC_r = \frac{n!}{r!(n-r)!}$$
