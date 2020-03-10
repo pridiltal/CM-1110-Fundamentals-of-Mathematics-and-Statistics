@@ -1,5 +1,31 @@
 # Sets and Relations
 
+```{r initial7, echo = FALSE, cache = FALSE, include = FALSE}
+library(knitr)
+opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE,
+  fig.path = 'figure/',
+  cache.path = 'cache/',
+  fig.align = 'center',
+  fig.show = 'hold',
+  cache = TRUE,
+  external = TRUE,
+  dev = "png",
+  fig.height = 16,
+  fig.width = 10,
+  out.width = "0.8\\textwidth"
+)
+
+
+library(tidyverse)
+library(janitor)
+
+```
+
+\pagenumbering{arabic}
+
 ## Introduction
 
 - Everyday we hear, or make statements to convey ideas about possibilities of occurring events.
@@ -222,3 +248,116 @@ ggplot()+
   theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
 
 ```
+
+\newpage
+
+\pagenumbering{arabic}
+
+## Tutorial 
+
+### Chapter 7: Sets and Relations {-}
+
+
+1. A player rolls a die.
+
+(a) What is the sample space of this experiment?
+(b) Write down the following events as subsets of the sample space. Decide whether each event is simple or compound.
+
+i. A = the event of getting 3
+ii. B = the event of getting 7
+iii. C = the event of getting a number less than 4
+iv. D = the event of getting an even number
+v. E = the event of getting 2 or 5
+
+
+2. A player rolls two dies
+
+(a) What is the sample space of this experiment?
+(b) Write down the following events as subsets of the sample space. Decide whether each event is simple or compound.
+
+i. A= the event that one number is even
+ii. B= the event that sum of the two numbers is odd
+iii. C= the event that the numbers are equal
+iv. D= the event of getting 2 and 5
+v. E= the event of getting 2 or 5
+
+3. A player rolls three dies
+
+(a) What is the sample space of this experiment? (Use set builder form of a set to represent the sample space)
+(b) Write down the following events as subsets of the sample space. Decide whether each event is simple or compound
+
+i. A = the event of getting all the numbers greater than 4
+ii. B = the event that two numbers are equal
+
+4. A company produces a certain type of car batteries. If a battery has a voltage that is outside certain limits, that battery is characterized as bad (B); if the battery has a voltage within the prescribed limits it is characterized as good (G). A quality inspector selects batteries one by one as they come off the production line and tests them until he gets a bad battery. He uses this data to estimate the proportion of bad batteries produced by the company.
+
+(a) What is the sample space of this experiment
+(b) Write down the following events as subsets of the sample space. Decide whether each event is simple or compound.
+
+i. I = the event that number of good batteries before a bad battery is 3.
+ii. J = the event that the number of good batteries before a bad battery is less
+than 3.
+
+5. A professor is giving ten true-false questions (10 marks for a correct answer). If a student guesses on each question, how many different ways could the ten questions be answered?
+
+6. A security supervisor of a large corporation wishes to issue each employee an identity card with one English letter followed by two digits.
+
+(a) How many different ID cards could be made
+(b) How many identity cards will have the same two numbers
+(c) How many identity cards will have first number greater than the second number
+
+7. A doctor observes the lifetime of leukemia patients after being treated with a newly developed treatment.
+
+(a) What is the sample space of this experiment?
+(b) Write down the following event as subsets of the sample space. Decide whether it is
+simple or compound.
+
+i. K= the event that a randomly selected patient lives more than 10 years
+
+8. Three students are selected at random from the class. Let 
+P1 = the event that the first student pass
+P2 = the event that the second student pass
+P3 = the event that the third student pass Write the following events using the above events.
+
+(a) The event that all three students pass
+(b) The event that all three students fails
+(c) The event that only 2 of the three students pass after the treatments
+
+9. Identify the events of interest as subsets of the sample space. A box contains one ticket with number 1 on it, 2 tickets with number 2, 3 tickets with number 3, 4 tickets with number 4, 5 tickets with number 5, and 6 tickets with number 6. A ticket is taken randomly from the box
+
+(a) A = The event of getting an even number?
+(b) B = The event of getting a number less than 5?
+(c) C = The event of getting an even number less than 5?
+(d) Express C in terms of A and B using event operations
+(e) ) D = The event of getting an even number or a number less than 5?
+(f) Express D in terms of A and B using event operations
+(g) Express, E= the event of getting an odd number, using the above defined event or events
+
+10. Three components are connected to form a system as shown in figure (a). Because the components in the 2-3 subsystem are connected in parallel, that subsystem will function if at least one of the two individual components functions. For the entire system to function, component 1 must function and so must be 2-3 subsystem.
+
+
+```{r   out.width = "80%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/Chapter7a.png")
+```
+
+
+Each component is either in working condition (s) or not working condition (f) at any time.
+Let
+$W1 =$ The event that component 1 is in working condition
+$W2 =$ The event that component 2 is in working condition
+$W3 =$ The event that component 3 is in working condition
+$W =$ The event that the system is in working condition
+
+(a) Write the above events as subsets of the sample space. (b) Write the following events.
+i. $W3^\prime$
+ii. $W1 \cap W2$
+iii. $W2 \cup W3$
+iv. $W1 \cap (W2 \cup W3)$
+(c) Express $W$ in terms of $W1, W2$ and $W3$ using event operations.
+
+
+11. Three products are selected at random, from a production line. Each product is either defective or non defective. Let
+$D1 =$ The event that the first item is defective
+$D2 =$ The event that the second item is defective
+$D3 =$ The event that the third item is defective
+$E =$ The event that two of the three products are defective Express E in terms of $D1, D2$ and $D3$ using event operations
