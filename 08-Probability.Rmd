@@ -341,13 +341,6 @@ ggplot()+
 
 ```
 
-**Example 18:** In a small company there are 5 executive managers. Two of them are males and 3 are females. Three executive managers are to be selected for a committee.
-
-a.	How many different ways are there to select three executive managers for the committee?
-b.	How many different ways are there to select three executive managers for the committee while satisfying the following conditions?
-   i.	All in the committee will be females
-   ii. Two will be females and one will be     a male
-   iii.	Two will be males and one will be a female
 
 \newpage
 
@@ -379,3 +372,25 @@ $$n!\quad\quad \quad \quad \quad \quad  \frac{n!}{n_1!n_2!\dots n_k!}\quad\quad 
 **Number of combinations of $n$ objects taken** $r$ **at a time** $( r \leq n)$
 
 $$^nC_r = \frac{n!}{r!(n-r)!}$$
+
+
+## Tutorial 
+
+### Chapter 8: Probability {-}
+
+1. A professor is giving ten true-false questions (10 marks for a correct answer). If a student guesses on each question, how many different ways could the ten questions be answered?
+
+
+2. A security supervisor of a large corporation wishes to issue each employee an identity card with one English letter followed by two digits.
+
+(a) How many different ID cards could be made
+(b) How many identity cards will have the same two numbers
+(c) How many identity cards will have first number greater than the second number
+
+3. In a small company there are 5 executive managers. Two of them are males and 3 are females. Three executive managers are to be selected for a committee.
+
+a.	How many different ways are there to select three executive managers for the committee?
+b.	How many different ways are there to select three executive managers for the committee while satisfying the following conditions?
+   i.	All in the committee will be females
+   ii. Two will be females and one will be     a male
+   iii.	Two will be males and one will be a female
