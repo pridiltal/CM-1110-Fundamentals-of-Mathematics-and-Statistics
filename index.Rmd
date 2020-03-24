@@ -36,13 +36,19 @@ On successful completion of this module, students will be able to apply fundamen
 
 ## Outline Syllabus {-}
 
+**Fundamentals of Mathematics**
+
 -	Number Systems
 -	Sequences and Series
 -	Introduction to Logic
 -	Boolean Algebra
 -	Differentiation and Integration
+
+**Fundamentals of Statistics**
+
 - Descriptive Statistics
 - Sets and Relations
+- Random Variables
 - Probability
 - Correlation and Regression
 
