@@ -1,5 +1,7 @@
 # Number Systems
 
+<!--  Butenko, S., & Pardalos, P. M. (2014). Numerical methods and optimization: An introduction. CRC Press.-->
+
 ```{r initial1, echo = FALSE, cache = FALSE, include = FALSE}
 library(knitr)
 opts_chunk$set(

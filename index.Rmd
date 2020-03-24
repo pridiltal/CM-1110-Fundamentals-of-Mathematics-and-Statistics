@@ -16,7 +16,7 @@ header-includes:
 - \fancyfoot[CO,CE]{Prepared by Dr. Priyanga D. Talagala}
 - \fancyfoot[LE,RO]{\thepage}
 - \usepackage{wrapfig}
-- \usepackage{float}
+#- \usepackage{float}
 - \usepackage{floatrow}
 - \floatplacement{figure}{H}
 - \floatplacement{table}{H}

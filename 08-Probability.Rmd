@@ -654,7 +654,8 @@ knitr::include_graphics("figure/totprob.png")
 Then for $i = 1, 2, \dots, n$.
 
 \[P(A_i|B) = \frac{P(A_i \cap B)}{P(B)}\]
-\[P(A_i|B) = \frac{P(B│A_i )P(A_i))}{P(B)}\]
+
+\[P(A_i|B) = \frac{P(B|A_i)P(A_i)}{P(B)}\]
 
 
 

@@ -1,3 +1,6 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
 \documentclass[]{book}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -6,31 +9,34 @@
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
 \else % if luatex or xelatex
-  \ifxetex
-    \usepackage{mathspec}
-  \else
-    \usepackage{fontspec}
-  \fi
+  \usepackage{unicode-math}
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
 \IfFileExists{microtype.sty}{%
-\usepackage{microtype}
+\usepackage[]{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
 \usepackage{hyperref}
-\hypersetup{unicode=true,
+\hypersetup{
             pdftitle={CM 1110 Fundamentals of Mathematics and Statistics},
             pdfauthor={Dr.~Priyanga D. Talagala},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
-\usepackage{natbib}
-\bibliographystyle{apalike}
 \usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -40,12 +46,6 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -60,31 +60,10 @@
 \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
-%%% Use protect on footnotes to avoid problems with footnotes in titles
-\let\rmarkdownfootnote\footnote%
-\def\footnote{\protect\rmarkdownfootnote}
-
-%%% Change title format to be more compact
-\usepackage{titling}
-
-% Create subtitle command for use in maketitle
-\providecommand{\subtitle}[1]{
-  \posttitle{
-    \begin{center}\large#1\end{center}
-    }
-}
-
-\setlength{\droptitle}{-2em}
-
-  \title{CM 1110 Fundamentals of Mathematics and Statistics}
-    \pretitle{\vspace{\droptitle}\centering\huge}
-  \posttitle{\par}
-    \author{Dr.~Priyanga D. Talagala}
-    \preauthor{\centering\large\emph}
-  \postauthor{\par}
-      \predate{\centering\large\emph}
-  \postdate{\par}
-    \date{2020-03-13}
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -94,6 +73,21 @@
   \thm@postskip=\thm@preskip
 }
 \makeatother
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[CO,CE]{Prepared by Dr. Priyanga D. Talagala}
+\fancyfoot[LE,RO]{\thepage}
+\usepackage{wrapfig}
+\usepackage{floatrow}
+\floatplacement{figure}{H}
+\floatplacement{table}{H}
+\makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{CM 1110 Fundamentals of Mathematics and Statistics}
+\author{Dr.~Priyanga D. Talagala}
+\date{2020-03-24}
 
 \begin{document}
 \maketitle
@@ -5075,7 +5069,8 @@ A box contains 3 white balls and 2 black balls. Two balls are taken one after th
 Then for \(i = 1, 2, \dots, n\).
 
 \[P(A_i|B) = \frac{P(A_i \cap B)}{P(B)}\]
-\[P(A_i|B) = \frac{P(B│A_i )P(A_i))}{P(B)}\]
+
+\[P(A_i|B) = \frac{P(B|A_i)P(A_i)}{P(B)}\]
 
 \newpage
 
@@ -5134,10 +5129,12 @@ Then for \(i = 1, 2, \dots, n\).
   Two will be males and one will be a female
 \end{enumerate}
 
+\hypertarget{random-variables}{%
+\chapter{Random Variables}\label{random-variables}}
+
 \hypertarget{correlation-and-regression}{%
 \chapter{Correlation and Regression}\label{correlation-and-regression}}
 
 \bibliography{book.bib,packages.bib}
-
 
 \end{document}
