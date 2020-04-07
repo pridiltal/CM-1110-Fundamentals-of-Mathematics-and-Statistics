@@ -13,7 +13,7 @@ header-includes:
 - \usepackage{fancyhdr}
 - \pagestyle{fancy}
 #- \fancyhead[CO,CE]{This is fancy header}
-- \fancyfoot[CO,CE]{Prepared by Dr. Priyanga D. Talagala}
+- \fancyfoot[CO,CE]{Prepared by Dr. Priyanga D. Talagala  (Copyright 2020 Priyanga D. Talagala)}
 - \fancyfoot[LE,RO]{\thepage}
 - \usepackage{wrapfig}
 #- \usepackage{float}
@@ -76,3 +76,7 @@ Tutorial:
 Consultation time: 
 
 - Tuesday [11.30 am to 12.30 pm]
+
+## Copyright Notice {-}
+
+My lectures and course materials, including presentations, tests, exams, outlines, and similar materials, are protected by copyright. I am the exclusive owner of copyright in those materials I create. I encourage you to take notes and make copies of course materials for your own educational use. However, you may not, nor may you knowingly allow others to reproduce or distribute lecture notes and course materials publicly without my express written consent.  

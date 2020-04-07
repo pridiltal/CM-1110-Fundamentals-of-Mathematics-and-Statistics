@@ -75,7 +75,7 @@
 \makeatother
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyfoot[CO,CE]{Prepared by Dr. Priyanga D. Talagala}
+\fancyfoot[CO,CE]{Prepared by Dr. Priyanga D. Talagala  (Copyright 2020 Priyanga D. Talagala)}
 \fancyfoot[LE,RO]{\thepage}
 \usepackage{wrapfig}
 \usepackage{floatrow}
@@ -87,7 +87,7 @@
 
 \title{CM 1110 Fundamentals of Mathematics and Statistics}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-03-25}
+\date{2020-04-07}
 
 \begin{document}
 \maketitle
@@ -193,6 +193,12 @@ Consultation time:
 \item
   Tuesday {[}11.30 am to 12.30 pm{]}
 \end{itemize}
+
+\hypertarget{copyright-notice}{%
+\section*{Copyright Notice}\label{copyright-notice}}
+\addcontentsline{toc}{section}{Copyright Notice}
+
+My lectures and course materials, including presentations, tests, exams, outlines, and similar materials, are protected by copyright. I am the exclusive owner of copyright in those materials I create. I encourage you to take notes and make copies of course materials for your own educational use. However, you may not, nor may you knowingly allow others to reproduce or distribute lecture notes and course materials publicly without my express written consent.
 
 \hypertarget{number-systems}{%
 \chapter{Number Systems}\label{number-systems}}
@@ -1014,6 +1020,340 @@ Stewart, J., Clegg, D. K., \& Watson, S. (2020). `Infinite Sequences and Series'
 
 \hypertarget{differentiation-and-integration}{%
 \chapter{Differentiation and Integration}\label{differentiation-and-integration}}
+
+\pagenumbering{arabic}
+
+\hypertarget{differentiation}{%
+\section{Differentiation}\label{differentiation}}
+
+\textbf{Reading :}
+
+Stewart, J. (2003). Calculus: Early Transcendentals. Thomson Learning. Inc., Belmont, CA.
+
+Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
+
+\hypertarget{derivative-and-tangent-lines}{%
+\subsection{Derivative and tangent lines}\label{derivative-and-tangent-lines}}
+
+\hypertarget{geometric-meaning-of-the-derivative}{%
+\subsubsection{Geometric meaning of the derivative}\label{geometric-meaning-of-the-derivative}}
+
+\begin{itemize}
+\tightlist
+\item
+  The steepness of a line can be determined by its \emph{slope}.
+\item
+  The steepness of the graph of a function (\(f\)) at a given point on it (say \((x_0, f{(x_0)})\)), can be approximate by its \textbf{tangent Line} at that point.
+\item
+  The slope of the tangent line at a point on the function is equal to the derivative of the function at that point
+\item
+  \emph{The derivative of \(f\) at \(x_0\)} is denoted by \(f^\prime (x_0)\)
+\end{itemize}
+
+\begin{center}\includegraphics[width=0.7\linewidth]{figure/5Derivatives-1} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  The direct computation of the slope of the tangent line is not possible as we are given only one point \((x_0, f{(x_0)})\).
+\item
+  Instead, we consider the \textbf{secant line} through two points: \((x_0, f{(x_0)})\) and \((x, f{(x)})\), on the graph of \(f\).
+\end{itemize}
+
+\begin{center}\includegraphics[width=0.7\linewidth]{figure/5Derivatives-2} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  As \(x\) approaches \(x_0\), the secant line is approaching to the tangent line.
+\item
+  As \(x\) varies, the secant line turns about the fixed point \((x_0, f{(x_0)})\).
+\item
+  We can describe the tangent line as the limiting line of the secant line when \(x\) approaches \(x_0\) from either direction.
+\end{itemize}
+
+\begin{center}\includegraphics[width=0.7\linewidth]{figure/5Derivatives-3} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  As we move on the secant line from \((x_0, f{(x_0)})\) to \((x, f{(x)})\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    the rise is \(f(x) - f(x_0)\)
+  \item
+    the run is \(x - x_0\).
+  \end{itemize}
+\item
+  Therefore,
+  \[\text{The slope of the secant line} = \frac{f(x) - f(x_0)}{x - x_0} \text{ for } x\neq x_0.\]
+\item
+  To have the derivative be the slope of the tangent line, we define it as the limit of the slope of the secant line.
+\end{itemize}
+
+\textbf{Definition: Tangent line }
+
+\textbf{The tangent line to the curve \(y=f(x)\) at the point \(P(x_0, f(x_0))\) is the line through \(P\) with slope} \[m = lim_{x\to x_{0}}\frac{f(x)-f(x_0)}{x-x_0}\]
+
+\textbf{provided that this limit exists}
+
+\textbf{Definition}
+
+\textbf{The derivative of a function \(f\) at \(x_0\) is}
+\[f^{\prime}(x_0) = lim_{x\to x_{0}}\frac{f(x) - f(x_0)}{x-x_0}\]
+\textbf{provided this limit exists and is finite.}
+
+\begin{itemize}
+\tightlist
+\item
+  If this limit does not exist or if it is infinite, we say that \textbf{\(f\) does not have a derivative at \(x_{0}\)}
+\end{itemize}
+
+\emph{Example 1}
+
+Compute the derivative of the function \(x^2\) at \(x=1\).
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Devbox1a-1} \end{center}
+
+\newpage
+
+\textbf{The geometric interpretation of the above solution}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/5Derivatives-4} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  The derivative is the slope of the tangent line to the graph at the point \((1,1)\). ( \(f^\prime(1) = 2\))
+\item
+  The secant line has slope \(x+1\), and the limit of that slope as x tends to 1 is the slope 2 of the tangent line
+\end{itemize}
+
+\hypertarget{equations-of-the-tangent-lines}{%
+\subsubsection{Equations of the tangent lines}\label{equations-of-the-tangent-lines}}
+
+\begin{itemize}
+\tightlist
+\item
+  When we compute the derivative, \(f^\prime(x_0)\), we can give an equation for the tangent line at \((x_0, f(x_0))\) on the graph of \(f\).
+\item
+  the tangent line has the equation \[y-f(x_0)= f^\prime(x_0)(x-x_0)\]
+\end{itemize}
+
+\newpage
+
+\emph{Example 2}
+
+Give the equation for the tangent line to the parabola \(y=x^2\) at \(x=1\).
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Devbox2-1} \end{center}
+
+\hypertarget{important-properties}{%
+\subsubsection{Important properties}\label{important-properties}}
+
+\textbf{1. Differentiable functions are continuous}
+
+\begin{itemize}
+\tightlist
+\item
+  A function must be continuous at any point where it has a derivative.
+\end{itemize}
+
+\newpage
+
+\textbf{Theorem}
+
+\textbf{If the derivative \(f^\prime(x_0)\) exists, then the function \(f\) is continuous at \(x_{0}\).}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Devbox3-1} \end{center}
+
+\textbf{2. Continuous functions that do not have derivative}
+
+\begin{itemize}
+\item
+  The converse of the above theorem is false; that is, there are functions that are continuous but not differentiable.
+\item
+  This usually occurs in one of the three ways:
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  When the graph of \(f\) has a vertical tangent line at a given point. (\(\frac{f(x) - f(x_0)}{x-x_0}\) tends to \(\infty\) or to \(-\infty\) as \(x\) tends to \(x_0\))
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/5Derivatives-6} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  When the secant line has different limits as \(x\) tends to \(x_0\) from the left and from the right (i.e.~when the graph has a sharp corner or a cusp at \(x=x_0\)).
+\end{enumerate}
+
+\includegraphics[width=1\linewidth]{figure/5Derivatives-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  When there is a jump discontinuity. The graph of a function will not have a tangent line at a point where the function is discontinuous.
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/5Derivatives-5} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  This graph does not have a tangent line at \(x=x_{0}\)
+\item
+  Therefore, the function \(f\) does not have a derivative at \(x_{0}\).
+\end{itemize}
+
+\newpage
+
+\hypertarget{leibniz-notation-and-derivative-as-a-function}{%
+\subsection{Leibniz notation and derivative as a function}\label{leibniz-notation-and-derivative-as-a-function}}
+
+\hypertarget{the-derivative-of-xn-derivatives-of-linear-combinations}{%
+\subsection{\texorpdfstring{The derivative of \(x^n\), derivatives of linear combinations}{The derivative of x\^{}n, derivatives of linear combinations}}\label{the-derivative-of-xn-derivatives-of-linear-combinations}}
+
+\hypertarget{the-product-and-quotient-rules}{%
+\subsection{The product and quotient rules}\label{the-product-and-quotient-rules}}
+
+\hypertarget{average-velocity-and-velocity}{%
+\subsection{Average velocity and velocity}\label{average-velocity-and-velocity}}
+
+\hypertarget{other-rate-of-change}{%
+\subsection{Other rate of change}\label{other-rate-of-change}}
+
+\hypertarget{composite-functions-and-the-chain-rule}{%
+\subsection{Composite functions and the chain rule}\label{composite-functions-and-the-chain-rule}}
+
+\hypertarget{the-derivatives-of-sine-and-cosine}{%
+\subsection{The derivatives of sine and cosine}\label{the-derivatives-of-sine-and-cosine}}
+
+\hypertarget{integration}{%
+\section{Integration}\label{integration}}
+
+\hypertarget{the-geometric-definition-of-the-integral}{%
+\subsection{The geometric definition of the integral}\label{the-geometric-definition-of-the-integral}}
+
+\hypertarget{the-fundamental-theorem-of-calculus}{%
+\subsection{The Fundamental Theorem of Calculus}\label{the-fundamental-theorem-of-calculus}}
+
+\hypertarget{indefinite-integrals-and-integrals-of-xn-nneq-1-sin-x-cos-x}{%
+\subsection{\texorpdfstring{Indefinite integrals and integrals of \(x^n\) (\(n\neq-1\), \(sin x\), \(cos x\))}{Indefinite integrals and integrals of x\^{}n (n\textbackslash{}neq-1, sin x, cos x)}}\label{indefinite-integrals-and-integrals-of-xn-nneq-1-sin-x-cos-x}}
+
+\hypertarget{the-algebra-of-integrals}{%
+\subsection{The algebra of integrals}\label{the-algebra-of-integrals}}
+
+\hypertarget{integration-and-substitution}{%
+\subsection{integration and substitution}\label{integration-and-substitution}}
+
+\hypertarget{the-analytic-definition-of-the-integral}{%
+\subsection{the analytic definition of the integral}\label{the-analytic-definition-of-the-integral}}
+
+\textbf{Reading :}
+
+Stewart, J., Clegg, D. K., \& Watson, S. (2020). Calculus: early transcendentals. Cengage Learning.
+
+Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
+
+\newpage
+
+\pagenumbering{arabic}
+
+\hypertarget{tutorial}{%
+\section{Tutorial}\label{tutorial}}
+
+\hypertarget{chapter-5.1-differentiation}{%
+\subsection*{Chapter 5.1: Differentiation}\label{chapter-5.1-differentiation}}
+\addcontentsline{toc}{subsection}{Chapter 5.1: Differentiation}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The graph of function \(f\) is given. Use it to sketch the graph of the derivative \(f^\prime\)
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/5Derivatives-8} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Find the derivative of the function using the definition of derivative. state the domain of the function and the domain of the derivative.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(f(x) = 20\)
+\item
+  \(f(x) = 1-3x^2\)
+\item
+  \(f(x) = x^3 -3x+5\)
+\item
+  \(f(x) = \sqrt{1+2x}\)
+\item
+  \(f(x) = 12+5x\)
+\item
+  \(g(x) = 5x^2+3x-2\)
+\item
+  \(g(x) = x+\sqrt{x}\)
+\item
+  \(g(x) = \frac{3+x}{1-3x}\)
+\item
+  \(G(t) = \frac{4t}{t+1}\)
+\item
+  \(g(x) = \frac{1}{x^2}\)
+\item
+  \(G(t) = t^4\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  The graph of \(f\) is given.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\roman{enumi})}
+\tightlist
+\item
+  At what values is \(f\) discontinuous? Why?
+\item
+  At what values is \(f\) not differentiable? Why?
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{figure/5Derivatives-9} 
+
+}
+
+\caption{(a)}\label{fig:unnamed-chunk-11}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{figure/5Derivatives-10} 
+
+}
+
+\caption{(b)}\label{fig:unnamed-chunk-12}
+\end{figure}
 
 \hypertarget{descriptive-statistics}{%
 \chapter{Descriptive Statistics}\label{descriptive-statistics}}
@@ -2982,7 +3322,7 @@ and
 
 }
 
-\caption{Relationship of mean, median and mode for different types of skewness}\label{fig:unnamed-chunk-23}
+\caption{Relationship of mean, median and mode for different types of skewness}\label{fig:unnamed-chunk-33}
 \end{figure}
 
 \hypertarget{pearsonian-coefficient-of-skewness}{%
@@ -3031,7 +3371,7 @@ where \(S_k\) = coefficient of skewness, \(M_d\) = median
 
 }
 
-\caption{Types of kurtosis}\label{fig:unnamed-chunk-24}
+\caption{Types of kurtosis}\label{fig:unnamed-chunk-34}
 \end{figure}
 
 \hypertarget{measures-of-association}{%
@@ -3145,8 +3485,8 @@ Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., \& Harris, M. (2
 
 \pagenumbering{arabic}
 
-\hypertarget{tutorial}{%
-\section{Tutorial}\label{tutorial}}
+\hypertarget{tutorial-1}{%
+\section{Tutorial}\label{tutorial-1}}
 
 \hypertarget{chapter-6-descriptive-statistics}{%
 \subsection*{Chapter 6: Descriptive Statistics}\label{chapter-6-descriptive-statistics}}
@@ -3955,8 +4295,8 @@ However, since the time is positive we can define the sample space as simply the
 
 \pagenumbering{arabic}
 
-\hypertarget{tutorial-1}{%
-\section{Tutorial}\label{tutorial-1}}
+\hypertarget{tutorial-2}{%
+\section{Tutorial}\label{tutorial-2}}
 
 \hypertarget{chapter-7-sets-and-relations}{%
 \subsection*{Chapter 7: Sets and Relations}\label{chapter-7-sets-and-relations}}
@@ -5084,8 +5424,8 @@ Then for \(i = 1, 2, \dots, n\).
 
 \newpage
 
-\hypertarget{tutorial-2}{%
-\section{Tutorial}\label{tutorial-2}}
+\hypertarget{tutorial-3}{%
+\section{Tutorial}\label{tutorial-3}}
 
 \hypertarget{chapter-8-probability}{%
 \subsection*{Chapter 8: Probability}\label{chapter-8-probability}}
