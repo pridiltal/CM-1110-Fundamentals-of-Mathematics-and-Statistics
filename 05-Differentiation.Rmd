@@ -33,19 +33,12 @@ library(tidyverse)
 
 ## Differentiation 
 
-**Reading :**
-
-Stewart, J. (2003). Calculus: Early Transcendentals. Thomson Learning. Inc., Belmont, CA.
-
-Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman & Company.
-
-
 ### Derivative and tangent lines
 
 #### Geometric meaning of the derivative
 
 - The steepness of a line can be determined by its *slope*.
-- The steepness of the graph of a function ($f$) at a given point on it (say $(x_0, f{(x_0)})$), can be approximate by its **tangent Line** at that point. 
+- The steepness of the graph of a function ($f$) at a given point on it (say $(x_0, f{(x_0)})$), can be approximated by its **tangent line** at that point. 
 - The slope of the tangent line at a point on the function is equal to the derivative of the function at that point 
 - *The derivative of $f$ at $x_0$*  is denoted by $f^\prime (x_0)$  
 
@@ -56,6 +49,8 @@ knitr::include_graphics("figure/5Derivatives-1.png")
 
 - The direct computation of the slope of the tangent line is not possible as we are given only one point $(x_0, f{(x_0)})$.
 - Instead,  we consider the **secant line** through two points: $(x_0, f{(x_0)})$ and $(x, f{(x)})$, on the graph of $f$.
+
+
 
 ```{r   out.width = "70%", echo = FALSE, fig.align='center'}
 knitr::include_graphics("figure/5Derivatives-2.png")
@@ -76,15 +71,15 @@ knitr::include_graphics("figure/5Derivatives-3.png")
 $$\text{The slope of the secant line} = \frac{f(x) - f(x_0)}{x - x_0} \text{ for } x\neq x_0.$$
 - To have the derivative be the slope of the tangent line, we define it as the limit of the slope of the secant line.
 
-**Definition: Tangent line **
+**Definition 1: Tangent line **
 
-**The tangent line to the curve $y=f(x)$ at the point $P(x_0, f(x_0))$ is the line through $P$ with slope** $$m = lim_{x\to x_{0}}\frac{f(x)-f(x_0)}{x-x_0}$$
+**The tangent line to the curve $f$ at the point $(x_0, f(x_0))$ is the line through that point with slope** $$m = lim_{x\to x_{0}}\frac{f(x)-f(x_0)}{x-x_0}$$
 
 **provided that this limit exists**
 
 
 
-**Definition**
+**Definition 2**
 
 **The derivative of a function $f$  at $x_0$ is**
 $$f^{\prime}(x_0) = lim_{x\to x_{0}}\frac{f(x) - f(x_0)}{x-x_0}$$
@@ -93,9 +88,10 @@ $$f^{\prime}(x_0) = lim_{x\to x_{0}}\frac{f(x) - f(x_0)}{x-x_0}$$
 
 - If this limit does not exist or if it is infinite, we say that **$f$ does not have a derivative at $x_{0}$**
 
-*Example 1*
+\newpage
 
-Compute the derivative of the function $x^2$ at $x=1$.
+*Example 1*
+Compute the derivative of the function $x^2$ at $x=1$, using the definition of derivative
 
 ```{r Devbox1a, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
 library(ggplot2)
@@ -122,7 +118,7 @@ knitr::include_graphics("figure/5Derivatives-4.png")
 
 
 - When we compute the derivative, $f^\prime(x_0)$, we can give an equation for the tangent line at $(x_0, f(x_0))$ on the graph of $f$.
-- the tangent line has the equation $$y-f(x_0)= f^\prime(x_0)(x-x_0)$$
+- The tangent line has the equation $$y-f(x_0)= f^\prime(x_0)(x-x_0)$$
 
 
 \newpage
@@ -168,9 +164,11 @@ ggplot()+
 
 -  The converse of the above theorem is false; that is, there are  functions that are continuous but not differentiable. 
 
-- This usually occurs in one of the three ways:
+- This usually occurs in one of the two ways:
 
-1. When the graph of $f$ has a vertical tangent line at a given point. ($\frac{f(x) - f(x_0)}{x-x_0}$ tends to $\infty$ or to $-\infty$ as $x$ tends to $x_0$)
+\newpage
+
+1. When the graph of $f$ has a vertical tangent line at a given point. (The slope of the secant line $\frac{f(x) - f(x_0)}{x-x_0}$ tends to $\infty$ or to $-\infty$ as $x$ tends to $x_0$)
 
 
 ```{r   out.width = "100%", echo = FALSE, fig.align='center'}
@@ -184,7 +182,10 @@ knitr::include_graphics("figure/5Derivatives-6.png")
 knitr::include_graphics("figure/5Derivatives-7.png")
 ```
 
-3. When there is a jump discontinuity. The graph of a function will not have a tangent line at a point where the function is discontinuous.
+
+\newpage
+
+The graph of a function will not have a tangent line at a point where the function is discontinuous.
 
 ```{r   out.width = "100%", echo = FALSE, fig.align='center'}
 knitr::include_graphics("figure/5Derivatives-5.png")
@@ -196,88 +197,855 @@ knitr::include_graphics("figure/5Derivatives-5.png")
 
 \newpage
 
+**5.1.2 Leibniz notation  and derivative as a function**
+
+```{r  out.width = "100%", echo = FALSE, fig.align='center', fig.cap="Isaac Newton and Gottfried Leibniz"}
+knitr::include_graphics("figure/5Derivatives-13.png")
+```
+
+\newpage 
+
+
 ### Leibniz notation  and derivative as a function
 
+- In the Leibniz notation the derivative of $f$ at $x_0$ is denoted by the symbol $\frac{df}{dx}(x_0)$
 
+- With Leibniz notation the definition of the derivative reads
 
+$$\frac{df}{dx}(x_0)= lim_{x\to x_{0}}\frac{f(x)-f(x_0)}{x-x_0}$$
 
-### The derivative of $x^n$, derivatives of linear combinations
+We set $\Delta x = x-x_0.$
 
-### The product and quotient rules
+Then $x = x_0+ \Delta x$.
 
-### Average velocity and velocity
+Let $\Delta f$ for the change $f(x_0 + \Delta x) - f(x_0)$ in the value of $f$ that occurs  when we change $x$ by $\Delta x$ from $x_0$ to $x_0+\Delta x$
 
-### Other rate of change
+```{r out.width = "70%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/5Derivatives-11.png")
+```
 
-### Composite functions and the chain rule
+Then the slope of the secant line takes the form
 
-### The derivatives of sine and cosine
+$$\frac{f(x_0 +\Delta x)-f(x_0)}{\Delta x }= \frac{\Delta f}{\Delta x}.$$
 
+Now the definition of the derivative reads 
 
-## Integration
-
-
-### The geometric definition of the integral
-
-### The Fundamental Theorem of Calculus
-
-### Indefinite integrals and integrals of $x^n$ ($n\neq-1$, $sin x$, $cos x$)
-
-### The algebra of integrals
-
-### integration and substitution
-
-### the analytic definition of the integral
-
-
-
-**Reading :**
-
-Stewart, J., Clegg, D. K., & Watson, S. (2020). Calculus: early transcendentals. Cengage Learning.
-
-Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman & Company.
-
-
+$$\frac{df}{dx} (x_0) = lim_{\Delta x\to 0}\frac{\Delta f}{\Delta x}= lim_{\Delta x\to 0} \frac{f(x_0 +\Delta x)-f(x_0)}{\Delta x }$$
 
 
 \newpage
 
+*Example 3*
+
+Use the above definition of the derivative to compute $\frac{df}{dx}(3)$ where $f(x)=x^2$
+
+```{r LB1, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+#### The derivative as a function
+
+- So far we considered derivatives at a given value of x
+
+- If we consider the derivative at a **variable** $x$, we get *the derivative function* $\frac{df}{dx}$ whose value $\frac{df}{dx}(x)$ is the slope of the tangent line to the graph of f at the point $(x, f(x)).$
+
+$$\frac{df}{dx}(x) =lim_{\Delta x\to 0}\frac{f(x+\Delta x) -f(x)}{\Delta x}$$
+
+
+### Derivatives of polynomials and exponential functions 
+
+
+#### Derivative of a constant function
+
+$$\frac{d}{dx}(c) = 0$$
+
+```{r LB2, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+#### Power functions
+
+- We now look at the functions $f(x) = x^n$.
+
+
+**Pascal's Triangle and the Binomial Theorem**
+
+*Binomial Expansions Using Pascal's Triangle*
+
+Consider the following expanded powers of $(a + b)^n$, where $a + b$ is any binomial and $n$ is a whole number. Look for patterns.
+
+$(a+b)^0 = 1$
+
+$(a+b)^1 = a+b$
+
+$(a+b)^2 = a^2+2ab+b^2$
+
+$(a+b)^3 = a^3+3a^2b+3ab^2+b^3$
+
+$(a+b)^4 = a^4+4a^3b+6a^2b^2+4ab^3+b^4$
+
+$(a+b)^5 = a^5+5a^4b+10a^3b^2+10a^2b^3+5ab^4+b^5$
+
+Each expansion is a polynomial. 
+
+<!--There are some patterns to be noted.-->
+
+- Blaise Pascal found a numerical pattern, called **Pascal's Triangle**
+
+```{r  out.width = "70%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/5Derivatives-12.png")
+```
+
+- Pascal's Triangle gives us the coefficients for an expanded binomial of the form $(a + b)^n$, where $n$ is the row of the triangle. 
+
+
+**Binomial Theorem**
+  
+  - According to the Binomial Theorem, if $a$ and $b$ are any real numbers and $k$ is a positive integer, then
+
+$$(a+b)^n = a^n + na^{n-1}b+\frac{n(n-1)}{2!}a^{n-2}b^2+
+  \frac{n(n-1)(n-2)}{3!}a^{n-3}b^3 +$$
+
+$$\dots + \frac{n(n-1)(n-2)\dots (n-k+1)}{n!}a^{n-k}b^k + \dots + nab^{n-1}+b^n$$
+  
+The traditional notation for the binomial coefficients is
+$${n \choose 0}=1$$
+  
+$${n \choose k}=\frac{n(n-1)(n-2)\dots (n-k+1)}{k!}$$  $n=1,2,\dots, k$
+    
+which enables us to write the Binomial Theorem in the abbreviated form 
+  
+  $$(a+b)^n = \sum_{k=0}^n {n \choose k }a^{n-k}b^k = \sum_{k=0}^n {n \choose k }a^{k}b^{n-k}.$$
+   
+   
+*Example 1*
+    
+$f(x)=x$
+      
+```{r LB3, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+ggplot()+
+      theme_void()+
+      theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+    
+```
+    
+\newpage
+    
+*Example 2*
+      
+$f(x)=x^2$
+      
+```{r LB4, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+ggplot()+
+      theme_void()+
+      theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+    
+```
+    
+\newpage
+    
+*Example 3*
+      
+$f(x)=x^3$
+      
+```{r LB5, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+ggplot()+
+      theme_void()+
+      theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+    
+```
+    
+\newpage
+
+*Example 4*
+      
+$f(x)=x^4$
+      
+```{r LB6, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+ggplot()+
+      theme_void()+
+      theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+    
+```
+     
+     
+**The Power Rule**
+      
+If $n$ is a positive integer, then
+    
+$$\frac{d}{dx}(x^n)=nx^{n-1}$$
+      
+```{r LB7, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+ggplot()+
+      theme_void()+
+      theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+  
+```
+    
+*Functions with negative integer exponents*
+      
+*Example 5*
+      
+$f(x)=\frac{1}{x}$
+      
+```{r LB8, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+    
+    ggplot()+
+      theme_void()+
+      theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+    
+```
+    
+*When the  exponent is a fraction*
+      
+*Example 6*
+      
+$f(x)=\sqrt{x}$
+      
+```{r LB9, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+ggplot()+
+      theme_void()+
+      theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+    
+```
+
+
+**The Power Rule (General version)**
+      
+If $n$ is any real number, then
+    
+$$\frac{d}{dx}(x^n)=nx^{n-1}$$
+      
+#### The constant multiple rule
+      
+If $c$ is a constant and $f$ is a differentiable function, then
+    
+$$\frac{d}{dx}[cf(x)]= c\frac{d}{dx}f(x)$$
+
+\newpage 
+
+```{r LB10, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+      theme_void()+
+      theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+    
+```
+
+*Example 7*
+      
+$f(x)=3x^4$
+
+```{r LB11, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+
+library(ggplot2)
+ggplot()+
+      theme_void()+
+      theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+    
+```
+
+
+#### The Sum Rule
+
+If $f$ and $g$  are both differentiable, then
+
+$$\frac{d}{dx}[f(x)+g(x)]= \frac{d}{dx}f(x)+ \frac{d}{dx}g(x)$$
+  
+  
+```{r LB12, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+- The Sum Rule is applicable to the sum of any number of functions
+
+\vspace{6pt}
+
+#### The Difference Rule
+
+If $f$ and $g$  are both differentiable, then
+
+$$\frac{d}{dx}[f(x)-g(x)]= \frac{d}{dx}f(x)- \frac{d}{dx}g(x)$$
+  
+  - The Constant Multiple Rule, the Sum Rule and the Difference Rule can be combined with the Power Rule to differentiate any polynomial. 
+
+\newpage
+
+*Example 8*
+  
+  a) $f(x)=x^4 - 6x^2+4$
+  
+  b) Find the points on the curve $f(x)=x^4-6x^2+4$ where the tangent line is horizontal
+  
+  
+```{r LB13, out.width='100%', fig.asp=1, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+\newpage
+
+#### Exponential Functions
+
+*Exercise:*
+
+Compute the derivative of the exponential function $f(x) = a^x$ using th definition of a derivative
+
+
+  
+```{r LB14, out.width='100%', fig.asp=1, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+**Definition: Definition of the number** $e$
+
+$e$ is the number such that 
+
+$$lim_{h\to 0}\frac{e^h -1}{h}=1$$
+
+- If we put $a=e$ and , then, $f^\prime(0)=1$.
+
+- Then **derivative of the Natural Exponential Function**
+$$\frac{d}{dx}(e^x)= e^x$$
+
+- Therefore, the exponential function, $f(x) = e^x$ has the property that it is its own derivative.
+
+- Geometrically, this means that  the slope of the tangent line to the curve $f(x) = e^x$ is equal to the y-coordinate of the point. 
+
+*Example 9*
+  
+If $f(x)=e^x-x$, find $f^\prime(x)$
+
+  
+```{r LB15, out.width='100%', fig.asp=1, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+```{r LB16, out.width='80%', fig.asp=.75, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+x <- seq(-2,2,0.1)
+y1 <- exp(x) -x
+y2 <- exp(x) -1
+
+data <- data.frame(x,y1,y2)
+p<- data %>%
+  ggplot(aes(x, y1))+
+  geom_line() +
+  geom_text(data = data[10,],aes(label = "f(x)"), vjust = "inward", hjust = "inward", size =12)+
+  #geom_text(data = data[3,], aes(x=x, y=y1), "f(x)")+
+  labs(x="", y="") +
+  geom_line(data =data, aes(x=x, y=y2), colour= "red")+
+  geom_text(data = data[10,c("x", "y2")],aes(x=x, y=y2 ,label = "f'(x)"), vjust = "inward", hjust = "inward", colour = "red", size =12)+
+  geom_hline(yintercept= 0)+
+  geom_vline(xintercept= 0)+
+  theme( aspect.ratio = 1)
+print(p)
+```
+
+### The product and quotient rules
+
+#### The product rule
+
+
+If $f$and $g$ are both differentiable, then
+
+$$\frac{d}{dx}[f(x)g(x)]= f(x)\frac{d}{dx}[g(x)]+ g(x)\frac{d}{dx}[f(x)]$$
+ 
+```{r LB17, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+*Example 10*
+  
+If $f(x)=xe^x$, find $f^\prime(x)$
+
+  
+```{r LB18, out.width='100%', fig.asp=0.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+#### The quotient rule
+ 
+ 
+If $f$and $g$ are both differentiable, then
+
+$$\frac{d}{dx}[\frac{f(x)}{g(x)}]= \frac{g(x)\frac{d}{dx}[f(x)]- f(x)\frac{d}{dx}[g(x)]}{[g(x)]^2}$$
+ 
+```{r LB19, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+*Example 11*
+  
+If $f(x)=\frac{x^2+x-2}{x^3+6}$, find $f^\prime(x)$
+
+  
+```{r LB20, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+### Machine learning use cases
+
+<!--https://ml-cheatsheet.readthedocs.io/en/latest/calculus.html#derivatives-->
+
+    
+### The chain rule
+
+If $y=f(u)$ and $u=g(x)$ are both differentiable functions, then
+
+$$\frac{dy}{dx} = \frac{dy}{du}\frac{du}{dx} $$
+ 
+ 
+ 
+```{r LB21, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+*Example 12*
+  
+If $f(x)=\sqrt{x^2+1}$, find $f^\prime(x)$ using chain rule.
+
+  
+```{r LB22, out.width='100%', fig.asp=0.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+    
+#### The power rule combined with the chain rule
+
+If $n$ is any real number and $u=g(x)$ is differentiable, then
+
+$$\frac{d}{dx}(u^n)= nu^{n-1}\frac{du}{dx}$$
+
+Alternatively,
+
+$$\frac{d}{dx}([g(x)]^n)= n[g(x)]^{n-1}\frac{d}{dx}g(x)$$
+  
+  
+```{r LB23, out.width='100%', fig.asp=0.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+*Example 13*
+  
+If $f(x)=(x^3-2)^{100}$, find $f^\prime(x)$
+
+  
+```{r LB24, out.width='100%', fig.asp=0.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+``` 
+
+
+*Example 14*
+  
+If $f(x)=\frac{1}{(x^2+x+1)^{1/3}}$, find $f^\prime(x)$
+
+  
+```{r LB25, out.width='100%', fig.asp=0.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+``` 
+
+### Partial Derivatives
+
+<!-- Page 911 Stewart-->
+
+If $f$ is a function of two variables, its **partial derivatives** are the functions $f_x$ and $f_y$ defined by 
+
+$$f_x=f_x(x,y)=lim_{h\to 0}\frac{f(x+h,y)-f(x,y)}{h}$$
+ 
+$$f_y=f_y(x,y)=lim_{h\to 0}\frac{f(x,y+h)-f(x,y)}{h}$$ 
+
+
+- There are many alternative notations for partial derivatives.
+
+- Instead of $f_x$, it can be written as $f_1$ or $D_1f$ to indicate that the differentiation is with respect to the *first* variable.
+
+- Another notation is $\frac{\partial f}{\partial x}$. 
+
+- But here $\frac{\partial f}{\partial x}$ can't be interpreted as a ratio of differentials.
+
+**Notations for Partial Derivatives**
+
+If $z=f(x,y), we write$
+
+$$f_x=f_x(x,y)= \frac{\partial f}{\partial x}= \frac{\partial }{\partial x}f(x,y)= \frac{\partial z }{\partial x}= f_1=D_1f= D_xf $$
+
+$$f_y=f_y(x,y)= \frac{\partial f}{\partial y}= \frac{\partial }{\partial y}f(x,y)= \frac{\partial z }{\partial y}= f_2=D_2f= D_yf $$
+
+
+
+- The partial derivative with respect to $x$ is just the *ordinary* derivative of the function of a single variable that we get by keeping $y$ fixed.
+
+- Therefore, we have the following rule.
+
+**Rule for finding Partial Derivatives of ** $z=f(x,y)$
+
+1. To find $f_x$, regard $y$ as a constant and differentiate $f(x,y)$ with respect to $x$.
+
+2. To find $f_y$, regard $x$ as a constant and differentiate $f(x,y)$ with respect to $y$.
+
+
+*Example 15*
+  
+If $f(x,y)=x^3+x^2y^3-2y^2$, find $f_x(2,1)$ and $f_y(2,1)$
+
+  
+```{r LB25b, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+``` 
+
+### Higher Derivatives
+
+- If $f$ is a differentiable function, then its derivative $f^\prime$ is also a function.
+
+- It is denoted by $(f^\prime)^\prime = f^{\prime\prime}$.
+
+- This $f^{\prime\prime}$ is called the **second derivative** of $f$ as it is the derivative of the derivative of $f$. 
+
+- Using Leibniz notation we can write the second derivative of $f$ as follows:
+
+$$\frac{d}{dx}(\frac{dy}{dx})= \frac{d^2y}{dx^2}$$
+   
+- Another notation is $f^{\prime\prime}= D^2f(x)$.
+
+- We can interpret $f^{\prime\prime}$ as the slope of the curve $y=f^{\prime}(x)$ at the point $(x, f^\prime(x))$. 
+
+- In other words, it is the rate of change of the slope of the original curve $f(x)$.
+
+- The **third derivative** $f^{\prime\prime\prime}$ is the derivative of the second derivative: $f^{\prime\prime\prime} = (f^{\prime\prime})^\prime$.
+
+- Therefore, $f^{\prime\prime\prime}(x)$  can be interpreted as the slope of the curve $y= f^{\prime\prime}(x)$ or as the rate of change of $f^{\prime\prime}(x)$
+
+- Alternative notations for the third derivative:
+
+$$y^{\prime\prime\prime} = f^{\prime\prime\prime}(x)=\frac{d}{dx}(\frac{d^2y}{dx^2})= \frac{d^3y}{dx^3}= D^3f(x)$$
+
+- In general, the $n$th derivative of $f$ is denoted by $f^{(n)}$ and is obtained from $f$ by differentiating $n$ times. 
+
+- If $y=f(x)$,
+$$y^{(n)} = f^{(n)}(x)= \frac{d^ny}{dx^n}= D^nf(x)$$
+
+
+*Example 16*
+  
+If $f(x)=x^3-7x^2-3x+5$
+
+  
+```{r LB26, out.width='100%', fig.asp=0.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+``` 
+
+### Derivatives of logarithmic functions
+
+<!-- pg 222 proof-->
+
+$$\frac{d}{dx}(a^x)= a^xln(a)$$
+
+
+  
+```{r LB27, out.width='100%', fig.asp=0.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+``` 
+
+
+$$\frac{d}{dx}(log_ax)= \frac{1}{xln(a)}$$
+```{r LB28, out.width='100%', fig.asp=0.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+``` 
+
+$$\frac{d}{dx}(lnx)= \frac{1}{x}$$
+
+*Example 17*
+  
+If $y=ln(x^3+1)$
+
+  
+```{r LB29, out.width='100%', fig.asp=0.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+``` 
+
+### Applications of differentiation
+
+#### Maximum and minimum values
+
+**1. Definition**
+
+A function $f$ has an **absolute maximum** (or **global maximum**) at $c$ if $f(c)\geq f(x)$ for all $x$ in $D$, where $D$ is the domain of $f$. The number $f(c)$ is called the **maximum value** of $f$ on $D$.
+
+Similarly,  $f$ has an **absolute minimum** (or **global minimum**) at $c$ if $f(c)\leq f(x)$ for all $x$ in $D$ and the number $f(c)$ is called the **minimum value** of $f$ on $D$.
+
+The maximum and minimum values of $f$ are called the **extreme values** of $f$. 
+
+
+
+**2. Definition**
+
+A function $f$ has an **local maximum** (or **relative maximum**) at $c$ if $f(c)\geq f(x)$ when $x$ is near $c$.
+[This means that $f(c)\geq f(x)$ for all $x$ in some open interval containing $c$]
+
+Similarly,  $f$ has a **local minimum** (or **relative minimum**) at $c$ if $f(c)\leq f(x)$  when $x$ is near $c$.
+
+
+```{r  out.width = "100%", echo = FALSE, fig.align='center', fig.cap="Isaac Newton and Gottfried Leibniz"}
+knitr::include_graphics("figure/5Derivatives-14.png")
+```
+
+
+**3. The Extreme Value Theorem**
+
+If $f$ is continuous on a closed interval $[a,b]$, then $f$ attains an absolute maximum value $f(c)$ and an absolute minimum value $f(d)$ at some numbers $c$ and $d$ in $[a,b]$
+
+
+  
+```{r LB30, out.width='100%', fig.asp=0.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+``` 
+
+
+- A function need not possess extreme values if either hypothesis (continuity or closed interval) is omitted from the Extreme Value Theorem
+
+
+```{r LB31, out.width='100%', fig.asp=0.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+``` 
+
+
+**4. Fermat's Theorem**
+
+If $f$ has a local maximum or minimum at $c$, and if $f^\prime(c)$ exists, then $f^\prime(c) = 0.$
+
+
+
+```{r LB32, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+
+**5. Definition**
+
+A **critical number** of a function $f$ is a number $c$ in the domain of $f$ such that either $f^\prime(c) = 0$ or $f^\prime(c)$ does not exist.
+
+
+
+*Example 18*
+  
+Find the critical numbers of  $f(x)=x^{3/5}(4-x).$
+
+  
+```{r LB33, out.width='100%', fig.asp=0.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+``` 
+
+
+**6. Fermat's Theorem (modification)**
+
+In terms of critical numbers, Fermat's Theorem can be rephrased as,
+
+If $f$ has a local maximum or minimum at $c$, then $c$ is a critical number of $f$.
+
+
+
+**7. The closed interval method**
+
+To find the *absolute* maximum and minimum values of a continuous function $f$ on a closed interval $[a,b]$:
+
+1. Find the values of $f$ at the critical numbers of $f$ in $(a,b)$.
+
+2. Find the values of $f$ at the endpoints of the interval.
+
+3. The largest of the values from Steps 1 and 2 is the absolute maximum value; the smallest of these values is the absolute minimum value. 
+
+
+*Example 19*
+  
+Find the absolute maximum and minimum values of the function  $f(x)=x^3-3x^2+1$   $-\frac{1}{2} \leq x \leq4.$
+
+  
+```{r LB34, out.width='100%', fig.asp=0.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+``` 
+
+
+
+#### How derivatives affect the shape of a graph
+
+
+
+
+
+## Integration
+    
+    
+### The geometric definition of the integral
+    
+### The Fundamental Theorem of Calculus
+    
+### Indefinite integrals and integrals of
+
+$x^n$ ($n\neq-1$, $sin x$, $cos x$)
+    
+### The algebra of integrals
+    
+### integration and substitution
+    
+### the analytic definition of the integral
+    
+    
+    
+    
+**Reading :**
+      
+Stewart, J. (2003). Calculus: Early Transcendentals. Thomson Learning. Inc., Belmont, CA.
+    
+Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman & Company.
+    
+    
+    
+\newpage
+    
 \pagenumbering{arabic}
-
+    
 ## Tutorial 
-
+    
 ### Chapter 5.1: Differentiation {-}
-
+    
 1. The graph of function $f$  is given. Use it to sketch the graph of the derivative $f^\prime$
-
-```{r   out.width = "100%", echo = FALSE, fig.align='center'}
-knitr::include_graphics("figure/5Derivatives-8.png")
+      
+```{r  p1a, out.width = "100%", echo = FALSE, fig.align='center'}
+    knitr::include_graphics("figure/5Derivatives-8.png")
 ```
-
+    
 2. Find the derivative of the function using the definition of derivative. state the domain of the function and the domain of the derivative.
-
-(a) $f(x) = 20$
-(b) $f(x) = 1-3x^2$
-(c) $f(x) = x^3 -3x+5$
-(d) $f(x) = \sqrt{1+2x}$
-(e) $f(x) = 12+5x$
-(f) $g(x) = 5x^2+3x-2$
-(g) $g(x) = x+\sqrt{x}$
-(h) $g(x) = \frac{3+x}{1-3x}$
-(i) $G(t) = \frac{4t}{t+1}$
-(j) $g(x) = \frac{1}{x^2}$
-(k) $G(t) = t^4$
-
+    
+  (a) $f(x) = 20$
+  (b) $f(x) = 1-3x^2$
+  (c) $f(x) = x^3 -3x+5$
+  (d) $f(x) = \sqrt{1+2x}$
+  (e) $f(x) = 12+5x$
+  (f) $g(x) = 5x^2+3x-2$
+  (g) $g(x) = x+\sqrt{x}$
+  (h) $g(x) = \frac{3+x}{1-3x}$
+  (i) $G(t) = \frac{4t}{t+1}$
+  (j) $g(x) = \frac{1}{x^2}$
+  (k) $G(t) = t^4$
+      
 3. The graph of $f$ is given.
-
-(i) At what values is $f$ discontinuous? Why?
-(ii) At what values is $f$ not differentiable? Why?
-
-
-```{r   out.width = "70%", echo = FALSE, fig.align='center', fig.cap="(a)"}
-knitr::include_graphics("figure/5Derivatives-9.png")
+    
+  (i) At what values is $f$ discontinuous? Why?
+  (ii) At what values is $f$ not differentiable? Why?
+      
+```{r  p1, out.width = "70%", echo = FALSE, fig.align='center', fig.cap="(a)"}
+    knitr::include_graphics("figure/5Derivatives-9.png")
 ```
+    
 
-```{r   out.width = "70%", echo = FALSE, fig.align='center', fig.cap="(b)"}
-knitr::include_graphics("figure/5Derivatives-10.png")
+```{r  p2, out.width = "70%", echo = FALSE, fig.align='center', fig.cap="(b)"}
+    knitr::include_graphics("figure/5Derivatives-10.png")
 ```

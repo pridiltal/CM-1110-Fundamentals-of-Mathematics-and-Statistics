@@ -4,3 +4,10 @@
 _publish.R
 _bookdown_files
 rsconnect
+cache/*
+*.log
+*.aux
+.DS_Store
+/cache/*
+**/*_cache/*
+**/cache/*

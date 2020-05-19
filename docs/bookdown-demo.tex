@@ -87,7 +87,7 @@
 
 \title{CM 1110 Fundamentals of Mathematics and Statistics}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-04-07}
+\date{2020-05-19}
 
 \begin{document}
 \maketitle
@@ -1026,12 +1026,6 @@ Stewart, J., Clegg, D. K., \& Watson, S. (2020). `Infinite Sequences and Series'
 \hypertarget{differentiation}{%
 \section{Differentiation}\label{differentiation}}
 
-\textbf{Reading :}
-
-Stewart, J. (2003). Calculus: Early Transcendentals. Thomson Learning. Inc., Belmont, CA.
-
-Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
-
 \hypertarget{derivative-and-tangent-lines}{%
 \subsection{Derivative and tangent lines}\label{derivative-and-tangent-lines}}
 
@@ -1043,7 +1037,7 @@ Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
 \item
   The steepness of a line can be determined by its \emph{slope}.
 \item
-  The steepness of the graph of a function (\(f\)) at a given point on it (say \((x_0, f{(x_0)})\)), can be approximate by its \textbf{tangent Line} at that point.
+  The steepness of the graph of a function (\(f\)) at a given point on it (say \((x_0, f{(x_0)})\)), can be approximated by its \textbf{tangent line} at that point.
 \item
   The slope of the tangent line at a point on the function is equal to the derivative of the function at that point
 \item
@@ -1093,13 +1087,13 @@ Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
   To have the derivative be the slope of the tangent line, we define it as the limit of the slope of the secant line.
 \end{itemize}
 
-\textbf{Definition: Tangent line }
+\textbf{Definition 1: Tangent line }
 
-\textbf{The tangent line to the curve \(y=f(x)\) at the point \(P(x_0, f(x_0))\) is the line through \(P\) with slope} \[m = lim_{x\to x_{0}}\frac{f(x)-f(x_0)}{x-x_0}\]
+\textbf{The tangent line to the curve \(f\) at the point \((x_0, f(x_0))\) is the line through that point with slope} \[m = lim_{x\to x_{0}}\frac{f(x)-f(x_0)}{x-x_0}\]
 
 \textbf{provided that this limit exists}
 
-\textbf{Definition}
+\textbf{Definition 2}
 
 \textbf{The derivative of a function \(f\) at \(x_0\) is}
 \[f^{\prime}(x_0) = lim_{x\to x_{0}}\frac{f(x) - f(x_0)}{x-x_0}\]
@@ -1111,9 +1105,10 @@ Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
   If this limit does not exist or if it is infinite, we say that \textbf{\(f\) does not have a derivative at \(x_{0}\)}
 \end{itemize}
 
-\emph{Example 1}
+\newpage
 
-Compute the derivative of the function \(x^2\) at \(x=1\).
+\emph{Example 1}
+Compute the derivative of the function \(x^2\) at \(x=1\), using the definition of derivative
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/Devbox1a-1} \end{center}
 
@@ -1139,7 +1134,7 @@ Compute the derivative of the function \(x^2\) at \(x=1\).
 \item
   When we compute the derivative, \(f^\prime(x_0)\), we can give an equation for the tangent line at \((x_0, f(x_0))\) on the graph of \(f\).
 \item
-  the tangent line has the equation \[y-f(x_0)= f^\prime(x_0)(x-x_0)\]
+  The tangent line has the equation \[y-f(x_0)= f^\prime(x_0)(x-x_0)\]
 \end{itemize}
 
 \newpage
@@ -1175,14 +1170,16 @@ Give the equation for the tangent line to the parabola \(y=x^2\) at \(x=1\).
 \item
   The converse of the above theorem is false; that is, there are functions that are continuous but not differentiable.
 \item
-  This usually occurs in one of the three ways:
+  This usually occurs in one of the two ways:
 \end{itemize}
+
+\newpage
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  When the graph of \(f\) has a vertical tangent line at a given point. (\(\frac{f(x) - f(x_0)}{x-x_0}\) tends to \(\infty\) or to \(-\infty\) as \(x\) tends to \(x_0\))
+  When the graph of \(f\) has a vertical tangent line at a given point. (The slope of the secant line \(\frac{f(x) - f(x_0)}{x-x_0}\) tends to \(\infty\) or to \(-\infty\) as \(x\) tends to \(x_0\))
 \end{enumerate}
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/5Derivatives-6} \end{center}
@@ -1197,13 +1194,9 @@ Give the equation for the tangent line to the parabola \(y=x^2\) at \(x=1\).
 
 \includegraphics[width=1\linewidth]{figure/5Derivatives-7}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\tightlist
-\item
-  When there is a jump discontinuity. The graph of a function will not have a tangent line at a point where the function is discontinuous.
-\end{enumerate}
+\newpage
+
+The graph of a function will not have a tangent line at a point where the function is discontinuous.
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/5Derivatives-5} \end{center}
 
@@ -1217,26 +1210,581 @@ Give the equation for the tangent line to the parabola \(y=x^2\) at \(x=1\).
 
 \newpage
 
+\textbf{5.1.2 Leibniz notation and derivative as a function}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/5Derivatives-13} 
+
+}
+
+\caption{Isaac Newton and Gottfried Leibniz}\label{fig:unnamed-chunk-10}
+\end{figure}
+
+\newpage
+
 \hypertarget{leibniz-notation-and-derivative-as-a-function}{%
 \subsection{Leibniz notation and derivative as a function}\label{leibniz-notation-and-derivative-as-a-function}}
 
-\hypertarget{the-derivative-of-xn-derivatives-of-linear-combinations}{%
-\subsection{\texorpdfstring{The derivative of \(x^n\), derivatives of linear combinations}{The derivative of x\^{}n, derivatives of linear combinations}}\label{the-derivative-of-xn-derivatives-of-linear-combinations}}
+\begin{itemize}
+\item
+  In the Leibniz notation the derivative of \(f\) at \(x_0\) is denoted by the symbol \(\frac{df}{dx}(x_0)\)
+\item
+  With Leibniz notation the definition of the derivative reads
+\end{itemize}
+
+\[\frac{df}{dx}(x_0)= lim_{x\to x_{0}}\frac{f(x)-f(x_0)}{x-x_0}\]
+
+We set \(\Delta x = x-x_0.\)
+
+Then \(x = x_0+ \Delta x\).
+
+Let \(\Delta f\) for the change \(f(x_0 + \Delta x) - f(x_0)\) in the value of \(f\) that occurs when we change \(x\) by \(\Delta x\) from \(x_0\) to \(x_0+\Delta x\)
+
+\begin{center}\includegraphics[width=0.7\linewidth]{figure/5Derivatives-11} \end{center}
+
+Then the slope of the secant line takes the form
+
+\[\frac{f(x_0 +\Delta x)-f(x_0)}{\Delta x }= \frac{\Delta f}{\Delta x}.\]
+
+Now the definition of the derivative reads
+
+\[\frac{df}{dx} (x_0) = lim_{\Delta x\to 0}\frac{\Delta f}{\Delta x}= lim_{\Delta x\to 0} \frac{f(x_0 +\Delta x)-f(x_0)}{\Delta x }\]
+
+\newpage
+
+\emph{Example 3}
+
+Use the above definition of the derivative to compute \(\frac{df}{dx}(3)\) where \(f(x)=x^2\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB1-1} \end{center}
+
+\hypertarget{the-derivative-as-a-function}{%
+\subsubsection{The derivative as a function}\label{the-derivative-as-a-function}}
+
+\begin{itemize}
+\item
+  So far we considered derivatives at a given value of x
+\item
+  If we consider the derivative at a \textbf{variable} \(x\), we get \emph{the derivative function} \(\frac{df}{dx}\) whose value \(\frac{df}{dx}(x)\) is the slope of the tangent line to the graph of f at the point \((x, f(x)).\)
+\end{itemize}
+
+\[\frac{df}{dx}(x) =lim_{\Delta x\to 0}\frac{f(x+\Delta x) -f(x)}{\Delta x}\]
+
+\hypertarget{derivatives-of-polynomials-and-exponential-functions}{%
+\subsection{Derivatives of polynomials and exponential functions}\label{derivatives-of-polynomials-and-exponential-functions}}
+
+\hypertarget{derivative-of-a-constant-function}{%
+\subsubsection{Derivative of a constant function}\label{derivative-of-a-constant-function}}
+
+\[\frac{d}{dx}(c) = 0\]
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB2-1} \end{center}
+
+\hypertarget{power-functions}{%
+\subsubsection{Power functions}\label{power-functions}}
+
+\begin{itemize}
+\tightlist
+\item
+  We now look at the functions \(f(x) = x^n\).
+\end{itemize}
+
+\textbf{Pascal's Triangle and the Binomial Theorem}
+
+\emph{Binomial Expansions Using Pascal's Triangle}
+
+Consider the following expanded powers of \((a + b)^n\), where \(a + b\) is any binomial and \(n\) is a whole number. Look for patterns.
+
+\((a+b)^0 = 1\)
+
+\((a+b)^1 = a+b\)
+
+\((a+b)^2 = a^2+2ab+b^2\)
+
+\((a+b)^3 = a^3+3a^2b+3ab^2+b^3\)
+
+\((a+b)^4 = a^4+4a^3b+6a^2b^2+4ab^3+b^4\)
+
+\((a+b)^5 = a^5+5a^4b+10a^3b^2+10a^2b^3+5ab^4+b^5\)
+
+Each expansion is a polynomial.
+
+\begin{itemize}
+\tightlist
+\item
+  Blaise Pascal found a numerical pattern, called \textbf{Pascal's Triangle}
+\end{itemize}
+
+\begin{center}\includegraphics[width=0.7\linewidth]{figure/5Derivatives-12} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  Pascal's Triangle gives us the coefficients for an expanded binomial of the form \((a + b)^n\), where \(n\) is the row of the triangle.
+\end{itemize}
+
+\textbf{Binomial Theorem}
+
+\begin{itemize}
+\tightlist
+\item
+  According to the Binomial Theorem, if \(a\) and \(b\) are any real numbers and \(k\) is a positive integer, then
+\end{itemize}
+
+\[(a+b)^n = a^n + na^{n-1}b+\frac{n(n-1)}{2!}a^{n-2}b^2+
+  \frac{n(n-1)(n-2)}{3!}a^{n-3}b^3 +\]
+
+\[\dots + \frac{n(n-1)(n-2)\dots (n-k+1)}{n!}a^{n-k}b^k + \dots + nab^{n-1}+b^n\]
+
+The traditional notation for the binomial coefficients is
+\[{n \choose 0}=1\]
+
+\[{n \choose k}=\frac{n(n-1)(n-2)\dots (n-k+1)}{k!}\] \(n=1,2,\dots, k\)
+
+which enables us to write the Binomial Theorem in the abbreviated form
+
+\[(a+b)^n = \sum_{k=0}^n {n \choose k }a^{n-k}b^k = \sum_{k=0}^n {n \choose k }a^{k}b^{n-k}.\]
+
+\emph{Example 1}
+
+\(f(x)=x\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB3-1} \end{center}
+
+\newpage
+
+\emph{Example 2}
+
+\(f(x)=x^2\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB4-1} \end{center}
+
+\newpage
+
+\emph{Example 3}
+
+\(f(x)=x^3\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB5-1} \end{center}
+
+\newpage
+
+\emph{Example 4}
+
+\(f(x)=x^4\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB6-1} \end{center}
+
+\textbf{The Power Rule}
+
+If \(n\) is a positive integer, then
+
+\[\frac{d}{dx}(x^n)=nx^{n-1}\]
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB7-1} \end{center}
+
+\emph{Functions with negative integer exponents}
+
+\emph{Example 5}
+
+\(f(x)=\frac{1}{x}\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB8-1} \end{center}
+
+\emph{When the exponent is a fraction}
+
+\emph{Example 6}
+
+\(f(x)=\sqrt{x}\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB9-1} \end{center}
+
+\textbf{The Power Rule (General version)}
+
+If \(n\) is any real number, then
+
+\[\frac{d}{dx}(x^n)=nx^{n-1}\]
+
+\hypertarget{the-constant-multiple-rule}{%
+\subsubsection{The constant multiple rule}\label{the-constant-multiple-rule}}
+
+If \(c\) is a constant and \(f\) is a differentiable function, then
+
+\[\frac{d}{dx}[cf(x)]= c\frac{d}{dx}f(x)\]
+
+\newpage
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB10-1} \end{center}
+
+\emph{Example 7}
+
+\(f(x)=3x^4\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB11-1} \end{center}
+
+\hypertarget{the-sum-rule}{%
+\subsubsection{The Sum Rule}\label{the-sum-rule}}
+
+If \(f\) and \(g\) are both differentiable, then
+
+\[\frac{d}{dx}[f(x)+g(x)]= \frac{d}{dx}f(x)+ \frac{d}{dx}g(x)\]
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB12-1} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  The Sum Rule is applicable to the sum of any number of functions
+\end{itemize}
+
+\vspace{6pt}
+
+\hypertarget{the-difference-rule}{%
+\subsubsection{The Difference Rule}\label{the-difference-rule}}
+
+If \(f\) and \(g\) are both differentiable, then
+
+\[\frac{d}{dx}[f(x)-g(x)]= \frac{d}{dx}f(x)- \frac{d}{dx}g(x)\]
+
+\begin{itemize}
+\tightlist
+\item
+  The Constant Multiple Rule, the Sum Rule and the Difference Rule can be combined with the Power Rule to differentiate any polynomial.
+\end{itemize}
+
+\newpage
+
+\emph{Example 8}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  \(f(x)=x^4 - 6x^2+4\)
+\item
+  Find the points on the curve \(f(x)=x^4-6x^2+4\) where the tangent line is horizontal
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB13-1} \end{center}
+
+\newpage
+
+\hypertarget{exponential-functions}{%
+\subsubsection{Exponential Functions}\label{exponential-functions}}
+
+\emph{Exercise:}
+
+Compute the derivative of the exponential function \(f(x) = a^x\) using th definition of a derivative
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB14-1} \end{center}
+
+\textbf{Definition: Definition of the number} \(e\)
+
+\(e\) is the number such that
+
+\[lim_{h\to 0}\frac{e^h -1}{h}=1\]
+
+\begin{itemize}
+\item
+  If we put \(a=e\) and , then, \(f^\prime(0)=1\).
+\item
+  Then \textbf{derivative of the Natural Exponential Function}
+  \[\frac{d}{dx}(e^x)= e^x\]
+\item
+  Therefore, the exponential function, \(f(x) = e^x\) has the property that it is its own derivative.
+\item
+  Geometrically, this means that the slope of the tangent line to the curve \(f(x) = e^x\) is equal to the y-coordinate of the point.
+\end{itemize}
+
+\emph{Example 9}
+
+If \(f(x)=e^x-x\), find \(f^\prime(x)\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB15-1} \end{center}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/LB16-1} \end{center}
 
 \hypertarget{the-product-and-quotient-rules}{%
 \subsection{The product and quotient rules}\label{the-product-and-quotient-rules}}
 
-\hypertarget{average-velocity-and-velocity}{%
-\subsection{Average velocity and velocity}\label{average-velocity-and-velocity}}
+\hypertarget{the-product-rule}{%
+\subsubsection{The product rule}\label{the-product-rule}}
 
-\hypertarget{other-rate-of-change}{%
-\subsection{Other rate of change}\label{other-rate-of-change}}
+If \(f\)and \(g\) are both differentiable, then
 
-\hypertarget{composite-functions-and-the-chain-rule}{%
-\subsection{Composite functions and the chain rule}\label{composite-functions-and-the-chain-rule}}
+\[\frac{d}{dx}[f(x)g(x)]= f(x)\frac{d}{dx}[g(x)]+ g(x)\frac{d}{dx}[f(x)]\]
 
-\hypertarget{the-derivatives-of-sine-and-cosine}{%
-\subsection{The derivatives of sine and cosine}\label{the-derivatives-of-sine-and-cosine}}
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB17-1} \end{center}
+
+\emph{Example 10}
+
+If \(f(x)=xe^x\), find \(f^\prime(x)\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB18-1} \end{center}
+
+\hypertarget{the-quotient-rule}{%
+\subsubsection{The quotient rule}\label{the-quotient-rule}}
+
+If \(f\)and \(g\) are both differentiable, then
+
+\[\frac{d}{dx}[\frac{f(x)}{g(x)}]= \frac{g(x)\frac{d}{dx}[f(x)]- f(x)\frac{d}{dx}[g(x)]}{[g(x)]^2}\]
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB19-1} \end{center}
+
+\emph{Example 11}
+
+If \(f(x)=\frac{x^2+x-2}{x^3+6}\), find \(f^\prime(x)\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB20-1} \end{center}
+
+\hypertarget{machine-learning-use-cases}{%
+\subsection{Machine learning use cases}\label{machine-learning-use-cases}}
+
+\hypertarget{the-chain-rule}{%
+\subsection{The chain rule}\label{the-chain-rule}}
+
+If \(y=f(u)\) and \(u=g(x)\) are both differentiable functions, then
+
+\[\frac{dy}{dx} = \frac{dy}{du}\frac{du}{dx} \]
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB21-1} \end{center}
+
+\emph{Example 12}
+
+If \(f(x)=\sqrt{x^2+1}\), find \(f^\prime(x)\) using chain rule.
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB22-1} \end{center}
+
+\hypertarget{the-power-rule-combined-with-the-chain-rule}{%
+\subsubsection{The power rule combined with the chain rule}\label{the-power-rule-combined-with-the-chain-rule}}
+
+If \(n\) is any real number and \(u=g(x)\) is differentiable, then
+
+\[\frac{d}{dx}(u^n)= nu^{n-1}\frac{du}{dx}\]
+
+Alternatively,
+
+\[\frac{d}{dx}([g(x)]^n)= n[g(x)]^{n-1}\frac{d}{dx}g(x)\]
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB23-1} \end{center}
+
+\emph{Example 13}
+
+If \(f(x)=(x^3-2)^{100}\), find \(f^\prime(x)\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB24-1} \end{center}
+
+\emph{Example 14}
+
+If \(f(x)=\frac{1}{(x^2+x+1)^{1/3}}\), find \(f^\prime(x)\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB25-1} \end{center}
+
+\hypertarget{partial-derivatives}{%
+\subsection{Partial Derivatives}\label{partial-derivatives}}
+
+If \(f\) is a function of two variables, its \textbf{partial derivatives} are the functions \(f_x\) and \(f_y\) defined by
+
+\[f_x=f_x(x,y)=lim_{h\to 0}\frac{f(x+h,y)-f(x,y)}{h}\]
+
+\[f_y=f_y(x,y)=lim_{h\to 0}\frac{f(x,y+h)-f(x,y)}{h}\]
+
+\begin{itemize}
+\item
+  There are many alternative notations for partial derivatives.
+\item
+  Instead of \(f_x\), it can be written as \(f_1\) or \(D_1f\) to indicate that the differentiation is with respect to the \emph{first} variable.
+\item
+  Another notation is \(\frac{\partial f}{\partial x}\).
+\item
+  But here \(\frac{\partial f}{\partial x}\) can't be interpreted as a ratio of differentials.
+\end{itemize}
+
+\textbf{Notations for Partial Derivatives}
+
+If \(z=f(x,y), we write\)
+
+\[f_x=f_x(x,y)= \frac{\partial f}{\partial x}= \frac{\partial }{\partial x}f(x,y)= \frac{\partial z }{\partial x}= f_1=D_1f= D_xf \]
+
+\[f_y=f_y(x,y)= \frac{\partial f}{\partial y}= \frac{\partial }{\partial y}f(x,y)= \frac{\partial z }{\partial y}= f_2=D_2f= D_yf \]
+
+\begin{itemize}
+\item
+  The partial derivative with respect to \(x\) is just the \emph{ordinary} derivative of the function of a single variable that we get by keeping \(y\) fixed.
+\item
+  Therefore, we have the following rule.
+\end{itemize}
+
+\textbf{Rule for finding Partial Derivatives of } \(z=f(x,y)\)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  To find \(f_x\), regard \(y\) as a constant and differentiate \(f(x,y)\) with respect to \(x\).
+\item
+  To find \(f_y\), regard \(x\) as a constant and differentiate \(f(x,y)\) with respect to \(y\).
+\end{enumerate}
+
+\emph{Example 15}
+
+If \(f(x,y)=x^3+x^2y^3-2y^2\), find \(f_x(2,1)\) and \(f_y(2,1)\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB25b-1} \end{center}
+
+\hypertarget{higher-derivatives}{%
+\subsection{Higher Derivatives}\label{higher-derivatives}}
+
+\begin{itemize}
+\item
+  If \(f\) is a differentiable function, then its derivative \(f^\prime\) is also a function.
+\item
+  It is denoted by \((f^\prime)^\prime = f^{\prime\prime}\).
+\item
+  This \(f^{\prime\prime}\) is called the \textbf{second derivative} of \(f\) as it is the derivative of the derivative of \(f\).
+\item
+  Using Leibniz notation we can write the second derivative of \(f\) as follows:
+\end{itemize}
+
+\[\frac{d}{dx}(\frac{dy}{dx})= \frac{d^2y}{dx^2}\]
+
+\begin{itemize}
+\item
+  Another notation is \(f^{\prime\prime}= D^2f(x)\).
+\item
+  We can interpret \(f^{\prime\prime}\) as the slope of the curve \(y=f^{\prime}(x)\) at the point \((x, f^\prime(x))\).
+\item
+  In other words, it is the rate of change of the slope of the original curve \(f(x)\).
+\item
+  The \textbf{third derivative} \(f^{\prime\prime\prime}\) is the derivative of the second derivative: \(f^{\prime\prime\prime} = (f^{\prime\prime})^\prime\).
+\item
+  Therefore, \(f^{\prime\prime\prime}(x)\) can be interpreted as the slope of the curve \(y= f^{\prime\prime}(x)\) or as the rate of change of \(f^{\prime\prime}(x)\)
+\item
+  Alternative notations for the third derivative:
+\end{itemize}
+
+\[y^{\prime\prime\prime} = f^{\prime\prime\prime}(x)=\frac{d}{dx}(\frac{d^2y}{dx^2})= \frac{d^3y}{dx^3}= D^3f(x)\]
+
+\begin{itemize}
+\item
+  In general, the \(n\)th derivative of \(f\) is denoted by \(f^{(n)}\) and is obtained from \(f\) by differentiating \(n\) times.
+\item
+  If \(y=f(x)\),
+  \[y^{(n)} = f^{(n)}(x)= \frac{d^ny}{dx^n}= D^nf(x)\]
+\end{itemize}
+
+\emph{Example 16}
+
+If \(f(x)=x^3-7x^2-3x+5\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB26-1} \end{center}
+
+\hypertarget{derivatives-of-logarithmic-functions}{%
+\subsection{Derivatives of logarithmic functions}\label{derivatives-of-logarithmic-functions}}
+
+\[\frac{d}{dx}(a^x)= a^xln(a)\]
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB27-1} \end{center}
+
+\[\frac{d}{dx}(log_ax)= \frac{1}{xln(a)}\]
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB28-1} \end{center}
+
+\[\frac{d}{dx}(lnx)= \frac{1}{x}\]
+
+\emph{Example 17}
+
+If \(y=ln(x^3+1)\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB29-1} \end{center}
+
+\hypertarget{applications-of-differentiation}{%
+\subsection{Applications of differentiation}\label{applications-of-differentiation}}
+
+\hypertarget{maximum-and-minimum-values}{%
+\subsubsection{Maximum and minimum values}\label{maximum-and-minimum-values}}
+
+\textbf{1. Definition}
+
+A function \(f\) has an \textbf{absolute maximum} (or \textbf{global maximum}) at \(c\) if \(f(c)\geq f(x)\) for all \(x\) in \(D\), where \(D\) is the domain of \(f\). The number \(f(c)\) is called the \textbf{maximum value} of \(f\) on \(D\).
+
+Similarly, \(f\) has an \textbf{absolute minimum} (or \textbf{global minimum}) at \(c\) if \(f(c)\leq f(x)\) for all \(x\) in \(D\) and the number \(f(c)\) is called the \textbf{minimum value} of \(f\) on \(D\).
+
+The maximum and minimum values of \(f\) are called the \textbf{extreme values} of \(f\).
+
+\textbf{2. Definition}
+
+A function \(f\) has an \textbf{local maximum} (or \textbf{relative maximum}) at \(c\) if \(f(c)\geq f(x)\) when \(x\) is near \(c\).
+{[}This means that \(f(c)\geq f(x)\) for all \(x\) in some open interval containing \(c\){]}
+
+Similarly, \(f\) has a \textbf{local minimum} (or \textbf{relative minimum}) at \(c\) if \(f(c)\leq f(x)\) when \(x\) is near \(c\).
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/5Derivatives-14} 
+
+}
+
+\caption{Isaac Newton and Gottfried Leibniz}\label{fig:unnamed-chunk-13}
+\end{figure}
+
+\textbf{3. The Extreme Value Theorem}
+
+If \(f\) is continuous on a closed interval \([a,b]\), then \(f\) attains an absolute maximum value \(f(c)\) and an absolute minimum value \(f(d)\) at some numbers \(c\) and \(d\) in \([a,b]\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB30-1} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  A function need not possess extreme values if either hypothesis (continuity or closed interval) is omitted from the Extreme Value Theorem
+\end{itemize}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB31-1} \end{center}
+
+\textbf{4. Fermat's Theorem}
+
+If \(f\) has a local maximum or minimum at \(c\), and if \(f^\prime(c)\) exists, then \(f^\prime(c) = 0.\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB32-1} \end{center}
+
+\textbf{5. Definition}
+
+A \textbf{critical number} of a function \(f\) is a number \(c\) in the domain of \(f\) such that either \(f^\prime(c) = 0\) or \(f^\prime(c)\) does not exist.
+
+\emph{Example 18}
+
+Find the critical numbers of \(f(x)=x^{3/5}(4-x).\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB33-1} \end{center}
+
+\textbf{6. Fermat's Theorem (modification)}
+
+In terms of critical numbers, Fermat's Theorem can be rephrased as,
+
+If \(f\) has a local maximum or minimum at \(c\), then \(c\) is a critical number of \(f\).
+
+\textbf{7. The closed interval method}
+
+To find the \emph{absolute} maximum and minimum values of a continuous function \(f\) on a closed interval \([a,b]\):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Find the values of \(f\) at the critical numbers of \(f\) in \((a,b)\).
+\item
+  Find the values of \(f\) at the endpoints of the interval.
+\item
+  The largest of the values from Steps 1 and 2 is the absolute maximum value; the smallest of these values is the absolute minimum value.
+\end{enumerate}
+
+\emph{Example 19}
+
+Find the absolute maximum and minimum values of the function \(f(x)=x^3-3x^2+1\) \(-\frac{1}{2} \leq x \leq4.\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB34-1} \end{center}
+
+\hypertarget{how-derivatives-affect-the-shape-of-a-graph}{%
+\subsubsection{How derivatives affect the shape of a graph}\label{how-derivatives-affect-the-shape-of-a-graph}}
 
 \hypertarget{integration}{%
 \section{Integration}\label{integration}}
@@ -1247,8 +1795,10 @@ Give the equation for the tangent line to the parabola \(y=x^2\) at \(x=1\).
 \hypertarget{the-fundamental-theorem-of-calculus}{%
 \subsection{The Fundamental Theorem of Calculus}\label{the-fundamental-theorem-of-calculus}}
 
-\hypertarget{indefinite-integrals-and-integrals-of-xn-nneq-1-sin-x-cos-x}{%
-\subsection{\texorpdfstring{Indefinite integrals and integrals of \(x^n\) (\(n\neq-1\), \(sin x\), \(cos x\))}{Indefinite integrals and integrals of x\^{}n (n\textbackslash{}neq-1, sin x, cos x)}}\label{indefinite-integrals-and-integrals-of-xn-nneq-1-sin-x-cos-x}}
+\hypertarget{indefinite-integrals-and-integrals-of}{%
+\subsection{Indefinite integrals and integrals of}\label{indefinite-integrals-and-integrals-of}}
+
+\(x^n\) (\(n\neq-1\), \(sin x\), \(cos x\))
 
 \hypertarget{the-algebra-of-integrals}{%
 \subsection{The algebra of integrals}\label{the-algebra-of-integrals}}
@@ -1261,7 +1811,7 @@ Give the equation for the tangent line to the parabola \(y=x^2\) at \(x=1\).
 
 \textbf{Reading :}
 
-Stewart, J., Clegg, D. K., \& Watson, S. (2020). Calculus: early transcendentals. Cengage Learning.
+Stewart, J. (2003). Calculus: Early Transcendentals. Thomson Learning. Inc., Belmont, CA.
 
 Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
 
@@ -1343,7 +1893,7 @@ Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
 
 }
 
-\caption{(a)}\label{fig:unnamed-chunk-11}
+\caption{(a)}\label{fig:p1}
 \end{figure}
 
 \begin{figure}
@@ -1352,7 +1902,7 @@ Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
 
 }
 
-\caption{(b)}\label{fig:unnamed-chunk-12}
+\caption{(b)}\label{fig:p2}
 \end{figure}
 
 \hypertarget{descriptive-statistics}{%
@@ -2018,14 +2568,15 @@ The number of family members of a sample of undergraduates of Batch 19 are as fo
 Construct a frequency table
 
 \begin{verbatim}
-##  Number of family members Count Percentage (%)
-##                         2     1              5
-##                         3     3             15
-##                         4     7             35
-##                         5     5             25
-##                         6     2             10
-##                         7     2             10
-##                     Total    20            100
+## # A tibble: 6 x 3
+##   `Number of family members` Count `Percentage (%)`
+##                        <dbl> <int>            <dbl>
+## 1                          2     1                5
+## 2                          3     3               15
+## 3                          4     7               35
+## 4                          5     5               25
+## 5                          6     2               10
+## 6                          7     2               10
 \end{verbatim}
 
 \textbf{CASE IV:}
@@ -2041,12 +2592,13 @@ The ages (in years) of a sample of undergraduates of Batch 19 are as follows:
 Construct a frequency table
 
 \begin{verbatim}
-##  Age (years) Count Percentage (%)
-##           21     4             20
-##           22     8             40
-##           23     6             30
-##           24     2             10
-##        Total    20            100
+## # A tibble: 4 x 3
+##   `Age (years)` Count `Percentage (%)`
+##           <dbl> <int>            <dbl>
+## 1            21     4               20
+## 2            22     8               40
+## 3            23     6               30
+## 4            24     2               10
 \end{verbatim}
 
 \hypertarget{grouped-frequency-distribution}{%
@@ -3322,7 +3874,7 @@ and
 
 }
 
-\caption{Relationship of mean, median and mode for different types of skewness}\label{fig:unnamed-chunk-33}
+\caption{Relationship of mean, median and mode for different types of skewness}\label{fig:unnamed-chunk-34}
 \end{figure}
 
 \hypertarget{pearsonian-coefficient-of-skewness}{%
@@ -3371,7 +3923,7 @@ where \(S_k\) = coefficient of skewness, \(M_d\) = median
 
 }
 
-\caption{Types of kurtosis}\label{fig:unnamed-chunk-34}
+\caption{Types of kurtosis}\label{fig:unnamed-chunk-35}
 \end{figure}
 
 \hypertarget{measures-of-association}{%
