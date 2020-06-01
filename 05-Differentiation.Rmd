@@ -488,7 +488,7 @@ $$\frac{d}{dx}[f(x)-g(x)]= \frac{d}{dx}f(x)- \frac{d}{dx}g(x)$$
 
 *Example 8*
   
-  a) $f(x)=x^4 - 6x^2+4$
+  a) Differentiate $f(x)=x^4 - 6x^2+4$
   
   b) Find the points on the curve $f(x)=x^4-6x^2+4$ where the tangent line is horizontal
   
