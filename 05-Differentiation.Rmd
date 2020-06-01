@@ -628,11 +628,10 @@ ggplot()+
 
 ```
 
-
+<!--
 ### Machine learning use cases
 
 <!--https://ml-cheatsheet.readthedocs.io/en/latest/calculus.html#derivatives-->
-
     
 ### The chain rule
 
@@ -730,9 +729,11 @@ $$f_y=f_y(x,y)=lim_{h\to 0}\frac{f(x,y+h)-f(x,y)}{h}$$
 
 - But here $\frac{\partial f}{\partial x}$ can't be interpreted as a ratio of differentials.
 
+\newpage
+
 **Notations for Partial Derivatives**
 
-If $z=f(x,y), we write$
+If $z=f(x,y),$  we write
 
 $$f_x=f_x(x,y)= \frac{\partial f}{\partial x}= \frac{\partial }{\partial x}f(x,y)= \frac{\partial z }{\partial x}= f_1=D_1f= D_xf $$
 
@@ -850,6 +851,13 @@ ggplot()+
 
 ``` 
 
+In general, if we combine derivatives of logarithmic functions with the chain rule. we get
+
+$$\frac{d}{dx}{ln\text{ } u} = \frac{1}{u}\frac{du}{dx}$$
+or
+
+$$\frac{d}{dx}{[ln\text{ } g(x)]} = \frac{g^\prime (x)}{g(x)}$$
+
 ### Applications of differentiation
 
 #### Maximum and minimum values
@@ -918,11 +926,14 @@ ggplot()+
 
 ```
 
+\newpage
 
+\newpage
 
 **5. Definition**
 
 A **critical number** of a function $f$ is a number $c$ in the domain of $f$ such that either $f^\prime(c) = 0$ or $f^\prime(c)$ does not exist.
+
 
 
 
@@ -931,7 +942,7 @@ A **critical number** of a function $f$ is a number $c$ in the domain of $f$ suc
 Find the critical numbers of  $f(x)=x^{3/5}(4-x).$
 
   
-```{r LB33, out.width='100%', fig.asp=0.6, fig.align='center', fig.pos='h'}
+```{r LB33, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
 library(ggplot2)
 ggplot()+
   theme_void()+
@@ -940,9 +951,9 @@ ggplot()+
 ``` 
 
 
-**6. Fermat's Theorem (modification)**
+- In terms of critical numbers, Fermat's Theorem can be rephrased as,
 
-In terms of critical numbers, Fermat's Theorem can be rephrased as,
+**6. Fermat's Theorem (modification)**
 
 If $f$ has a local maximum or minimum at $c$, then $c$ is a critical number of $f$.
 
@@ -950,7 +961,7 @@ If $f$ has a local maximum or minimum at $c$, then $c$ is a critical number of $
 
 **7. The closed interval method**
 
-To find the *absolute* maximum and minimum values of a continuous function $f$ on a closed interval $[a,b]$:
+To find the *absolute* maximum and minimum values of a **continuous** function $f$ on a closed interval $[a,b]$:
 
 1. Find the values of $f$ at the critical numbers of $f$ in $(a,b)$.
 
@@ -974,6 +985,7 @@ ggplot()+
 
 
 
+\newpage 
 #### How derivatives affect the shape of a graph
 
 

@@ -1537,9 +1537,6 @@ If \(f(x)=\frac{x^2+x-2}{x^3+6}\), find \(f^\prime(x)\)
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/LB20-1} \end{center}
 
-\hypertarget{machine-learning-use-cases}{%
-\subsection{Machine learning use cases}\label{machine-learning-use-cases}}
-
 \hypertarget{the-chain-rule}{%
 \subsection{The chain rule}\label{the-chain-rule}}
 
@@ -1600,9 +1597,11 @@ If \(f\) is a function of two variables, its \textbf{partial derivatives} are th
   But here \(\frac{\partial f}{\partial x}\) can't be interpreted as a ratio of differentials.
 \end{itemize}
 
+\newpage
+
 \textbf{Notations for Partial Derivatives}
 
-If \(z=f(x,y), we write\)
+If \(z=f(x,y),\) we write
 
 \[f_x=f_x(x,y)= \frac{\partial f}{\partial x}= \frac{\partial }{\partial x}f(x,y)= \frac{\partial z }{\partial x}= f_1=D_1f= D_xf \]
 
@@ -1697,6 +1696,13 @@ If \(y=ln(x^3+1)\)
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/LB29-1} \end{center}
 
+In general, if we combine derivatives of logarithmic functions with the chain rule. we get
+
+\[\frac{d}{dx}{ln\text{ } u} = \frac{1}{u}\frac{du}{dx}\]
+or
+
+\[\frac{d}{dx}{[ln\text{ } g(x)]} = \frac{g^\prime (x)}{g(x)}\]
+
 \hypertarget{applications-of-differentiation}{%
 \subsection{Applications of differentiation}\label{applications-of-differentiation}}
 
@@ -1747,6 +1753,10 @@ If \(f\) has a local maximum or minimum at \(c\), and if \(f^\prime(c)\) exists,
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/LB32-1} \end{center}
 
+\newpage
+
+\newpage
+
 \textbf{5. Definition}
 
 A \textbf{critical number} of a function \(f\) is a number \(c\) in the domain of \(f\) such that either \(f^\prime(c) = 0\) or \(f^\prime(c)\) does not exist.
@@ -1757,15 +1767,19 @@ Find the critical numbers of \(f(x)=x^{3/5}(4-x).\)
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/LB33-1} \end{center}
 
-\textbf{6. Fermat's Theorem (modification)}
+\begin{itemize}
+\tightlist
+\item
+  In terms of critical numbers, Fermat's Theorem can be rephrased as,
+\end{itemize}
 
-In terms of critical numbers, Fermat's Theorem can be rephrased as,
+\textbf{6. Fermat's Theorem (modification)}
 
 If \(f\) has a local maximum or minimum at \(c\), then \(c\) is a critical number of \(f\).
 
 \textbf{7. The closed interval method}
 
-To find the \emph{absolute} maximum and minimum values of a continuous function \(f\) on a closed interval \([a,b]\):
+To find the \emph{absolute} maximum and minimum values of a \textbf{continuous} function \(f\) on a closed interval \([a,b]\):
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1782,6 +1796,8 @@ To find the \emph{absolute} maximum and minimum values of a continuous function 
 Find the absolute maximum and minimum values of the function \(f(x)=x^3-3x^2+1\) \(-\frac{1}{2} \leq x \leq4.\)
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/LB34-1} \end{center}
+
+\newpage
 
 \hypertarget{how-derivatives-affect-the-shape-of-a-graph}{%
 \subsubsection{How derivatives affect the shape of a graph}\label{how-derivatives-affect-the-shape-of-a-graph}}
