@@ -87,7 +87,7 @@
 
 \title{CM 1110 Fundamentals of Mathematics and Statistics}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-06-01}
+\date{2020-06-08}
 
 \begin{document}
 \maketitle
@@ -1757,6 +1757,10 @@ If \(f\) has a local maximum or minimum at \(c\), and if \(f^\prime(c)\) exists,
 
 \newpage
 
+Examples
+
+\newpage
+
 \textbf{5. Definition}
 
 A \textbf{critical number} of a function \(f\) is a number \(c\) in the domain of \(f\) such that either \(f^\prime(c) = 0\) or \(f^\prime(c)\) does not exist.
@@ -1802,8 +1806,129 @@ Find the absolute maximum and minimum values of the function \(f(x)=x^3-3x^2+1\)
 \hypertarget{how-derivatives-affect-the-shape-of-a-graph}{%
 \subsubsection{How derivatives affect the shape of a graph}\label{how-derivatives-affect-the-shape-of-a-graph}}
 
+\hypertarget{what-does-fprime-say-about-f}{%
+\paragraph{\texorpdfstring{What does \(f^\prime\) say about \(f\)?}{What does f\^{}\textbackslash{}prime say about f?}}\label{what-does-fprime-say-about-f}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Increasing/ Decreasing Test}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  If \(f^\prime (x) >0\) on an interval, then \(f\) is increasing on that interval
+\item
+  If \(f^\prime (x) <0\) on an interval, then \(f\) is decreasing on that interval
+\end{enumerate}
+
+\emph{Example 20}
+
+Find where the function \(f(x)=3x^4-4x^3- 12x^2+5\) is increasing and where it is decreasing
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB35-1} \end{center}
+
+\newpage
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{The First Derivative Test}
+\end{enumerate}
+
+Suppose that \(c\) is a critical number of a continuous function \(f\).
+(a) If \(f^\prime\) changes from positive to negative at \(c\), then \(f\) has a local maximum at \(c\).
+(b) If \(f^\prime\) changes from negative to positive at \(c\), then \(f\) has a local minimum at \(c\).
+(c) If \(f^\prime\) does not change sign at \(c\) (for example, if \(f^\prime\) is positive on both sides of \(c\) or negative on both sides), then \(f\) has no local maximum or minimum at \(c\).
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB36-1} \end{center}
+
+\hypertarget{what-does-fprime-prime-say-about-f}{%
+\paragraph{\texorpdfstring{What does \(f^{\prime \prime}\) say about \(f\)?}{What does f\^{}\{\textbackslash{}prime \textbackslash{}prime\} say about f?}}\label{what-does-fprime-prime-say-about-f}}
+
+\textbf{Concavity}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/5Derivatives-15} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Definition}
+\end{enumerate}
+
+If the graph of \(f\) lies above all of its tangents on an interval \(I\), then it is called \textbf{concave upward} on \(I\). If the graph of \(f\) lies below all of its tangents on \(I\), it is called \textbf{concave downward} on \(I\).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \textbf{Concavity Test}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  If \(f^{\prime \prime}(x)>0\) for all \(x\) in \(I\), then the graph of \(f\) is concave upward on \(I\).
+\item
+  If \(f^{\prime \prime}(x)<0\) for all \(x\) in \(I\), then the graph of \(f\) is concave downward on \(I\).
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  \textbf{Definition: Inflection Point}
+\end{enumerate}
+
+A point \(P\) in a curve \(y=f(x)\) is called an \textbf{inflection point} if \(f\) is continuous there and the curve changes from concave upward to concave downward or from concave downward to concave upward at \(P\).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  \textbf{The Second Derivative Test}
+\end{enumerate}
+
+Suppose \(f^{\prime \prime}\) is continuous near \(c\).
+(a) If \(f^\prime (c) = 0\) and \(f^{\prime \prime}(c) >0,\) then \(f\) has a local minimum at \(c\)
+(b) If \(f^\prime (c) = 0\) and \(f^{\prime \prime}(c) <0,\) then \(f\) has a local maximum at \(c\)
+
+\newpage
+
+\emph{Example 21}
+
+Discuss the curve \(y= x^4 - 4x^3\) with respect to concavity, points of inflection and local maxima and minima.
+
+\newpage
+
+\begin{center}\includegraphics[width=0.8\textwidth]{figure/unnamed-chunk-14-1} \end{center}
+
+\newpage
+
 \hypertarget{integration}{%
 \section{Integration}\label{integration}}
+
+\textbf{Exercise}
+
+\begin{itemize}
+\tightlist
+\item
+  Find the area of the region \(S\) that lies under the curve \(y=f(x)\) from \(a\) to \(b\)
+\end{itemize}
+
+\hypertarget{the-area-problem}{%
+\subsection{The Area Problem}\label{the-area-problem}}
 
 \hypertarget{the-geometric-definition-of-the-integral}{%
 \subsection{The geometric definition of the integral}\label{the-geometric-definition-of-the-integral}}
@@ -1920,6 +2045,109 @@ Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
 
 \caption{(b)}\label{fig:p2}
 \end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Where is the function \(f(x) = |x|\) differentiable? find a formula for \(f^\prime\) and sketch its graph.
+\item
+  Find an equation of the tangent line to the curve \(y=x \sqrt x\) at the point \((1,1).\) Illustrate by graphing the curve and its tangent line.
+\item
+  If \(f(x) = e^x -x,\) find \(f^\prime\). Compare the graphs of \(f\) and \(f^\prime\).
+\item
+  At what point on the curve \(y=e^x\) is the tangent line parallel to the line \(y=2x\)?
+\item
+  Differentiate the function
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(g(x) = \frac{3x-1}{2x+1}\)
+\item
+  \(V(x) = (2x^3+3)(x^4-2x)\)
+\item
+  \(f(y) = \left ( \frac{1}{y^2}- \frac{3}{y^4} \right ) (y+5y^3)\)
+\item
+  \(f(x) = \frac{1}{x^4+x^2+1}\)
+\item
+  \(f(x) = \frac{x}{x+\frac{c}{x}}\)
+\item
+  \(f(x) = \frac{3x^2+2\sqrt x}{x}\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Find an equation of the tangent line to the given curve at the specified point.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(y= \frac{1}{1+x^2}\), \((-1, \frac{1}{2})\)
+\item
+  \(y= \frac{e^x }{1+x^2}\), \((1, \frac{e}{2})\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  Suppose that \(f(5) = 1\) , \(f^\prime (5) =6\), \(g(5) = -3\) and \(g^\prime (5) =2\). Find the following values.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \((fg)^\prime(5)\)
+\item
+  \((f/g)^\prime(5)\)
+\item
+  \((g/f)^\prime(5)\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  If \(h(2) = 4\) and \(h^\prime(2) = -3,\) find
+\end{enumerate}
+
+\[\frac{d}{dx} \left( \frac{h(x)}{x} \right) \Bigr|_{x=2} \]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\item
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  Use the Product Rule twice to prove that if \(f\), \(g\) and \(h\) are differentiable, then
+  \[(fgh)^\prime = f^\prime gh+ fg^\prime h + fgh^\prime\]
+\item
+  Taking \(f=g=h\) in part (a), show that
+\end{enumerate}
+
+\[\frac{d}{dx} [f(x)]^3= 3[f(x)]^2f^\prime(x)\]
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Use part (b) to differentiate \(y= e^{3x}\)
+\end{enumerate}
 
 \hypertarget{descriptive-statistics}{%
 \chapter{Descriptive Statistics}\label{descriptive-statistics}}
@@ -3890,7 +4118,7 @@ and
 
 }
 
-\caption{Relationship of mean, median and mode for different types of skewness}\label{fig:unnamed-chunk-34}
+\caption{Relationship of mean, median and mode for different types of skewness}\label{fig:unnamed-chunk-35}
 \end{figure}
 
 \hypertarget{pearsonian-coefficient-of-skewness}{%
@@ -3939,7 +4167,7 @@ where \(S_k\) = coefficient of skewness, \(M_d\) = median
 
 }
 
-\caption{Types of kurtosis}\label{fig:unnamed-chunk-35}
+\caption{Types of kurtosis}\label{fig:unnamed-chunk-36}
 \end{figure}
 
 \hypertarget{measures-of-association}{%

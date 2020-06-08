@@ -871,7 +871,6 @@ Similarly,  $f$ has an **absolute minimum** (or **global minimum**) at $c$ if $f
 The maximum and minimum values of $f$ are called the **extreme values** of $f$. 
 
 
-
 **2. Definition**
 
 A function $f$ has an **local maximum** (or **relative maximum**) at $c$ if $f(c)\geq f(x)$ when $x$ is near $c$.
@@ -927,6 +926,9 @@ ggplot()+
 ```
 
 \newpage
+
+\newpage
+Examples
 
 \newpage
 
@@ -988,13 +990,134 @@ ggplot()+
 \newpage 
 #### How derivatives affect the shape of a graph
 
+##### What does $f^\prime$ say about $f$?
+
+1. **Increasing/ Decreasing Test**
+
+  (a) If $f^\prime (x) >0$ on an interval, then $f$ is increasing on that interval
+  (b) If $f^\prime (x) <0$ on an interval, then $f$ is decreasing on that interval
 
 
+*Example 20*
+  
+Find where the function $f(x)=3x^4-4x^3- 12x^2+5$ is increasing and where it is decreasing
+
+  
+```{r LB35, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+``` 
+
+\newpage
+
+2. **The First Derivative Test**
+
+Suppose that $c$ is a critical number of a continuous function $f$.
+  (a) If $f^\prime$ changes from positive to negative at $c$, then $f$ has a local maximum at $c$.
+  (b) If $f^\prime$ changes from  negative to  positive at $c$, then $f$ has a local minimum at $c$.
+  (c) If $f^\prime$ does not change sign at $c$ (for example, if $f^\prime$ is positive on both sides of $c$ or negative on both sides), then $f$ has no local maximum or minimum at $c$.  
+
+  
+```{r LB36, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+``` 
+
+
+
+##### What does $f^{\prime \prime}$ say about $f$?
+
+**Concavity**
+
+
+```{r  p15a, out.width = "100%", echo = FALSE, fig.align='center'}
+    knitr::include_graphics("figure/5Derivatives-15.png")
+```
+
+3. **Definition**
+
+If the graph of $f$ lies above all of its tangents  on an interval $I$, then it is called **concave upward** on $I$. If the graph of $f$ lies below all of its tangents on $I$, it is called **concave downward** on $I$.
+
+
+4. **Concavity Test**
+  (a) If $f^{\prime \prime}(x)>0$ for all $x$ in $I$, then the graph of $f$ is concave upward on $I$.
+  (b) If $f^{\prime \prime}(x)<0$ for all $x$ in $I$, then the graph of $f$ is concave downward on $I$.
+
+
+
+5. **Definition: Inflection Point**
+
+A point $P$ in a curve $y=f(x)$ is called an **inflection point** if $f$ is continuous there and the curve changes from concave upward to concave downward or from concave downward to concave upward at $P$.
+  
+  
+6. **The Second Derivative Test**
+
+Suppose $f^{\prime \prime}$ is continuous near $c$.
+  (a) If $f^\prime (c) = 0$  and $f^{\prime \prime}(c) >0,$ then $f$ has a local minimum at $c$
+  (b) If $f^\prime (c) = 0$  and $f^{\prime \prime}(c) <0,$ then $f$ has a local maximum at $c$ 
+  
+
+\newpage
+
+*Example 21*
+  
+Discuss the curve $y= x^4 - 4x^3$ with respect to concavity, points of inflection and local maxima and minima.
+
+\newpage
+  
+```{r fig.height=12, fig.width=6}
+y <- expression(x^4-(4*x^3))
+x <- seq(-1.5, 4, by = 0.1)
+f <- eval(y)
+
+f_1 <- D(y, "x")
+x <- seq(-1.5, 4, by = 0.1)
+f1 <- eval(f_1)
+
+f_2 <- D(D(y, "x"), "x")
+x <- seq(-1.5, 4, by = 0.1)
+f2 <- eval(f_2)
+
+data <- data.frame(x, f, f1, f2)
+
+p <- data %>% pivot_longer(-x, names_to = "Function", values_to = "f") %>%
+  ggplot( aes(x, f)) +
+  geom_line() +
+  geom_vline(xintercept= c(0,3))+
+  geom_hline(yintercept= c(0))+
+  facet_wrap(vars(Function), ncol = 1, scale = "free") + 
+  theme(aspect.ratio = 0.9)
+
+
+
+print(p)
+```
+
+\newpage 
 
 
 ## Integration
+
+**Exercise**
+
+- Find the area of the region $S$ that lies under the curve $y=f(x)$ from $a$ to $b$
+
+
+
+
+
+
+
     
-    
+### The Area Problem
+
+
 ### The geometric definition of the integral
     
 ### The Fundamental Theorem of Calculus
@@ -1061,3 +1184,51 @@ Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman & Company.
 ```{r  p2, out.width = "70%", echo = FALSE, fig.align='center', fig.cap="(b)"}
     knitr::include_graphics("figure/5Derivatives-10.png")
 ```
+
+
+4. Where is the function $f(x) = |x|$ differentiable? find a formula for $f^\prime$ and sketch its graph.
+
+
+5. Find an equation of the tangent line to the curve $y=x \sqrt x$ at the point $(1,1).$ Illustrate by graphing the curve and its  tangent line.
+
+6. If $f(x) = e^x -x,$ find $f^\prime$. Compare the graphs of $f$ and $f^\prime$.
+
+7. At what point on the curve $y=e^x$ is the tangent line parallel to the line $y=2x$?
+
+8. Differentiate the function
+
+  (a) $g(x) = \frac{3x-1}{2x+1}$
+  (b) $V(x) = (2x^3+3)(x^4-2x)$
+  (c) $f(y) = \left ( \frac{1}{y^2}- \frac{3}{y^4} \right ) (y+5y^3)$
+  (d) $f(x) = \frac{1}{x^4+x^2+1}$
+  (e) $f(x) = \frac{x}{x+\frac{c}{x}}$
+  (f) $f(x) = \frac{3x^2+2\sqrt x}{x}$
+  
+  
+9. Find an equation of the tangent line to the given curve at the specified point.
+
+  (a)  $y= \frac{1}{1+x^2}$, $(-1, \frac{1}{2})$
+  (b)  $y= \frac{e^x }{1+x^2}$, $(1, \frac{e}{2})$
+
+10. Suppose that $f(5) = 1$ , $f^\prime (5) =6$, $g(5) = -3$ and  $g^\prime (5) =2$. Find the following values.
+
+  (a) $(fg)^\prime(5)$
+  (b) $(f/g)^\prime(5)$
+  (c) $(g/f)^\prime(5)$
+
+
+11. If $h(2) = 4$ and $h^\prime(2) = -3,$ find
+
+$$\frac{d}{dx} \left( \frac{h(x)}{x} \right) \Bigr|_{x=2} $$
+
+12. 
+
+(a) Use the Product Rule twice to prove that if $f$, $g$ and $h$ are differentiable, then
+ $$(fgh)^\prime = f^\prime gh+ fg^\prime h + fgh^\prime$$
+ 
+(b) Taking $f=g=h$ in part (a), show that
+
+$$\frac{d}{dx} [f(x)]^3= 3[f(x)]^2f^\prime(x)$$
+
+(c) Use part (b) to differentiate $y= e^{3x}$
+

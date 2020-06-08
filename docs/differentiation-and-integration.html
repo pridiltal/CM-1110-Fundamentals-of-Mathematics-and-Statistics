@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Priyanga D. Talagala" />
 
 
-<meta name="date" content="2020-06-01" />
+<meta name="date" content="2020-06-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -117,12 +117,13 @@
 <li class="chapter" data-level="5.1.9" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#applications-of-differentiation"><i class="fa fa-check"></i><b>5.1.9</b> Applications of differentiation</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#integration"><i class="fa fa-check"></i><b>5.2</b> Integration</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#the-geometric-definition-of-the-integral"><i class="fa fa-check"></i><b>5.2.1</b> The geometric definition of the integral</a></li>
-<li class="chapter" data-level="5.2.2" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#the-fundamental-theorem-of-calculus"><i class="fa fa-check"></i><b>5.2.2</b> The Fundamental Theorem of Calculus</a></li>
-<li class="chapter" data-level="5.2.3" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#indefinite-integrals-and-integrals-of"><i class="fa fa-check"></i><b>5.2.3</b> Indefinite integrals and integrals of</a></li>
-<li class="chapter" data-level="5.2.4" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#the-algebra-of-integrals"><i class="fa fa-check"></i><b>5.2.4</b> The algebra of integrals</a></li>
-<li class="chapter" data-level="5.2.5" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#integration-and-substitution"><i class="fa fa-check"></i><b>5.2.5</b> integration and substitution</a></li>
-<li class="chapter" data-level="5.2.6" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#the-analytic-definition-of-the-integral"><i class="fa fa-check"></i><b>5.2.6</b> the analytic definition of the integral</a></li>
+<li class="chapter" data-level="5.2.1" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#the-area-problem"><i class="fa fa-check"></i><b>5.2.1</b> The Area Problem</a></li>
+<li class="chapter" data-level="5.2.2" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#the-geometric-definition-of-the-integral"><i class="fa fa-check"></i><b>5.2.2</b> The geometric definition of the integral</a></li>
+<li class="chapter" data-level="5.2.3" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#the-fundamental-theorem-of-calculus"><i class="fa fa-check"></i><b>5.2.3</b> The Fundamental Theorem of Calculus</a></li>
+<li class="chapter" data-level="5.2.4" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#indefinite-integrals-and-integrals-of"><i class="fa fa-check"></i><b>5.2.4</b> Indefinite integrals and integrals of</a></li>
+<li class="chapter" data-level="5.2.5" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#the-algebra-of-integrals"><i class="fa fa-check"></i><b>5.2.5</b> The algebra of integrals</a></li>
+<li class="chapter" data-level="5.2.6" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#integration-and-substitution"><i class="fa fa-check"></i><b>5.2.6</b> integration and substitution</a></li>
+<li class="chapter" data-level="5.2.7" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#the-analytic-definition-of-the-integral"><i class="fa fa-check"></i><b>5.2.7</b> the analytic definition of the integral</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#tutorial"><i class="fa fa-check"></i><b>5.3</b> Tutorial</a><ul>
 <li class="chapter" data-level="" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html#chapter-5.1-differentiation"><i class="fa fa-check"></i>Chapter 5.1: Differentiation</a></li>
@@ -641,6 +642,8 @@ Figure 5.2: Isaac Newton and Gottfried Leibniz
 <p><img src="figure/LB32-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <div style="page-break-after: always;"></div>
 <div style="page-break-after: always;"></div>
+<p>Examples</p>
+<div style="page-break-after: always;"></div>
 <p><strong>5. Definition</strong></p>
 <p>A <strong>critical number</strong> of a function <span class="math inline">\(f\)</span> is a number <span class="math inline">\(c\)</span> in the domain of <span class="math inline">\(f\)</span> such that either <span class="math inline">\(f^\prime(c) = 0\)</span> or <span class="math inline">\(f^\prime(c)\)</span> does not exist.</p>
 <p><em>Example 18</em></p>
@@ -665,29 +668,90 @@ Figure 5.2: Isaac Newton and Gottfried Leibniz
 </div>
 <div id="how-derivatives-affect-the-shape-of-a-graph" class="section level4">
 <h4><span class="header-section-number">5.1.9.2</span> How derivatives affect the shape of a graph</h4>
+<div id="what-does-fprime-say-about-f" class="section level5">
+<h5><span class="header-section-number">5.1.9.2.1</span> What does <span class="math inline">\(f^\prime\)</span> say about <span class="math inline">\(f\)</span>?</h5>
+<ol style="list-style-type: decimal">
+<li><strong>Increasing/ Decreasing Test</strong></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>If <span class="math inline">\(f^\prime (x) &gt;0\)</span> on an interval, then <span class="math inline">\(f\)</span> is increasing on that interval</li>
+<li>If <span class="math inline">\(f^\prime (x) &lt;0\)</span> on an interval, then <span class="math inline">\(f\)</span> is decreasing on that interval</li>
+</ol>
+<p><em>Example 20</em></p>
+<p>Find where the function <span class="math inline">\(f(x)=3x^4-4x^3- 12x^2+5\)</span> is increasing and where it is decreasing</p>
+<p><img src="figure/LB35-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div style="page-break-after: always;"></div>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>The First Derivative Test</strong></li>
+</ol>
+<p>Suppose that <span class="math inline">\(c\)</span> is a critical number of a continuous function <span class="math inline">\(f\)</span>.
+(a) If <span class="math inline">\(f^\prime\)</span> changes from positive to negative at <span class="math inline">\(c\)</span>, then <span class="math inline">\(f\)</span> has a local maximum at <span class="math inline">\(c\)</span>.
+(b) If <span class="math inline">\(f^\prime\)</span> changes from negative to positive at <span class="math inline">\(c\)</span>, then <span class="math inline">\(f\)</span> has a local minimum at <span class="math inline">\(c\)</span>.
+(c) If <span class="math inline">\(f^\prime\)</span> does not change sign at <span class="math inline">\(c\)</span> (for example, if <span class="math inline">\(f^\prime\)</span> is positive on both sides of <span class="math inline">\(c\)</span> or negative on both sides), then <span class="math inline">\(f\)</span> has no local maximum or minimum at <span class="math inline">\(c\)</span>.</p>
+<p><img src="figure/LB36-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="what-does-fprime-prime-say-about-f" class="section level5">
+<h5><span class="header-section-number">5.1.9.2.2</span> What does <span class="math inline">\(f^{\prime \prime}\)</span> say about <span class="math inline">\(f\)</span>?</h5>
+<p><strong>Concavity</strong></p>
+<p><img src="figure/5Derivatives-15.png" width="100%" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Definition</strong></li>
+</ol>
+<p>If the graph of <span class="math inline">\(f\)</span> lies above all of its tangents on an interval <span class="math inline">\(I\)</span>, then it is called <strong>concave upward</strong> on <span class="math inline">\(I\)</span>. If the graph of <span class="math inline">\(f\)</span> lies below all of its tangents on <span class="math inline">\(I\)</span>, it is called <strong>concave downward</strong> on <span class="math inline">\(I\)</span>.</p>
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Concavity Test</strong></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>If <span class="math inline">\(f^{\prime \prime}(x)&gt;0\)</span> for all <span class="math inline">\(x\)</span> in <span class="math inline">\(I\)</span>, then the graph of <span class="math inline">\(f\)</span> is concave upward on <span class="math inline">\(I\)</span>.</li>
+<li>If <span class="math inline">\(f^{\prime \prime}(x)&lt;0\)</span> for all <span class="math inline">\(x\)</span> in <span class="math inline">\(I\)</span>, then the graph of <span class="math inline">\(f\)</span> is concave downward on <span class="math inline">\(I\)</span>.</li>
+</ol>
+<ol start="5" style="list-style-type: decimal">
+<li><strong>Definition: Inflection Point</strong></li>
+</ol>
+<p>A point <span class="math inline">\(P\)</span> in a curve <span class="math inline">\(y=f(x)\)</span> is called an <strong>inflection point</strong> if <span class="math inline">\(f\)</span> is continuous there and the curve changes from concave upward to concave downward or from concave downward to concave upward at <span class="math inline">\(P\)</span>.</p>
+<ol start="6" style="list-style-type: decimal">
+<li><strong>The Second Derivative Test</strong></li>
+</ol>
+<p>Suppose <span class="math inline">\(f^{\prime \prime}\)</span> is continuous near <span class="math inline">\(c\)</span>.
+(a) If <span class="math inline">\(f^\prime (c) = 0\)</span> and <span class="math inline">\(f^{\prime \prime}(c) &gt;0,\)</span> then <span class="math inline">\(f\)</span> has a local minimum at <span class="math inline">\(c\)</span>
+(b) If <span class="math inline">\(f^\prime (c) = 0\)</span> and <span class="math inline">\(f^{\prime \prime}(c) &lt;0,\)</span> then <span class="math inline">\(f\)</span> has a local maximum at <span class="math inline">\(c\)</span></p>
+<div style="page-break-after: always;"></div>
+<p><em>Example 21</em></p>
+<p>Discuss the curve <span class="math inline">\(y= x^4 - 4x^3\)</span> with respect to concavity, points of inflection and local maxima and minima.</p>
+<div style="page-break-after: always;"></div>
+<p><img src="figure/unnamed-chunk-14-1.png" width="0.8\textwidth" style="display: block; margin: auto;" /></p>
+<div style="page-break-after: always;"></div>
+</div>
 </div>
 </div>
 </div>
 <div id="integration" class="section level2">
 <h2><span class="header-section-number">5.2</span> Integration</h2>
+<p><strong>Exercise</strong></p>
+<ul>
+<li>Find the area of the region <span class="math inline">\(S\)</span> that lies under the curve <span class="math inline">\(y=f(x)\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span></li>
+</ul>
+<div id="the-area-problem" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> The Area Problem</h3>
+</div>
 <div id="the-geometric-definition-of-the-integral" class="section level3">
-<h3><span class="header-section-number">5.2.1</span> The geometric definition of the integral</h3>
+<h3><span class="header-section-number">5.2.2</span> The geometric definition of the integral</h3>
 </div>
 <div id="the-fundamental-theorem-of-calculus" class="section level3">
-<h3><span class="header-section-number">5.2.2</span> The Fundamental Theorem of Calculus</h3>
+<h3><span class="header-section-number">5.2.3</span> The Fundamental Theorem of Calculus</h3>
 </div>
 <div id="indefinite-integrals-and-integrals-of" class="section level3">
-<h3><span class="header-section-number">5.2.3</span> Indefinite integrals and integrals of</h3>
+<h3><span class="header-section-number">5.2.4</span> Indefinite integrals and integrals of</h3>
 <p><span class="math inline">\(x^n\)</span> (<span class="math inline">\(n\neq-1\)</span>, <span class="math inline">\(sin x\)</span>, <span class="math inline">\(cos x\)</span>)</p>
 </div>
 <div id="the-algebra-of-integrals" class="section level3">
-<h3><span class="header-section-number">5.2.4</span> The algebra of integrals</h3>
+<h3><span class="header-section-number">5.2.5</span> The algebra of integrals</h3>
 </div>
 <div id="integration-and-substitution" class="section level3">
-<h3><span class="header-section-number">5.2.5</span> integration and substitution</h3>
+<h3><span class="header-section-number">5.2.6</span> integration and substitution</h3>
 </div>
 <div id="the-analytic-definition-of-the-integral" class="section level3">
-<h3><span class="header-section-number">5.2.6</span> the analytic definition of the integral</h3>
+<h3><span class="header-section-number">5.2.7</span> the analytic definition of the integral</h3>
 <p><strong>Reading :</strong></p>
 <p>Stewart, J. (2003). Calculus: Early Transcendentals. Thomson Learning. Inc., Belmont, CA.</p>
 <p>Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman &amp; Company.</p>
@@ -738,6 +802,52 @@ Figure 5.3: (a)
 Figure 5.4: (b)
 </p>
 </div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Where is the function <span class="math inline">\(f(x) = |x|\)</span> differentiable? find a formula for <span class="math inline">\(f^\prime\)</span> and sketch its graph.</p></li>
+<li><p>Find an equation of the tangent line to the curve <span class="math inline">\(y=x \sqrt x\)</span> at the point <span class="math inline">\((1,1).\)</span> Illustrate by graphing the curve and its tangent line.</p></li>
+<li><p>If <span class="math inline">\(f(x) = e^x -x,\)</span> find <span class="math inline">\(f^\prime\)</span>. Compare the graphs of <span class="math inline">\(f\)</span> and <span class="math inline">\(f^\prime\)</span>.</p></li>
+<li><p>At what point on the curve <span class="math inline">\(y=e^x\)</span> is the tangent line parallel to the line <span class="math inline">\(y=2x\)</span>?</p></li>
+<li><p>Differentiate the function</p></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(g(x) = \frac{3x-1}{2x+1}\)</span></li>
+<li><span class="math inline">\(V(x) = (2x^3+3)(x^4-2x)\)</span></li>
+<li><span class="math inline">\(f(y) = \left ( \frac{1}{y^2}- \frac{3}{y^4} \right ) (y+5y^3)\)</span></li>
+<li><span class="math inline">\(f(x) = \frac{1}{x^4+x^2+1}\)</span></li>
+<li><span class="math inline">\(f(x) = \frac{x}{x+\frac{c}{x}}\)</span></li>
+<li><span class="math inline">\(f(x) = \frac{3x^2+2\sqrt x}{x}\)</span></li>
+</ol>
+<ol start="9" style="list-style-type: decimal">
+<li>Find an equation of the tangent line to the given curve at the specified point.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(y= \frac{1}{1+x^2}\)</span>, <span class="math inline">\((-1, \frac{1}{2})\)</span></li>
+<li><span class="math inline">\(y= \frac{e^x }{1+x^2}\)</span>, <span class="math inline">\((1, \frac{e}{2})\)</span></li>
+</ol>
+<ol start="10" style="list-style-type: decimal">
+<li>Suppose that <span class="math inline">\(f(5) = 1\)</span> , <span class="math inline">\(f^\prime (5) =6\)</span>, <span class="math inline">\(g(5) = -3\)</span> and <span class="math inline">\(g^\prime (5) =2\)</span>. Find the following values.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\((fg)^\prime(5)\)</span></li>
+<li><span class="math inline">\((f/g)^\prime(5)\)</span></li>
+<li><span class="math inline">\((g/f)^\prime(5)\)</span></li>
+</ol>
+<ol start="11" style="list-style-type: decimal">
+<li>If <span class="math inline">\(h(2) = 4\)</span> and <span class="math inline">\(h^\prime(2) = -3,\)</span> find</li>
+</ol>
+<p><span class="math display">\[\frac{d}{dx} \left( \frac{h(x)}{x} \right) \Bigr|_{x=2} \]</span></p>
+<ol start="12" style="list-style-type: decimal">
+<li></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>Use the Product Rule twice to prove that if <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span> are differentiable, then
+<span class="math display">\[(fgh)^\prime = f^\prime gh+ fg^\prime h + fgh^\prime\]</span></p></li>
+<li><p>Taking <span class="math inline">\(f=g=h\)</span> in part (a), show that</p></li>
+</ol>
+<p><span class="math display">\[\frac{d}{dx} [f(x)]^3= 3[f(x)]^2f^\prime(x)\]</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Use part (b) to differentiate <span class="math inline">\(y= e^{3x}\)</span></li>
+</ol>
 
 </div>
 </div>
