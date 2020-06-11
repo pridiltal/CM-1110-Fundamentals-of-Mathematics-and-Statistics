@@ -1016,8 +1016,11 @@ ggplot()+
 2. **The First Derivative Test**
 
 Suppose that $c$ is a critical number of a continuous function $f$.
+
   (a) If $f^\prime$ changes from positive to negative at $c$, then $f$ has a local maximum at $c$.
+  
   (b) If $f^\prime$ changes from  negative to  positive at $c$, then $f$ has a local minimum at $c$.
+  
   (c) If $f^\prime$ does not change sign at $c$ (for example, if $f^\prime$ is positive on both sides of $c$ or negative on both sides), then $f$ has no local maximum or minimum at $c$.  
 
   
@@ -1046,7 +1049,9 @@ If the graph of $f$ lies above all of its tangents  on an interval $I$, then it 
 
 
 4. **Concavity Test**
+
   (a) If $f^{\prime \prime}(x)>0$ for all $x$ in $I$, then the graph of $f$ is concave upward on $I$.
+  
   (b) If $f^{\prime \prime}(x)<0$ for all $x$ in $I$, then the graph of $f$ is concave downward on $I$.
 
 
@@ -1104,14 +1109,46 @@ print(p)
 
 ## Integration
 
-**Exercise**
+### The Definite Integral
 
-- Find the area of the region $S$ that lies under the curve $y=f(x)$ from $a$ to $b$
+**Definition: Definite Integral**
+
+If $f$ is a continuous function defined for $a \leq x \leq b$, we divide the interval $[a,b]$ into $n$ sub-intervals of equal width $\Delta x = (b-a)/n$. We let $x_0 (=a) , x_1, x_2, \dots, x_n(=b)$ be the endpoints of these sub-intervals and we let $x_1^*,x_2^*, \dots, x_n^*$ be any **sample point** in these sub-intervals, so $x_i^*$ lies in the $i$th sub-interval $[x_{i-1} , x_i]$. Then **definite integral of $f$ from $a$ to $b$ ** is 
+
+$$\int_a^b f(x) dx = lim_{n\to \infty}\sum_{i=1}^n f(x_i^*) \Delta x $$
+
+ 
+\newpage
+
+
+```{r LB37, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+``` 
 
 
 
+ 
+```{r, eval = FALSE}
+library(tidyverse)
+set.seed(1234)
+n <- 1000
+y <- runif(n, 5,10)
+
+data <- data.frame(x = 1:n, y =y)
 
 
+p<- data %>% ggplot(aes(y)) +
+  geom_histogram(binwidth = 0.4, color = "black", fill = "gray", boundary = 4)  +
+  theme(axis.title=element_blank(),
+        axis.text=element_blank()) 
+  
+
+p
+```
 
 
     
@@ -1232,3 +1269,42 @@ $$\frac{d}{dx} [f(x)]^3= 3[f(x)]^2f^\prime(x)$$
 
 (c) Use part (b) to differentiate $y= e^{3x}$
 
+\newpage
+
+13. Write the composite function in the form $f(g(x)).$ Then find the derivative of the function. 
+
+ (a) $f(x) = \sqrt{x^2+1}$      
+ (b) $f(x) = (x^3-1)^{100}$     
+ (c) $f(x) = e^{-mx}$ 
+ (d) $g(t) =\frac{1}{(t^4+1)^3}$
+ (e) $f(x) = (1+4x)^5(3+x-x^2)^8$
+ (f) $f(t) = \left( \frac{t-2}{2t+1} \right)^9$
+
+14. Suppose that $F(x) = f(g(x))$ and $g(3) =6$, $g^\prime(3) =4$, $f^\prime(3) =2$ and $f^\prime(6) =7$. Find $F^\prime(3).$
+
+15. A table of values for $f,g, f^\prime,$ and $g^\prime$ is given. 
+
+$x$  | $f(x)$  | $g(x)$   | $f^\prime(x)$  | $g^\prime(x)$
+-----|---------|----------|----------------|---------------
+1    |3        |   2      |    4           |6
+2    |1        |   8      |    5           |7
+3    |7        |   2      |    7           |9
+
+(a) If $h(x) = f(g(x))$, Find $h^\prime (1)$. $\text {      }$ (b) If $H(x) = g(f(x))$, Find $H^\prime (1)$.
+   
+16. Suppose $L$ is a function such that $L^{\prime}(x)=1/x$ for $x>0$. Find an expression for the derivative of each function. 
+  (a) $f(x)= L(x^4)$ 
+  (b) $g(x)= L(4x)$ 
+  (c) $F(x)= [L(x)]^4$ 
+  (d) $G(x) = L(1/x)$
+
+17. Find the fist and second derivatives of the function
+   (a) $f(x)= x^5+6x^2-7x$
+   (b) $F(t)=t^8-7t^6+2t^4$
+   (b) $F(t)= (1-7t)^6$
+   
+18. (a) Show that $\frac{d}{dx} [ln \text{ }g(x)]= \frac{g^\prime (x)}{g(x)}$ $\text{    }$ (b) Differentiate $y=ln (x^3+1)$
+
+19.  Find $\frac{d}{dx} ln \left[ \frac{x+1}{\sqrt{x-2}}\right]$
+
+20. Sketch the graph of the function $f(x) = x^{\frac{2}{3}}(6-x)^{\frac{1}{3}}.$

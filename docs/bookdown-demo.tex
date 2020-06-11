@@ -87,7 +87,7 @@
 
 \title{CM 1110 Fundamentals of Mathematics and Statistics}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-06-08}
+\date{2020-06-11}
 
 \begin{document}
 \maketitle
@@ -1842,9 +1842,16 @@ Find where the function \(f(x)=3x^4-4x^3- 12x^2+5\) is increasing and where it i
 \end{enumerate}
 
 Suppose that \(c\) is a critical number of a continuous function \(f\).
-(a) If \(f^\prime\) changes from positive to negative at \(c\), then \(f\) has a local maximum at \(c\).
-(b) If \(f^\prime\) changes from negative to positive at \(c\), then \(f\) has a local minimum at \(c\).
-(c) If \(f^\prime\) does not change sign at \(c\) (for example, if \(f^\prime\) is positive on both sides of \(c\) or negative on both sides), then \(f\) has no local maximum or minimum at \(c\).
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  If \(f^\prime\) changes from positive to negative at \(c\), then \(f\) has a local maximum at \(c\).
+\item
+  If \(f^\prime\) changes from negative to positive at \(c\), then \(f\) has a local minimum at \(c\).
+\item
+  If \(f^\prime\) does not change sign at \(c\) (for example, if \(f^\prime\) is positive on both sides of \(c\) or negative on both sides), then \(f\) has no local maximum or minimum at \(c\).
+\end{enumerate}
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/LB36-1} \end{center}
 
@@ -1875,7 +1882,6 @@ If the graph of \(f\) lies above all of its tangents on an interval \(I\), then 
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
-\tightlist
 \item
   If \(f^{\prime \prime}(x)>0\) for all \(x\) in \(I\), then the graph of \(f\) is concave upward on \(I\).
 \item
@@ -1919,13 +1925,18 @@ Discuss the curve \(y= x^4 - 4x^3\) with respect to concavity, points of inflect
 \hypertarget{integration}{%
 \section{Integration}\label{integration}}
 
-\textbf{Exercise}
+\hypertarget{the-definite-integral}{%
+\subsection{The Definite Integral}\label{the-definite-integral}}
 
-\begin{itemize}
-\tightlist
-\item
-  Find the area of the region \(S\) that lies under the curve \(y=f(x)\) from \(a\) to \(b\)
-\end{itemize}
+\textbf{Definition: Definite Integral}
+
+If \(f\) is a continuous function defined for \(a \leq x \leq b\), we divide the interval \([a,b]\) into \(n\) sub-intervals of equal width \(\Delta x = (b-a)/n\). We let \(x_0 (=a) , x_1, x_2, \dots, x_n(=b)\) be the endpoints of these sub-intervals and we let \(x_1^*,x_2^*, \dots, x_n^*\) be any \textbf{sample point} in these sub-intervals, so \(x_i^*\) lies in the \(i\)th sub-interval \([x_{i-1} , x_i]\). Then \textbf{definite integral of \(f\) from \(a\) to \(b\) } is
+
+\[\int_a^b f(x) dx = lim_{n\to \infty}\sum_{i=1}^n f(x_i^*) \Delta x \]
+
+\newpage
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB37-1} \end{center}
 
 \hypertarget{the-area-problem}{%
 \subsection{The Area Problem}\label{the-area-problem}}
@@ -2147,6 +2158,116 @@ Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
 \tightlist
 \item
   Use part (b) to differentiate \(y= e^{3x}\)
+\end{enumerate}
+
+\newpage
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{12}
+\tightlist
+\item
+  Write the composite function in the form \(f(g(x)).\) Then find the derivative of the function.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(f(x) = \sqrt{x^2+1}\)\\
+\item
+  \(f(x) = (x^3-1)^{100}\)\\
+\item
+  \(f(x) = e^{-mx}\)
+\item
+  \(g(t) =\frac{1}{(t^4+1)^3}\)
+\item
+  \(f(x) = (1+4x)^5(3+x-x^2)^8\)
+\item
+  \(f(t) = \left( \frac{t-2}{2t+1} \right)^9\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{13}
+\item
+  Suppose that \(F(x) = f(g(x))\) and \(g(3) =6\), \(g^\prime(3) =4\), \(f^\prime(3) =2\) and \(f^\prime(6) =7\). Find \(F^\prime(3).\)
+\item
+  A table of values for \(f,g, f^\prime,\) and \(g^\prime\) is given.
+\end{enumerate}
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+\(x\) & \(f(x)\) & \(g(x)\) & \(f^\prime(x)\) & \(g^\prime(x)\)\tabularnewline
+\midrule
+\endhead
+1 & 3 & 2 & 4 & 6\tabularnewline
+2 & 1 & 8 & 5 & 7\tabularnewline
+3 & 7 & 2 & 7 & 9\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  If \(h(x) = f(g(x))\), Find \(h^\prime (1)\). \(\text { }\) (b) If \(H(x) = g(f(x))\), Find \(H^\prime (1)\).
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{15}
+\tightlist
+\item
+  Suppose \(L\) is a function such that \(L^{\prime}(x)=1/x\) for \(x>0\). Find an expression for the derivative of each function.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(f(x)= L(x^4)\)
+\item
+  \(g(x)= L(4x)\)
+\item
+  \(F(x)= [L(x)]^4\)
+\item
+  \(G(x) = L(1/x)\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{16}
+\tightlist
+\item
+  Find the fist and second derivatives of the function
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(f(x)= x^5+6x^2-7x\)
+\item
+  \(F(t)=t^8-7t^6+2t^4\)
+\item
+  \(F(t)= (1-7t)^6\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{17}
+\item
+  \begin{enumerate}
+  \def\labelenumii{(\alph{enumii})}
+  \tightlist
+  \item
+    Show that \(\frac{d}{dx} [ln \text{ }g(x)]= \frac{g^\prime (x)}{g(x)}\) \(\text{    }\) (b) Differentiate \(y=ln (x^3+1)\)
+  \end{enumerate}
+\item
+  Find \(\frac{d}{dx} ln \left[ \frac{x+1}{\sqrt{x-2}}\right]\)
+\item
+  Sketch the graph of the function \(f(x) = x^{\frac{2}{3}}(6-x)^{\frac{1}{3}}.\)
 \end{enumerate}
 
 \hypertarget{descriptive-statistics}{%
@@ -4118,7 +4239,7 @@ and
 
 }
 
-\caption{Relationship of mean, median and mode for different types of skewness}\label{fig:unnamed-chunk-35}
+\caption{Relationship of mean, median and mode for different types of skewness}\label{fig:unnamed-chunk-36}
 \end{figure}
 
 \hypertarget{pearsonian-coefficient-of-skewness}{%
@@ -4167,7 +4288,7 @@ where \(S_k\) = coefficient of skewness, \(M_d\) = median
 
 }
 
-\caption{Types of kurtosis}\label{fig:unnamed-chunk-36}
+\caption{Types of kurtosis}\label{fig:unnamed-chunk-37}
 \end{figure}
 
 \hypertarget{measures-of-association}{%
