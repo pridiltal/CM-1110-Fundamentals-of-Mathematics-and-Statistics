@@ -82,12 +82,13 @@
 \floatplacement{figure}{H}
 \floatplacement{table}{H}
 \makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+\usepackage{amsmath}
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
 \title{CM 1110 Fundamentals of Mathematics and Statistics}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-06-11}
+\date{2020-07-09}
 
 \begin{document}
 \maketitle
@@ -1023,6 +1024,91 @@ Stewart, J., Clegg, D. K., \& Watson, S. (2020). `Infinite Sequences and Series'
 
 \pagenumbering{arabic}
 
+\hypertarget{limits-summary}{%
+\section*{Limits (Summary)}\label{limits-summary}}
+\addcontentsline{toc}{section}{Limits (Summary)}
+
+\hypertarget{the-limit-of-a-function}{%
+\subsection*{The limit of a function}\label{the-limit-of-a-function}}
+\addcontentsline{toc}{subsection}{The limit of a function}
+
+\textbf{Definition 1}
+
+We write \[lim_{x\to a}f(x)=L\] and say ``the limit of \(f(x)\), as \(x\) approaches \(a\), equals \(L\)''
+
+if we can make the values of \(f(x)\) arbitrarily close to \(L\) (as close to \(L\) as we like) by taking \(x\) to be sufficiently close to \(a\) (\textbf{on either side of} \(a\)) but not equal to \(a\)
+
+\hypertarget{one-sided-limits}{%
+\subsection*{One-sided limits}\label{one-sided-limits}}
+\addcontentsline{toc}{subsection}{One-sided limits}
+
+\textbf{Definition 2}
+
+We write
+
+\[lim_{x\to a^-}f(x)=L\]
+and say the \textbf{left-hand limit of} \(f(x)\) \textbf{as} \(x\) \textbf{approaches} \(a\) {[}or the \textbf{limit of} \(f(x)\) \textbf{as} \(x\) \textbf{approaches} \(a\) \textbf{from the left}{]} is equal to \(L\) if we can make the values of \(f(x)\) arbitrarily close to \(L\) by taking \(x\) to be sufficiently close to \(a\) and \(x\) less than \(a\).
+
+Notice that Definition 2 differs from Definition 1 only in that we require \(x\) to be less than \(a\).
+
+Similarly, if we require that \(x\) be grater than \(a\), we get ``the \textbf{right-hand limit of} \(f(x)\) \textbf{as} \(x\) \textbf{approaches} \(a\) is equal to \(L\)'' and we write
+\[lim_{x\to a^+}f(x)=L\]
+
+\hypertarget{relationship-between-the-limit-and-one-side-limits}{%
+\subsection{Relationship between the limit and one-side limits}\label{relationship-between-the-limit-and-one-side-limits}}
+
+\[lim_{x\to a}f(x)=L \;\;\;\text{if and only if }\;\;\; lim_{x\to a^-}f(x)=L \;\;\text{and}\;\; lim_{x\to a^+}f(x)=L\]
+
+That is,
+\[lim_{x\to a}f(x)=L \Rightarrow  lim_{x\to a^-}f(x)= lim_{x\to a^+}f(x)=L\]
+\[lim_{x\to a^-}f(x)= lim_{x\to a^+}f(x)=L \Rightarrow lim_{x\to a}f(x)=L\]
+\[lim_{x\to a^-}f(x) \ne lim_{x\to a^+}f(x) \Rightarrow lim_{x\to a}f(x) \text{ Does Not Exist }\]
+
+\hypertarget{properties}{%
+\subsection*{Properties}\label{properties}}
+\addcontentsline{toc}{subsection}{Properties}
+
+Assume \(lim_{x\to a}f(x)\) and \(lim_{x\to a}g(x)\) both exist and \(c\) is any number then,
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(lim_{x\to a}[cf(x)] = c\;lim_{x\to a}f(x)\)
+\item
+  \(lim_{x\to a}[f(x) \pm g(x)] = lim_{x\to a}f(x) \pm lim_{x\to a}g(x)\)
+\item
+  \(lim_{x\to a}[f(x)g(x)] = lim_{x\to a}f(x) lim_{x\to a}g(x)\)
+\item
+  \(lim_{x\to a}\left[\frac{f(x)}{g(x)}\right] = \frac{lim_{x\to a}f(x)}{lim_{x\to a}g(x)}\) provided \(lim_{x\to a}g(x) \ne 0\)
+\item
+  \(lim_{x\to a}[f(x)]^n = [lim_{x\to a}f(x)]^n\)
+\end{enumerate}
+
+\hypertarget{continuous-functions}{%
+\subsection*{Continuous functions}\label{continuous-functions}}
+\addcontentsline{toc}{subsection}{Continuous functions}
+
+\textbf{Definition3}
+
+A function \(f\) is \textbf{continuous at a number} \(a\) if
+
+\[lim_{x\to a}f(x)=f(a)\]
+
+Notice that Definition 3 implicitly requires three things if \(f\) is continuous at \(a\):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(f(a)\) is defined (that is, \(a\) is in the domain of \(f\))
+\item
+  \(lim_{x\to a}f(x)\) exits
+\item
+  \(lim_{x\to a}f(x) = f(a)\)
+\end{enumerate}
+
+\newpage
+
 \hypertarget{differentiation}{%
 \section{Differentiation}\label{differentiation}}
 
@@ -1934,34 +2020,287 @@ If \(f\) is a continuous function defined for \(a \leq x \leq b\), we divide the
 
 \[\int_a^b f(x) dx = lim_{n\to \infty}\sum_{i=1}^n f(x_i^*) \Delta x \]
 
+\begin{itemize}
+\item
+  The \textbf{definite integral} \(\int_a^b f(x) dx\) is a number and does not depend on \(x\).
+\item
+  Therefore, any letter can be used in place of \(x\) without changing the value of the integral
+  \[\int_a^b f(x) dx= \int_a^b f(t) dt = \int_a^b f(r) dr\]
+  \newpage
+\item
+  A definite integral can be interpreted as a \textbf{net area.}
+\end{itemize}
+
 \newpage
 
-\begin{center}\includegraphics[width=1\linewidth]{figure/LB37-1} \end{center}
+\hypertarget{properties-of-the-definite-integral}{%
+\subsubsection{Properties of the Definite Integral}\label{properties-of-the-definite-integral}}
 
-\hypertarget{the-area-problem}{%
-\subsection{The Area Problem}\label{the-area-problem}}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\int_a^b f(x) dx= -\int_b^a f(x) dx\)
+\item
+  \(\int_a^a f(x) dx= 0\)
+\item
+  \(\int_a^b[ f(x)+ g(x)] dx= \int_a^b f(x) dx + \int_a^b g(x)dx\)
+\item
+  \(\int_a^b c dx= c(b-a),\) where \(c\) is a constant.
+\item
+  \(\int_a^b c f(x) dx= c\int_a^b f(x) dx\), where \(c\) is a constant.
+\item
+  \(\int_a^b[ f(x)- g(x)] dx= \int_a^b f(x) dx - \int_a^b g(x)dx\)
+\item
+  \(\int_a^b f(x) dx + \int_b^c f(x)dx = \int_a^c f(x) dx\)
+\end{enumerate}
 
-\hypertarget{the-geometric-definition-of-the-integral}{%
-\subsection{The geometric definition of the integral}\label{the-geometric-definition-of-the-integral}}
+\newpage
 
 \hypertarget{the-fundamental-theorem-of-calculus}{%
 \subsection{The Fundamental Theorem of Calculus}\label{the-fundamental-theorem-of-calculus}}
 
-\hypertarget{indefinite-integrals-and-integrals-of}{%
-\subsection{Indefinite integrals and integrals of}\label{indefinite-integrals-and-integrals-of}}
+\begin{itemize}
+\tightlist
+\item
+  The fundamental Theorem of Calculus establishes a connection between the two branches of calculus and integral calculus.
+\end{itemize}
 
-\(x^n\) (\(n\neq-1\), \(sin x\), \(cos x\))
+\[g(x) = \int_a^x f(t) dt,\]
+where \(f\) is a continuous function on \([a,b]\) and \(x\) varies between \(a\) and \(b\).
 
-\hypertarget{the-algebra-of-integrals}{%
-\subsection{The algebra of integrals}\label{the-algebra-of-integrals}}
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB37-1} \end{center}
 
-\hypertarget{integration-and-substitution}{%
-\subsection{integration and substitution}\label{integration-and-substitution}}
+\textbf{The Fundamental Theorem of Calculus, Part I}
 
-\hypertarget{the-analytic-definition-of-the-integral}{%
-\subsection{the analytic definition of the integral}\label{the-analytic-definition-of-the-integral}}
+If \(f\) is continuous on \([a,b],\) then the function \(g\) defined by
+\[g(x) = \int_a^x f(t) dt,\text{   } a\leq x \leq b\]
 
-\textbf{Reading :}
+is continuous on \([a,b]\) and differentiable on \((a,b),\) and \(g^\prime(x) = f(x).\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB38-1} \end{center}
+
+\newpage
+
+\begin{itemize}
+\tightlist
+\item
+  Using Leibniz notation for derivatives, we can write the Fundamental Theorem of Calculus, Part I as
+  \[\frac{d}{dx} \int_a^x f(t) dt= f(x)\]
+  when \(f\) is continuous.
+\end{itemize}
+
+\emph{Example 22}
+
+Find the derivative of the function \(g(x) = \int_0^x \sqrt{1+ t+ t^2} dt\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB38b-1} \end{center}
+
+\hypertarget{indefinite-integrals}{%
+\subsection{Indefinite Integrals}\label{indefinite-integrals}}
+
+\hypertarget{antiderivatives}{%
+\subsubsection{Antiderivatives}\label{antiderivatives}}
+
+\begin{itemize}
+\item
+  Consider the problem of finding a function \(F\) whose derivative is a known function \(f\).
+\item
+  If such a function \(F\) exists, it is called \textbf{an antiderivative} of \(f\).
+\end{itemize}
+
+\textbf{Definition: Antiderivative}
+
+A function \(F\) is called an antiderivative of \(f\) on an interval \(I\) if \(F^\prime(x) = f(x)\) for all \(x\) in \(I\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB39-1} \end{center}
+
+\textbf{Indefinite integral}
+
+\begin{itemize}
+\item
+  The notation \(\int f(x)dx\) is traditionally used for an antiderivative of \(f\) and is called an \textbf{indefinite integral.}
+\item
+  Thus
+  \[\int f(x) dx = F(x) \text{ means } F^\prime(x) = f(x)\]
+\end{itemize}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB40-1} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  If \(f\) is continuous on \([a,b],\) then
+  \[\int_a^b f(x)dx = \left[\int f(x)dx \right]_a^b\]
+\end{itemize}
+
+\textbf{Indefinite Integrals}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\int cf(x) dx = c\int f(x)dx\)
+\item
+  \(\int [f(x) +g(x)] dx = \int f(x)dx + \int g(x)dx\)
+\item
+  \(\int k dx = kx+C\)
+\item
+  \(\int x^n dx = \frac{x^{n+1}}{n+1}+C\) \((n \neq -1)\)
+\item
+  \(\int \frac{1}{x} dx = ln|x|+C\)
+\item
+  \(\int e^xdx= e^x+C\)
+\item
+  \(\int a^xdx= \frac{a^x}{ln \text{ } a}+C\)
+\end{enumerate}
+
+\newpage
+
+\emph{Example 23}
+
+Evaluate \(\int_1^9 \frac{2t^2+t^2\sqrt{t}-1}{t^2} dt\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB41-1} \end{center}
+
+\hypertarget{the-substitution-rule}{%
+\subsection{The Substitution Rule}\label{the-substitution-rule}}
+
+\textbf{The Substitution Rule}
+
+If \(u= g(x)\) is a differentiable function whose range is and interval \(I\) and \(f\) is continuous on \(I\), then
+
+\[\int f(g(x))g^\prime(x)dx=\int f(u)du\]
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB42-1} \end{center}
+
+\emph{Example 24}
+
+Evaluate \(\int\sqrt{2x+1} dx\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB43-1} \end{center}
+
+\newpage
+
+\textbf{The Substitution Rule for Definite Integrals}
+
+If \(g^\prime\) is continuous on \([a,b]\) and \(f\) is continuous on the range of \(u=g(x),\) then
+\[\int_a^bf(g(x))g^\prime(x)dx=\int_{g(a)}^{g(b)} f(u)du\]
+
+\emph{Example 25}
+
+Evaluate \(\int_0^4\sqrt{2x+1} dx\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB44-1} \end{center}
+
+\newpage
+
+\textbf{Integrals of Symmetric Functions}
+
+Suppose \(f\) is continuous on \([-a,a].\)
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  If \(f\) is even \([f(-x) = f(x)],\) then \(\int_{-a}^af(x) dx = 2\int_0^af(x)dx\)
+\item
+  If \(f\) is odd \([f(-x) = - f(x)],\) then \(\int_{-a}^af(x) dx = 0\)
+\end{enumerate}
+
+\newpage
+
+\hypertarget{the-integral-of-the-logarithmic-and-exponential-function}{%
+\subsection{The integral of the logarithmic and exponential function}\label{the-integral-of-the-logarithmic-and-exponential-function}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\int e^xdx = e^x + C\)
+\item
+  \(\int \frac{1}{x}dx = ln(x) + C\) if \(x>0\)
+\item
+  \(\int a^xdx = \frac{a^x}{ln (a)} + C\)
+\end{enumerate}
+
+\emph{Example 26}
+
+Evaluate \(\int \frac{e^x - e^{-x}}{5} dx\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB45-1} \end{center}
+
+\emph{Example 27}
+
+Evaluate \(\int \frac{3x^2}{x^3+1} dx\) \(x\neq -1\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB46-1} \end{center}
+
+\hypertarget{integration-by-parts}{%
+\subsection{Integration by Parts}\label{integration-by-parts}}
+
+\[\int f(x) g^\prime(x)dx=f(x)g(x)-\int g(x)f^\prime(x)dx\]
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB46b-1} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(u = f(x)\) and \(v=g(x)\). Then the differentials are \(du = f^\prime (x) dx\) and \(dv = g^\prime(x) dx,\) so, by the Substitution Rule, the formula for integration by parts becomes
+\end{itemize}
+
+\[\int udv = uv-\int vdu\]
+
+\emph{Example 28}
+
+Evaluate \(\int ln \text{ } x dx\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB47-1} \end{center}
+
+\emph{Example 29}
+
+Evaluate \(\int x^2e^x dx\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/LB48-1} \end{center}
+
+\newpage
+
+\[\int_a^b f(x) g^\prime(x)dx=\left [ f(x)g(x) \right ]_a^b-\int_a^b  g(x)f^\prime(x)dx\]
+
+\hypertarget{trigonometric-functions}{%
+\subsection{Trigonometric Functions}\label{trigonometric-functions}}
+
+\textbf{Derivatives of Trigonometric Functions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\frac{d}{dx} sin(x) = cos(x)\)
+\item
+  \(\frac{d}{dx} cos(x) = -sin(x)\)
+\item
+  \(\frac{d}{dx} tan(x) = sec^2(x)\)
+\item
+  \(\frac{d}{dx} sec(x) = sec(x)tan(x)\)
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.8\textwidth]{figure/unnamed-chunk-15-1} \end{center}
+
+\textbf{Integration of Trigonometric Functions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\int cos(x)dx = sin(x) +C\)
+\item
+  \(\int sin(x)dx = -cos(x) +C\)
+\item
+  \(\int sec^2(x) = tan(x) +C\)
+\item
+  \(\int sec(x)tan(x) = sec(x) +C\)
+\end{enumerate}
+
+\textbf{References and Reading:}
 
 Stewart, J. (2003). Calculus: Early Transcendentals. Thomson Learning. Inc., Belmont, CA.
 
@@ -2268,6 +2607,172 @@ Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
   Find \(\frac{d}{dx} ln \left[ \frac{x+1}{\sqrt{x-2}}\right]\)
 \item
   Sketch the graph of the function \(f(x) = x^{\frac{2}{3}}(6-x)^{\frac{1}{3}}.\)
+\item
+  Suppose you are given a formula for a function \(f\).
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  How do you determine where \(f\) is increasing or decreasing?
+\item
+  How do you determine where the graph of \(f\) is concave upward or concave downward?
+  (c)How do you locate inflection points?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{21}
+\tightlist
+\item
+  If \(x^2+y^2=25,\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Find \(\frac{dy}{dx}\)
+\item
+  Fins an equation of the tangent to the circle \(x^2+y^2=25\) at the point \((3,4).\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{22}
+\item
+  If \(f(x,y) = 4-x^2-2y^2,\) find \(f_x(1,1)\) and \(f_y(1,1)\) and interpret these numbers as slopes.
+\item
+  If \(f(x,y) = sin\left(\frac{x}{1+y} \right),\) calculate \(\frac{\partial f}{\partial x}\) and \(\frac{\partial f}{\partial y}\)
+\item
+  Differentiate \(y=\frac{x^{3/4} \sqrt{x^2+1}}{(3x+2)^5}\)
+\item
+  Use the properties of integrals to evaluate \(\int_0^1 (4+3x^2)dx\)
+\item
+  If it is known that \(\int_0^{10} f(x)dx=17\) and \(\int_0^{8} f(x)dx=12\), find \(\int_8^{10} f(x)dx\)
+\item
+  Use Part I of the Fundamental Theorem of Calculus to find the derivative of the function
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(g(x) = \int_o^x\sqrt{1+2t}dt\)
+\item
+  \(g(x) = \int_o^xln(t)dt\)
+\item
+  \(g(y) = \int_2^yt^2sin(t)dt\)
+\item
+  \(g(y) = \int_3^y\frac{1}{x+x^2}dx\)
+\item
+  \(g(x) = \int_x^2cos(t^2)dt\)
+\item
+  \(y = \int_{1-3x}^1\frac{u^3}{1+u^2}du\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{28}
+\item
+  Find the general indefinite integral \(\int(10x^4-2sec^2x)dx.\)
+\item
+  Evaluate the integral
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(\int_0^2(6x^2-4x+5)dx\)
+\item
+  \(\int_{-1}^0(2x-e^x)dx\)
+\item
+  \(\int_{-2}^2(3u+1)^2du\)
+\item
+  \(\int_1^4\sqrt{t}(1+t)dt\)
+\item
+  \(\int_1^4\sqrt{\frac{5}{x}}dx\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{30}
+\tightlist
+\item
+  Find the area of the region that lies to the right of the \(y\)-axis and to the left of the parabola \(x=2y-y^2.\)
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.6\linewidth]{figure/c5Q31} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{31}
+\tightlist
+\item
+  Find\\
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(\int\frac{x}{\sqrt{1-4x^2}}dx\)
+\item
+  \(\int \sqrt{1+x^2} x^5dx\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{32}
+\tightlist
+\item
+  Find
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(\int tan\;x \;dx\)
+\item
+  \(x^3 cos (x^4 +2) dx\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{33}
+\tightlist
+\item
+  Calculate
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(\int_1^e\frac{ln\;x}{x}dx\)
+\item
+  \(\int e^{5x} dx\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{34}
+\item
+  Show that \(\frac{d}{dx}(log_ax) = \frac{1}{xln(a)}\)
+\item
+  Find \(\int xsin(x)dx\)
+\item
+  Find \(\int t^2e^tdt\)
+\item
+  Evaluate \(\int e^xsin (x)dx\)
+\item
+  If \(f(0) = g(0)=0\) and \(f^{\prime\prime}\) and \(g^{\prime\prime}\) are continuous, show that
+  \[\int_0^af(x)g^{\prime\prime}(x)dx=f(a)g^{\prime}(a)-f^{\prime}(a)g(a)+\int_0^af^{\prime\prime}(x)g(x)dx\]
+\item
+  Suppose that \(f(1)=2,\) \(f(4)=7,\) \(f^{\prime}(1)=5,\) \(f^{\prime}(4)=3\) and \(f^{\prime\prime}\) is continuous. Find the value of \(\int_1^4xf^{\prime\prime}(x)dx\)
 \end{enumerate}
 
 \hypertarget{descriptive-statistics}{%
@@ -4239,7 +4744,7 @@ and
 
 }
 
-\caption{Relationship of mean, median and mode for different types of skewness}\label{fig:unnamed-chunk-36}
+\caption{Relationship of mean, median and mode for different types of skewness}\label{fig:unnamed-chunk-37}
 \end{figure}
 
 \hypertarget{pearsonian-coefficient-of-skewness}{%
@@ -4288,7 +4793,7 @@ where \(S_k\) = coefficient of skewness, \(M_d\) = median
 
 }
 
-\caption{Types of kurtosis}\label{fig:unnamed-chunk-37}
+\caption{Types of kurtosis}\label{fig:unnamed-chunk-38}
 \end{figure}
 
 \hypertarget{measures-of-association}{%
@@ -5916,7 +6421,7 @@ The total number of ways of completing the operation is \(n_1 \times n_2 \times 
 \item
   \(P (E) = 1 \iff\) the event E is certain to occur.
 \item
-  \(P (E) = 1 \iff\) the event E cannot occur.
+  \(P (E) = 0 \iff\) the event E cannot occur.
 \end{itemize}
 
 \hypertarget{methods-for-determining-probability}{%
@@ -6100,15 +6605,20 @@ Total & & & & &\tabularnewline
 
 Let
 
-X be the even that a randomly selected employee with type X bonus scheme
-Y be the even that a randomly selected employee with type Y bonus scheme
-Z be the even that a randomly selected employee with type Z bonus scheme
+X be the event that a randomly selected employee with type X bonus scheme
+
+Y be the event that a randomly selected employee with type Y bonus scheme
+
+Z be the event that a randomly selected employee with type Z bonus scheme
 
 Let
 
 L be the event that a randomly selected employee is a Laborer
+
 C be the event that a randomly selected employee is a Clerk
+
 T be the event that a randomly selected employee is a Technician
+
 E be the event that a randomly selected employee is an Executive
 
 \begin{enumerate}
@@ -6350,6 +6860,414 @@ Then for \(i = 1, 2, \dots, n\).
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Three cards are chosen in succession from a deck with 52 cards. Find the number of ways this can be done
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  with replacement
+\item
+  without replacement
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Find the number \(m\) of ways that 9 books can be divided between 4 students if the student with the highest marks is to receive 3 books and each of the others 2 books.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Find the number \(n\) of different signals, each consisting of 6 bulbs arranged in a vertical line, that can be formed from 4 identical red bulbs and 2 identical blue bulbs.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Suppose repetitions are not allowed.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Find the number \(n\) of three-digit numbers that can be formed from the six digits: \(2,3,5,6,7,9\)
+\item
+  How many of them are even?
+\item
+  How may of them exceed 400?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\item
+  A student is to answer 8 out of 10 questions on an exam.
+
+  \begin{enumerate}
+  \def\labelenumii{(\alph{enumii})}
+  \tightlist
+  \item
+    Find the number \(n\) of ways the student can choose the eight questions
+  \item
+    Find \(n\) if the student must answer the first three questions
+  \end{enumerate}
+\item
+  A random experiment can result in one of the outcomes \(\{a, b, c, d\}\) with probabilities 0.1, 0.3, 0.5, and 0.1, respectively. Let \(A\) denotes the event \(\{a, b\}\), \(B\) the event \(\{b, c, d\}\), and \(C\) the event \(\{d\}\). Then calculate the following probabilities
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(P(A)\)
+\item
+  \(P(B)\)
+\item
+  \(P(C)\)
+\item
+  \(P(A^\prime)\)
+\item
+  \(P(B^\prime)\)
+\item
+  \(P(C^\prime)\)
+\item
+  \(P(A\cap B)\)
+\item
+  \(P(A\cup B)\)
+\item
+  \(P(A\cap C)\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\item
+  A box contains one ticket with number 1 on it, 2 tickets with number 2, 3 tickets with number 3, 4 tickets with number 4, 5 tickets with number 5, and 6 tickets with number 6. A ticket is taken randomly from the box.
+
+  \begin{enumerate}
+  \def\labelenumii{(\alph{enumii})}
+  \tightlist
+  \item
+    What is the probability of getting an even number?
+  \item
+    What is the probability of getting a number less than 5?
+  \item
+    What is the probability of getting an even number less than 5?
+  \item
+    What is the probability of getting an even number or a number less than 4?
+  \end{enumerate}
+\item
+  A credit card contains 16 digits between 0 and 9. However, only 100 million numbers are valid. If a number is entered randomly, what is the probability that it is a valid number?
+\item
+  In a group of 200 college students, 134 are enrolled in a course in Statistics, 68 are enrolled in a course in Computer Science and 43 are enrolled in both. What is the probability that a randomly selected student is not enrolled in either course? What is the method you use to calculate the above probability value? Justify
+\item
+  In an acid-base titration, a base or acid is gradually added to the other until they have completely neutralized each other. Because acids and bases are usually colorless (as are the water and salt produced in the neutralization reaction), pH is measured to monitor the reaction. Suppose that the equivalence point is reached at approximately 100 ml of an NaOH solution has been added (enough to react with all the acetic acid present) but that replicates are equally likely to indicate from 95 to 104 ml to the nearest ml. Assume that volumes are measured to the nearest ml and describe the sample space.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  What is the probability that equivalence is indicated at 100 ml?
+\item
+  What is the probability that equivalence is indicated at less than 100 ml?
+\item
+  What is the probability that equivalence is indicated between 98 and 102 ml (inclusive)?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  Suppose A, B, and C are events with \(P(A) = 1/2\), \(P(B) = 1/2\), \(P(C) = 1/3\), \(P(A \cup B) = 3/4\),\\
+  \(P(A \cap C) = 1/6\), \(P(B \cap C) = 1/6\), and \(Pr(A \cap B \cap C) = 1/12\).
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Determine whether or not A and B are independent.
+\item
+  Calculate \(P(A \cup B \cup C)\).
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\tightlist
+\item
+  A lot of 100 semiconductor chips contains 20 that are defective. Two are selected randomly, without replacement, from the lot.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  What is the probability that the first one selected is defective?
+\item
+  What is the probability that the second one selected is defective given that the first one was defective?
+\item
+  What is the probability that both are defective?
+\item
+  How does the answer to part (b) change if chips selected were replaced prior to the next selection?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{12}
+\tightlist
+\item
+  Disks of polycarbonate plastic from a supplier are analyzed for scratch and shock resistance. The results from 100 disks are summarized as follows:
+\end{enumerate}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+& Shock Resistance & &\tabularnewline
+\midrule
+\endhead
+& & High & Low\tabularnewline
+Scratch Resistance & High & 70 & 9\tabularnewline
+& Low & 16 & 5\tabularnewline
+\bottomrule
+\end{longtable}
+
+Let A denote the event that a disk has high shock resistance, and let B denote the event that a disk has high scratch resistance.
+
+If a disk is selected at random, determine the following probabilities:
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(P(A)\)
+\item
+  \(P(B)\)
+\item
+  \(P(A^\prime)\)
+\item
+  \(P(A^\prime \cup B)\)
+\item
+  If a disk is selected at random, what is the probability that its scratch resistance is high and its shock resistance is high?
+\item
+  If a disk is selected at random, what is the probability that its scratch resistance is high or its shock resistance is high?
+\item
+  Consider the event that a disk has high scratch resistance and the event that a disk has high shock resistance. Are these two events mutually exclusive?
+\item
+  \(P(A|B)\)
+\item
+  \(P(B|A)\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{13}
+\item
+  Two pumps connected serially fail independently of one another on any given day. The probability that the older pump will fail is on any given day is 0.05. The probability that the newer pump will fail on any given day is is 0.01. The system fails if at least one pump fails. What is the probability that the pumping system will fail on any given day?
+\item
+  Three components are connected to form a system as shown in ﬁgure (a). Because the components in the 2-3 subsystem are connected in parallel, that subsystem will function if at least one of the two individual components functions. For the entire system to function, component 1 must function and so must be 2-3 subsystem.
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/Chapter7a} \end{center}
+
+Each component is either in working condition (s) or not working condition (f) at any time.
+Let
+
+\(W1 =\) The event that component 1 is in working condition
+
+\(W2 =\) The event that component 2 is in working condition
+
+\(W3 =\) The event that component 3 is in working condition
+
+\(W =\) The event that the system is in working condition
+
+If the probability that any component work is 0.9, calculate the probability that system works.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{15}
+\item
+  Three students are selected at random from a class. According to past data, \(90\%\) of students pass. Calculate the probability that 2 of the three students pass.
+\item
+  A company employing 1000 workers oﬀers deluxe medical coverage (D), standard medical coverage (S), and economy medical coverage (E) to its employees. Of the employees, 30\% have D, 60\% have S, and 10\% have E. From past experience, the probability that an employee with D, will submit no claims during next year is 0.1. The corresponding probabilities for employees with S and E are 0.4 and 0.7 respectively. If an employee is selected at random,
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  What is the probability that the selected employee will not submit a claim during next year?
+\item
+  If an employee has not submitted any claim during the last year, what is the probability that the employee has S
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{17}
+\item
+  Two students are selected at random, one after the other and without replacement, from a group of 10 students of whom 6 are male. What is the probability that ﬁrst selected student is a male given that second selected student is a male?
+\item
+  In a lotto game, a person may pick any 6 numbers from the numbers \(1, 2, \dots, 44\) for his/her ticket. Suppose one number can be chosen only once. What is the probability of getting
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  all the winning numbers in the same order as those were drawn in the draw.
+\item
+  all the winning numbers in some order
+\item
+  What is the method you used to calculate the above probabilities? Justify you method.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{19}
+\tightlist
+\item
+  A chain of video stores sells three diﬀerent brands of video cassette recorders (VCR). \(50\%\) of its VCR sales are brand A, \(30\%\) are brand B and \(20\%\) are brand C. Each manufacturer oﬀers a one-year warranty on parts and labour. It is known that \(25\%\) brand A require warranty repair work, whereas the corresponding percentages for brands B and C are \(20\%\) and \(10\%\) respectively.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  What is the probability that a randomly selected buyer will buy a brand A VCR and it will need repair while under warranty?
+\item
+  What is the probability that a randomly selected buyer will buy a VCR that will need repair under warranty?
+\item
+  If a customer returns to the store with a VCR that needs warranty repair, what is the probability that it is a
+
+  \begin{enumerate}
+  \def\labelenumii{(\roman{enumii})}
+  \tightlist
+  \item
+    brand A VCR?
+  \item
+    brand B VCR?
+  \item
+    brand C VCR?
+  \end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{20}
+\tightlist
+\item
+  Consider the experiment of rolling a weighted dice with numbers from 1 to 6. The weights have been applied to sides so that the probability of getting a number is directly proportional to that number.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  What is the probability of getting an even number in any single rolling?
+\item
+  What is the probability of getting a number greater than 2 in any single rolling?
+\item
+  What is the probability of getting an even number or a number greater than 2 in any single rolling?
+\item
+  If the number that turns up in any single rolling is even, what is the probability that the number is greater than 2?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{21}
+\tightlist
+\item
+  A particle moves on a circle through points which have been marked \(0, 1, 2, 3, 4\) (in a clockwise order). At each step it has a probability \(p\) of moving to right (clock-wise) immediate value and \((1-p)\) to the left (counter-clock wise) immediate value. Let \(X_n\) denote its location on the circle in the nth step and \(P_{ij}= P(X_{n+1} =j |X_{n}=i)\).
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  Calculate the \(P_{ij}\)'s where \(i=0,1,2,3,4\) and \(j= 0,1,2,3,4\)
+\item
+  display the calculated values in a) in the following format as a matrix.
+\end{enumerate}
+
+\[\begin{pmatrix}
+P_{00} & P_{01} & P_{02}& P_{03} & P_{04}\\ 
+ P_{10} & P_{11} & P_{12}& P_{13} & P_{14}\\
+ P_{20} & P_{21} & P_{22}& P_{23} & P_{24}\\
+ P_{30} & P_{31} & P_{32}& P_{33} & P_{34}\\
+ P_{40} & P_{41} & P_{42}& P_{43} & P_{44}
+\end{pmatrix}\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{22}
+\tightlist
+\item
+  Consider the experiment of tossing two fair dice. Let A denote the event of an odd total, B the event of 1 on the ﬁrst die, and C the event of a total of seven.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Are A and B independent?
+\item
+  Are A and C independent?
+\item
+  Are B and C independent?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{23}
+\tightlist
+\item
+  Verify the following relationships (De Morgan's laws) using Venn diagrams
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(A^\prime \cap B^\prime = (A\cup B)^\prime\)
+\item
+  \(A^\prime \cup B^\prime = (A\cap B)^\prime\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{24}
+\tightlist
+\item
+  Suppose \(A\) and \(B\) are two independent events. Prove the followings
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(P(A^\prime \cap B)=P(A^\prime)P(B)\)
+\item
+  \(P(A\cap B^\prime)=P(A)P(B^\prime)\)
+\item
+  \(P(A^\prime \cap B^\prime)=P(A^\prime)P(B^\prime)\)
+\end{enumerate}
+
+\newpage
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \item
   A professor is giving ten true-false questions (10 marks for a correct answer). If a student guesses on each question, how many different ways could the ten questions be answered?
 \item
@@ -6398,6 +7316,120 @@ Then for \(i = 1, 2, \dots, n\).
 
 \hypertarget{random-variables}{%
 \chapter{Random Variables}\label{random-variables}}
+
+\begin{itemize}
+\tightlist
+\item
+  Some sample spaces contain quantitative (numerical) outcomes, others contain qualitative outcomes.
+\item
+  Often it is convenient to work with sample spaces containing numerical outcomes.
+\item
+  A function that maps the original sample space into the real numbers is called a `random variable'.
+\item
+  This is more useful when the original sample space contains qualitative outcomes.
+\end{itemize}
+
+\textbf{Definition 1: Random Variable}
+
+Let \(\Omega\) be a sample space. Let \(X\) be a function from \(\Omega\) to \(\Re\) (\emph{i.e.} \(X:\Omega \rightarrow \Re\)). Then \(X\) is called a random variable.
+
+\begin{center}\includegraphics[width=0.5\linewidth]{figure/Ch9_F1} \end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  A random variable assigns a real number to each outcome of a sample space.
+\item
+  In other words, to each outcome of an experiment or a sample point \(\omega_i\), of the sample spaces, there is a unique real number \(x_i\), known as the value of the random variable \(X\).
+\item
+  The range of the random variable is called the \emph{induced sample space}.
+\item
+  \emph{A note on notation:} Random variables will always denoted with uppercase letters and the realized values of the random variable (or its range) will be denoted by the corresponding lowercase letters. Thus, the random variable \(X\) can take the value \(x\).
+\item
+  Each outcome of a sample space occurs with a certain probability. Therefore, each possible value of a random variable is associated with a probability.
+\item
+  Any events of a sample space can be written in terms of a suitably defined random variable.
+\end{itemize}
+
+\hypertarget{types-of-random-variables}{%
+\section{Types of Random Variables}\label{types-of-random-variables}}
+
+\begin{itemize}
+\tightlist
+\item
+  A random variable is of two types
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Discrete Random Variable
+  \item
+    Continuous Random Variable
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{discrete-random-variable}{%
+\section{Discrete Random Variable}\label{discrete-random-variable}}
+
+\begin{itemize}
+\tightlist
+\item
+  If the induced sample space is discrete, then the random variable is called a \textbf{discrete random variable}.
+\end{itemize}
+
+\emph{Example 01}
+Consider the experiment of tossing a coin. Express the following events using a suitably defined random variable
+
+\(H=\) \emph{The event of getting a head}
+
+\(T=\) \emph{The event of getting a tail}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box1-1} \end{center}
+
+\emph{Example 02}
+
+Consider the experiment of rolling of a die. Express the following events using a suitably defined random variable
+
+\(A=\) \emph{The event that the number faced up is less than 5}
+
+\(B=\) \emph{The event that the number faced up is even}
+
+\(C=\) \emph{The event that the number faced up is 2 or 5}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box2-1} \end{center}
+
+\newpage
+
+\emph{Example 03}
+
+Consider the experiment of tossing a coin 10 times. Then the sample space \(\Omega\) contains \(2^{10} = 1024\) outcomes. Each outcome is a sequence of 10 H's and T's.
+
+Express the following events in terms of a suitably defined random variable.
+
+\(D=\) \emph{The event that the number of heads is 5}
+
+\(E=\) \emph{The event that the number of tails is less than 4}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box3-1} \end{center}
+
+\hypertarget{continuous-random-variable}{%
+\section{Continuous Random Variable}\label{continuous-random-variable}}
+
+\begin{itemize}
+\tightlist
+\item
+  If the induced sample space is continuous, then the random variable is called a \textbf{continuous random variable.}
+\end{itemize}
+
+\emph{Example 04}
+
+Consider the experiment of measuring the lifetime (in hours) of a randomly selected bulb. Express the following events in terms of a suitably defined random variable.
+
+\(F=\) \emph{The event that the lifetime is less than 300 hours}
+
+\(G=\) \emph{The event that the lifetime is 1000 hours}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box4-1} \end{center}
 
 \hypertarget{correlation-and-regression}{%
 \chapter{Correlation and Regression}\label{correlation-and-regression}}

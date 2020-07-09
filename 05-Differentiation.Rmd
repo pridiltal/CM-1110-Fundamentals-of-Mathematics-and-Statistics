@@ -31,6 +31,75 @@ library(tidyverse)
 
 \pagenumbering{arabic}
 
+## Limits (Summary) {-}
+<!-- page 93 stewart-->
+
+### The limit of a function {-}
+
+**Definition 1** 
+
+We write  $$lim_{x\to a}f(x)=L$$ and say "the limit of $f(x)$, as $x$ approaches $a$, equals $L$"
+
+if we can make the values of $f(x)$ arbitrarily close to $L$ (as close to $L$ as we like) by taking $x$ to be sufficiently close to $a$ (**on either side of** $a$) but not equal to $a$
+
+### One-sided limits {-}
+
+**Definition 2**
+
+We write 
+
+$$lim_{x\to a^-}f(x)=L$$
+and say the **left-hand limit of** $f(x)$ **as** $x$ **approaches** $a$ [or the **limit of** $f(x)$ **as** $x$ **approaches** $a$ **from the left**] is equal to $L$ if we can make the values of $f(x)$ arbitrarily close to $L$ by taking $x$ to be sufficiently close to $a$ and $x$ less than $a$.
+
+Notice that Definition 2  differs from Definition 1 only in that we require $x$ to be less than $a$. 
+
+Similarly, if we require that $x$ be grater than  $a$, we get "the **right-hand limit of** $f(x)$ **as** $x$ **approaches** $a$ is equal to $L$"  and we write 
+$$lim_{x\to a^+}f(x)=L$$
+
+### Relationship between the limit and one-side limits
+
+$$lim_{x\to a}f(x)=L \;\;\;\text{if and only if }\;\;\; lim_{x\to a^-}f(x)=L \;\;\text{and}\;\; lim_{x\to a^+}f(x)=L$$
+
+
+That is,
+$$lim_{x\to a}f(x)=L \Rightarrow  lim_{x\to a^-}f(x)= lim_{x\to a^+}f(x)=L$$
+$$lim_{x\to a^-}f(x)= lim_{x\to a^+}f(x)=L \Rightarrow lim_{x\to a}f(x)=L$$
+$$lim_{x\to a^-}f(x) \ne lim_{x\to a^+}f(x) \Rightarrow lim_{x\to a}f(x) \text{ Does Not Exist }$$
+
+
+### Properties {-}
+
+Assume $lim_{x\to a}f(x)$ and $lim_{x\to a}g(x)$ both exist and $c$ is any number then, 
+
+1. $lim_{x\to a}[cf(x)] = c\;lim_{x\to a}f(x)$
+
+2. $lim_{x\to a}[f(x) \pm g(x)] = lim_{x\to a}f(x) \pm lim_{x\to a}g(x)$
+
+3. $lim_{x\to a}[f(x)g(x)] = lim_{x\to a}f(x)  lim_{x\to a}g(x)$
+
+4. $lim_{x\to a}\left[\frac{f(x)}{g(x)}\right] = \frac{lim_{x\to a}f(x)}{lim_{x\to a}g(x)}$ provided $lim_{x\to a}g(x) \ne 0$
+
+5. $lim_{x\to a}[f(x)]^n = [lim_{x\to a}f(x)]^n$
+
+<!-- pg 124-->
+
+### Continuous functions {-}
+
+**Definition3**
+
+A function $f$ is **continuous at a number** $a$ if 
+
+$$lim_{x\to a}f(x)=f(a)$$
+
+Notice that Definition 3 implicitly requires three things if $f$ is continuous at $a$:
+
+1. $f(a)$ is defined (that is, $a$ is in the domain of $f$)
+2. $lim_{x\to a}f(x)$ exits
+3. $lim_{x\to a}f(x) = f(a)$
+
+
+\newpage
+
 ## Differentiation 
 
 ### Derivative and tangent lines
@@ -1117,8 +1186,35 @@ If $f$ is a continuous function defined for $a \leq x \leq b$, we divide the int
 
 $$\int_a^b f(x) dx = lim_{n\to \infty}\sum_{i=1}^n f(x_i^*) \Delta x $$
 
- 
+- The **definite integral** $\int_a^b f(x) dx$ is a number and does not depend on $x$.
+- Therefore, any letter can be used in place of $x$ without changing the value of the integral
+$$\int_a^b f(x) dx= \int_a^b f(t) dt = \int_a^b f(r) dr$$
 \newpage
+
+- A definite integral can be interpreted as a **net area.**
+
+    
+\newpage
+
+#### Properties of the Definite Integral
+
+1. $\int_a^b f(x) dx= -\int_b^a f(x) dx$
+2. $\int_a^a f(x) dx= 0$
+3. $\int_a^b[ f(x)+ g(x)] dx= \int_a^b f(x) dx + \int_a^b g(x)dx$
+4. $\int_a^b c dx= c(b-a),$ where $c$ is a constant.
+5. $\int_a^b c f(x) dx= c\int_a^b  f(x) dx$, where $c$ is a constant.
+6. $\int_a^b[ f(x)- g(x)] dx= \int_a^b f(x) dx - \int_a^b g(x)dx$
+7. $\int_a^b f(x) dx + \int_b^c f(x)dx = \int_a^c f(x) dx$
+
+\newpage
+
+    
+### The Fundamental Theorem of Calculus
+   
+- The fundamental Theorem of Calculus establishes a connection between the two branches of calculus and integral calculus.
+
+$$g(x) = \int_a^x f(t) dt,$$
+where $f$ is a continuous function on $[a,b]$ and $x$ varies between $a$ and $b$.
 
 
 ```{r LB37, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
@@ -1127,52 +1223,299 @@ ggplot()+
   theme_void()+
   theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
 
-``` 
+```
+
+**The Fundamental Theorem of Calculus, Part I**
+
+If $f$ is continuous on $[a,b],$ then the function $g$ defined by 
+$$g(x) = \int_a^x f(t) dt,\text{   } a\leq x \leq b$$
+
+is continuous on $[a,b]$ and differentiable on $(a,b),$ and $g^\prime(x) = f(x).$
+
+```{r LB38, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+\newpage
+- Using Leibniz notation for derivatives, we can write the Fundamental Theorem of Calculus, Part I as
+$$\frac{d}{dx} \int_a^x f(t) dt= f(x)$$
+when $f$ is continuous. 
 
 
+*Example 22*
 
- 
-```{r, eval = FALSE}
-library(tidyverse)
-set.seed(1234)
-n <- 1000
-y <- runif(n, 5,10)
+Find the derivative of the function $g(x) = \int_0^x \sqrt{1+ t+ t^2} dt$
 
-data <- data.frame(x = 1:n, y =y)
+```{r LB38b, out.width='100%', fig.asp=0.6, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+### Indefinite Integrals
+
+#### Antiderivatives
+
+<!-- Stewardt pg 353-->
+
+- Consider the problem of finding a function $F$ whose derivative is a known function $f$.
+
+- If such a function $F$ exists, it is called **an antiderivative** of $f$.
+
+**Definition: Antiderivative**
+
+A function $F$ is called an antiderivative of $f$ on an interval $I$ if $F^\prime(x) = f(x)$ for all $x$ in $I$
+
+```{r LB39, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+**Indefinite integral**
+
+- The notation $\int f(x)dx$ is traditionally used for an antiderivative of $f$ and is called an **indefinite integral.**
+
+- Thus
+$$\int f(x) dx = F(x) \text{ means } F^\prime(x) = f(x)$$ 
 
 
-p<- data %>% ggplot(aes(y)) +
-  geom_histogram(binwidth = 0.4, color = "black", fill = "gray", boundary = 4)  +
-  theme(axis.title=element_blank(),
-        axis.text=element_blank()) 
-  
+```{r LB40, out.width='100%', fig.asp=0.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
 
-p
+```
+
+- If $f$ is continuous on $[a,b],$ then 
+$$\int_a^b f(x)dx = \left[\int f(x)dx \right]_a^b$$
+
+
+**Indefinite Integrals**
+
+1. $\int cf(x) dx = c\int f(x)dx$
+
+2. $\int [f(x) +g(x)] dx = \int f(x)dx + \int g(x)dx$
+
+3. $\int k dx = kx+C$
+
+4. $\int x^n dx = \frac{x^{n+1}}{n+1}+C$  $(n \neq -1)$
+
+5. $\int \frac{1}{x} dx = ln|x|+C$  
+
+6. $\int e^xdx= e^x+C$
+
+7. $\int a^xdx= \frac{a^x}{ln \text{ }  a}+C$
+
+\newpage
+
+*Example 23*
+
+Evaluate  $\int_1^9 \frac{2t^2+t^2\sqrt{t}-1}{t^2} dt$
+
+```{r LB41, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
 ```
 
 
-    
-### The Area Problem
+### The Substitution Rule
+
+**The Substitution Rule**
+
+If $u= g(x)$ is a differentiable function  whose range is and interval $I$ and $f$ is continuous on $I$, then 
+
+$$\int f(g(x))g^\prime(x)dx=\int f(u)du$$
+
+```{r LB42, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+*Example 24*
+
+Evaluate  $\int\sqrt{2x+1} dx$
+
+```{r LB43, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+\newpage 
+
+**The Substitution Rule for Definite Integrals**
+
+If $g^\prime$ is continuous on $[a,b]$ and $f$ is continuous on the range of $u=g(x),$ then
+$$\int_a^bf(g(x))g^\prime(x)dx=\int_{g(a)}^{g(b)} f(u)du$$
 
 
-### The geometric definition of the integral
-    
-### The Fundamental Theorem of Calculus
-    
-### Indefinite integrals and integrals of
+*Example 25*
+<!-- page 418-->
 
-$x^n$ ($n\neq-1$, $sin x$, $cos x$)
-    
-### The algebra of integrals
-    
-### integration and substitution
-    
-### the analytic definition of the integral
-    
-    
-    
-    
-**Reading :**
+Evaluate  $\int_0^4\sqrt{2x+1} dx$
+
+```{r LB44, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+\newpage
+**Integrals of Symmetric Functions**
+
+Suppose $f$ is continuous on $[-a,a].$
+
+  a) If $f$ is even $[f(-x) = f(x)],$ then $\int_{-a}^af(x) dx = 2\int_0^af(x)dx$
+  b) If $f$ is odd $[f(-x) = - f(x)],$ then $\int_{-a}^af(x) dx = 0$
+
+\newpage
+### The integral of the logarithmic and exponential function
+
+<!-- Book The usefulness of calculus by Joseph Nowmark-->
+
+1. $\int e^xdx = e^x + C$
+
+2. $\int \frac{1}{x}dx = ln(x) + C$ if $x>0$
+
+3. $\int a^xdx = \frac{a^x}{ln (a)} + C$ 
+
+*Example 26*
+
+Evaluate  $\int \frac{e^x - e^{-x}}{5} dx$
+
+```{r LB45, out.width='100%', fig.asp=0.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+*Example 27*
+
+Evaluate  $\int \frac{3x^2}{x^3+1} dx$  $x\neq -1$
+
+```{r LB46, out.width='100%', fig.asp=0.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+### Integration by Parts
+
+$$\int f(x) g^\prime(x)dx=f(x)g(x)-\int g(x)f^\prime(x)dx$$
+
+```{r LB46b, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+- Let $u = f(x)$ and $v=g(x)$. Then the differentials are $du = f^\prime (x) dx$ and $dv = g^\prime(x) dx,$ so, by the Substitution Rule, the formula for integration by parts becomes
+
+$$\int udv = uv-\int vdu$$
+
+*Example 28*
+
+Evaluate  $\int ln \text{ } x dx$ 
+
+```{r LB47, out.width='100%', fig.asp=0.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+*Example 29*
+
+Evaluate  $\int x^2e^x   dx$ 
+
+```{r LB48, out.width='100%', fig.asp=0.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+\newpage
+
+$$\int_a^b f(x) g^\prime(x)dx=\left [ f(x)g(x) \right ]_a^b-\int_a^b  g(x)f^\prime(x)dx$$
+
+### Trigonometric Functions
+
+**Derivatives of Trigonometric Functions**
+
+  1. $\frac{d}{dx} sin(x) = cos(x)$
+  2. $\frac{d}{dx} cos(x) = -sin(x)$
+  3. $\frac{d}{dx} tan(x) = sec^2(x)$
+  4. $\frac{d}{dx} sec(x) = sec(x)tan(x)$
+
+
+```{r fig.height=8}
+y <- expression(sin(x))
+x <- seq(-7, 7, by = 0.1)
+f <- eval(y)
+
+f_1 <- D(y, "x")
+x <- seq(-7, 7, by = 0.1)
+f1 <- eval(f_1)
+
+f_2 <- D(D(y, "x"), "x")
+x <- seq(-7, 7, by = 0.1)
+f2 <- eval(f_2)
+
+data <- data.frame(x, f, f1, f2)
+
+p <- data %>% pivot_longer(-x, names_to = "Function", values_to = "f") %>%
+  ggplot( aes(x, f)) +
+  geom_line() +
+  geom_vline(xintercept= c(0))+
+  geom_hline(yintercept= c(0))+
+  facet_wrap(vars(Function), ncol = 1, scale = "free") 
+
+
+
+print(p)
+```
+  
+  
+**Integration of Trigonometric Functions**
+
+  1. $\int cos(x)dx = sin(x) +C$
+  2. $\int sin(x)dx = -cos(x) +C$
+  3. $\int sec^2(x) = tan(x) +C$
+  4. $\int sec(x)tan(x) = sec(x) +C$
+
+
+**References and Reading:**
       
 Stewart, J. (2003). Calculus: Early Transcendentals. Thomson Learning. Inc., Belmont, CA.
     
@@ -1308,3 +1651,71 @@ $x$  | $f(x)$  | $g(x)$   | $f^\prime(x)$  | $g^\prime(x)$
 19.  Find $\frac{d}{dx} ln \left[ \frac{x+1}{\sqrt{x-2}}\right]$
 
 20. Sketch the graph of the function $f(x) = x^{\frac{2}{3}}(6-x)^{\frac{1}{3}}.$
+
+21. Suppose you are given a formula for a function $f$.
+   (a)  How do you determine where $f$ is  increasing or decreasing?
+   (b) How do you determine where the graph of $f$ is concave upward or concave downward?
+   (c)How do you locate inflection points?
+
+22. If $x^2+y^2=25,$
+   (a) Find $\frac{dy}{dx}$
+   (b) Fins an equation of the tangent to the circle $x^2+y^2=25$ at the point $(3,4).$
+   
+23. If $f(x,y) = 4-x^2-2y^2,$ find $f_x(1,1)$ and $f_y(1,1)$ and interpret these numbers as slopes.
+
+24. If $f(x,y) = sin\left(\frac{x}{1+y} \right),$ calculate $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$
+
+25. Differentiate $y=\frac{x^{3/4} \sqrt{x^2+1}}{(3x+2)^5}$
+
+26. Use the properties of integrals to evaluate $\int_0^1 (4+3x^2)dx$
+
+27. If it is known that $\int_0^{10} f(x)dx=17$ and $\int_0^{8} f(x)dx=12$, find $\int_8^{10} f(x)dx$
+
+
+28. Use Part I of the Fundamental Theorem of Calculus to find the derivative of the function
+   (a) $g(x) = \int_o^x\sqrt{1+2t}dt$
+   (b) $g(x) = \int_o^xln(t)dt$
+   (c) $g(y) = \int_2^yt^2sin(t)dt$
+   (d) $g(y) = \int_3^y\frac{1}{x+x^2}dx$
+   (e) $g(x) = \int_x^2cos(t^2)dt$
+   (f) $y = \int_{1-3x}^1\frac{u^3}{1+u^2}du$
+
+29. Find the general indefinite integral $\int(10x^4-2sec^2x)dx.$ 
+
+30. Evaluate the integral
+   (a) $\int_0^2(6x^2-4x+5)dx$
+   (b) $\int_{-1}^0(2x-e^x)dx$
+   (c) $\int_{-2}^2(3u+1)^2du$
+   (d) $\int_1^4\sqrt{t}(1+t)dt$
+   (e) $\int_1^4\sqrt{\frac{5}{x}}dx$
+   
+31. Find the area of the region that lies to the right of the $y$-axis and to the left of the parabola $x=2y-y^2.$
+
+```{r  out.width = "60%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/c5Q31.png")
+```
+
+32. Find  
+   (a) $\int\frac{x}{\sqrt{1-4x^2}}dx$
+   (b) $\int \sqrt{1+x^2} x^5dx$
+
+33. Find
+   (a)  $\int tan\;x \;dx$
+   (b)  $x^3 cos (x^4 +2) dx$
+
+34. Calculate 
+   (a) $\int_1^e\frac{ln\;x}{x}dx$
+   (b) $\int e^{5x} dx$
+   
+35. Show that $\frac{d}{dx}(log_ax) = \frac{1}{xln(a)}$
+
+36. Find $\int xsin(x)dx$
+
+37. Find $\int t^2e^tdt$
+
+38. Evaluate $\int e^xsin (x)dx$
+
+39. If $f(0) = g(0)=0$ and $f^{\prime\prime}$ and $g^{\prime\prime}$ are continuous, show that 
+$$\int_0^af(x)g^{\prime\prime}(x)dx=f(a)g^{\prime}(a)-f^{\prime}(a)g(a)+\int_0^af^{\prime\prime}(x)g(x)dx$$
+
+40. Suppose that $f(1)=2,$ $f(4)=7,$ $f^{\prime}(1)=5,$ $f^{\prime}(4)=3$ and $f^{\prime\prime}$ is continuous. Find the value of $\int_1^4xf^{\prime\prime}(x)dx$

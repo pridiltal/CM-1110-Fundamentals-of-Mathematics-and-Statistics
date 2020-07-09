@@ -21,6 +21,7 @@ header-includes:
 - \floatplacement{figure}{H}
 - \floatplacement{table}{H}
 - \makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+- \usepackage{amsmath}
 ---
 
 # Course Syllabus {-}
