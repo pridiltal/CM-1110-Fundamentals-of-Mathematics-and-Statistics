@@ -1823,10 +1823,6 @@ gridExtra::grid.arrange(p1,p2,p3,p4,p5,p6, ncol=2)
 - When $r=0$, it signifies there is **no linear** relationship between the two variables. (There can be a non-linear relationship, Figure (e))
 - Figure (e): There is a very strong curvilinear relationship. But there is **no linear** relationship.
 
-### References {-}
-
-Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., & Harris, M. (2007). *Australasian business statistics*. John Wiley & Sons.
-
 
 \newpage
 
@@ -1992,8 +1988,11 @@ Lecture attendance |	13| 6	| 15 |	4	 |12|14|	15|	10|	11|	6
 (c)	Comment on the relationship between the marks and the lecture attendance
 
 
+## References {-}
 
+Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., & Harris, M. (2007). *Australasian business statistics*. John Wiley & Sons.
 
+Spiegel, M. R., & Stephens, L. J. (2017). Schaum’s outline of statistics. McGraw Hill Professional.
 
 
 

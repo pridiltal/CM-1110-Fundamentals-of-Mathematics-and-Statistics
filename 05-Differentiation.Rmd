@@ -1514,14 +1514,6 @@ print(p)
   3. $\int sec^2(x) = tan(x) +C$
   4. $\int sec(x)tan(x) = sec(x) +C$
 
-
-**References and Reading:**
-      
-Stewart, J. (2003). Calculus: Early Transcendentals. Thomson Learning. Inc., Belmont, CA.
-    
-Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman & Company.
-    
-    
     
 \newpage
     
@@ -1719,3 +1711,10 @@ knitr::include_graphics("figure/c5Q31.png")
 $$\int_0^af(x)g^{\prime\prime}(x)dx=f(a)g^{\prime}(a)-f^{\prime}(a)g(a)+\int_0^af^{\prime\prime}(x)g(x)dx$$
 
 40. Suppose that $f(1)=2,$ $f(4)=7,$ $f^{\prime}(1)=5,$ $f^{\prime}(4)=3$ and $f^{\prime\prime}$ is continuous. Find the value of $\int_1^4xf^{\prime\prime}(x)dx$
+
+## References {-}
+    
+Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman & Company.
+
+Stewart, J. (2003). Calculus: Early Transcendentals. Thomson Learning. Inc., Belmont, CA.
+    

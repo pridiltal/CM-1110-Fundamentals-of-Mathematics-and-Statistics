@@ -502,3 +502,7 @@ $D2 =$ The event that the second item is defective
 $D3 =$ The event that the third item is defective
 $E =$ The event that two of the three products are defective Express E in terms of $D1, D2$ and $D3$ using event operations
 
+## References {-}
+
+Lipschutz, S. (2000). Schaum’s Outline of Probability. McGraw Hill Professional.
+

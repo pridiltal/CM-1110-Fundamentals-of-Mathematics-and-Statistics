@@ -162,7 +162,7 @@ c. for example 6.789542587436512..........
 - The counting numbers start with 1 and their end is not defined. 
 - i.e $\mathbb{N} =\{1,2,3,4,...\}$
 
-**Reading :**
+**Further Reading :**
 
 Dass, H. K. (2008). 'Complex Numbers', *Advanced Engineering Mathematics*. S. Chand Publishing.  pp. 474-520.
 
@@ -715,3 +715,8 @@ ggplot()+
 
 ```
 
+## References {-}
+
+Butenko, S., & Pardalos, P. M. (2014). Numerical methods and optimization: An introduction. CRC Press
+
+Dass, H. K. (2008). ‘Complex Numbers’, Advanced Engineering Mathematics. S. Chand Publishing. pp. 474-520.

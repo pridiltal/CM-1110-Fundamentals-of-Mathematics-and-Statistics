@@ -1,1 +1,396 @@
 # Introduction to Logic
+
+\pagenumbering{arabic}
+
+## Statement (Proposition)
+
+- A statement is a declarative sentence which is either true or false **but not both**
+- A proposition is a collection of declarative statements that has either a truth value "true” or a truth value "false".
+- The truth value True and False are denoted by the symbols **T** and **F**, respectively.
+- Sometimes it is also denoted by **1** (stands for true) and **0** (stands for false).
+- Since it depends on only two possible truth values, it is known as *two-values logic* of *bi-values logic*.
+
+*Example 1*
+
+Consider the following sentences and select the statements
+
+  (a) Man is Mortal <!-- (subject to death),it returns truth value “TRUE”-->
+  (b) 12 plus 9 is equal to 1 <!-- it returns truth value “FALSE-->
+  (c) Moon rises in the east <!-- The Sun, the Moon, the planets, and the stars all rise in the east and set in the west.-->
+  (d) 3 is less than four
+  (e) Please sit down
+  (f) $y$ is a cat <!--  It is because unless we give a specific value of A, we cannot say whether the statement is true or false.-->
+  (g) 14 is a composite number <!--A composite number is a positive integer that can be formed by multiplying two smaller positive integers. Equivalently, it is a positive integer that has at least one divisor other than 1 and itself. ... For example, the integer 14 is a composite number because it is the product of the two smaller integers 2 × 7.
+  
+  A composite number has more than two factors. The number 1 is neither prime nor composite. The prime numbers between 2 and 31 are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 and 31 since each of these numbers has only two factors, itself and 1-->
+  (f) *Chaddy* is a nice dog.
+
+  
+## Propositional Variables
+
+-  Every statement in propositional logic consists
+of **propositional variables** combined via
+**propositional connectives**.
+- Propositional variables are usually denoted by capital English letters, such as P, Q, R etc.
+- Each variable can take one of two values: **T** or **F**.
+
+## Logical Connectives
+
+<!--https://www.tutorialspoint.com/discrete_mathematics/discrete_mathematics_propositional_logic.htm#:~:text=Propositional%20Logic%20is%20concerned%20with,or%20in%20a%20composite%20manner.
+
+http://web.stanford.edu/class/archive/cs/cs103/cs103.1152/lectures/07/Slides07.pdf
+-->
+
+- We use **logical connectives** to connect  the propositional variables (several statements into a single statement). 
+- The most basic and fundamental connectives are Negation, Conjunction and Disjunction.
+
+### Negation
+
+- Negation is the simplest common example of a truth-functional operation.
+- The negation of a statement is also a statement.
+- We use the connective **Not** for negation. 
+- If $P$ be a statement, then the negation of $P$ is denoted by $\neg P$.
+- $P$ and $\neg P$ has opposite truth values.
+- The relationship between the truth values of $P$ and $\neg P$  can be made explicit by a diagram called a **truth table**
+
+**Truth Table (Negation)**
+
+$P$   | $\neg P$
+------|------------
+$T$   |   $F$
+$F$   |   $T$
+
+
+### Conjunction
+
+- The conjunction of two statements, $P$ and $Q$ is also a statement.
+- We use the connective **And** ($\land$) for conjunction.
+- It is denoted by $P \land Q$
+
+**Truth Table (Conjunction)**
+
+$P$   | $Q$  | $(P \land Q)$
+------|----- |------------
+$T$   |  $T$ |  $T$
+$T$   |  $F$ |  $F$
+$F$   |  $T$ |  $F$
+$F$   |  $F$ |  $F$
+
+**Rule:**  $(P \land Q)$ is true if both $P$ and $Q$ are true, otherwise false.
+
+- In order to make  $(P \land Q)$ true, $P$ and $Q$ have to be **simultaneously** true
+
+
+### Disjunction
+
+- The disjunction of two statements, $P$ and $Q$ is also a statement.
+- We use the connective **Or** ($\lor$) for disjunction
+- It is denoted by $P \lor Q$
+
+**Truth Table (Disjunction)**
+
+$P$   | $Q$  | $(P \lor Q)$
+------|----- |------------
+$T$   |  $T$ |  $T$
+$T$   |  $F$ |  $T$
+$F$   |  $T$ |  $T$
+$F$   |  $F$ |  $F$
+
+**Rule:**  $(P \lor Q)$ is true if either $P$ or $Q$ is true and it is false when both $P$ and $Q$ are false.
+
+- $(P \lor Q)$ shall stand for "$P$ or $Q$ or both".
+
+## Conditional
+
+- In mathematics, expressions of the form "IF $P$ then $Q$" occur so often.
+- This can be expressed in any one of the following forms.
+    a) If $P$, then $Q$
+    b) $P$ only if $Q$
+    c) $P$ implies $Q$
+    d) $Q$ if $P$
+- Therefore, it is important to understand the corresponding truth-functional operation.
+- Let $P$ and $Q$ be any two statements.
+- Then the statement $P \rightarrow Q$ is called a conditional statement.
+- In an implication $P \rightarrow Q$, $P$ is called the *antecedent* (hypothesis) and $Q$ is called the *consequent* (conclusion).
+
+**Truth Table (Conditional)**
+
+$P$   | $Q$  | $(P \rightarrow Q)$
+------|----- |------------
+$T$   |  $T$ |  $T$
+$T$   |  $F$ |  $F$
+$F$   |  $T$ |  $T$
+$F$   |  $F$ |  $T$
+
+**Rule:**  An implication (conditional) $(P \rightarrow Q)$ is False only when the hypothesis ($P$) is true and conclusion ($Q$) is false, otherwise True.
+
+## Bi-Conditional
+
+- Let $P$ and $Q$ be any two statements.
+- Then the statement $P \leftrightarrow Q$ is called a bi-conditional statement.
+- This can be expressed in any one of the following forms.
+    a) $P$ if and only if $Q$
+    b) $P$ is necessary and sufficient of $Q$
+    c) $P$ is necessary and sufficient for $Q$
+    d) $P$ implies $Q$ and $P$ is implied by $Q$
+- The bi-conditional (double implication) $P \leftrightarrow Q$ can be defined as 
+
+$$P \leftrightarrow Q: (P \rightarrow Q) \land (Q \rightarrow P)$$
+
+\newpage
+
+**Truth Table (Bi-Conditional)**
+
+$P$   | $Q$  |  $(P \rightarrow Q)$ | $(Q \rightarrow P)$ |  $(P \leftrightarrow Q)$
+------|----- |----------------------|---------------------|-----------
+$T$   |  $T$ |  $T$   | $T$    | $T$
+$T$   |  $F$ |  $F$   | $T$    | $F$
+$F$   |  $T$ |  $T$   | $F$    | $F$
+$F$   |  $F$ |  $T$   | $T$    | $T$  
+    
+**Rule:**  $(P \leftrightarrow Q)$ is True only when both $P$ and $Q$ have identical truth values, otherwise false. 
+
+<!-- From the truth table us is clear that $(P \leftrightarrow Q)$ has the truth value T whenever both P and Q have identical truth values-->
+
+## Converse
+
+- Let $P$ and $Q$ be any two statements.
+- The converse statement of the conditional  $P \rightarrow Q$ is given as  $Q \rightarrow P$
+
+```{r boxC31, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+## Inverse
+
+- Let $P$ and $Q$ be any two statements.
+- The inverse statement of the conditional  $(P \rightarrow Q)$ is given as  $(\lnot P \rightarrow \lnot Q)$
+
+```{r boxC32, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+## Contra Positive
+
+- Let $P$ and $Q$ be any two statements.
+- The contra positive statement of the conditional  $(P \rightarrow Q)$ is given as  $(\lnot Q \rightarrow \lnot P)$
+
+```{r boxC33, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+**Truth Table (Contra Positive)**
+
+$P$   | $Q$  |  $P \rightarrow Q$ | $\lnot Q$ | $\lnot P$ | $(\lnot Q \rightarrow \lnot P)$ 
+------|----- |------------|-----------|-----------|--------
+$T$   |  $T$ |  $T$   | $F$    | $F$ | $T$
+$T$   |  $F$ |  $F$   | $T$    | $F$ | $F$
+$F$   |  $T$ |  $T$   | $F$    | $T$ | $T$
+$F$   |  $F$ |  $T$   | $T$    | $T$ | $T$ 
+    
+- From the truth table it can be seen that both conditional $P \rightarrow Q$  and contra positive  $(\lnot Q \rightarrow \lnot P)$ have same truth values.
+
+## Exclusive OR
+
+- Let $P$ and $Q$ be any two statements.
+- The exclusive OR of two statements $P$ and $Q$ is denoted by $(P \overline{\lor} Q)$.
+- We use the connective XOR for exclusive OR
+- The exclusive OR $(P \overline{\lor} Q)$ is true if either $P$ or $Q$ is True but not both.
+- The exclusive OR is also known as exclusive disjunction.
+
+the conditional  $(P \rightarrow Q)$ is given as  $(\lnot Q \rightarrow \lnot P)$
+
+**Truth Table (Exclusive OR)**
+
+$P$   | $Q$  | $(P \overline{\lor}Q)$
+------|----- |------------
+$T$   |  $T$ |  $F$
+$T$   |  $F$ |  $T$
+$F$   |  $T$ |  $T$
+$F$   |  $F$ |  $F$
+ 
+**Rule:** $(P \overline{\lor}Q)$ is true if either $P$ or $Q$ is True but not both, otherwise false.
+
+
+## NAND
+
+- The word NAND stands for NOT and AND.
+- The connective NAND is denoted by the symbol $\uparrow$.
+- Let $P$ and $Q$ be any two statements.
+- The NAND of $P$ and $Q$ is denoted by $(P \uparrow Q)$.
+- The NAND, $(P \uparrow Q)$ can be defined as 
+
+$$(P\uparrow Q)\equiv\lnot(P \land Q)$$
+
+**Truth Table (NAND)**
+
+$P$   | $Q$  | $(P \uparrow Q)$
+------|----- |------------
+$T$   |  $T$ |  $F$
+$T$   |  $F$ |  $T$
+$F$   |  $T$ |  $T$
+$F$   |  $F$ |  $T$
+ 
+**Rule:** $(P \uparrow Q)$ is True if *either* $P$ or $Q$ is false, otherwise False
+
+
+## NOR
+
+- The word NOR stands for NOT and OR.
+- The connective NOR is denoted by the symbol $\downarrow$.
+- Let $P$ and $Q$ be any two statements.
+- The NOR of $P$ and $Q$ is denoted by $(P \downarrow Q)$.
+- The NOR, $(P \downarrow Q)$ can be defined as 
+
+$$(P\downarrow Q)\equiv\lnot(P \lor Q)$$
+
+**Truth Table (NOR)**
+
+$P$   | $Q$  | $(P \downarrow Q)$
+------|----- |------------
+$T$   |  $T$ |  $F$
+$T$   |  $F$ |  $F$
+$F$   |  $T$ |  $F$
+$F$   |  $F$ |  $T$
+ 
+**Rule:** $(P \downarrow Q)$ is True only when both $P$ or $Q$ are false, otherwise False
+
+## Tautology
+
+-  If the truth values of a composite statement are always true, irrespective of the truth values of the atomic (individual) statements, then it is a **tautology**.
+
+*Example*
+
+- The composite statement $(P\land (P \rightarrow Q)) \rightarrow Q$ is a tautology.
+- Verify this using a truth table with composite statement as  $(P\land (P \rightarrow Q)) \rightarrow Q$
+
+```{r boxC35, fig.cap='', out.width='100%', fig.asp=.7, fig.align='center'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+## Contradiction
+
+- If the truth values of a composite statement are always false, irrespective of the truth values of the atomic (individual) statements, then it is a **contradiction** or **unsatisfiable**.
+
+*Example*
+
+- The composite statement $\lnot(P\rightarrow(Q\rightarrow(P\land Q)))$ is a contradiction.
+- Verify this using a truth table with composite statement as  $\lnot(P\rightarrow(Q\rightarrow(P\land Q)))$
+
+```{r boxC36, fig.cap='', out.width='100%', fig.asp=.7, fig.align='center'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+## Satisfiable
+
+- If the truth values of a composite statement are sometimes true and sometimes false, irrespective of the truth values of the atomic statements, then it is called a satisfiable.
+
+
+*Example*
+
+- The composite statement $(P \rightarrow Q) \rightarrow (Q \rightarrow P)$ is satisfiable.
+- Verify this using a truth table of $(P \rightarrow Q) \rightarrow (Q \rightarrow P)$
+
+```{r boxC37, fig.cap='', out.width='100%', fig.asp=.7, fig.align='center'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+## Duality Law
+
+- Two formulae $P$ and $p^*$are said to be duals of each other if either one can be obtained from the other by interchanging $\land$ by $\lor$ and $\lor$ by $\land$.
+- The two connectives $\lor$ and $\land$ are called dual to each other. 
+
+*Example*
+
+The formulae $P \equiv (P \lor Q)\land R$ and $P^* \equiv (P \land Q)\lor R$ are dual to each other.
+
+\newpage
+
+## Algebra of Propositions
+
+- If $P, Q$ and $R$ be three statements, then the following laws hold. 
+
+Algebra of Propositions|   
+-----------------|-------------------
+Commutative Laws  |  $P\land Q\equiv Q \land P$ and $P\lor Q\equiv Q \lor P$ 
+Associative Laws  |  $P\land (Q \land R)\equiv (P\land Q) \land R$ and $P\lor (Q \lor R)\equiv (P\lor Q) \lor R$
+Distributive Laws  |  $P\land (Q \lor R)\equiv (P\land Q) \lor (P\land R)$ and $P\lor (Q \land R)\equiv (P\lor Q) \land (P\lor R)$ 
+Idempotent Laws  | $P\land P\equiv P$ and $P\lor P\equiv P$
+Absorption Laws  |  $P\lor (P \land Q)\equiv P$ and $P\land (P \lor Q)\equiv P$ 
+De Morgan's Laws  | $\lnot (P\land Q)  \Leftrightarrow (\lnot P) \lor(\lnot Q)$ and $\lnot (P\lor Q) \Leftrightarrow (\lnot P) \land (\lnot Q)$
+
+
+## References {-}
+
+Acharjya, D. P. (2009). Fundamental approach to discrete mathematics. New Age International.
+
+Mendelson, E. (1970). Boolean algebra and switching circuits. McGraw-Hill Edition 2004.
+
+\newpage
+\pagenumbering{arabic}
+## Tutorial {-}
+
+<!--schaum bool page 19 Question 1.1)-->
+1. Reduce the following sentences to statement forms 
+
+(a) A necessary condition for $x$ to be prime is that $x$ is odd or $x=2$.
+
+(b) A sufficient condition for $f$ to be continuous is that $f$ is differentiable.
+
+(c) A necessary and sufficient condition for Mr. Perera to be elected is that Mr. Perera wins 75 votes.
+
+(d) Calathea plant will stay healthy only if enough moisture is available.
+
+(e) It is raining but the sun is still shining.
+
+(f) She will die today unless medical aid is obtained.
+
+(g) If taxes are increased or government spending decreases, then inflation will not occur this year.
+
+<!--Archariya page 7 1.11)-->
+2. Show that the composite statement $(P \land (P \rightarrow Q)) \rightarrow Q$ is a tautology using a truth table
+
+
+<!--Archariya page 7 1.12)-->
+3. Show that the composite statement $\lnot (P \rightarrow( Q \rightarrow (P \land  Q)))$ is a contradiction using a truth table
+
+
+<!--schaum bool page 9 example 1.19)-->
+4. Show that $(A \rightarrow B) \rightarrow A$
+logically implies $A$
+
+<!--schaum bool page 9 example 1.20)-->
+5. Show that $(A \leftrightarrow B)$ is 
+logically equivalent to  $(A \rightarrow B) \land (B \rightarrow A)$

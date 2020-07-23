@@ -88,7 +88,7 @@
 
 \title{CM 1110 Fundamentals of Mathematics and Statistics}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-07-09}
+\date{2020-07-23}
 
 \begin{document}
 \maketitle
@@ -428,7 +428,7 @@ Numbers can be classified according to how they are represented or according to 
   i.e \(\mathbb{N} =\{1,2,3,4,...\}\)
 \end{itemize}
 
-\textbf{Reading :}
+\textbf{Further Reading :}
 
 Dass, H. K. (2008). `Complex Numbers', \emph{Advanced Engineering Mathematics}. S. Chand Publishing. pp.~474-520.
 
@@ -943,6 +943,14 @@ Addition & Subtraction & Multiplication & Division\tabularnewline
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/NSbox28-1} \end{center}
 
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+Butenko, S., \& Pardalos, P. M. (2014). Numerical methods and optimization: An introduction. CRC Press
+
+Dass, H. K. (2008). `Complex Numbers', Advanced Engineering Mathematics. S. Chand Publishing. pp.~474-520.
+
 \hypertarget{sequences-and-series}{%
 \chapter{Sequences and Series}\label{sequences-and-series}}
 
@@ -1015,6 +1023,678 @@ Stewart, J., Clegg, D. K., \& Watson, S. (2020). `Infinite Sequences and Series'
 
 \hypertarget{introduction-to-logic}{%
 \chapter{Introduction to Logic}\label{introduction-to-logic}}
+
+\pagenumbering{arabic}
+
+\hypertarget{statement-proposition}{%
+\section{Statement (Proposition)}\label{statement-proposition}}
+
+\begin{itemize}
+\tightlist
+\item
+  A statement is a declarative sentence which is either true or false \textbf{but not both}
+\item
+  A proposition is a collection of declarative statements that has either a truth value ``true'' or a truth value ``false''.
+\item
+  The truth value True and False are denoted by the symbols \textbf{T} and \textbf{F}, respectively.
+\item
+  Sometimes it is also denoted by \textbf{1} (stands for true) and \textbf{0} (stands for false).
+\item
+  Since it depends on only two possible truth values, it is known as \emph{two-values logic} of \emph{bi-values logic}.
+\end{itemize}
+
+\emph{Example 1}
+
+Consider the following sentences and select the statements
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Man is Mortal 
+\item
+  12 plus 9 is equal to 1 
+\item
+  Moon rises in the east 
+\item
+  3 is less than four
+\item
+  Please sit down
+\item
+  \(y\) is a cat 
+\item
+  14 is a composite number 
+\item
+  \emph{Chaddy} is a nice dog.
+\end{enumerate}
+
+\hypertarget{propositional-variables}{%
+\section{Propositional Variables}\label{propositional-variables}}
+
+\begin{itemize}
+\tightlist
+\item
+  Every statement in propositional logic consists
+  of \textbf{propositional variables} combined via
+  \textbf{propositional connectives}.
+\item
+  Propositional variables are usually denoted by capital English letters, such as P, Q, R etc.
+\item
+  Each variable can take one of two values: \textbf{T} or \textbf{F}.
+\end{itemize}
+
+\hypertarget{logical-connectives}{%
+\section{Logical Connectives}\label{logical-connectives}}
+
+\begin{itemize}
+\tightlist
+\item
+  We use \textbf{logical connectives} to connect the propositional variables (several statements into a single statement).
+\item
+  The most basic and fundamental connectives are Negation, Conjunction and Disjunction.
+\end{itemize}
+
+\hypertarget{negation}{%
+\subsection{Negation}\label{negation}}
+
+\begin{itemize}
+\tightlist
+\item
+  Negation is the simplest common example of a truth-functional operation.
+\item
+  The negation of a statement is also a statement.
+\item
+  We use the connective \textbf{Not} for negation.
+\item
+  If \(P\) be a statement, then the negation of \(P\) is denoted by \(\neg P\).
+\item
+  \(P\) and \(\neg P\) has opposite truth values.
+\item
+  The relationship between the truth values of \(P\) and \(\neg P\) can be made explicit by a diagram called a \textbf{truth table}
+\end{itemize}
+
+\textbf{Truth Table (Negation)}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\(P\) & \(\neg P\)\tabularnewline
+\midrule
+\endhead
+\(T\) & \(F\)\tabularnewline
+\(F\) & \(T\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{conjunction}{%
+\subsection{Conjunction}\label{conjunction}}
+
+\begin{itemize}
+\tightlist
+\item
+  The conjunction of two statements, \(P\) and \(Q\) is also a statement.
+\item
+  We use the connective \textbf{And} (\(\land\)) for conjunction.
+\item
+  It is denoted by \(P \land Q\)
+\end{itemize}
+
+\textbf{Truth Table (Conjunction)}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\(P\) & \(Q\) & \((P \land Q)\)\tabularnewline
+\midrule
+\endhead
+\(T\) & \(T\) & \(T\)\tabularnewline
+\(T\) & \(F\) & \(F\)\tabularnewline
+\(F\) & \(T\) & \(F\)\tabularnewline
+\(F\) & \(F\) & \(F\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\textbf{Rule:} \((P \land Q)\) is true if both \(P\) and \(Q\) are true, otherwise false.
+
+\begin{itemize}
+\tightlist
+\item
+  In order to make \((P \land Q)\) true, \(P\) and \(Q\) have to be \textbf{simultaneously} true
+\end{itemize}
+
+\hypertarget{disjunction}{%
+\subsection{Disjunction}\label{disjunction}}
+
+\begin{itemize}
+\tightlist
+\item
+  The disjunction of two statements, \(P\) and \(Q\) is also a statement.
+\item
+  We use the connective \textbf{Or} (\(\lor\)) for disjunction
+\item
+  It is denoted by \(P \lor Q\)
+\end{itemize}
+
+\textbf{Truth Table (Disjunction)}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\(P\) & \(Q\) & \((P \lor Q)\)\tabularnewline
+\midrule
+\endhead
+\(T\) & \(T\) & \(T\)\tabularnewline
+\(T\) & \(F\) & \(T\)\tabularnewline
+\(F\) & \(T\) & \(T\)\tabularnewline
+\(F\) & \(F\) & \(F\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\textbf{Rule:} \((P \lor Q)\) is true if either \(P\) or \(Q\) is true and it is false when both \(P\) and \(Q\) are false.
+
+\begin{itemize}
+\tightlist
+\item
+  \((P \lor Q)\) shall stand for ``\(P\) or \(Q\) or both''.
+\end{itemize}
+
+\hypertarget{conditional}{%
+\section{Conditional}\label{conditional}}
+
+\begin{itemize}
+\tightlist
+\item
+  In mathematics, expressions of the form ``IF \(P\) then \(Q\)'' occur so often.
+\item
+  This can be expressed in any one of the following forms.
+
+  \begin{enumerate}
+  \def\labelenumi{\alph{enumi})}
+  \tightlist
+  \item
+    If \(P\), then \(Q\)
+  \item
+    \(P\) only if \(Q\)
+  \item
+    \(P\) implies \(Q\)
+  \item
+    \(Q\) if \(P\)
+  \end{enumerate}
+\item
+  Therefore, it is important to understand the corresponding truth-functional operation.
+\item
+  Let \(P\) and \(Q\) be any two statements.
+\item
+  Then the statement \(P \rightarrow Q\) is called a conditional statement.
+\item
+  In an implication \(P \rightarrow Q\), \(P\) is called the \emph{antecedent} (hypothesis) and \(Q\) is called the \emph{consequent} (conclusion).
+\end{itemize}
+
+\textbf{Truth Table (Conditional)}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\(P\) & \(Q\) & \((P \rightarrow Q)\)\tabularnewline
+\midrule
+\endhead
+\(T\) & \(T\) & \(T\)\tabularnewline
+\(T\) & \(F\) & \(F\)\tabularnewline
+\(F\) & \(T\) & \(T\)\tabularnewline
+\(F\) & \(F\) & \(T\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\textbf{Rule:} An implication (conditional) \((P \rightarrow Q)\) is False only when the hypothesis (\(P\)) is true and conclusion (\(Q\)) is false, otherwise True.
+
+\hypertarget{bi-conditional}{%
+\section{Bi-Conditional}\label{bi-conditional}}
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(P\) and \(Q\) be any two statements.
+\item
+  Then the statement \(P \leftrightarrow Q\) is called a bi-conditional statement.
+\item
+  This can be expressed in any one of the following forms.
+
+  \begin{enumerate}
+  \def\labelenumi{\alph{enumi})}
+  \tightlist
+  \item
+    \(P\) if and only if \(Q\)
+  \item
+    \(P\) is necessary and sufficient of \(Q\)
+  \item
+    \(P\) is necessary and sufficient for \(Q\)
+  \item
+    \(P\) implies \(Q\) and \(P\) is implied by \(Q\)
+  \end{enumerate}
+\item
+  The bi-conditional (double implication) \(P \leftrightarrow Q\) can be defined as
+\end{itemize}
+
+\[P \leftrightarrow Q: (P \rightarrow Q) \land (Q \rightarrow P)\]
+
+\newpage
+
+\textbf{Truth Table (Bi-Conditional)}
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+\(P\) & \(Q\) & \((P \rightarrow Q)\) & \((Q \rightarrow P)\) & \((P \leftrightarrow Q)\)\tabularnewline
+\midrule
+\endhead
+\(T\) & \(T\) & \(T\) & \(T\) & \(T\)\tabularnewline
+\(T\) & \(F\) & \(F\) & \(T\) & \(F\)\tabularnewline
+\(F\) & \(T\) & \(T\) & \(F\) & \(F\)\tabularnewline
+\(F\) & \(F\) & \(T\) & \(T\) & \(T\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\textbf{Rule:} \((P \leftrightarrow Q)\) is True only when both \(P\) and \(Q\) have identical truth values, otherwise false.
+
+\hypertarget{converse}{%
+\section{Converse}\label{converse}}
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(P\) and \(Q\) be any two statements.
+\item
+  The converse statement of the conditional \(P \rightarrow Q\) is given as \(Q \rightarrow P\)
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC31-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{inverse}{%
+\section{Inverse}\label{inverse}}
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(P\) and \(Q\) be any two statements.
+\item
+  The inverse statement of the conditional \((P \rightarrow Q)\) is given as \((\lnot P \rightarrow \lnot Q)\)
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC32-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{contra-positive}{%
+\section{Contra Positive}\label{contra-positive}}
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(P\) and \(Q\) be any two statements.
+\item
+  The contra positive statement of the conditional \((P \rightarrow Q)\) is given as \((\lnot Q \rightarrow \lnot P)\)
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC33-1} 
+
+}
+
+\end{figure}
+
+\textbf{Truth Table (Contra Positive)}
+
+\begin{longtable}[]{@{}llllll@{}}
+\toprule
+\(P\) & \(Q\) & \(P \rightarrow Q\) & \(\lnot Q\) & \(\lnot P\) & \((\lnot Q \rightarrow \lnot P)\)\tabularnewline
+\midrule
+\endhead
+\(T\) & \(T\) & \(T\) & \(F\) & \(F\) & \(T\)\tabularnewline
+\(T\) & \(F\) & \(F\) & \(T\) & \(F\) & \(F\)\tabularnewline
+\(F\) & \(T\) & \(T\) & \(F\) & \(T\) & \(T\)\tabularnewline
+\(F\) & \(F\) & \(T\) & \(T\) & \(T\) & \(T\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\tightlist
+\item
+  From the truth table it can be seen that both conditional \(P \rightarrow Q\) and contra positive \((\lnot Q \rightarrow \lnot P)\) have same truth values.
+\end{itemize}
+
+\hypertarget{exclusive-or}{%
+\section{Exclusive OR}\label{exclusive-or}}
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(P\) and \(Q\) be any two statements.
+\item
+  The exclusive OR of two statements \(P\) and \(Q\) is denoted by \((P \overline{\lor} Q)\).
+\item
+  We use the connective XOR for exclusive OR
+\item
+  The exclusive OR \((P \overline{\lor} Q)\) is true if either \(P\) or \(Q\) is True but not both.
+\item
+  The exclusive OR is also known as exclusive disjunction.
+\end{itemize}
+
+the conditional \((P \rightarrow Q)\) is given as \((\lnot Q \rightarrow \lnot P)\)
+
+\textbf{Truth Table (Exclusive OR)}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\(P\) & \(Q\) & \((P \overline{\lor}Q)\)\tabularnewline
+\midrule
+\endhead
+\(T\) & \(T\) & \(F\)\tabularnewline
+\(T\) & \(F\) & \(T\)\tabularnewline
+\(F\) & \(T\) & \(T\)\tabularnewline
+\(F\) & \(F\) & \(F\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\textbf{Rule:} \((P \overline{\lor}Q)\) is true if either \(P\) or \(Q\) is True but not both, otherwise false.
+
+\hypertarget{nand}{%
+\section{NAND}\label{nand}}
+
+\begin{itemize}
+\tightlist
+\item
+  The word NAND stands for NOT and AND.
+\item
+  The connective NAND is denoted by the symbol \(\uparrow\).
+\item
+  Let \(P\) and \(Q\) be any two statements.
+\item
+  The NAND of \(P\) and \(Q\) is denoted by \((P \uparrow Q)\).
+\item
+  The NAND, \((P \uparrow Q)\) can be defined as
+\end{itemize}
+
+\[(P\uparrow Q)\equiv\lnot(P \land Q)\]
+
+\textbf{Truth Table (NAND)}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\(P\) & \(Q\) & \((P \uparrow Q)\)\tabularnewline
+\midrule
+\endhead
+\(T\) & \(T\) & \(F\)\tabularnewline
+\(T\) & \(F\) & \(T\)\tabularnewline
+\(F\) & \(T\) & \(T\)\tabularnewline
+\(F\) & \(F\) & \(T\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\textbf{Rule:} \((P \uparrow Q)\) is True if \emph{either} \(P\) or \(Q\) is false, otherwise False
+
+\hypertarget{nor}{%
+\section{NOR}\label{nor}}
+
+\begin{itemize}
+\tightlist
+\item
+  The word NOR stands for NOT and OR.
+\item
+  The connective NOR is denoted by the symbol \(\downarrow\).
+\item
+  Let \(P\) and \(Q\) be any two statements.
+\item
+  The NOR of \(P\) and \(Q\) is denoted by \((P \downarrow Q)\).
+\item
+  The NOR, \((P \downarrow Q)\) can be defined as
+\end{itemize}
+
+\[(P\downarrow Q)\equiv\lnot(P \lor Q)\]
+
+\textbf{Truth Table (NOR)}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\(P\) & \(Q\) & \((P \downarrow Q)\)\tabularnewline
+\midrule
+\endhead
+\(T\) & \(T\) & \(F\)\tabularnewline
+\(T\) & \(F\) & \(F\)\tabularnewline
+\(F\) & \(T\) & \(F\)\tabularnewline
+\(F\) & \(F\) & \(T\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\textbf{Rule:} \((P \downarrow Q)\) is True only when both \(P\) or \(Q\) are false, otherwise False
+
+\hypertarget{tautology}{%
+\section{Tautology}\label{tautology}}
+
+\begin{itemize}
+\tightlist
+\item
+  If the truth values of a composite statement are always true, irrespective of the truth values of the atomic (individual) statements, then it is a \textbf{tautology}.
+\end{itemize}
+
+\emph{Example}
+
+\begin{itemize}
+\tightlist
+\item
+  The composite statement \((P\land (P \rightarrow Q)) \rightarrow Q\) is a tautology.
+\item
+  Verify this using a truth table with composite statement as \((P\land (P \rightarrow Q)) \rightarrow Q\)
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC35-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{contradiction}{%
+\section{Contradiction}\label{contradiction}}
+
+\begin{itemize}
+\tightlist
+\item
+  If the truth values of a composite statement are always false, irrespective of the truth values of the atomic (individual) statements, then it is a \textbf{contradiction} or \textbf{unsatisfiable}.
+\end{itemize}
+
+\emph{Example}
+
+\begin{itemize}
+\tightlist
+\item
+  The composite statement \(\lnot(P\rightarrow(Q\rightarrow(P\land Q)))\) is a contradiction.
+\item
+  Verify this using a truth table with composite statement as \(\lnot(P\rightarrow(Q\rightarrow(P\land Q)))\)
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC36-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{satisfiable}{%
+\section{Satisfiable}\label{satisfiable}}
+
+\begin{itemize}
+\tightlist
+\item
+  If the truth values of a composite statement are sometimes true and sometimes false, irrespective of the truth values of the atomic statements, then it is called a satisfiable.
+\end{itemize}
+
+\emph{Example}
+
+\begin{itemize}
+\tightlist
+\item
+  The composite statement \((P \rightarrow Q) \rightarrow (Q \rightarrow P)\) is satisfiable.
+\item
+  Verify this using a truth table of \((P \rightarrow Q) \rightarrow (Q \rightarrow P)\)
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC37-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{duality-law}{%
+\section{Duality Law}\label{duality-law}}
+
+\begin{itemize}
+\tightlist
+\item
+  Two formulae \(P\) and \(p^*\)are said to be duals of each other if either one can be obtained from the other by interchanging \(\land\) by \(\lor\) and \(\lor\) by \(\land\).
+\item
+  The two connectives \(\lor\) and \(\land\) are called dual to each other.
+\end{itemize}
+
+\emph{Example}
+
+The formulae \(P \equiv (P \lor Q)\land R\) and \(P^* \equiv (P \land Q)\lor R\) are dual to each other.
+
+\newpage
+
+\hypertarget{algebra-of-propositions}{%
+\section{Algebra of Propositions}\label{algebra-of-propositions}}
+
+\begin{itemize}
+\tightlist
+\item
+  If \(P, Q\) and \(R\) be three statements, then the following laws hold.
+\end{itemize}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\begin{minipage}[b]{0.44\columnwidth}\raggedright
+Algebra of Propositions\strut
+\end{minipage} & \begin{minipage}[b]{0.50\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.44\columnwidth}\raggedright
+Commutative Laws\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright
+\(P\land Q\equiv Q \land P\) and \(P\lor Q\equiv Q \lor P\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.44\columnwidth}\raggedright
+Associative Laws\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright
+\(P\land (Q \land R)\equiv (P\land Q) \land R\) and \(P\lor (Q \lor R)\equiv (P\lor Q) \lor R\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.44\columnwidth}\raggedright
+Distributive Laws\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright
+\(P\land (Q \lor R)\equiv (P\land Q) \lor (P\land R)\) and \(P\lor (Q \land R)\equiv (P\lor Q) \land (P\lor R)\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.44\columnwidth}\raggedright
+Idempotent Laws\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright
+\(P\land P\equiv P\) and \(P\lor P\equiv P\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.44\columnwidth}\raggedright
+Absorption Laws\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright
+\(P\lor (P \land Q)\equiv P\) and \(P\land (P \lor Q)\equiv P\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.44\columnwidth}\raggedright
+De Morgan's Laws\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright
+\(\lnot (P\land Q) \Leftrightarrow (\lnot P) \lor(\lnot Q)\) and \(\lnot (P\lor Q) \Leftrightarrow (\lnot P) \land (\lnot Q)\)\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{references-1}{%
+\section*{References}\label{references-1}}
+\addcontentsline{toc}{section}{References}
+
+Acharjya, D. P. (2009). Fundamental approach to discrete mathematics. New Age International.
+
+Mendelson, E. (1970). Boolean algebra and switching circuits. McGraw-Hill Edition 2004.
+
+\newpage
+\pagenumbering{arabic}
+
+\hypertarget{tutorial}{%
+\section*{Tutorial}\label{tutorial}}
+\addcontentsline{toc}{section}{Tutorial}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Reduce the following sentences to statement forms
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  A necessary condition for \(x\) to be prime is that \(x\) is odd or \(x=2\).
+\item
+  A sufficient condition for \(f\) to be continuous is that \(f\) is differentiable.
+\item
+  A necessary and sufficient condition for Mr.~Perera to be elected is that Mr.~Perera wins 75 votes.
+\item
+  Calathea plant will stay healthy only if enough moisture is available.
+\item
+  It is raining but the sun is still shining.
+\item
+  She will die today unless medical aid is obtained.
+\item
+  If taxes are increased or government spending decreases, then inflation will not occur this year.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Show that the composite statement \((P \land (P \rightarrow Q)) \rightarrow Q\) is a tautology using a truth table
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Show that the composite statement \(\lnot (P \rightarrow( Q \rightarrow (P \land Q)))\) is a contradiction using a truth table
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Show that \((A \rightarrow B) \rightarrow A\)
+  logically implies \(A\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Show that \((A \leftrightarrow B)\) is
+  logically equivalent to \((A \rightarrow B) \land (B \rightarrow A)\)
+\end{enumerate}
 
 \hypertarget{boolean-algebra}{%
 \chapter{Boolean Algebra}\label{boolean-algebra}}
@@ -2300,18 +2980,12 @@ Evaluate \(\int x^2e^x dx\)
   \(\int sec(x)tan(x) = sec(x) +C\)
 \end{enumerate}
 
-\textbf{References and Reading:}
-
-Stewart, J. (2003). Calculus: Early Transcendentals. Thomson Learning. Inc., Belmont, CA.
-
-Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
-
 \newpage
 
 \pagenumbering{arabic}
 
-\hypertarget{tutorial}{%
-\section{Tutorial}\label{tutorial}}
+\hypertarget{tutorial-1}{%
+\section{Tutorial}\label{tutorial-1}}
 
 \hypertarget{chapter-5.1-differentiation}{%
 \subsection*{Chapter 5.1: Differentiation}\label{chapter-5.1-differentiation}}
@@ -2774,6 +3448,14 @@ Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
 \item
   Suppose that \(f(1)=2,\) \(f(4)=7,\) \(f^{\prime}(1)=5,\) \(f^{\prime}(4)=3\) and \(f^{\prime\prime}\) is continuous. Find the value of \(\int_1^4xf^{\prime\prime}(x)dx\)
 \end{enumerate}
+
+\hypertarget{references-2}{%
+\section*{References}\label{references-2}}
+\addcontentsline{toc}{section}{References}
+
+Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
+
+Stewart, J. (2003). Calculus: Early Transcendentals. Thomson Learning. Inc., Belmont, CA.
 
 \hypertarget{descriptive-statistics}{%
 \chapter{Descriptive Statistics}\label{descriptive-statistics}}
@@ -4897,18 +5579,12 @@ This famous (Fisher's or Anderson's) iris data set gives the measurements in cen
   Figure (e): There is a very strong curvilinear relationship. But there is \textbf{no linear} relationship.
 \end{itemize}
 
-\hypertarget{references}{%
-\subsection*{References}\label{references}}
-\addcontentsline{toc}{subsection}{References}
-
-Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., \& Harris, M. (2007). \emph{Australasian business statistics}. John Wiley \& Sons.
-
 \newpage
 
 \pagenumbering{arabic}
 
-\hypertarget{tutorial-1}{%
-\section{Tutorial}\label{tutorial-1}}
+\hypertarget{tutorial-2}{%
+\section{Tutorial}\label{tutorial-2}}
 
 \hypertarget{chapter-6-descriptive-statistics}{%
 \subsection*{Chapter 6: Descriptive Statistics}\label{chapter-6-descriptive-statistics}}
@@ -5324,6 +6000,14 @@ Lecture attendance & 13 & 6 & 15 & 4 & 12 & 14 & 15 & 10 & 11 & 6\tabularnewline
   Comment on the relationship between the marks and the lecture attendance
 \end{enumerate}
 
+\hypertarget{references-3}{%
+\section*{References}\label{references-3}}
+\addcontentsline{toc}{section}{References}
+
+Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., \& Harris, M. (2007). \emph{Australasian business statistics}. John Wiley \& Sons.
+
+Spiegel, M. R., \& Stephens, L. J. (2017). Schaum's outline of statistics. McGraw Hill Professional.
+
 \hypertarget{sets-and-relations}{%
 \chapter{Sets and Relations}\label{sets-and-relations}}
 
@@ -5717,8 +6401,8 @@ However, since the time is positive we can define the sample space as simply the
 
 \pagenumbering{arabic}
 
-\hypertarget{tutorial-2}{%
-\section{Tutorial}\label{tutorial-2}}
+\hypertarget{tutorial-3}{%
+\section{Tutorial}\label{tutorial-3}}
 
 \hypertarget{chapter-7-sets-and-relations}{%
 \subsection*{Chapter 7: Sets and Relations}\label{chapter-7-sets-and-relations}}
@@ -6065,6 +6749,12 @@ Let
   \(D3 =\) The event that the third item is defective
   \(E =\) The event that two of the three products are defective Express E in terms of \(D1, D2\) and \(D3\) using event operations
 \end{enumerate}
+
+\hypertarget{references-4}{%
+\section*{References}\label{references-4}}
+\addcontentsline{toc}{section}{References}
+
+Lipschutz, S. (2000). Schaum's Outline of Probability. McGraw Hill Professional.
 
 \hypertarget{probability}{%
 \chapter{Probability}\label{probability}}
@@ -6851,8 +7541,8 @@ Then for \(i = 1, 2, \dots, n\).
 
 \newpage
 
-\hypertarget{tutorial-3}{%
-\section{Tutorial}\label{tutorial-3}}
+\hypertarget{tutorial-4}{%
+\section{Tutorial}\label{tutorial-4}}
 
 \hypertarget{chapter-8-probability}{%
 \subsection*{Chapter 8: Probability}\label{chapter-8-probability}}
@@ -7264,55 +7954,15 @@ P_{00} & P_{01} & P_{02}& P_{03} & P_{04}\\
   \(P(A^\prime \cap B^\prime)=P(A^\prime)P(B^\prime)\)
 \end{enumerate}
 
-\newpage
+\hypertarget{references-5}{%
+\section*{References}\label{references-5}}
+\addcontentsline{toc}{section}{References}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  A professor is giving ten true-false questions (10 marks for a correct answer). If a student guesses on each question, how many different ways could the ten questions be answered?
-\item
-  A security supervisor of a large corporation wishes to issue each employee an identity card with one English letter followed by two digits.
-\end{enumerate}
+Casella, G., \& Berger, R. L. (2002). Statistical inference (Vol. 2, pp.~337-472).Pacific Grove, CA: Duxbury
 
-\begin{enumerate}
-\def\labelenumi{(\alph{enumi})}
-\tightlist
-\item
-  How many different ID cards could be made
-\item
-  How many identity cards will have the same two numbers
-\item
-  How many identity cards will have first number greater than the second number
-\end{enumerate}
+Lipschutz, S. (2000). Schaum's Outline of Probability. McGraw Hill Professional.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\tightlist
-\item
-  In a small company there are 5 executive managers. Two of them are males and 3 are females. Three executive managers are to be selected for a committee.
-\end{enumerate}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\tightlist
-\item
-  How many different ways are there to select three executive managers for the committee?
-\item
-  How many different ways are there to select three executive managers for the committee while satisfying the following conditions?
-\item
-  All in the committee will be females
-\end{enumerate}
-
-\begin{enumerate}
-\def\labelenumi{\roman{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
-\item
-  Two will be females and one will be a male
-\item
-  Two will be males and one will be a female
-\end{enumerate}
+Mood, A.M., Graybill, F.A. and Boes, D.C. (2007): Introduction to the Theory of Statistics, 3rd Edn. (Reprint). Tata McGraw-Hill Pub. Co.~Ltd.
 
 \hypertarget{random-variables}{%
 \chapter{Random Variables}\label{random-variables}}
@@ -7431,8 +8081,38 @@ Consider the experiment of measuring the lifetime (in hours) of a randomly selec
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box4-1} \end{center}
 
+\hypertarget{references-6}{%
+\section*{References}\label{references-6}}
+\addcontentsline{toc}{section}{References}
+
+Casella, G., \& Berger, R. L. (2002). Statistical inference (Vol. 2, pp.~337-472).Pacific Grove, CA: Duxbury
+
+Mood, A.M., Graybill, F.A. and Boes, D.C. (2007): Introduction to the Theory of Statistics, 3rd Edn. (Reprint). Tata McGraw-Hill Pub. Co.~Ltd.
+
 \hypertarget{correlation-and-regression}{%
 \chapter{Correlation and Regression}\label{correlation-and-regression}}
+
+Acharjya, D. P. (2009). Fundamental approach to discrete mathematics. New Age International.
+
+Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., \& Harris, M. (2007). \emph{Australasian business statistics}. John Wiley \& Sons.
+
+Butenko, S., \& Pardalos, P. M. (2014). Numerical methods and optimization: An introduction. CRC Press
+
+Casella, G., \& Berger, R. L. (2002). Statistical inference (Vol. 2, pp.~337-472).Pacific Grove, CA: Duxbury
+
+Dass, H. K. (2008). `Complex Numbers', Advanced Engineering Mathematics. S. Chand Publishing. pp.~474-520.
+
+Lipschutz, S. (2000). Schaum's Outline of Probability. McGraw Hill Professional.
+
+Mendelson, E. (1970). Boolean algebra and switching circuits. McGraw-Hill Edition 2004.
+
+Mood, A.M., Graybill, F.A. and Boes, D.C. (2007): Introduction to the Theory of Statistics, 3rd Edn. (Reprint). Tata McGraw-Hill Pub. Co.~Ltd.
+
+Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
+
+Spiegel, M. R., \& Stephens, L. J. (2017). Schaum's outline of statistics. McGraw Hill Professional.
+
+Stewart, J. (2003). Calculus: Early Transcendentals. Thomson Learning. Inc., Belmont, CA.
 
 \bibliography{book.bib,packages.bib}
 

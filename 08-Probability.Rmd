@@ -851,7 +851,7 @@ P_{00} & P_{01} & P_{02}& P_{03} & P_{04}\\
   (c)	$P(A^\prime \cap B^\prime)=P(A^\prime)P(B^\prime)$
           
           
-          
+<!--         
 \newpage
 
 1. A professor is giving ten true-false questions (10 marks for a correct answer). If a student guesses on each question, how many different ways could the ten questions be answered?
@@ -870,3 +870,12 @@ b.	How many different ways are there to select three executive managers for the 
    i.	All in the committee will be females
    ii. Two will be females and one will be a male
    iii.	Two will be males and one will be a female
+-->
+
+## References {-}
+
+Casella, G., & Berger, R. L. (2002). Statistical inference (Vol. 2, pp. 337-472).Pacific Grove, CA: Duxbury
+
+Lipschutz, S. (2000). Schaum’s Outline of Probability. McGraw Hill Professional.
+
+Mood, A.M., Graybill, F.A. and Boes, D.C. (2007): Introduction to the Theory of Statistics, 3rd Edn. (Reprint). Tata McGraw-Hill Pub. Co. Ltd.
