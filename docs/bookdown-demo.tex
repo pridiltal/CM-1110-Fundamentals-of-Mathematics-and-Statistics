@@ -88,7 +88,7 @@
 
 \title{CM 1110 Fundamentals of Mathematics and Statistics}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-07-23}
+\date{2020-07-27}
 
 \begin{document}
 \maketitle
@@ -1698,6 +1698,723 @@ Mendelson, E. (1970). Boolean algebra and switching circuits. McGraw-Hill Editio
 
 \hypertarget{boolean-algebra}{%
 \chapter{Boolean Algebra}\label{boolean-algebra}}
+
+\begin{itemize}
+\tightlist
+\item
+  George Boole approached logic in a new way reducing it to a simple algebra.
+\item
+  He introduced symbolic logic known as \emph{Boolean Algebra, Boolean function, Boolean expression, Boolean ring} etc.
+\item
+  Each variable in Boolean Algebra has either of two values: true or false.
+\item
+  The purpose of Boolean Algebra is to solve logic problems.
+\item
+  C.E Shannon observed that Boolean Algebra could be used to analyze electronic circuits.
+\end{itemize}
+
+\hypertarget{gates}{%
+\section{Gates}\label{gates}}
+
+\begin{itemize}
+\tightlist
+\item
+  In Chapter 3 we discussed about logic connectives \(\lnot\), \(\land\) and \(\lor\).
+\item
+  The connectives \(\land\) and \(\lor\) can be considered as circuits connected in series and parallel, respectively.
+\item
+  A circuit with one or more input signals but only one output signal is known as a gate.
+\item
+  Gates are digital circuits because of input and output signals, which are either low or high.
+\item
+  Gates are also known as logical circuits as they can be analyzed with Boolean Algebra.
+\item
+  In gates, the connectives \(\lnot\), \(\land\) and \(\lor\) are usually denoted by the symbols \(^\prime, \;\;.\) and \(+\), respectively.
+\end{itemize}
+
+\hypertarget{not-gate}{%
+\subsection{NOT gate}\label{not-gate}}
+
+A NOT gate receives input \(x\), where \(x\) is a bit (binary digit) and produces output \(x^\prime\) where
+
+\begin{equation}
+x^\prime =
+\begin{cases} 
+1 & \text{if } x=0\\
+0 & \text{if } x=1
+\end{cases}
+\end{equation}
+
+\begin{itemize}
+\tightlist
+\item
+  \(x^\prime\) is called the \emph{complement} of \(x\).
+\item
+  0 is called the \emph{zero} element.
+\item
+  1 is called the \emph{unit} element.
+\item
+  The output state is always the opposite of the input state.
+\item
+  The output is also known as the complement of the input.
+\item
+  The block diagram and the logic table for the basic NOT gate:
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC41-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{and-gate}{%
+\subsection{AND gate}\label{and-gate}}
+
+\begin{itemize}
+\tightlist
+\item
+  An AND gate receives input \(x_1\) and \(x_2\), where \(x_1\) and \(x_2\) are bits, and produces output \((x_1 \land x_2)\) where
+\end{itemize}
+
+\begin{equation}
+(x_1 \land x_2) =
+\begin{cases} 
+1 & \text{if } x_1=x_2=1\\
+0 & \text{ Otherwise }
+\end{cases}
+\end{equation}
+
+\begin{itemize}
+\tightlist
+\item
+  \((x_1 \land x_2)\) is called the \emph{meet} of \(x_1\) and \(x_2\).
+\item
+  An AND gate can have more than two inputs, but only one output.
+\item
+  The block diagram and the logic table for the basic AND gate:
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC42-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{or-gate}{%
+\subsection{OR gate}\label{or-gate}}
+
+\begin{itemize}
+\tightlist
+\item
+  An OR gate receives input \(x_1\) and \(x_2\), where \(x_1\) and \(x_2\) are bits, and produces output \((x_1 \lor x_2)\) where
+\end{itemize}
+
+\begin{equation}
+(x_1 \lor x_2) =
+\begin{cases} 
+1 & \text{if } x_1 \text{ or } x_2=1\\
+0 & \text{ Otherwise }
+\end{cases}
+\end{equation}
+
+\begin{itemize}
+\tightlist
+\item
+  \((x_1 \lor x_2)\) is called the \emph{join} of \(x_1\) and \(x_2\).
+\item
+  An OR gate can have more than two inputs, but only one output.
+\item
+  The block diagram and the logic table for the basic OR gate:
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC43-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{more-logic-gates}{%
+\subsection{More logic gates}\label{more-logic-gates}}
+
+\begin{itemize}
+\tightlist
+\item
+  There are some other types of gates that are widely used in Computer Science such as NAND, NOR, XOR, and XNOR gates
+\end{itemize}
+
+\hypertarget{nor-gate}{%
+\subsubsection{NOR gate}\label{nor-gate}}
+
+\begin{itemize}
+\tightlist
+\item
+  A NOR gate receives input \(x_1\) and \(x_2\), where \(x_1\) and \(x_2\) are bits, and produces output \((x_1 \lor x_2)^\prime\) where
+\end{itemize}
+
+\begin{equation}
+(x_1 \lor x_2)^\prime =
+\begin{cases} 
+1 & \text{if } x_1 = x_2=0\\
+0 & \text{ Otherwise }
+\end{cases}
+\end{equation}
+
+\begin{itemize}
+\tightlist
+\item
+  A NOR gate can have more than two inputs, but only one output.
+\item
+  The block diagram and the logic table for the basic NOR gate:
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC44-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{nand-gate}{%
+\subsubsection{NAND gate}\label{nand-gate}}
+
+\begin{itemize}
+\tightlist
+\item
+  A NAND gate receives input \(x_1\) and \(x_2\), where \(x_1\) and \(x_2\) are bits, and produces output \((x_1 \land x_2)^\prime\) where
+\end{itemize}
+
+\begin{equation}
+(x_1 \land x_2)^\prime =
+\begin{cases} 
+1 & \text{if } x_1 =0 \text{ or } x_2=0\\
+0 & \text{ Otherwise }
+\end{cases}
+\end{equation}
+
+\begin{itemize}
+\tightlist
+\item
+  A NAND gate can have more than two inputs, but only one output.
+\item
+  The block diagram and the logic table for the basic NAND gate:
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC45-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{xor-gate-exclusive-or-gate}{%
+\subsubsection{XOR gate (Exclusive OR gate)}\label{xor-gate-exclusive-or-gate}}
+
+\begin{itemize}
+\tightlist
+\item
+  A XOR gate receives input \(x_1\) and \(x_2\), where \(x_1\) and \(x_2\) are bits, and produces output \((x_1 \overline{\lor} x_2)\) or \((x_1 \oplus x_2)\), where
+\end{itemize}
+
+\begin{equation}
+(x_1 \oplus x_2)^\prime =
+\begin{cases} 
+1 & \text{if } x_1 =1 \text{ or } x_2=1 \text{ but not both}\\
+0 & \text{ Otherwise }
+\end{cases}
+\end{equation}
+
+\begin{itemize}
+\tightlist
+\item
+  Rule: XOR gate produces 1 that have an odd number of 1's.
+\item
+  A XOR gate can have more than two inputs, but only one output.
+\item
+  The block diagram and the logic table for the basic XOR gate:
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC46-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{xnor-gate-exclusive-nor-gate}{%
+\subsubsection{XNOR gate (Exclusive NOR gate)}\label{xnor-gate-exclusive-nor-gate}}
+
+\begin{itemize}
+\tightlist
+\item
+  A XNOR gate receives input \(x_1\) and \(x_2\), where \(x_1\) and \(x_2\) are bits, and produces output \((x_1\text{ XNOR }x_2)\), where
+\end{itemize}
+
+\begin{equation}
+(x_1 \text{ XNOR } x_2)^\prime =
+\begin{cases} 
+1 & \text{if } x_1 \text{ and  } x_2 \text{ are same bits}\\
+0 & \text{ Otherwise }
+\end{cases}
+\end{equation}
+
+\begin{itemize}
+\tightlist
+\item
+  A XNOR gate can have more than two inputs, but only one output.
+\item
+  It can recognize \emph{even-parity} words \emph{i.e} a word which has an even number of 1's.
+\item
+  Example: 11001111 is even-parity as it contains six 1's, 1110 is an odd-parity as it has an odd number of 1's.
+\item
+  The block diagram and the logic table for the basic XNOR gate:
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC47-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{combinatorial-circuit}{%
+\section{Combinatorial Circuit}\label{combinatorial-circuit}}
+
+\begin{itemize}
+\tightlist
+\item
+  A combinatorial circuit produces a unique output for every combination of inputs.
+\item
+  A combinatorial circuit has no memory, previous inputs and the state of the system do not affect the output of a combinatorial circuit.
+\item
+  These circuits can be constructed using gates which we have already discussed.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC48-1} 
+
+}
+
+\end{figure}
+
+\newpage
+
+\hypertarget{boolean-expression}{%
+\section{Boolean Expression}\label{boolean-expression}}
+
+\begin{itemize}
+\tightlist
+\item
+  Any expression built up from the variables \(x_1,y_1,z_1, x_2,y_2,z_2,\dots\) by applying the operations \(\land, \; \lor\) and \(^\prime\) a finite number of times is called a Boolean expression.
+\item
+  If \(X\) and \(Y\) are two Boolean expressions, then \(X^\prime, \;Y^\prime, \; (X\land Y)\) and \((X\lor Y)\) are also Boolean expressions.
+\item
+  The output of a combinatorial circuit is also a Boolean expression.
+\end{itemize}
+
+\emph{Example}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC49-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{theorem}{%
+\subsection{Theorem}\label{theorem}}
+
+\begin{itemize}
+\tightlist
+\item
+  If \(\land, \; \lor\) and \(^\prime\) are connectives introduced earlier, then the following properties hold.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\roman{enumi})}
+\item
+  Associative Law: For all \(a,b,c \in \{0,1\}\)
+  \[(a \land b) \land c = a \land (b\land c) \text{ and } (a \lor b) \lor c = a \lor (b\lor c)\]
+\item
+  Identity Law: For all \(a \in \{0,1\}\)
+  \[(a \land 1)  = a  \text{ and } (a \lor 0)  = a\]
+\item
+  Commutative Law: For all \(a,b\in \{0,1\}\)
+  \[(a \land b)  = (b \land a)  \text{ and } (a \lor b)  = (b \lor a)\]
+\item
+  Complement Law: For all \(a\in \{0,1\}\)
+  \[(a \land a^\prime)  = 0 \text{ and } (a \lor a^\prime)  = 1\]
+\item
+  Distributive Law: For all \(a,b,c\in \{0,1\}\)
+  \[a \lor (b\land c) = (a \lor b) \land (a \lor c)  \text{ and }  a \land (b\lor c)= (a \land b) \lor (a \land c)\]
+\item
+  De-Morgan's Law: If \(x_1\) and \(x_2\) are bits, \emph{i.e.} \(x_1, x_2\in \{0,1\},\) then
+  \[(x_1 \land x_2)^\prime = x_1^\prime \lor x_2^\prime  \text{ and }  (x_1 \lor x_2)^\prime = x_1^\prime \land x_2^\prime \]
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC410-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{equivalent-combinatorial-circuits}{%
+\section{Equivalent Combinatorial Circuits}\label{equivalent-combinatorial-circuits}}
+
+\begin{itemize}
+\tightlist
+\item
+  Two combinatorial circuits, each having inputs \(x_1, x_2, \dots, x_n\) are said to be equivalent if they produce the same output for same inputs.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC411-1} 
+
+}
+
+\end{figure}
+
+\newpage
+
+\hypertarget{boolean-algebra-1}{%
+\section{Boolean Algebra}\label{boolean-algebra-1}}
+
+\begin{itemize}
+\item
+  A \emph{Boolean algebra} consists of a set \(S\) together with two binary operations \(\land\) and \(\lor\) on \(S\), a singular operation \(^\prime\) on \(S\) and two specific elements 0 and 1 of \(S\) such that the following laws hold.
+\item
+  A Boolean algebra will be designated by a hextuple \(B = \langle S, \land, \lor, ^\prime, 0,1\rangle\)
+\item
+  Sometimes one refers to the set \(S\) as a Boolean algebra, but this is just a loose misuse of language.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  Associative Law: For all \(a,b,c \in S\)
+  \[(a \land b) \land c = a \land (b\land c) \text{ and } (a \lor b) \lor c = a \lor (b\lor c)\]
+\item
+  Identity Law: For all \(a \in S\)
+  \[(a \land 1)  = a  \text{ and } (a \lor 0)  = a\]
+\item
+  Commutative Law: For all \(a,b\in S\)
+  \[(a \land b)  = (b \land a)  \text{ and } (a \lor b)  = (b \lor a)\]
+\item
+  Complement Law: For all \(a\in S\)
+  \[(a \land a^\prime)  = 0 \text{ and } (a \lor a^\prime)  = 1\]
+\item
+  Distributive Law: For all \(a,b,c\in S\)
+  \[a \lor (b\land c) = (a \lor b) \land (a \lor c)  \text{ and }  a \land (b\lor c)= (a \land b) \lor (a \land c)\]
+\end{enumerate}
+
+\hypertarget{theorem-1}{%
+\subsection{Theorem}\label{theorem-1}}
+
+In a Boolean algebra: if \((a\lor b) =1\) and \((a\land b) =0,\) then \(b=a^\prime,\) \emph{i.e.} the complement is unique
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC412-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{theorem-2}{%
+\subsection{Theorem}\label{theorem-2}}
+
+In a Boolean algebra \(B = \langle S, \land, \lor, ^\prime, 0,1\rangle\); the following properties hold.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Idempotent Law: For all \(x \in S\)
+  \[(x \lor x) =x \text{ and } (x \land x) =x\]
+\item
+  Bound Law: For all \(x \in S\)
+  \[(x \lor 1) =1 \text{ and } (x \land 0) =0\]
+\item
+  Absorption Law: For all \(x,y \in S\)
+  \[x \land (x\lor y) =x \text{ and } x \lor (x \land y) =x \]
+\item
+  Involution Law: For all \(x \in S\)
+  \[(x^\prime)^\prime  =x \]
+\item
+  0 and 1 Law: \(0^\prime =1\) and \(1^\prime =0\)
+\item
+  De-Morgan's Law: For all \(x, y \in S\)
+  \[(x \land y)^\prime = x^\prime \lor y^\prime  \text{ and }  (x \lor y)^\prime = x^\prime \land y^\prime \]
+\end{enumerate}
+
+\hypertarget{dual-of-a-statement}{%
+\section{Dual of a Statement}\label{dual-of-a-statement}}
+
+\begin{itemize}
+\tightlist
+\item
+  The dual of a statement involving Boolean expressions is obtained by replacing 0 by 1, 1 by 0, \(\land\) by \(\lor\), and \(\lor\) by \(\land\).
+\item
+  Two Boolean expressions are said to be dual of each other if one expression is obtained from other by replacing 0 by 1, 1 by 0, \(\land\) by \(\lor\), and \(\lor\) by \(\land\).
+\item
+  In Boolean Algebra, the dual of a theorem is also a theorem.
+\end{itemize}
+
+\emph{Example}
+
+What the dual of the statement: \((x \land y)^\prime = x^\prime \lor y^\prime\)
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC413-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{boolean-function}{%
+\section{Boolean Function}\label{boolean-function}}
+
+Let \(B = \langle S, \land, \lor, ^\prime, 0,1\rangle\) be a Boolean algebra and let \(X(x_1, x_2,x_3, \dots, x_n)\) be a Boolean expression in \(n\) variables.
+
+A function \(f: B^n \rightarrow B\) is called a Boolean function if \(f\) is of the form
+
+\(f(x_1, x_2,x_3, \dots, x_n) = X(x_1, x_2,x_3, \dots, x_n)\)
+
+\emph{Example}
+
+Consider the Boolean function \(f: B^3 \rightarrow B; \;\; B = \{0,1\}\) defined by
+\[f(x_!,x_2,x_3) = x_1 \land (x_2 \lor \bar{x_3})\]
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC414-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{representation-of-boolean-functions}{%
+\subsection{Representation of Boolean Functions}\label{representation-of-boolean-functions}}
+
+\begin{itemize}
+\item
+  There are several ways of representing Boolean functions.
+
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \tightlist
+  \item
+    \textbf{Tabular representation}
+  \item
+    \(n\) Space representation
+  \item
+    Cube representation
+  \end{enumerate}
+\end{itemize}
+
+\textbf{Tabular representation}
+
+\begin{itemize}
+\tightlist
+\item
+  A Boolean function is completely determined by its evaluation over any Boolean algebra.
+\item
+  In tabular representation, we consider a row \(R\) of the table where the output is 1.
+\item
+  We then form the combination \((x_1 \land x_2 \land x_3 \land \dots \land x_n)\) and place a bar over each \(x_i\) whose value is 0 in row \(R\).
+\item
+  The combination formed is 1 if and only if \(x_i\) have the value given in row \(R\).
+\item
+  We thus join (OR) the terms to obtain the Boolean expression.
+\end{itemize}
+
+\newpage
+
+\emph{Example}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+\(x_1\) & \(x_2\) & \(x_3\) & \(f(x_1, x_2, x_3)\)\tabularnewline
+\midrule
+\endhead
+1 & 1 & 1 & 1\tabularnewline
+1 & 1 & 0 & 0\tabularnewline
+1 & 0 & 1 & 1\tabularnewline
+0 & 1 & 1 & 0\tabularnewline
+1 & 0 & 0 & 0\tabularnewline
+0 & 1 & 0 & 1\tabularnewline
+0 & 0 & 1 & 0\tabularnewline
+0 & 0 & 0 & 0\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC415-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{various-normal-forms}{%
+\section{Various Normal Forms}\label{various-normal-forms}}
+
+\hypertarget{disjunctive-normal-form}{%
+\subsection{Disjunctive normal form}\label{disjunctive-normal-form}}
+
+\begin{itemize}
+\tightlist
+\item
+  A Boolean function \(f: B^n \rightarrow B\) which consists of a sum of elementary products is called the \textbf{disjunctive normal form} of the given function \(f\)
+\item
+  Let \(f: B^n \rightarrow B\) is a Boolean function.
+\item
+  If \(f\) is not identically zero, let \(A_1, A_2, A_3, \dots, A_k\) denote the elements \(A_i\) of \(B_2^n,\) for which \(f(A_i) =1,\) where
+\end{itemize}
+
+\[A_i = (a_1, a_2,\dots, a_n).\]
+
+\begin{itemize}
+\tightlist
+\item
+  For each \(A_i\) set \(m_i = (y_1 \land y_2 \land y_3\land \dots \land y_n)\), where
+\end{itemize}
+
+\begin{equation}
+y_i =
+\begin{cases} 
+x_i & \text{if } a_i=1\\
+x_i^\prime & \text{if } a_i=0.
+\end{cases}
+\end{equation}
+
+\begin{itemize}
+\tightlist
+\item
+  Then \(f(x_1, x_2, x_3, \dots, x_n)= m_1 \lor m_2 \lor m_3 \lor \dots \lor m_k.\)
+\item
+  This representation of a Boolean function is called the \textbf{disjunctive normal form}
+\end{itemize}
+
+\emph{Example}
+
+Consider the Boolean function \((x_1 \oplus x_2).\) The truth table for this function is given below.
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\(x_1\) & \(x_2\) & \((x_1 \oplus x_2)\)\tabularnewline
+\midrule
+\endhead
+1 & 1 & 0\tabularnewline
+1 & 0 & 1\tabularnewline
+0 & 1 & 1\tabularnewline
+0 & 0 & 0\tabularnewline
+\bottomrule
+\end{longtable}
+
+Write the disjunctive form of this function
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC416-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{conjunctive-normal-form}{%
+\subsection{Conjunctive normal form}\label{conjunctive-normal-form}}
+
+\begin{itemize}
+\tightlist
+\item
+  A Boolean function \(f: B^n \rightarrow B\) which consists of a product of elementary sums is called the \textbf{conjunctive normal form} of the given function \(f\)
+\item
+  Let \(f: B^n \rightarrow B\) is a Boolean function.
+\item
+  If \(f\) is not identically one, let \(A_1, A_2, A_3, \dots, A_k\) denote the elements \(A_i\) of \(B_2^n,\) for which \(f(A_i) =0,\) where
+\end{itemize}
+
+\[A_i = (a_1, a_2,\dots, a_n).\]
+
+\begin{itemize}
+\tightlist
+\item
+  For each \(A_i\) set \(M_i = (y_1 \lor y_2 \lor y_3\lor \dots \lor y_n)\), where
+\end{itemize}
+
+\begin{equation}
+y_i =
+\begin{cases} 
+x_i & \text{if } a_i=0\\
+x_i^\prime & \text{if } a_i=1.
+\end{cases}
+\end{equation}
+
+\begin{itemize}
+\tightlist
+\item
+  Then \(f(x_1, x_2, x_3, \dots, x_n)= M_1 \land M_2 \land M_3 \land \dots \land M_k.\)
+\item
+  This representation of a Boolean function is called the \textbf{conjunctive normal form}
+\end{itemize}
+
+\emph{Example}
+
+Consider the Boolean function \((x_1 \oplus x_2).\) The truth table for this function is given below.
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\(x_1\) & \(x_2\) & \((x_1 \oplus x_2)\)\tabularnewline
+\midrule
+\endhead
+1 & 1 & 0\tabularnewline
+1 & 0 & 1\tabularnewline
+0 & 1 & 1\tabularnewline
+0 & 0 & 0\tabularnewline
+\bottomrule
+\end{longtable}
+
+Write the conjunctive form of this function
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC417-1} 
+
+}
+
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  A term of the form \((y_1\land y_2 \land y3 \land \dots \land y_n),\) where each \(y_i\) is either \(x_i\) or \(\bar{x_i}\) is called a \emph{minterm}.
+\item
+  A term of the form \((y_1 \lor y_2 \lor y3 \lor \dots \lor y_n),\) where each \(y_i\) is either \(x_i\) or \(\bar{x_i}\) is called a \emph{maxterm}
+\end{itemize}
+
+\hypertarget{references-2}{%
+\section*{References}\label{references-2}}
+\addcontentsline{toc}{section}{References}
+
+Acharjya, D. P. (2009). Fundamental approach to discrete mathematics. New Age International.
+
+Mendelson, E. (1970). Boolean algebra and switching circuits. McGraw-Hill Edition 2004.
 
 \hypertarget{differentiation-and-integration}{%
 \chapter{Differentiation and Integration}\label{differentiation-and-integration}}
@@ -3449,8 +4166,8 @@ Evaluate \(\int x^2e^x dx\)
   Suppose that \(f(1)=2,\) \(f(4)=7,\) \(f^{\prime}(1)=5,\) \(f^{\prime}(4)=3\) and \(f^{\prime\prime}\) is continuous. Find the value of \(\int_1^4xf^{\prime\prime}(x)dx\)
 \end{enumerate}
 
-\hypertarget{references-2}{%
-\section*{References}\label{references-2}}
+\hypertarget{references-3}{%
+\section*{References}\label{references-3}}
 \addcontentsline{toc}{section}{References}
 
 Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
@@ -6000,8 +6717,8 @@ Lecture attendance & 13 & 6 & 15 & 4 & 12 & 14 & 15 & 10 & 11 & 6\tabularnewline
   Comment on the relationship between the marks and the lecture attendance
 \end{enumerate}
 
-\hypertarget{references-3}{%
-\section*{References}\label{references-3}}
+\hypertarget{references-4}{%
+\section*{References}\label{references-4}}
 \addcontentsline{toc}{section}{References}
 
 Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., \& Harris, M. (2007). \emph{Australasian business statistics}. John Wiley \& Sons.
@@ -6750,8 +7467,8 @@ Let
   \(E =\) The event that two of the three products are defective Express E in terms of \(D1, D2\) and \(D3\) using event operations
 \end{enumerate}
 
-\hypertarget{references-4}{%
-\section*{References}\label{references-4}}
+\hypertarget{references-5}{%
+\section*{References}\label{references-5}}
 \addcontentsline{toc}{section}{References}
 
 Lipschutz, S. (2000). Schaum's Outline of Probability. McGraw Hill Professional.
@@ -7954,8 +8671,8 @@ P_{00} & P_{01} & P_{02}& P_{03} & P_{04}\\
   \(P(A^\prime \cap B^\prime)=P(A^\prime)P(B^\prime)\)
 \end{enumerate}
 
-\hypertarget{references-5}{%
-\section*{References}\label{references-5}}
+\hypertarget{references-6}{%
+\section*{References}\label{references-6}}
 \addcontentsline{toc}{section}{References}
 
 Casella, G., \& Berger, R. L. (2002). Statistical inference (Vol. 2, pp.~337-472).Pacific Grove, CA: Duxbury
@@ -8081,8 +8798,8 @@ Consider the experiment of measuring the lifetime (in hours) of a randomly selec
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box4-1} \end{center}
 
-\hypertarget{references-6}{%
-\section*{References}\label{references-6}}
+\hypertarget{references-7}{%
+\section*{References}\label{references-7}}
 \addcontentsline{toc}{section}{References}
 
 Casella, G., \& Berger, R. L. (2002). Statistical inference (Vol. 2, pp.~337-472).Pacific Grove, CA: Duxbury
