@@ -1,5 +1,7 @@
 # Boolean Algebra
 
+\pagenumbering{arabic}
+
   - George Boole approached logic in a new way reducing it to a simple algebra.
   - He introduced symbolic logic known as *Boolean Algebra, Boolean function, Boolean expression, Boolean ring* etc.
   - Each variable in Boolean Algebra has either of two values: true or false.
