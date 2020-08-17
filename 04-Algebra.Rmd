@@ -512,3 +512,145 @@ ggplot()+
 Acharjya, D. P. (2009). Fundamental approach to discrete mathematics. New Age International.
 
 Mendelson, E. (1970). Boolean algebra and switching circuits. McGraw-Hill Edition 2004.
+
+\newpage
+
+\pagenumbering{arabic}
+## Tutorial {-}
+
+<!-- Fundamentals approach to Discrete mathematics book page 159-->
+1. Construct an AND gate using three NOR gates
+
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 2-->
+2. Construct an OR gate using three NAND gates
+
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 3-->
+3. Draw a gating network to  the statement $(x.y)+(y.z)+(z.x)$
+
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 4-->
+4. Draw a gating network to  the statement $(x+y)^\prime(z.u)+(x.y)^\prime(z+u)$
+
+
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 5-->
+5. What is the output of the following gating network
+
+```{r   out.width = "100%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/networkQ5.png")
+```
+
+
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 6-->
+6. Construct a gating network using inverter and OR gate to the statement $(x.y)+(y.z)+(z.x)$
+
+
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 7-->
+7. Find the value of the Boolean expression given below for $x=1,$ $y=1$ and $z=0.$
+\[(x\land(y\lor(x\land y^\prime)))\lor((x\land y^\prime)\lor (x\land z^\prime)^\prime)\]
+
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 8-->
+8. Construct an AND gate using  inverters and three NOR gates.
+
+\newpage 
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 9-->
+9. Write the Boolean expression that represents the following combinatorial circuit, construct the logic table with the output of each gate.
+
+
+```{r   out.width = "100%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/networkQ9.png")
+```
+
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 10-->
+10. Show that $y=z$ when $(x+y)=(x+z)$ and $(x^\prime+y)=(x^\prime+z)$.
+
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 11 (Pri live note: HW do Q 17 instead)-->
+11.  Given the Boolean function $f$, write $f$ in its disjunctive normal form.
+
+ $x$  |   $y$   |   $z$   | $f(x,y,z)$
+ -----|---------|---------|------------
+ 1    |   1     |   1     |    1
+ 1    |   1     |   0     |    1
+ 1    |   0     |   1     |    0
+ 1    |   0     |   0     |    0
+ 0    |   1     |   1     |    0
+ 0    |   1     |   0     |    1
+ 0    |   0     |   1     |    0
+ 0    |   0     |   0     |    1
+  
+<!-- Fundamentals approach to Discrete mathematics book page 171 example 9 HW--> 
+12.  Draw the logic circuit (Combinatorial circuit) with input $x,y,z$ and output $Y$ to the following Boolean expressions.
+  a) $Y = x^\prime yz+x^\prime yz^\prime +xyz^\prime$
+  b) $Y = x y^\prime z+xz^\prime +y^\prime z$
+
+\newpage
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 12-->
+13.  Show that the combinatorial circuits (a) and (b) are equivalent.
+
+```{r   out.width = "80%", echo = FALSE, fig.align='center', fig.cap="(a)"}
+knitr::include_graphics("figure/networkQ12a.png")
+```
+
+```{r   out.width = "80%", echo = FALSE, fig.align='center', fig.cap="(b)"}
+knitr::include_graphics("figure/networkQ12b.png")
+```
+
+
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 13-->
+14. Reduce the following Boolean products to either 0 or a fundamental product
+
+ (a) $x.y.x^\prime.z$
+ (b) $x.y.z^\prime.y.x$
+
+
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 14 (Pri live note: HW do Q 17 instead)-->
+15.  Given the Boolean function $f$, write $f$ in its conjunctive normal form.
+
+ $x$  |   $y$   |   $z$   | $f(x,y,z)$
+ -----|---------|---------|------------
+ 1    |   1     |   1     |    1
+ 1    |   1     |   0     |    1
+ 1    |   0     |   1     |    0
+ 1    |   0     |   0     |    0
+ 0    |   1     |   1     |    0
+ 0    |   1     |   0     |    1
+ 0    |   0     |   1     |    0
+ 0    |   0     |   0     |    1
+
+\newpage  
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 15-->
+16.  Design a combinatorial circuit that computes exclusive OR (XOR) of $x$ and $y$.
+
+
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 16-->
+17. Given the Boolean function $f$, write $f$ in its 
+ (a) disjunctive normal form
+ (b) conjunctive normal form
+ (c) draw the combinatorial circuit to the disjunctive normal form.
+
+ $x$  |   $y$   |   $z$   | $f(x,y,z)$
+ -----|---------|---------|------------
+ 1    |   1     |   1     |    0
+ 1    |   1     |   0     |    0
+ 1    |   0     |   1     |    0
+ 1    |   0     |   0     |    1
+ 0    |   1     |   1     |    1
+ 0    |   1     |   0     |    1
+ 0    |   0     |   1     |    1
+ 0    |   0     |   0     |    0
+ 
+ 
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 17--> 
+18. Find the disjunctive normal form of the function, $f(x,y)= (x+y).(x^\prime+y^\prime)$ using algebraic technique
+ 
+ 
+<!-- Fundamentals approach to Discrete mathematics book page 160 example 18--> 
+19. Find the disjunctive normal form for the following combinatorial circuit.
+
+```{r   out.width = "80%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/networkQ18.png")
+```
+ 
+ 
+
+<!--schaum bool page 53 Theorem 3.1)-->
+20. *Uniqueness of the complement*: Show that $y=x^\prime$, when $x \lor y=1$ and $x\land y = 0$
+

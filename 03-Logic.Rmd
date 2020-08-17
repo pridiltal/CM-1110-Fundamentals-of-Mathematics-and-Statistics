@@ -351,6 +351,18 @@ Idempotent Laws  | $P\land P\equiv P$ and $P\lor P\equiv P$
 Absorption Laws  |  $P\lor (P \land Q)\equiv P$ and $P\land (P \lor Q)\equiv P$ 
 De Morgan's Laws  | $\lnot (P\land Q)  \Leftrightarrow (\lnot P) \lor(\lnot Q)$ and $\lnot (P\lor Q) \Leftrightarrow (\lnot P) \land (\lnot Q)$
 
+## Logical Implication and Equivalence 
+<!-- Schaum's outlines Boolean algebra pg 9-->
+
+## Necessary and Sufficient Conditions
+<!-- Refer diary  hand written 
+note 2016  March14 -->
+
+### Necessary Condition
+
+### Sufficient Condition
+
+### Necessary and Sufficient Condition
 
 ## References {-}
 
@@ -394,3 +406,58 @@ logically implies $A$
 <!--schaum bool page 9 example 1.20)-->
 5. Show that $(A \leftrightarrow B)$ is 
 logically equivalent to  $(A \rightarrow B) \land (B \rightarrow A)$
+
+<!-- Fundamentals approach to Discrete mathematics book page 9-->
+6. Find the negation of $A\rightarrow B$
+
+
+<!-- Fundamentals approach to Discrete mathematics book page 9-->
+7. Construct the truth table for $A \rightarrow ( B\leftrightarrow A \land B).$
+
+<!-- Fundamentals approach to Discrete mathematics book page 10-->
+8. Find the negation of the following statement "He is rich but unhappy"
+
+<!-- Fundamentals approach to Discrete mathematics book page 10-->
+9. Prove by constructing truth table
+\[P \rightarrow(Q \lor R) \equiv (P \rightarrow Q) \lor (P \rightarrow R)\]
+
+<!-- Fundamentals approach to Discrete mathematics book page 10-->
+10. Find the negation of $P \leftrightarrow Q.$
+
+11. With the help of the truth table prove that $\lnot (P \land Q) \equiv \lnot P\lor \lnot Q$
+
+12. Show that $(P \rightarrow Q) \leftrightarrow (\lnot P \lor Q)$ is a tautology
+
+13. Show that the following stamens are equivalent.
+
+   - *Statement 1:* Good food is not cheap
+   
+   - *Statement 2:* Cheap food is not good
+
+14. Express $P\rightarrow Q$ only using $\downarrow$ and $\uparrow$.
+
+15. Prove that $(P \land Q) \land \lnot (P \lor Q)$ is a contradiction.
+
+16. Express $P \leftrightarrow Q$ only using $\downarrow$ and $\uparrow$.
+
+17. Show by truth table the following statement are equivalent
+
+   - *Statement 1:* Rich men are unhappy
+   
+   - *Statement 2:* Men are unhappy or poor
+
+<!-- Fundamentals approach to Discrete mathematics book page 13 Q 16-->
+18. A constructor promises a client "We will fix it on Monday if it is not raining". When the constructor would be deemed to have broken his promise. Explain with the help of truth table. 
+
+<!--schaum bool page 19 Question 1.2)-->
+19. Eliminate as many parentheses as possible from
+
+  a) $\{[(A \lor B)\rightarrow (\lnot C)] \lor [(((\lnot B)\land C)\land B)]\}$
+  b) $\{[A \land (\lnot (\lnot B))]\leftrightarrow [B \leftrightarrow (C \lor B)]\}$
+  c) $[(B\leftrightarrow (C \lor B)) \leftrightarrow (A \land (\lnot (\lnot B)))]$
+
+<!--schaum bool page 20 Question 1.5)-->
+20 Show the following are tautologies without using truth tables.
+
+   a) $((A \rightarrow B) \rightarrow C) \rightarrow ((C \rightarrow A) \rightarrow(D \rightarrow A )).$
+   b) $(A \rightarrow B)\rightarrow ((B \rightarrow C) \rightarrow (A \rightarrow C)).$

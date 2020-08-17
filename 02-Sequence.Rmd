@@ -2,12 +2,12 @@
 
 ## Sequences
 
-- A **Sequence** can be thought of as a list of numbers written in a definite order:
- \[a_{1}, a_{2}, a_{3}, a_{4}, ..., a_{n}, ...\]
-- The number $a_{1}$ is called the *first term*, $a_{2}$ is  the *second term*, and in general $a_{n}$ is called the $n^{th}$ *term*.
-- We will deal exclusively with infinite sequences and so each term $a_{n}$ will have a successor $a_{n+1}$
-- Notice that for every positive integer $n$ there is a corresponding number $a_{n}$ and so a sequence can be defined as a function whose domain is the set of positive integers.
+- A **Sequence** is a list of numbers written in a definite order:
+ \[a_{1}, a_{2}, a_{3}, a_{4}, ..., a_{n}\]
+- An element of a sequence is called a term . The number $a_{1}$ is called the *first term*, $a_{2}$ is  the *second term*, and in general $a_{n}$ is called the $n^{th}$ *term*.
+- As can be seen in the above sequence, for every positive integer $n$ there is a corresponding number $a_{n}$.Therefore a sequence can be defined as a function whose domain is the set of positive integers.
 - But we usually write $a_{n}$  instead of the function notation $f(n)$ for the value of the function at the number $n$.
+- When dealing with infinite sequences, each term $a_{n}$ will have a successor $a_{n+1}$
 - **Notation:** The sequence $\{a_{1}, a_{2}, a_{3},...\}$ is also denoted by 
 \[\{a_{n}\}\]  or \[\{a_{n}\}_{n=1}^{\infty}\]
 - Some sequences can be defined by giving a formula for the $n$th term.
@@ -26,22 +26,308 @@ c) $\{\sqrt{n-3}\}_{n=3}^{\infty} \hspace{5em} a_{n} = \sqrt{n-3}, n\geq3\hspace
 d) $\{cos\frac{n\pi}{6}\}_{n=0}^{\infty} \hspace{5em} a_{n} = cos\frac{n\pi}{6}, n\geq 0 \hspace{5em}\{1, \frac{\sqrt{3}}{2},\frac{1}{2}, 0,...,cos\frac{n\pi}{6},...\}$
 
 
-**Example**
-
-Find a formula for the general term $a_{n}$ of the sequence
-\[\{\frac{3}{5},-\frac{4}{25}, \frac{5}{125}, -\frac{6}{625}, \frac{7}{3125},...\}\]
-assuming that the pattern of the first few terms continues.
-
-
-*SOLUTION* 
-
-We are given that 
-
-
-
+<!--**Tutorial 1-->
 
 ## Series
 
-Reading:
+- A series is the sum of a number of terms of a sequence.
+- When writing series, the shorthand $\sum$ notation is used to represent the sum of a number of terms having a common form.
+- The series $f(1)+ f(2)+\dots+ f(n−1)+ f(n)$ can be written as
+\[\sum_{r=1}^nf(r).\]
 
-Stewart, J., Clegg, D. K., & Watson, S. (2020). 'Infinite Sequences and Series', *Calculus: early transcendentals*. Cengage Learning.
+### Arithmetic sequences and series
+
+- A sequence in which each term after the first term is obtained from the preceding term by adding a fixed number (Common difference), is called an arithmetic sequence or Arithmetic Progression.
+
+- The sequence defined by
+\[u_1=a \text{ and } u_n=u_{n-1} + d \text{ for } n\geq2\]
+gives
+\[a,a+d, a+2d,\dots\]
+- The $n$th term (i.e. the solution) is given by $u_n = a + (n −1)d$.
+- This is the **arithmetic sequence** with first term $a$ and common difference $d$
+
+
+- The **arithmetic series** with $n$ terms 
+\[a+(a+d)+(a+2d)+\dots+ [a+(n-1)d]\]
+has sum
+\[S_n = \frac{n}{2}(\text{first term} + \text{ last term)}\]
+\[S_n = \frac{n}{2}(2a+(n-1)d)\]
+
+
+### Geometric sequences and series
+
+
+- The sequence defined by
+\[u_1=a \text{ and } u_n=ru_{n-1} \text{ for } n\geq2\]
+gives
+\[a,ar, ar^2,\dots\]
+- The $n$th term is given by $u_n = ar^{n −1}$.
+- This is the **geometric sequence** with first term $a$ and common ratio $r$.
+
+- The **geometric series** with $n$ terms
+\[a+ar+ar^2+\dots+ ar^{n-1}\]
+has sum
+\[S_n = \frac{a(1-r^n)}{1-r} \text{ or }  \frac{a(r^n-1)}{r-1} \text{ for } r\neq1\]
+
+
+
+
+**Important results relating to the** $\sum$ **notation**
+
+(1) 
+$$\sum_{r=1}^n\{f(r)+ g(r)\} = \{f(1)+ g(1)\}+ \{f(2)+ g(2)\}+\dots + \{f(n)+ g(n)\}$$
+$$= \{f(1)+ f(2)+ \dots+ f(n)\}+ \{g(1)+ g(2)+\dots +g(n)\}$$
+$$= \sum_{r=1}^nf(r)+ \sum_{r=1}^ng(r)$$
+
+(2)
+$$\sum_{r=1}^naf(r)= af(1)+ af(2)+ \dots+ af(n)$$ where $a$ is a constant.
+$$=a\{f(1)+ f(2)+ \dots+ f(n)\}$$
+$$=a\sum_{r=1}^nf(r)$$
+
+<!-- $n\sum_{r=1}^nf(r) = \sum_{r=1}^nf(r)$ also, since n is a fixed quantity,
+Note that
+not a variable, in the summation-->
+
+(3)
+
+(a) $\sum_{r=1}^nr=\frac{n(n+1)}{2}$
+
+(b) $\sum_{r=1}^nr^2=\frac{n}{6}(n+1)(2n+1)$
+
+(c) $\sum_{r=1}^nr^3=\frac{n^2}{4}(n+1)^2$ or $\left[\frac{n(n+1)}{2}\right]^2$
+
+(d) $\sum_{r=1}^n1=(1+1+\dots+1) = n$
+
+<!-- Since a '1' is wanted for each of r =1,2,...,n
+This result is easily overlooked, and often incorrectly written as
+$\sum_{r=1}^n1=1$-->
+
+
+<!-- Tutorial 2-->
+
+###  Methods of proof
+
+  1. Mathematical induction
+  2. The difference method
+
+#### Mathematical induction
+
+<!-- Acharjya, D. P. (2009). Fundamental approach to discrete mathematics. New Age International. page 8-->
+
+
+- Let $n$ be a natural number. Then the aim is to show that some statement $P(n)$ involving $n$ is true for any $n$. 
+- The following steps are used in Mathematical induction
+   
+   1. Let $P(n)$ be a statement
+   2. Show that the statement is true for  $P(1)$ and $P(2)$. (*i.e.* $P(n)$ is true for $n=1$ and $n=2.$)
+   3. Assume that $P(k)$ is true (*i.e.* $P(n)$ is true for $n=k$).
+   4. Show that $P(k+1)$ follows from $P(k).$
+   
+#### The difference method
+
+- The process of proof by induction is a powerful mathematical tool. However it has the disadvantage that, in order to employ the method it requires the answer. 
+- There are, however, direct methods of proof such as the method of differences, or the difference method.
+- The difference method can be summarised as follows,
+
+\[\sum_{r=1}^n \left\{f(r)-f(r-1) \right\} = f(n) - f(0)\]
+
+where $f$ is any function suitably defined on the non-negative integers.
+
+- This is also know  as the fundamental theorem of summation:
+
+
+##  Infinite Sequences
+
+- When dealing with infinite sequences, each term $a_{n}$ will have a successor $a_{n+1}$
+
+**Definition: Convergence and Divergence**
+
+A sequence $\{a_n\}$ has the **limit** $L$ and we write 
+
+\[\lim_{n\rightarrow \infty}a_n=L \text{ or } a_n \rightarrow L \text{ as } n\rightarrow \infty\]
+
+if we can make the term $a_n$ as close to L as $n$ becomes sufficiently large.
+
+If $\lim_{n\rightarrow \infty}a_n$ exists, we say the sequence **converges** (or is **convergent**).
+
+If $\lim_{n\rightarrow \infty}a_n$ does not exist, we say the sequence **diverges** (or is **divergent**).
+
+
+```{r boxC21, fig.cap='', out.width='100%', fig.asp=.5, fig.align='center'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+### Limit Laws for Sequences
+
+If $\{a_n\}$ and $\{b_n\}$ are convergent sequences and $c$ is a constant, then
+
+a) $\lim_{n \to \infty}(a_n+ b_n)= \lim_{n \to \infty}a_n+ \lim_{n \to \infty}b_n$
+
+b) $\lim_{n \to \infty}(a_n- b_n)= \lim_{n \to \infty}a_n- \lim_{n \to \infty}b_n$
+
+c) $\lim_{n \to \infty}ca_n= c \;\lim_{n \to \infty}a_n$
+
+d) $\lim_{n \to \infty}c= c$
+
+e) $\lim_{n \to \infty}(a_nb_n)= \lim_{n \to \infty}a_n. \lim_{n \to \infty}b_n$
+
+f) $\lim_{n \to \infty}\frac{a_n}{b_n}= \frac{\lim_{n \to \infty}a_n} {\lim_{n \to \infty}b_n} \text{ if } \lim_{n \to \infty}{b_n} \neq 0$
+
+g) $\lim_{n \to \infty}(a_n)^p= [\lim_{n \to \infty}a_n]^p \text{ if } p>0 \text{ and } a_n>0$
+
+
+**Squeeze Theorem for Sequences**
+
+If $a_n \leq b_n \leq c_n$ for $n\geq n_0$ and $\lim_{n \to \infty}a_n= \lim_{n \to \infty}c_n= L,$ then $\lim_{n \to \infty}b_n=L$
+
+**Theorem:** 
+
+$$\text{If }\;\; \lim_{n \to \infty}|a_n|=0, \text{ then } \;\;\lim_{n \to \infty}a_n=0.$$
+
+
+**Theorem**
+
+The sequence $\{r^n\}$ is convergent if $-1 <r\leq1$ and divergent for all other values of $r$.
+
+\begin{equation}
+\lim_{n \to \infty}r^n=
+\begin{cases} 
+0 & \text{if } -1<r<1\\
+1 & \text{if } r=1
+\end{cases}
+\end{equation}
+
+**Definition**
+
+A sequence $\{a_n\}$ is called **increasing** if $a_n<a_{n+1}$ for all $n \geq 1,$ that is, $a_1<a_2<a_3<\dots.$ It is called **decreasing** if $a_n>a_{n+1}$ for all $n\geq 1.$ It is called **monotonic** if it is either increasing or decreasing.
+
+<!-- CalcII_Seq_Series.pdf page 17 stewart page 708-->
+
+\newpage
+
+**Definition**
+
+- If there exists a number $m$ such that $m \leq a_n$ for every $n$ we say the sequence is **bounded below**. The number $m$ is sometimes called a *lower bound* for the sequence.
+
+- If there exists a number $M$ such that $a_n \leq M$ for every $n$ we say the sequence is **bounded above**. The number $M$ is sometimes called an *upper bound* for the sequence.
+
+- If the sequence is both bounded below and bounded above we call the sequence **bounded**.
+
+<!-- Discuss tutorial question 8-->
+
+##  Infinite  Series
+
+
+- Consider the infinite sequence $\{a_n\}_{n=1}^\infty$.
+- Consider the *partial sums*
+
+\begin{align*}
+   s_1=a_1 \\
+   s_2=a_1+a_2 \\
+   s_3=a_1+a_2+a_3 \\
+   s_4=a_1+a_2+a_3+a_4 \\
+   &\vdots\\
+   s_n=a_1+a_2+a_3+a_4+\dots +a_n =\sum_{i=1}^na_i
+\end{align*}
+
+- These partial sums form a new sequence $\{s_n\}_{n=1}^\infty,$ which may or may not have a limit. 
+
+- Consider the limit of the sequence of partial sums, $\{s_n\}_{n=1}^\infty.$
+
+$$\lim_{n\to\infty}s_n= \lim_{n\to\infty}\sum_{i=1}^na_i=\sum_{i=1}^\infty a_i$$
+- This $\sum_{i=1}^\infty a_i$ ($=a_1+a_2+a_3+a_4+\dots +a_n \dots$) is called an **infinite series**
+
+**Definition**
+
+Consider the series $\sum_{n=1}^\infty a_n= =a_1+a_2+a_3+\dots.$ Let $s_n$ denote its $n$th partial sum:
+
+$$s_n= \sum_{i=1}^n a_i= a_1+a_2+\dots +a_n$$
+
+If the sequence $\{s_n\}$ is convergent and $\lim_{n\to \infty}s_n=s$ exist as a real number, then the series $\sum_{i=1}^\infty a_i$ is called **convergent** and we write,
+
+$a_1+a_2+\dots +a_n+\dots=s$ or $\sum_{n=1}^\infty a_n=s$
+
+The number $s$ is called the **sum of the series**. 
+If the sequence of partial sums is divergent then the infinite series is also
+called **divergent**.
+
+<!-- stewart page 714 note before example 1-->
+
+**Geometric Series**
+
+<!-- Stewart page 714 example 1-->
+
+- An important example of an infinite series is the *geometric series*
+
+$$\sum_{n=1}^\infty ar^{n-1}=a+ar+ar^2+\dots$$
+is convergent if $|r|<1$ and its sum is 
+$$\sum_{n=1}^\infty ar^{n-1}= \frac{a}{1-r}\qquad\qquad|r|<1$$
+
+
+\newpage
+Reading:
+- Stewart, J., Clegg, D. K., & Watson, S. (2020). 'Infinite Sequences and Series', *Calculus: early transcendentals*. Cengage Learning.
+
+- Acharjya, D. P. (2009). Fundamental approach to discrete mathematics. New Age International.
+
+\newpage
+\pagenumbering{arabic}
+## Tutorial {-}
+
+<!-- Stewart page 702-->
+1. Find a formula for the general term $a_{n}$ of the sequence, assuming that the pattern of the first few terms continues.
+
+(a) $\left\{\frac{3}{5},-\frac{4}{25}, \frac{5}{125}, -\frac{6}{625}, \frac{7}{3125},...\right\}$
+(b) $\{1,1,2,3,5,8,13,21,\dots\}$
+(c)  $\left\{\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \dots \right\}$
+(d)  $\left\{2,7,12,17, \dots \right\}$
+(e)  $\left\{1,-\frac{2}{3}, \frac{4}{9} , -\frac{8}{27}, \dots \right\}$
+
+2. Show that 
+\[\sum_{r=1}^n(6r^2+4r-1) = n(n+2)(2n+1)\]
+
+<!--acharjya page 8-->
+
+3. Show by method of induction
+
+(a) $\sum_{r=1}^nr=\frac{n(n+1)}{2}$
+(b) $\sum_{r=1}^nr^2=\frac{n}{6}(n+1)(2n+1)$
+(c) $\sum_{r=1}^nr^3=\left[\frac{n(n+1)}{2}\right]^2$ <!--acharjya page 14-->
+(d) $\sum_{r=1}^n\frac{1}{r(r+1)}=\frac{n}{n+1}$ <!--acharjya page 14-->
+
+4. 
+
+(a) By considering $n^3 − (n − 1)^3$ and similar expressions, find the formula for $\sum_{r=1}^nr^2$ in terms of $n$, assuming the results for
+$\sum_{r=1}^nr$
+
+(b) By considering $n^5 − (n − 1)^5$ and similar expressions, find the formula for $\sum_{r=1}^nr^4$ in terms of $n$, assuming the results for
+$\sum_{r=1}^nr$, $\sum_{r=1}^nr^2$ and $\sum_{r=1}^nr^3.$
+
+<!-- stewart page 706 Example 6)-->
+5. Determine whether the sequence $a_n= (-1)^n$ is convergent or divergent.
+
+<!-- stewart page 706 Example 7)-->
+6. Determine whether the sequence converges or diverges. If it converges, find the limit
+
+a) $a_n= n(n-1)$
+b) $a_n= \frac{n}{n+1}$
+c) $a_n = \frac{(-1)^n}{n}$
+d) $a_n = \frac{4n^2+2}{n^2+n}$
+e) $a_n= \frac{2^n}{3^{n+1}}$
+f) $a_n= \frac{(-1)^{n-1}n}{n^2+1}$
+
+<!-- stewart page 706 Example 8): Squeez theorem-->
+7. Discuss the convergence of the sequence $a_n=n!/n^n,$ where $n!= 1\times2\times\dots\times n.$
+
+<!-- CalcII_Seq_Series.pdf page 18(191)-->
+8. Determine if the following sequences are monotonic  and/ or bounded
+
+a) $\{-n^2\}_{n=0}^\infty$
+b) $\{(-1)^{n+1}\}_{n=1}^\infty$
+c) $\left\{ \frac{2}{n^2}\right\}_{n=5}^\infty$

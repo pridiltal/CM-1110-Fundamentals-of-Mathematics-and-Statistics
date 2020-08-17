@@ -88,7 +88,7 @@
 
 \title{CM 1110 Fundamentals of Mathematics and Statistics}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-07-27}
+\date{2020-08-17}
 
 \begin{document}
 \maketitle
@@ -960,16 +960,16 @@ Dass, H. K. (2008). `Complex Numbers', Advanced Engineering Mathematics. S. Chan
 \begin{itemize}
 \tightlist
 \item
-  A \textbf{Sequence} can be thought of as a list of numbers written in a definite order:
-  \[a_{1}, a_{2}, a_{3}, a_{4}, ..., a_{n}, ...\]
+  A \textbf{Sequence} is a list of numbers written in a definite order:
+  \[a_{1}, a_{2}, a_{3}, a_{4}, ..., a_{n}\]
 \item
-  The number \(a_{1}\) is called the \emph{first term}, \(a_{2}\) is the \emph{second term}, and in general \(a_{n}\) is called the \(n^{th}\) \emph{term}.
+  An element of a sequence is called a term . The number \(a_{1}\) is called the \emph{first term}, \(a_{2}\) is the \emph{second term}, and in general \(a_{n}\) is called the \(n^{th}\) \emph{term}.
 \item
-  We will deal exclusively with infinite sequences and so each term \(a_{n}\) will have a successor \(a_{n+1}\)
-\item
-  Notice that for every positive integer \(n\) there is a corresponding number \(a_{n}\) and so a sequence can be defined as a function whose domain is the set of positive integers.
+  As can be seen in the above sequence, for every positive integer \(n\) there is a corresponding number \(a_{n}\).Therefore a sequence can be defined as a function whose domain is the set of positive integers.
 \item
   But we usually write \(a_{n}\) instead of the function notation \(f(n)\) for the value of the function at the number \(n\).
+\item
+  When dealing with infinite sequences, each term \(a_{n}\) will have a successor \(a_{n+1}\)
 \item
   \textbf{Notation:} The sequence \(\{a_{1}, a_{2}, a_{3},...\}\) is also denoted by
   \[\{a_{n}\}\] or \[\{a_{n}\}_{n=1}^{\infty}\]
@@ -1004,22 +1004,385 @@ Dass, H. K. (2008). `Complex Numbers', Advanced Engineering Mathematics. S. Chan
   \(\{cos\frac{n\pi}{6}\}_{n=0}^{\infty} \hspace{5em} a_{n} = cos\frac{n\pi}{6}, n\geq 0 \hspace{5em}\{1, \frac{\sqrt{3}}{2},\frac{1}{2}, 0,...,cos\frac{n\pi}{6},...\}\)
 \end{enumerate}
 
-\textbf{Example}
-
-Find a formula for the general term \(a_{n}\) of the sequence
-\[\{\frac{3}{5},-\frac{4}{25}, \frac{5}{125}, -\frac{6}{625}, \frac{7}{3125},...\}\]
-assuming that the pattern of the first few terms continues.
-
-\emph{SOLUTION}
-
-We are given that
-
 \hypertarget{series}{%
 \section{Series}\label{series}}
 
-Reading:
+\begin{itemize}
+\tightlist
+\item
+  A series is the sum of a number of terms of a sequence.
+\item
+  When writing series, the shorthand \(\sum\) notation is used to represent the sum of a number of terms having a common form.
+\item
+  The series \(f(1)+ f(2)+\dots+ f(n−1)+ f(n)\) can be written as
+  \[\sum_{r=1}^nf(r).\]
+\end{itemize}
 
-Stewart, J., Clegg, D. K., \& Watson, S. (2020). `Infinite Sequences and Series', \emph{Calculus: early transcendentals}. Cengage Learning.
+\hypertarget{arithmetic-sequences-and-series}{%
+\subsection{Arithmetic sequences and series}\label{arithmetic-sequences-and-series}}
+
+\begin{itemize}
+\item
+  A sequence in which each term after the first term is obtained from the preceding term by adding a fixed number (Common difference), is called an arithmetic sequence or Arithmetic Progression.
+\item
+  The sequence defined by
+  \[u_1=a \text{ and } u_n=u_{n-1} + d \text{ for } n\geq2\]
+  gives
+  \[a,a+d, a+2d,\dots\]
+\item
+  The \(n\)th term (i.e.~the solution) is given by \(u_n = a + (n −1)d\).
+\item
+  This is the \textbf{arithmetic sequence} with first term \(a\) and common difference \(d\)
+\item
+  The \textbf{arithmetic series} with \(n\) terms
+  \[a+(a+d)+(a+2d)+\dots+ [a+(n-1)d]\]
+  has sum
+  \[S_n = \frac{n}{2}(\text{first term} + \text{ last term)}\]
+  \[S_n = \frac{n}{2}(2a+(n-1)d)\]
+\end{itemize}
+
+\hypertarget{geometric-sequences-and-series}{%
+\subsection{Geometric sequences and series}\label{geometric-sequences-and-series}}
+
+\begin{itemize}
+\item
+  The sequence defined by
+  \[u_1=a \text{ and } u_n=ru_{n-1} \text{ for } n\geq2\]
+  gives
+  \[a,ar, ar^2,\dots\]
+\item
+  The \(n\)th term is given by \(u_n = ar^{n −1}\).
+\item
+  This is the \textbf{geometric sequence} with first term \(a\) and common ratio \(r\).
+\item
+  The \textbf{geometric series} with \(n\) terms
+  \[a+ar+ar^2+\dots+ ar^{n-1}\]
+  has sum
+  \[S_n = \frac{a(1-r^n)}{1-r} \text{ or }  \frac{a(r^n-1)}{r-1} \text{ for } r\neq1\]
+\end{itemize}
+
+\textbf{Important results relating to the} \(\sum\) \textbf{notation}
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item
+  \[\sum_{r=1}^n\{f(r)+ g(r)\} = \{f(1)+ g(1)\}+ \{f(2)+ g(2)\}+\dots + \{f(n)+ g(n)\}\]
+  \[= \{f(1)+ f(2)+ \dots+ f(n)\}+ \{g(1)+ g(2)+\dots +g(n)\}\]
+  \[= \sum_{r=1}^nf(r)+ \sum_{r=1}^ng(r)\]
+\item
+  \[\sum_{r=1}^naf(r)= af(1)+ af(2)+ \dots+ af(n)\] where \(a\) is a constant.
+  \[=a\{f(1)+ f(2)+ \dots+ f(n)\}\]
+  \[=a\sum_{r=1}^nf(r)\]
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\setcounter{enumi}{2}
+\item
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  \(\sum_{r=1}^nr=\frac{n(n+1)}{2}\)
+\item
+  \(\sum_{r=1}^nr^2=\frac{n}{6}(n+1)(2n+1)\)
+\item
+  \(\sum_{r=1}^nr^3=\frac{n^2}{4}(n+1)^2\) or \(\left[\frac{n(n+1)}{2}\right]^2\)
+\item
+  \(\sum_{r=1}^n1=(1+1+\dots+1) = n\)
+\end{enumerate}
+
+\hypertarget{methods-of-proof}{%
+\subsection{Methods of proof}\label{methods-of-proof}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Mathematical induction
+\item
+  The difference method
+\end{enumerate}
+
+\hypertarget{mathematical-induction}{%
+\subsubsection{Mathematical induction}\label{mathematical-induction}}
+
+\begin{itemize}
+\item
+  Let \(n\) be a natural number. Then the aim is to show that some statement \(P(n)\) involving \(n\) is true for any \(n\).
+\item
+  The following steps are used in Mathematical induction
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    Let \(P(n)\) be a statement
+  \item
+    Show that the statement is true for \(P(1)\) and \(P(2)\). (\emph{i.e.} \(P(n)\) is true for \(n=1\) and \(n=2.\))
+  \item
+    Assume that \(P(k)\) is true (\emph{i.e.} \(P(n)\) is true for \(n=k\)).
+  \item
+    Show that \(P(k+1)\) follows from \(P(k).\)
+  \end{enumerate}
+\end{itemize}
+
+\hypertarget{the-difference-method}{%
+\subsubsection{The difference method}\label{the-difference-method}}
+
+\begin{itemize}
+\tightlist
+\item
+  The process of proof by induction is a powerful mathematical tool. However it has the disadvantage that, in order to employ the method it requires the answer.
+\item
+  There are, however, direct methods of proof such as the method of differences, or the difference method.
+\item
+  The difference method can be summarised as follows,
+\end{itemize}
+
+\[\sum_{r=1}^n \left\{f(r)-f(r-1) \right\} = f(n) - f(0)\]
+
+where \(f\) is any function suitably defined on the non-negative integers.
+
+\begin{itemize}
+\tightlist
+\item
+  This is also know as the fundamental theorem of summation:
+\end{itemize}
+
+\hypertarget{infinite-sequences-and-series}{%
+\section{Infinite Sequences and Series}\label{infinite-sequences-and-series}}
+
+\begin{itemize}
+\tightlist
+\item
+  When dealing with infinite sequences, each term \(a_{n}\) will have a successor \(a_{n+1}\)
+\end{itemize}
+
+\textbf{Definition: Convergence and Divergence}
+
+A sequence \(\{a_n\}\) has the \textbf{limit} \(L\) and we write
+
+\[\lim_{n\rightarrow \infty}a_n=L \text{ or } a_n \rightarrow L \text{ as } n\rightarrow \infty\]
+
+if we can make the term \(a_n\) as close to L as \(n\) becomes sufficiently large.
+
+If \(\lim_{n\rightarrow \infty}a_n\) exists, we say the sequence \textbf{converges} (or is \textbf{convergent}).
+
+If \(\lim_{n\rightarrow \infty}a_n\) does not exist, we say the sequence \textbf{diverges} (or is \textbf{divergent}).
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figure/boxC21-1} 
+
+}
+
+\end{figure}
+
+\hypertarget{limit-laws-for-sequences}{%
+\subsection{Limit Laws for Sequences}\label{limit-laws-for-sequences}}
+
+If \(\{a_n\}\) and \(\{b_n\}\) are convergent sequences and \(c\) is a constant, then
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  \(\lim_{n \to \infty}(a_n+ b_n)= \lim_{n \to \infty}a_n+ \lim_{n \to \infty}b_n\)
+\item
+  \(\lim_{n \to \infty}(a_n- b_n)= \lim_{n \to \infty}a_n- \lim_{n \to \infty}b_n\)
+\item
+  \(\lim_{n \to \infty}ca_n= c \;\lim_{n \to \infty}a_n\)
+\item
+  \(\lim_{n \to \infty}c= c\)
+\item
+  \(\lim_{n \to \infty}(a_nb_n)= \lim_{n \to \infty}a_n. \lim_{n \to \infty}b_n\)
+\item
+  \(\lim_{n \to \infty}\frac{a_n}{b_n}= \frac{\lim_{n \to \infty}a_n} {\lim_{n \to \infty}b_n} \text{ if } \lim_{n \to \infty}{b_n} \neq 0\)
+\item
+  \(\lim_{n \to \infty}(a_n)^p= [\lim_{n \to \infty}a_n]^p \text{ if } p>0 \text{ and } a_n>0\)
+\end{enumerate}
+
+\textbf{Squeeze Theorem for Sequences}
+
+If \(a_n \leq b_n \leq c_n\) for \(n\geq n_0\) and \(\lim_{n \to \infty}a_n= \lim_{n \to \infty}c_n= L,\) then \(\lim_{n \to \infty}b_n=L\)
+
+\textbf{Theorem:}
+
+\[\text{If }\;\; \lim_{n \to \infty}|a_n|=0, \text{ then } \;\;\lim_{n \to \infty}a_n=0.\]
+
+\textbf{Theorem}
+
+The sequence \(\{r^n\}\) is convergent if \(-1 <r\leq1\) and divergent for all other values of \(r\).
+
+\begin{equation}
+\lim_{n \to \infty}r^n=
+\begin{cases} 
+0 & \text{if } -1<r<1\\
+1 & \text{if } r=1
+\end{cases}
+\end{equation}
+
+\textbf{Definition}
+
+A sequence \(\{a_n\}\) is called \textbf{increasing} if \(a_n<a_{n+1}\) for all \(n \geq 1,\) that is, \(a_1<a_2<a_3<\dots.\) It is called \textbf{decreasing} if \(a_n>a_{n+1}\) for all \(n\geq 1.\) It is called \textbf{monotonic} if it is either increasing or decreasing.
+
+\textbf{Definition}
+
+\begin{itemize}
+\item
+  If there exists a number \(m\) such that \(m \leq a_n\) for every \(n\) we say the sequence is \textbf{bounded below}. The number \(m\) is sometimes called a \emph{lower bound} for the sequence.
+\item
+  If there exists a number \(M\) such that \(a_n \leq M\) for every \(n\) we say the sequence is \textbf{bounded above}. The number \(M\) is sometimes called an \emph{upper bound} for the sequence.
+\item
+  If the sequence is both bounded below and bounded above we call the sequence \textbf{bounded}.
+\end{itemize}
+
+\newpage
+
+Reading:
+- Stewart, J., Clegg, D. K., \& Watson, S. (2020). `Infinite Sequences and Series', \emph{Calculus: early transcendentals}. Cengage Learning.
+
+\begin{itemize}
+\tightlist
+\item
+  Acharjya, D. P. (2009). Fundamental approach to discrete mathematics. New Age International.
+\end{itemize}
+
+\newpage
+\pagenumbering{arabic}
+
+\hypertarget{tutorial}{%
+\section*{Tutorial}\label{tutorial}}
+\addcontentsline{toc}{section}{Tutorial}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Find a formula for the general term \(a_{n}\) of the sequence, assuming that the pattern of the first few terms continues.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(\left\{\frac{3}{5},-\frac{4}{25}, \frac{5}{125}, -\frac{6}{625}, \frac{7}{3125},...\right\}\)
+\item
+  \(\{1,1,2,3,5,8,13,21,\dots\}\)
+\item
+  \(\left\{\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \dots \right\}\)
+\item
+  \(\left\{2,7,12,17, \dots \right\}\)
+\item
+  \(\left\{1,-\frac{2}{3}, \frac{4}{9} , -\frac{8}{27}, \dots \right\}\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Show that
+  \[\sum_{r=1}^n(6r^2+4r-1) = n(n+2)(2n+1)\]
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Show by method of induction
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(\sum_{r=1}^nr=\frac{n(n+1)}{2}\)
+\item
+  \(\sum_{r=1}^nr^2=\frac{n}{6}(n+1)(2n+1)\)
+\item
+  \(\sum_{r=1}^nr^3=\left[\frac{n(n+1)}{2}\right]^2\) 
+\item
+  \(\sum_{r=1}^n\frac{1}{r(r+1)}=\frac{n}{n+1}\) 
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  By considering \(n^3 − (n − 1)^3\) and similar expressions, find the formula for \(\sum_{r=1}^nr^2\) in terms of \(n\), assuming the results for
+  \(\sum_{r=1}^nr\)
+\item
+  By considering \(n^5 − (n − 1)^5\) and similar expressions, find the formula for \(\sum_{r=1}^nr^4\) in terms of \(n\), assuming the results for
+  \(\sum_{r=1}^nr\), \(\sum_{r=1}^nr^2\) and \(\sum_{r=1}^nr^3.\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Determine whether the sequence \(a_n= (-1)^n\) is convergent or divergent.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Determine whether the sequence converges or diverges. If it converges, find the limit
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  \(a_n= n(n-1)\)
+\item
+  \(a_n= \frac{n}{n+1}\)
+\item
+  \(a_n = \frac{(-1)^n}{n}\)
+\item
+  \(a_n = \frac{4n^2+2}{n^2+n}\)
+\item
+  \(a_n= \frac{2^n}{3^{n+1}}\)
+\item
+  \(a_n= \frac{(-1)^{n-1}n}{n^2+1}\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Discuss the convergence of the sequence \(a_n=n!/n^n,\) where \(n!= 1\times2\times\dots\times n.\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Determine if the following sequences are monotonic and/ or bounded
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  \(\{-n^2\}_{n=0}^\infty\)
+\item
+  \(\{(-1)^{n+1}\}_{n=1}^\infty\)
+\item
+  \(\left\{ \frac{2}{n^2}\right\}_{n=5}^\infty\)
+\end{enumerate}
 
 \hypertarget{introduction-to-logic}{%
 \chapter{Introduction to Logic}\label{introduction-to-logic}}
@@ -1622,6 +1985,21 @@ De Morgan's Laws\strut
 \bottomrule
 \end{longtable}
 
+\hypertarget{logical-implication-and-equivalence}{%
+\section{Logical Implication and Equivalence}\label{logical-implication-and-equivalence}}
+
+\hypertarget{necessary-and-sufficient-conditions}{%
+\section{Necessary and Sufficient Conditions}\label{necessary-and-sufficient-conditions}}
+
+\hypertarget{necessary-condition}{%
+\subsection{Necessary Condition}\label{necessary-condition}}
+
+\hypertarget{sufficient-condition}{%
+\subsection{Sufficient Condition}\label{sufficient-condition}}
+
+\hypertarget{necessary-and-sufficient-condition}{%
+\subsection{Necessary and Sufficient Condition}\label{necessary-and-sufficient-condition}}
+
 \hypertarget{references-1}{%
 \section*{References}\label{references-1}}
 \addcontentsline{toc}{section}{References}
@@ -1633,8 +2011,8 @@ Mendelson, E. (1970). Boolean algebra and switching circuits. McGraw-Hill Editio
 \newpage
 \pagenumbering{arabic}
 
-\hypertarget{tutorial}{%
-\section*{Tutorial}\label{tutorial}}
+\hypertarget{tutorial-1}{%
+\section*{Tutorial}\label{tutorial-1}}
 \addcontentsline{toc}{section}{Tutorial}
 
 \begin{enumerate}
@@ -1694,6 +2072,117 @@ Mendelson, E. (1970). Boolean algebra and switching circuits. McGraw-Hill Editio
 \item
   Show that \((A \leftrightarrow B)\) is
   logically equivalent to \((A \rightarrow B) \land (B \rightarrow A)\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Find the negation of \(A\rightarrow B\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Construct the truth table for \(A \rightarrow ( B\leftrightarrow A \land B).\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Find the negation of the following statement ``He is rich but unhappy''
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Prove by constructing truth table
+  \[P \rightarrow(Q \lor R) \equiv (P \rightarrow Q) \lor (P \rightarrow R)\]
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\item
+  Find the negation of \(P \leftrightarrow Q.\)
+\item
+  With the help of the truth table prove that \(\lnot (P \land Q) \equiv \lnot P\lor \lnot Q\)
+\item
+  Show that \((P \rightarrow Q) \leftrightarrow (\lnot P \lor Q)\) is a tautology
+\item
+  Show that the following stamens are equivalent.
+\end{enumerate}
+
+\begin{itemize}
+\item
+  \emph{Statement 1:} Good food is not cheap
+\item
+  \emph{Statement 2:} Cheap food is not good
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{13}
+\item
+  Express \(P\rightarrow Q\) only using \(\downarrow\) and \(\uparrow\).
+\item
+  Prove that \((P \land Q) \land \lnot (P \lor Q)\) is a contradiction.
+\item
+  Express \(P \leftrightarrow Q\) only using \(\downarrow\) and \(\uparrow\).
+\item
+  Show by truth table the following statement are equivalent
+\end{enumerate}
+
+\begin{itemize}
+\item
+  \emph{Statement 1:} Rich men are unhappy
+\item
+  \emph{Statement 2:} Men are unhappy or poor
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{17}
+\tightlist
+\item
+  A constructor promises a client ``We will fix it on Monday if it is not raining''. When the constructor would be deemed to have broken his promise. Explain with the help of truth table.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{18}
+\tightlist
+\item
+  Eliminate as many parentheses as possible from
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  \(\{[(A \lor B)\rightarrow (\lnot C)] \lor [(((\lnot B)\land C)\land B)]\}\)
+\item
+  \(\{[A \land (\lnot (\lnot B))]\leftrightarrow [B \leftrightarrow (C \lor B)]\}\)
+\item
+  \([(B\leftrightarrow (C \lor B)) \leftrightarrow (A \land (\lnot (\lnot B)))]\)
+\end{enumerate}
+
+20 Show the following are tautologies without using truth tables.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  \(((A \rightarrow B) \rightarrow C) \rightarrow ((C \rightarrow A) \rightarrow(D \rightarrow A )).\)
+\item
+  \((A \rightarrow B)\rightarrow ((B \rightarrow C) \rightarrow (A \rightarrow C)).\)
 \end{enumerate}
 
 \hypertarget{boolean-algebra}{%
@@ -2418,6 +2907,281 @@ Acharjya, D. P. (2009). Fundamental approach to discrete mathematics. New Age In
 
 Mendelson, E. (1970). Boolean algebra and switching circuits. McGraw-Hill Edition 2004.
 
+\newpage
+
+\pagenumbering{arabic}
+
+\hypertarget{tutorial-2}{%
+\section*{Tutorial}\label{tutorial-2}}
+\addcontentsline{toc}{section}{Tutorial}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Construct an AND gate using three NOR gates
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Construct an OR gate using three NAND gates
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Draw a gating network to the statement \((x.y)+(y.z)+(z.x)\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Draw a gating network to the statement \((x+y)^\prime(z.u)+(x.y)^\prime(z+u)\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  What is the output of the following gating network
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/networkQ5} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Construct a gating network using inverter and OR gate to the statement \((x.y)+(y.z)+(z.x)\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Find the value of the Boolean expression given below for \(x=1,\) \(y=1\) and \(z=0.\)
+  \[(x\land(y\lor(x\land y^\prime)))\lor((x\land y^\prime)\lor (x\land z^\prime)^\prime)\]
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Construct an AND gate using inverters and three NOR gates.
+\end{enumerate}
+
+\newpage
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Write the Boolean expression that represents the following combinatorial circuit, construct the logic table with the output of each gate.
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/networkQ9} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  Show that \(y=z\) when \((x+y)=(x+z)\) and \((x^\prime+y)=(x^\prime+z)\).
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  Given the Boolean function \(f\), write \(f\) in its disjunctive normal form.
+\end{enumerate}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+\(x\) & \(y\) & \(z\) & \(f(x,y,z)\)\tabularnewline
+\midrule
+\endhead
+1 & 1 & 1 & 1\tabularnewline
+1 & 1 & 0 & 1\tabularnewline
+1 & 0 & 1 & 0\tabularnewline
+1 & 0 & 0 & 0\tabularnewline
+0 & 1 & 1 & 0\tabularnewline
+0 & 1 & 0 & 1\tabularnewline
+0 & 0 & 1 & 0\tabularnewline
+0 & 0 & 0 & 1\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\tightlist
+\item
+  Draw the logic circuit (Combinatorial circuit) with input \(x,y,z\) and output \(Y\) to the following Boolean expressions.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  \(Y = x^\prime yz+x^\prime yz^\prime +xyz^\prime\)
+\item
+  \(Y = x y^\prime z+xz^\prime +y^\prime z\)
+\end{enumerate}
+
+\newpage
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{12}
+\tightlist
+\item
+  Show that the combinatorial circuits (a) and (b) are equivalent.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{figure/networkQ12a} 
+
+}
+
+\caption{(a)}\label{fig:unnamed-chunk-5}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{figure/networkQ12b} 
+
+}
+
+\caption{(b)}\label{fig:unnamed-chunk-6}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{13}
+\tightlist
+\item
+  Reduce the following Boolean products to either 0 or a fundamental product
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(x.y.x^\prime.z\)
+\item
+  \(x.y.z^\prime.y.x\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{14}
+\tightlist
+\item
+  Given the Boolean function \(f\), write \(f\) in its conjunctive normal form.
+\end{enumerate}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+\(x\) & \(y\) & \(z\) & \(f(x,y,z)\)\tabularnewline
+\midrule
+\endhead
+1 & 1 & 1 & 1\tabularnewline
+1 & 1 & 0 & 1\tabularnewline
+1 & 0 & 1 & 0\tabularnewline
+1 & 0 & 0 & 0\tabularnewline
+0 & 1 & 1 & 0\tabularnewline
+0 & 1 & 0 & 1\tabularnewline
+0 & 0 & 1 & 0\tabularnewline
+0 & 0 & 0 & 1\tabularnewline
+\bottomrule
+\end{longtable}
+
+\newpage
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{15}
+\tightlist
+\item
+  Design a combinatorial circuit that computes exclusive OR (XOR) of \(x\) and \(y\).
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{16}
+\tightlist
+\item
+  Given the Boolean function \(f\), write \(f\) in its
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  disjunctive normal form
+\item
+  conjunctive normal form
+\item
+  draw the combinatorial circuit to the disjunctive normal form.
+\end{enumerate}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+\(x\) & \(y\) & \(z\) & \(f(x,y,z)\)\tabularnewline
+\midrule
+\endhead
+1 & 1 & 1 & 0\tabularnewline
+1 & 1 & 0 & 0\tabularnewline
+1 & 0 & 1 & 0\tabularnewline
+1 & 0 & 0 & 1\tabularnewline
+0 & 1 & 1 & 1\tabularnewline
+0 & 1 & 0 & 1\tabularnewline
+0 & 0 & 1 & 1\tabularnewline
+0 & 0 & 0 & 0\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{17}
+\tightlist
+\item
+  Find the disjunctive normal form of the function, \(f(x,y)= (x+y).(x^\prime+y^\prime)\) using algebraic technique
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{18}
+\tightlist
+\item
+  Find the disjunctive normal form for the following combinatorial circuit.
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/networkQ18} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{19}
+\tightlist
+\item
+  \emph{Uniqueness of the complement}: Show that \(y=x^\prime\), when \(x \lor y=1\) and \(x\land y = 0\)
+\end{enumerate}
+
 \hypertarget{differentiation-and-integration}{%
 \chapter{Differentiation and Integration}\label{differentiation-and-integration}}
 
@@ -2703,7 +3467,7 @@ The graph of a function will not have a tangent line at a point where the functi
 
 }
 
-\caption{Isaac Newton and Gottfried Leibniz}\label{fig:unnamed-chunk-10}
+\caption{Isaac Newton and Gottfried Leibniz}\label{fig:unnamed-chunk-15}
 \end{figure}
 
 \newpage
@@ -3215,7 +3979,7 @@ Similarly, \(f\) has a \textbf{local minimum} (or \textbf{relative minimum}) at 
 
 }
 
-\caption{Isaac Newton and Gottfried Leibniz}\label{fig:unnamed-chunk-13}
+\caption{Isaac Newton and Gottfried Leibniz}\label{fig:unnamed-chunk-18}
 \end{figure}
 
 \textbf{3. The Extreme Value Theorem}
@@ -3403,7 +4167,7 @@ Discuss the curve \(y= x^4 - 4x^3\) with respect to concavity, points of inflect
 
 \newpage
 
-\begin{center}\includegraphics[width=0.8\textwidth]{figure/unnamed-chunk-14-1} \end{center}
+\begin{center}\includegraphics[width=0.8\textwidth]{figure/unnamed-chunk-19-1} \end{center}
 
 \newpage
 
@@ -3682,7 +4446,7 @@ Evaluate \(\int x^2e^x dx\)
   \(\frac{d}{dx} sec(x) = sec(x)tan(x)\)
 \end{enumerate}
 
-\begin{center}\includegraphics[width=0.8\textwidth]{figure/unnamed-chunk-15-1} \end{center}
+\begin{center}\includegraphics[width=0.8\textwidth]{figure/unnamed-chunk-20-1} \end{center}
 
 \textbf{Integration of Trigonometric Functions}
 
@@ -3703,8 +4467,8 @@ Evaluate \(\int x^2e^x dx\)
 
 \pagenumbering{arabic}
 
-\hypertarget{tutorial-1}{%
-\section{Tutorial}\label{tutorial-1}}
+\hypertarget{tutorial-3}{%
+\section{Tutorial}\label{tutorial-3}}
 
 \hypertarget{chapter-5.1-differentiation}{%
 \subsection*{Chapter 5.1: Differentiation}\label{chapter-5.1-differentiation}}
@@ -6145,7 +6909,7 @@ and
 
 }
 
-\caption{Relationship of mean, median and mode for different types of skewness}\label{fig:unnamed-chunk-37}
+\caption{Relationship of mean, median and mode for different types of skewness}\label{fig:unnamed-chunk-42}
 \end{figure}
 
 \hypertarget{pearsonian-coefficient-of-skewness}{%
@@ -6194,7 +6958,7 @@ where \(S_k\) = coefficient of skewness, \(M_d\) = median
 
 }
 
-\caption{Types of kurtosis}\label{fig:unnamed-chunk-38}
+\caption{Types of kurtosis}\label{fig:unnamed-chunk-43}
 \end{figure}
 
 \hypertarget{measures-of-association}{%
@@ -6302,8 +7066,8 @@ This famous (Fisher's or Anderson's) iris data set gives the measurements in cen
 
 \pagenumbering{arabic}
 
-\hypertarget{tutorial-2}{%
-\section{Tutorial}\label{tutorial-2}}
+\hypertarget{tutorial-4}{%
+\section{Tutorial}\label{tutorial-4}}
 
 \hypertarget{chapter-6-descriptive-statistics}{%
 \subsection*{Chapter 6: Descriptive Statistics}\label{chapter-6-descriptive-statistics}}
@@ -7120,8 +7884,8 @@ However, since the time is positive we can define the sample space as simply the
 
 \pagenumbering{arabic}
 
-\hypertarget{tutorial-3}{%
-\section{Tutorial}\label{tutorial-3}}
+\hypertarget{tutorial-5}{%
+\section{Tutorial}\label{tutorial-5}}
 
 \hypertarget{chapter-7-sets-and-relations}{%
 \subsection*{Chapter 7: Sets and Relations}\label{chapter-7-sets-and-relations}}
@@ -8260,8 +9024,8 @@ Then for \(i = 1, 2, \dots, n\).
 
 \newpage
 
-\hypertarget{tutorial-4}{%
-\section{Tutorial}\label{tutorial-4}}
+\hypertarget{tutorial-6}{%
+\section{Tutorial}\label{tutorial-6}}
 
 \hypertarget{chapter-8-probability}{%
 \subsection*{Chapter 8: Probability}\label{chapter-8-probability}}
