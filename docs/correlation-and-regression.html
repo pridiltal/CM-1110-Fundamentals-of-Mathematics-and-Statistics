@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Priyanga D. Talagala" />
 
 
-<meta name="date" content="2020-08-17" />
+<meta name="date" content="2020-08-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="random-variables.html"/>
-<link rel="next" href="references-8.html"/>
+<link rel="next" href="references-9.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -106,9 +106,10 @@
 <li class="chapter" data-level="2.2.2" data-path="sequences-and-series.html"><a href="sequences-and-series.html#geometric-sequences-and-series"><i class="fa fa-check"></i><b>2.2.2</b> Geometric sequences and series</a></li>
 <li class="chapter" data-level="2.2.3" data-path="sequences-and-series.html"><a href="sequences-and-series.html#methods-of-proof"><i class="fa fa-check"></i><b>2.2.3</b> Methods of proof</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="sequences-and-series.html"><a href="sequences-and-series.html#infinite-sequences-and-series"><i class="fa fa-check"></i><b>2.3</b> Infinite Sequences and Series</a><ul>
+<li class="chapter" data-level="2.3" data-path="sequences-and-series.html"><a href="sequences-and-series.html#infinite-sequences"><i class="fa fa-check"></i><b>2.3</b> Infinite Sequences</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="sequences-and-series.html"><a href="sequences-and-series.html#limit-laws-for-sequences"><i class="fa fa-check"></i><b>2.3.1</b> Limit Laws for Sequences</a></li>
 </ul></li>
+<li class="chapter" data-level="2.4" data-path="sequences-and-series.html"><a href="sequences-and-series.html#infinite-series"><i class="fa fa-check"></i><b>2.4</b> Infinite Series</a></li>
 <li class="chapter" data-level="" data-path="sequences-and-series.html"><a href="sequences-and-series.html#tutorial"><i class="fa fa-check"></i>Tutorial</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="introduction-to-logic.html"><a href="introduction-to-logic.html"><i class="fa fa-check"></i><b>3</b> Introduction to Logic</a><ul>
@@ -277,8 +278,16 @@
 <li class="chapter" data-level="9.3" data-path="random-variables.html"><a href="random-variables.html#continuous-random-variable"><i class="fa fa-check"></i><b>9.3</b> Continuous Random Variable</a></li>
 <li class="chapter" data-level="" data-path="random-variables.html"><a href="random-variables.html#references-7"><i class="fa fa-check"></i>References</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html"><i class="fa fa-check"></i><b>10</b> Correlation and Regression</a></li>
-<li class="chapter" data-level="" data-path="references-8.html"><a href="references-8.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="10" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html"><i class="fa fa-check"></i><b>10</b> Correlation and Regression</a><ul>
+<li class="chapter" data-level="10.1" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#introduction-to-correlation-and-regression"><i class="fa fa-check"></i><b>10.1</b> Introduction to Correlation and Regression</a></li>
+<li class="chapter" data-level="10.2" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#simple-linear-regression"><i class="fa fa-check"></i><b>10.2</b> Simple Linear Regression</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#determining-the-equation-of-the-regression-line"><i class="fa fa-check"></i><b>10.2.1</b> Determining the equation of the regression line</a></li>
+<li class="chapter" data-level="10.2.2" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#deterministic-models-vs-probabilistic-models"><i class="fa fa-check"></i><b>10.2.2</b> Deterministic models vs probabilistic models</a></li>
+<li class="chapter" data-level="10.2.3" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#least-squares-estimation-of-the-parameters"><i class="fa fa-check"></i><b>10.2.3</b> Least squares estimation of the parameters</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#references-8"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references-9.html"><a href="references-9.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
 
       </nav>
@@ -298,7 +307,176 @@
             <section class="normal" id="section-">
 <div id="correlation-and-regression" class="section level1">
 <h1><span class="header-section-number">Chapter 10</span> Correlation and Regression</h1>
+<div id="introduction-to-correlation-and-regression" class="section level2">
+<h2><span class="header-section-number">10.1</span> Introduction to Correlation and Regression</h2>
+<ul>
+<li>In many practical situations we want to identify various types of relationships between variables.</li>
+<li>Sometimes we want to estimate how one variable is related to or affected by some other variables.</li>
+<li><strong>Regression analysis</strong> is a statistical technique for investigating and **modeling the relationship between variables*.</li>
+<li>There are numerous applications of regression in many fields.</li>
+</ul>
+<p><em>Examples</em>
+- A production company may need to determine how its sales related to advertising
+- How the growth of the bacteria is related to moisture level of the environment.
+- The relationship between blood pressure and the age of a person.
+- the relationship between transaction time and transaction amount in fraud detection.</p>
+<!-- Business statistics black e all page 499 3rd paragraph-->
+<ul>
+<li>Usually, the first step in regression analysis is to construct a scatter plot (or scatter matrix).</li>
+<li>Graphing the data in a scatter plot yields preliminary information about the <em>shape</em> and <em>spread</em> if the data.</li>
+</ul>
+<div id="scatter-plot-1" class="section level4">
+<h4><span class="header-section-number">10.1.0.1</span> Scatter plot</h4>
+<ul>
+<li>A scatter plot is a two dimensional graph of pairs of points from <strong>two numerical</strong> variables</li>
+<li>In a quantitative bi-variate dataset, we have a <span class="math inline">\((x,y)\)</span> pair for each sampling unit, where <span class="math inline">\(x\)</span> denotes the independent variable and <span class="math inline">\(y\)</span> denotes the dependent variable.</li>
+<li>Each <span class="math inline">\((x,y)\)</span> pair can be considered as a point on the Cartesian plan.</li>
+<li>Scatter plot is a plot of all the <span class="math inline">\((x,y)\)</span> pairs in the dataset.</li>
+<li>The purpose of scatter plot is to illustrate any relationship between two quantitative variables.
+<ul>
+<li>If the variables are related, what kind of relationship it is, linear or nonlinear?</li>
+<li>If the relationship is linear, the scatter plot will show whether it is negative or positive. - The scatter plot gives some idea of how well a regression line fits the data.</li>
+</ul></li>
+</ul>
+<p><strong>Example:</strong> <em>Palmer Archipelago (Antarctica) Penguin Data</em></p>
+<p>The palmerpenguins data (available through <code>palmerpenguins</code> R package) contains size measurements for three penguin species observed on three islands in the Palmer Archipelago, Antarctica.
+<!--https://allisonhorst.github.io/palmerpenguins/articles/intro.html--></p>
+<p><img src="figure/scatterplot10-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Penguin flipper length and body mass show a positive association for the 3 species.</p>
+</div>
+<div id="correlation-1" class="section level4">
+<h4><span class="header-section-number">10.1.0.2</span> Correlation</h4>
+<ul>
+<li>Correlation is a measure of the degree of relatedness of two or more variables.</li>
+<li>Several measures of correlation are available , the selection of which depends mostly on the level of data being analysed.</li>
+<li>Ideally, researchers would like to calculate <span class="math inline">\(\rho\)</span>, the <strong>population</strong> coefficient of correlation.</li>
+<li>However, because researchers virtually always deal with sample data, this section introduces a widely used sample coefficient of correlation, <span class="math inline">\(r\)</span>.</li>
+<li>This measure is applicable <strong>only if both variables being analysed have at least an interval level of data</strong></li>
+</ul>
+<p><strong>Pearson product-moment correlation coefficient</strong> (<span class="math inline">\(r\)</span>)</p>
+<ul>
+<li>The statistic <span class="math inline">\(r\)</span> is the Pearson product-moment correlation coefficient, named after Karl Pearson (1857 - 1936).</li>
+<li>The tern <span class="math inline">\(r\)</span> is a measure of the <strong>linear</strong> correlation of two variables.</li>
+<li>It is a number that ranges from -1 to 0 to +1, representing th strength of the linear relationship between the variables.</li>
+<li>An <span class="math inline">\(r\)</span> value of <span class="math inline">\(+1\)</span> denotes a perfect <strong>linear</strong> positive relationship between two variables.</li>
+<li>An <span class="math inline">\(r\)</span> value of <span class="math inline">\(-1\)</span> denotes a perfect <strong>linear</strong> negative relationship between two variables, which indicates an inverse relationship between two variables: as one variable gets larger, the other gets smaller.</li>
+<li>An <span class="math inline">\(r\)</span> value of 0 means no <strong>linear</strong> relationship is present between the two variables.</li>
+</ul>
+<p><span class="math display">\[ r = \frac{\sum(x-\bar{x})(y-\bar{y})}{\sqrt{\sum(x-\bar{x})^2\sum(y-\bar{y})^2}}\]</span></p>
+<p><span class="math display">\[ r = \frac{\sum{xy} - \frac{(\sum x\sum y)}{n}}{\sqrt{[\sum{x^2- \frac{(\sum{x})^2}{n}}][\sum y^2-\frac{(\sum y)^2}{n}]}}\]</span></p>
+<ul>
+<li>Examples: Following figure shows five different degrees of correlation:</li>
+</ul>
+<p><img src="figure/cor2-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>NOTE</strong></p>
+<ul>
+<li>When <span class="math inline">\(r=0\)</span>, it signifies there is <strong>no linear</strong> relationship between the two variables. (There can be a non-linear relationship, Figure (e))</li>
+<li>Figure (e): There is a very strong curvilinear relationship. But there is <strong>no linear</strong> relationship.</li>
+</ul>
+</div>
+</div>
+<div id="simple-linear-regression" class="section level2">
+<h2><span class="header-section-number">10.2</span> Simple Linear Regression</h2>
+<ul>
+<li>The most elementary regression model is called <strong>simple linear regression</strong>.</li>
+<li>Is is also known as *bivariate linear regression, which means that it involves only two variables.</li>
+<li>On variable is predicted by another variable.</li>
+<li>The variable to to be predicted is called the <em>independent variable</em> an is denoted by <span class="math inline">\(y\)</span>.</li>
+<li>The <em>predictor</em> is called the <em>independent variable</em> or <em>explanatory variable</em> and is denoted by <span class="math inline">\(x\)</span></li>
+<li>In simple <em>linear</em> regression analysis, only a strait-line relationship between two variables is examined.</li>
+<li>Nonlinear relationships and regression models with more than one independent variable can be explored by using multiple regression models.</li>
+</ul>
+<div id="determining-the-equation-of-the-regression-line" class="section level3">
+<h3><span class="header-section-number">10.2.1</span> Determining the equation of the regression line</h3>
+<ul>
+<li><p>The first step in determining the equation of the regression line that passes through he sample data is to establish the equation’s form.</p></li>
+<li><p>In mathematics, the equation of a line can be written as
+<span class="math display">\[y=mx+c\]</span>
+where:
+<span class="math inline">\(m\)</span> = slope of the line 
+<span class="math inline">\(c\)</span> = <span class="math inline">\(y\)</span> intercept of the line.</p></li>
+<li><p>In statistics, the slope-intercept form of the equation of the regression line through the population points is:
+<span class="math display">\[\hat{y} = \beta_0+\beta_1x\]</span>
+where:
+<span class="math inline">\(\hat{y}\)</span> = the predicted value of <span class="math inline">\(y\)</span> 
+<span class="math inline">\(\beta_0\)</span> = the population <span class="math inline">\(y\)</span> intercept 
+<span class="math inline">\(\beta_1\)</span> = the population slope.</p></li>
+<li><p>For any specific dependent variable value, <span class="math inline">\(y_i\)</span>:
+<span class="math display">\[y_i = \beta_0+\beta_1x_i+\epsilon_i\]</span>
+where:
+<span class="math inline">\(x_i\)</span> = the value of the independent variable for the <span class="math inline">\(i\)</span>th value 
+<span class="math inline">\(y_i\)</span> = the value of the dependent variable for the <span class="math inline">\(i\)</span>th value 
+<span class="math inline">\(\beta_0\)</span> = the population <span class="math inline">\(y\)</span> intercept 
+<span class="math inline">\(\beta_1\)</span> = the population slope 
+<span class="math inline">\(\epsilon_i\)</span> = the error of prediction for the <span class="math inline">\(i\)</span>th value.</p></li>
+<li>Unless the points being fitted by the regression equation are in perfect alignment, the regression line will miss at least some of the points.</li>
+<li><p>In the above equation, <span class="math inline">\(\epsilon_i\)</span> represents the error of the regression line in fitting these points. If a point is on the regression line, <span class="math inline">\(\epsilon_i = 0\)</span></p></li>
+</ul>
+</div>
+<div id="deterministic-models-vs-probabilistic-models" class="section level3">
+<h3><span class="header-section-number">10.2.2</span> Deterministic models vs probabilistic models</h3>
+<ul>
+<li>These mathematical models can be either deterministic models or probabilistic models.</li>
+</ul>
+<p><strong>Deterministic models</strong></p>
+<ul>
+<li>Deterministic models are <em>mathematical models that produces an</em> <strong>exact</strong> <em>output for a given input</em></li>
+<li>For example, consider the equation of a regression line is:
+<span class="math display">\[\hat{y} =1.68 + 2.40x\]</span>.</li>
+</ul>
+<p>For a value of <span class="math inline">\(x=5,\)</span> the exact predicted value of <span class="math inline">\(y\)</span> is
+<span class="math display">\[\hat{y} =1.68 + 2.40\times 5 = 13.68\]</span>.
+- However, the most of the time the values of <span class="math inline">\(y\)</span> will not equal exactly the values yields by the equations.
+- Random error will occur in the prediction of the <span class="math inline">\(y\)</span> values for values of <span class="math inline">\(x\)</span>, because it is likely that the variable <span class="math inline">\(x\)</span> doe bot explain all the variability of the variable <span class="math inline">\(y\)</span>.</p>
+<p><em>Example</em></p>
+<ul>
+<li>Suppose we want to predict the sales volume (<span class="math inline">\(y\)</span>) for a mobile phone company through regression analysis by using the annual amount of advertising (in Rupees) (<span class="math inline">\(x\)</span>) as the predictor.</li>
+<li>Although sales are often related to advertising, there can be other factors related to sales that are not accounted for by the amount of advertising. <!--reputation, quality, type--></li>
+<li>Therefore, a regression model to predict sales volume by the amount of advertising probably involves some error.</li>
+<li>For this reason, in regression, we present the general model as a probabilistic model.</li>
+</ul>
+<p><strong>Probabilistic models</strong></p>
+<ul>
+<li>A probabilistic model is <em>one that includes an error term that allows for the</em> <span class="math inline">\(y\)</span> *values to vary for any given value of <span class="math inline">\(x\)</span>.</li>
+<li>The deterministic regression model is
+<span class="math display">\[y=\beta_0+\beta_1x\]</span></li>
+<li>The probabilistic regression model is
+<span class="math display">\[y=\beta_0+\beta_1x+\epsilon.\]</span></li>
+<li><p><span class="math inline">\(\beta_0+\beta_1x\)</span> is the deterministic portion of the probabilistic model, <span class="math inline">\(\beta_0+\beta_1x+\epsilon.\)</span></p></li>
+<li><p>In deterministic mode, all points are assumed to be on the line and in all cases <span class="math inline">\(\epsilon\)</span> is zero.</p></li>
+</ul>
+</div>
+<div id="least-squares-estimation-of-the-parameters" class="section level3">
+<h3><span class="header-section-number">10.2.3</span> Least squares estimation of the parameters</h3>
+<ul>
+<li>The parameters <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are unknown and need to be estimated using <em>sample data</em>.</li>
+<li>The equation of the regression line contains the sample <span class="math inline">\(y\)</span> intercept, <span class="math inline">\(\hat{\beta_0}\)</span>, and the sample slope, <span class="math inline">\(\hat{\beta_1}\)</span>.</li>
+</ul>
+<p><span class="math display">\[\hat{y} = \hat{\beta_0}+\hat{\beta_1}x\]</span>
+where:
+<span class="math inline">\(\hat{y}\)</span> = the predicted value of <span class="math inline">\(y\)</span> 
+<span class="math inline">\(\hat{\beta_0}\)</span> = the sample <span class="math inline">\(y\)</span> intercept 
+<span class="math inline">\(\hat{\beta_1}\)</span> = the sample slope</p>
+<ul>
+<li>To determine the equation of the regression line for a sample of data, the researcher must determine the values of <span class="math inline">\(\hat{\beta_0}\)</span> and <span class="math inline">\(\hat{\beta_1}.\)</span></li>
+<li>This process is sometimes referred to as <strong>least squares analysis</strong>.</li>
+<li>Least squares analysis is a process whereby a regression model is developed by <em>producing the minimum sum of the squared error values.</em></li>
+<li>The least squares regression line is the <strong>regression line that results in the smallest sum of error squared</strong>.</li>
+</ul>
+<div style="page-break-after: always;"></div>
+<!-- Leave a page for the Derivation of the formula-->
+<p><em>Least square analysis contd.</em></p>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div id="references-8" class="section level2 unnumbered">
+<h2>References</h2>
+<ul>
+<li>Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., &amp; Harris, M. (2007). <em>Australasian business statistics</em>. John Wiley &amp; Sons.</li>
+</ul>
 
+<div style="page-break-after: always;"></div>
+</div>
 </div>
             </section>
 
@@ -306,7 +484,7 @@
         </div>
       </div>
 <a href="random-variables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references-8.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="references-9.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Number Systems | CM 1110 Fundamentals of Mathematics and Statistics</title>
-  <meta name="description" content="Chapter 1 Number Systems | CM 1110 Fundamentals of Mathematics and Statistics" />
+  <title>References | CM 1110 Fundamentals of Mathematics and Statistics</title>
+  <meta name="description" content="References | CM 1110 Fundamentals of Mathematics and Statistics" />
   <meta name="generator" content="bookdown 0.18.3 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Number Systems | CM 1110 Fundamentals of Mathematics and Statistics" />
+  <meta property="og:title" content="References | CM 1110 Fundamentals of Mathematics and Statistics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Number Systems | CM 1110 Fundamentals of Mathematics and Statistics" />
+  <meta name="twitter:title" content="References | CM 1110 Fundamentals of Mathematics and Statistics" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="sequences-and-series.html"/>
+<link rel="prev" href="correlation-and-regression.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -305,636 +305,34 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="number-systems" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Number Systems</h1>
-<!--  Butenko, S., & Pardalos, P. M. (2014). Numerical methods and optimization: An introduction. CRC Press.-->
-
-<p>Numbers can be classified according to how they are represented or according to the properties that they have.</p>
-<div id="main-types" class="section level2">
-<h2><span class="header-section-number">1.1</span> Main types</h2>
-<p><img src="figure/1-numbertypes.png" width="100%" style="display: block; margin: auto;" /></p>
-<div id="complex-numbers" class="section level3">
-<h3><span class="header-section-number">1.1.1</span> Complex numbers</h3>
-<ul>
-<li>Every number in number system is considered as a complex number</li>
-<li>A number of the form <span class="math inline">\(a+ib\)</span> is called a complex number when <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are real numbers and <span class="math inline">\(i=\sqrt{-1}\)</span>.</li>
-<li>For a given complex number, <span class="math inline">\(a+ib\)</span>, ‘<span class="math inline">\(a\)</span>’ is known as the real part and ‘<span class="math inline">\(b\)</span>’ is known as the imaginary part.</li>
-<li>If <span class="math inline">\(a=0\)</span>, the number <span class="math inline">\(ib\)</span> is said to be purely imaginary, if <span class="math inline">\(b=0\)</span> the number <span class="math inline">\(a\)</span> is real.</li>
-<li>A pair of complex number <span class="math inline">\(a+ib\)</span> and <span class="math inline">\(a-ib\)</span> are said to be conjugate of each other.</li>
-</ul>
-<p><strong>Show that the sum and product of a complex number and its conjugate complex are both real.</strong></p>
-<p><img src="figure/NSbox1a-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<ul>
-<li>Let <span class="math inline">\(a+ib\)</span> and <span class="math inline">\(c+id\)</span> be two complex numbers. Then</li>
-</ul>
-<p><strong>Addition.</strong> <span class="math inline">\((a+ib) + (c+id)= (a+c)+i(b+d)\)</span></p>
-<p><strong>Subtraction</strong> <span class="math inline">\((a+ib) - (c+id)= (a-c)+i(b-d)\)</span></p>
-<p><strong>Multiplication</strong> <span class="math inline">\((a+ib) \times (c+id)= ac-bd+i(ad+bc)\)</span></p>
-<p><strong>Addition.</strong> <span class="math inline">\(\frac{a+ib}{c+id}= \frac{a+ib}{c+id}.\frac{c-id}{c-id}= \frac{ac+bd}{c^2+d^2}+i\frac{bc-ad}{c^2+d^2}\)</span></p>
-<ul>
-<li>Complex numbers are denoted by <span class="math inline">\(\mathbb{C}\)</span>.</li>
-</ul>
-</div>
-<div id="imaginary-numbers" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> Imaginary numbers</h3>
-<ul>
-<li>A number that does not exist in the number line is known as imaginary number.</li>
-<li>For example, square root of negative numbers are imaginary numbers. It is denoted by <span class="math inline">\(i\)</span>.
-i.e <span class="math display">\[\sqrt{-1}=i\]</span> 
-<span class="math display">\[i^{2} = – 1\]</span></li>
-<li>So there is no real number <span class="math inline">\(i\)</span> that satisfies the above equation.</li>
-<li>The quantity, <span class="math inline">\(i\)</span> is called the unit imaginary number.</li>
-</ul>
-<p><strong>Geometrical Representation of imaginary numbers</strong></p>
-<p><img src="figure/1-ImgNum.png" width="50%" style="display: block; margin: auto;" /></p>
-<ul>
-<li>Let OA be positive numbers which is represented by <span class="math inline">\(x\)</span> and <span class="math inline">\(OA^\prime\)</span> by <span class="math inline">\(-x\)</span>.</li>
-<li>And <span class="math inline">\(-x= (i)^2x=i(ix)\)</span> is on <span class="math inline">\(OX^{\prime}\)</span>.</li>
-<li>According to the above expression, the multiplication of the real number <span class="math inline">\(x\)</span> by <span class="math inline">\(i\)</span> twice amounts is equivalent to the rotation of OA through two right angles to reach <span class="math inline">\(OA^\prime\)</span>.</li>
-<li>Therefore, the multiplication of <span class="math inline">\(x\)</span> by <span class="math inline">\(i\)</span> is equivalent to the rotation of <span class="math inline">\(x\)</span> through one right angle to reach <span class="math inline">\(OA^{\prime\prime}\)</span>.</li>
-<li>Therefore, y-axis is known as imaginary axis.</li>
-<li>Multiplication by <span class="math inline">\(i\)</span> rotates its direction through right angle.</li>
-</ul>
-</div>
-<div id="real-numbers" class="section level3">
-<h3><span class="header-section-number">1.1.3</span> Real numbers</h3>
-<ul>
-<li>All numbers that can be represented on the number line are known as real numbers.</li>
-<li>The real numbers is the set of numbers containing all of the rational numbers and all of the irrational numbers.</li>
-<li>Real Numbers are denoted by <span class="math inline">\(\mathbb{R}\)</span>.</li>
-</ul>
-</div>
-<div id="rational-numbers" class="section level3">
-<h3><span class="header-section-number">1.1.4</span> Rational numbers</h3>
-<ul>
-<li>Rational Numbers are denoted by <span class="math inline">\(\mathbb{Q}\)</span></li>
-<li>A rational number is defined as number of the form <span class="math inline">\(x/y\)</span> where <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are integers and <span class="math inline">\(y \neq 0\)</span>.</li>
-<li>The set of rational numbers encloses the set of integers and fractions.</li>
-<li><p>The rational numbers that are not integral will have decimal values. These values can be of two types</p>
-<ul>
-<li>Terminating decimal fractions (finite decimal factors): For example <span class="math inline">\(1/5 = 0.5\)</span> , <span class="math inline">\(13/5 = 2.6\)</span>.</li>
-<li>Non Terminating decimal fractions. The non terminating decimal fractions having two types:
-<ol style="list-style-type: lower-roman">
-<li>Non terminating periodic fractions</li>
-<li>Non terminating non periodic fractions</li>
-</ol></li>
-</ul></li>
-</ul>
-<p><em>i) Non terminating periodic fractions</em></p>
-<ol style="list-style-type: lower-alpha">
-<li>These are non terminating decimal fractions of the type <span class="math inline">\(a.b1b2b3b4b5 .....bmb1b2b3b4b5 .....bm\)</span></li>
-<li><p>Examples</p>
-<p><span class="math inline">\(19/6 = 3.16666666.....\)</span></p>
-<p><span class="math inline">\(18/7 = 2.57142857142857.......\)</span></p>
-<p><span class="math inline">\(21/9= 2.3333.......\)</span></p></li>
-</ol>
-<p><em>ii) Non terminating non periodic fractions</em></p>
-<ol style="list-style-type: lower-alpha">
-<li>These are non terminating and there is no periodic decimal places for that number.</li>
-<li>i.e <span class="math inline">\(a.b1b2b3b4b5 .....bmc1c2.........\)</span></li>
-<li>for example 6.789542587436512……….</li>
-</ol>
-<ul>
-<li><strong>So from above terminating and non terminating periodic fraction numbers belongs to rational numbers.</strong></li>
-</ul>
-</div>
-<div id="irrational-numbers" class="section level3">
-<h3><span class="header-section-number">1.1.5</span> Irrational numbers</h3>
-<ul>
-<li>Irrational numbers are denoted by <span class="math inline">\(\mathbb{I}\)</span></li>
-<li>Irrational numbers are consisted with <strong>non terminating and non periodic fractions</strong>.</li>
-<li>i.e irrational number is a number that cannot be written as a ratio <span class="math inline">\(x/y\)</span> form (or fraction).</li>
-<li>In decimal form, it never ends or repeats.</li>
-<li>Examples for irrational numbers are <span class="math inline">\(\sqrt{2} = 1.414213......\)</span>, <span class="math inline">\(\pi = 3.14159265.......\)</span>, <span class="math inline">\(\sqrt{3}\)</span>, <span class="math inline">\(\sqrt{5}\)</span> etc.</li>
-</ul>
-</div>
-<div id="integers" class="section level3">
-<h3><span class="header-section-number">1.1.6</span> Integers</h3>
-<ul>
-<li>All numbers that do not have the decimal places in them are called integers.</li>
-<li><span class="math inline">\(\mathbb{Z} = \{...,-5,-4,-3,-2,-1,0,1,2,3,4,5,...\}\)</span></li>
-<li>i.e it may be positive or negative or zero.</li>
-<li>Integers are denoted by <span class="math inline">\(\mathbb{Z}\)</span>.</li>
-<li>Any integers are added, subtracted, or multiplied the result is always is an integer.</li>
-<li>When any integers multiplied , each of the multiplied integer is called a factor or divisor of the resulting product.</li>
-</ul>
-</div>
-<div id="whole-numbers" class="section level3">
-<h3><span class="header-section-number">1.1.7</span> Whole numbers</h3>
-<ul>
-<li>The set of whole numbers means narrator numbers and <span class="math inline">\(0\)</span></li>
-<li>Whole numbers = <span class="math inline">\(\mathbb{W} = \{ 0,1,2,3,4,5,6,7,8,...\}\)</span></li>
-</ul>
-</div>
-<div id="natural-numbers" class="section level3">
-<h3><span class="header-section-number">1.1.8</span> Natural numbers</h3>
-<ul>
-<li>The counting numbers start with 1 and their end is not defined.</li>
-<li>i.e <span class="math inline">\(\mathbb{N} =\{1,2,3,4,...\}\)</span></li>
-</ul>
-<p><strong>Further Reading :</strong></p>
-<p>Dass, H. K. (2008). ‘Complex Numbers’, <em>Advanced Engineering Mathematics</em>. S. Chand Publishing. pp. 474-520.</p>
-</div>
-</div>
-<div id="number-representations" class="section level2">
-<h2><span class="header-section-number">1.2</span> Number representations</h2>
-<div id="glossary-of-terms-used-in-the-positional-numeral-systems" class="section level3">
-<h3><span class="header-section-number">1.2.1</span> Glossary of terms used in the positional numeral systems</h3>
-<p><img src="figure/NSbox1-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<ul>
-<li><p>There are various types of the number system in mathematics.</p></li>
-<li><p>The four most common number system types are:</p>
-<ul>
-<li>Decimal number system (Base- 10)</li>
-<li>Binary number system (Base- 2)</li>
-<li>Octal number system (Base-8)</li>
-<li>Hexadecimal number system (Base- 16)</li>
-</ul></li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>System</th>
-<th>Radix/ Base</th>
-<th>Digits</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Binary</td>
-<td>2</td>
-<td>0 1</td>
-</tr>
-<tr class="even">
-<td>Octal</td>
-<td>8</td>
-<td>0 1 2 3 4 5 6 7</td>
-</tr>
-<tr class="odd">
-<td>Decimal</td>
-<td>10</td>
-<td>0 1 2 3 4 5 6 7 8 9</td>
-</tr>
-<tr class="even">
-<td>Hexadecimal</td>
-<td>16</td>
-<td>0 1 2 3 4 5 6 7 8 9 A B C D E F</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="decimal-number-system" class="section level3">
-<h3><span class="header-section-number">1.2.2</span> Decimal Number System</h3>
-<ul>
-<li><p>The Decimal number system is a number of base or radix equal to 10.</p></li>
-<li><p>To determine the actual number in each position, take the number that appears in the position and multiply it by <span class="math inline">\(10^x\)</span>, where <span class="math inline">\(x\)</span> is the power representation.</p></li>
-</ul>
-<p><strong>Example 1: The value of the combination of symbols 453 is determined by adding the weights of each position as</strong></p>
-<p><span class="math display">\[4\times10^2+5\times10^1+3\times10^0\]</span>
-<span class="math display">\[= 4\times100 + 5\times10+3\times1\]</span>
-Or <span class="math display">\[= 400+50+3 = 453\]</span></p>
-<p><strong>Example 2: The value of the combination of symbols 369.54 is determined by adding the weights of each position as</strong></p>
-<p><span class="math display">\[3\times10^2+6\times10^1+9\times10^0+5\times10^{-1}+4\times10^{-2}\]</span>
-Or <span class="math display">\[= 300 + 60+9+\frac{5}{10}+\frac{4}{100}\]</span>
-Or <span class="math display">\[= 300 + 60+9+0.5+0.04= 369.54\]</span></p>
-</div>
-<div id="binary-number-system" class="section level3">
-<h3><span class="header-section-number">1.2.3</span> Binary Number System</h3>
-<ul>
-<li>The binary number system is a number system of base or radix equal to 2.</li>
-<li>In the binary number system, there are two symbols to represent number: 0 and 1</li>
-<li>When the symbols 0 an 1 are used to represent binary number, each symbol is called a binary digit or a bit.</li>
-<li>Therefore, the binary number 1011 is a four-digit number or a 4-bit binary number.</li>
-</ul>
-<div id="binary-to-decimal-conversion" class="section level4">
-<h4><span class="header-section-number">1.2.3.1</span> Binary-to-Decimal Conversion</h4>
-<ul>
-<li>Multiply binary digit (1 or 0) in each position by the weight of the position and add the results.</li>
-</ul>
-<p><strong>Example 1: Convert the binary number 11010 to its decimal equivalent</strong></p>
-<p><img src="figure/NSbox2-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><strong>Example 2: Convert the binary number 0.011 to its decimal equivalent</strong></p>
-<p><img src="figure/NSbox3-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><strong>Example 3: Convert the binary number 110.011 to its decimal equivalent</strong></p>
-<p><img src="figure/NSbox4-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="decimal-to-binary-conversion" class="section level4">
-<h4><span class="header-section-number">1.2.3.2</span> Decimal-to-Binary Conversion</h4>
-<ul>
-<li>To convert decimal numbers to their binary equivalent, the following procedures are employed:</li>
-</ul>
-<div id="whole-number-conversion-repeated-division-by-2" class="section level5">
-<h5><span class="header-section-number">1.2.3.2.1</span> Whole number conversion: Repeated division by 2</h5>
-<ul>
-<li>The remainder resulting from each division forms binary number.</li>
-<li>The first remainder to be produced is called the least significant bit (LSB) and the last remainder is called most significant bit (MSB).</li>
-</ul>
-<p><strong>Example 1: Convert the decimal number 17 to binary</strong></p>
-<p><img src="figure/NSbox5-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="fractional-number-conversion-repeated-multiplication-by-2" class="section level5">
-<h5><span class="header-section-number">1.2.3.2.2</span> Fractional number conversion: Repeated multiplication by 2</h5>
-<ul>
-<li>Multiply any factional part repeatedly by 2.</li>
-<li>The equivalent binary number is formed from the 1 or 0 in the units position (<span class="math inline">\(10^0\)</span> position).</li>
-</ul>
-<p><strong>Example 1: Convert the decimal number 0.625 to binary</strong></p>
-<p><img src="figure/NSbox6-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<ul>
-<li>Sometimes it will be necessary to terminate the multiplication when an acceptable degree of accuracy is obtained. Then the resulted binary number will be an approximation.</li>
-</ul>
-<p><strong>Example 2: Convert the decimal number 0.6375 to binary</strong></p>
-<p><img src="figure/NSbox7-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<ul>
-<li>We see that it continues in this way and does not terminate.</li>
-<li>So, <span class="math inline">\(0.6375_{10} = (0.1010001101....)_{2}\)</span>.</li>
-<li><p>If we discard all the bits after the 7th bit, then we get the approximate representation <span class="math inline">\(0.6375_{10} \approx (0.1010001)_{2},\)</span> committing an error amounting to
-<span class="math display">\[0.6375_{10} -(0.1010001)_{2}= 0.6375_{10} -0.6328125_{10}= (.0046875)_{10},\]</span>
-which is known as <strong><em>round-off error</em></strong>.</p></li>
-<li><p>Although, strictly, this is <em>chopping-off error</em>, it is generally, termed as <em>round-off error</em>.</p></li>
-</ul>
-<p><strong>Example 3: Convert the decimal number 49.683 to binary</strong></p>
-<p><img src="figure/NSbox8-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-</div>
-</div>
-<div id="octal-number-system" class="section level3">
-<h3><span class="header-section-number">1.2.4</span> Octal Number System</h3>
-<ul>
-<li>The octal system is a number system of base or radix equal to 8.</li>
-</ul>
-<div id="octal-to-decimal-conversion" class="section level4">
-<h4><span class="header-section-number">1.2.4.1</span> Octal-to-Decimal Conversion</h4>
-<p><strong>Example 1: Convert the following octal numbers to their decimal equivalent</strong></p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(35_8\)</span></li>
-<li><span class="math inline">\(100_8\)</span></li>
-<li><span class="math inline">\(0.24_8\)</span></li>
-</ol>
-<p><img src="figure/NSbox9-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="decimal-to-octal-conversion" class="section level4">
-<h4><span class="header-section-number">1.2.4.2</span> Decimal-to-Octal Conversion</h4>
-<ul>
-<li>To convert decimal numbers to their octal equivalent, the following procedures are employed:</li>
-</ul>
-<div id="whole-number-conversion-repeated-division-by-8" class="section level5">
-<h5><span class="header-section-number">1.2.4.2.1</span> Whole number conversion: Repeated division by 8</h5>
-<p><strong>Example 1: Convert the decimal number 245 to octal equivalent</strong></p>
-<p><img src="figure/NSbox10-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="fractional-number-conversion-repeated-multiplication-by-8" class="section level5">
-<h5><span class="header-section-number">1.2.4.2.2</span> Fractional number conversion: Repeated multiplication by 8</h5>
-<p><strong>Example 2: Convert the decimal fraction 0.432 to octal equivalent</strong></p>
-<p><img src="figure/NSbox11-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<ul>
-<li>This conversion to octal is not precise as there is a remainder.</li>
-<li>If greater accuracy is required, continue multiplying by 8 to obtain more octal digits.</li>
-</ul>
-<p><strong>Example 3: Convert the decimal number 419.95 to octal equivalent</strong></p>
-<p><img src="figure/NSbox12-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-</div>
-<div id="octal-to-binary-conversion" class="section level4">
-<h4><span class="header-section-number">1.2.4.3</span> Octal-to-Binary Conversion</h4>
-<p><strong>Octal and binary number correspondence</strong></p>
-<table>
-<thead>
-<tr class="header">
-<th>Octal</th>
-<th>Binary</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td>000</td>
-</tr>
-<tr class="even">
-<td>1</td>
-<td>001</td>
-</tr>
-<tr class="odd">
-<td>2</td>
-<td>010</td>
-</tr>
-<tr class="even">
-<td>3</td>
-<td>011</td>
-</tr>
-<tr class="odd">
-<td>4</td>
-<td>100</td>
-</tr>
-<tr class="even">
-<td>5</td>
-<td>101</td>
-</tr>
-<tr class="odd">
-<td>6</td>
-<td>110</td>
-</tr>
-<tr class="even">
-<td>7</td>
-<td>111</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>To convert from octal to binary, simply replace each octal digit with the corresponding three-digit binary number.</li>
-</ul>
-<p><strong>Example 1: Convert the following octal numbers to their binary equivalent</strong></p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(247_8\)</span></li>
-<li><span class="math inline">\(124.375_8\)</span></li>
-</ol>
-<p><img src="figure/NSbox131-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="binary-to-octal-conversion" class="section level4">
-<h4><span class="header-section-number">1.2.4.4</span> Binary-to-Octal Conversion</h4>
-<ul>
-<li>To convert from binary to octal, subdivide the number into groups of three bits, proceeding both left and right from the binary point, and if necessary padding the last group with zero. The octal representation of each group gives the required octal number.</li>
-</ul>
-<p><strong>Example 1: Convert the binary number 11010101.01101 to its octal equivalent</strong></p>
-<p><img src="figure/NSbox13-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-</div>
-<div id="hexadecimal-number-system" class="section level3">
-<h3><span class="header-section-number">1.2.5</span> Hexadecimal Number System</h3>
-<ul>
-<li>The Hexadecimal system is a number system of base or radix equal to 16.</li>
-<li>Hexadecimal is similar to the octal numeral system because each can be easily compared to the binary numeral system.</li>
-<li>Example values of hexadecimal numbers converted into binary, octal and decimal.</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>Hexadecimal</th>
-<th>Binary</th>
-<th>Octal</th>
-<th>Decimal</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td>0000</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>1</td>
-<td>0001</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>2</td>
-<td>0010</td>
-<td>2</td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>3</td>
-<td>0011</td>
-<td>3</td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>4</td>
-<td>0100</td>
-<td>4</td>
-<td>4</td>
-</tr>
-<tr class="even">
-<td>5</td>
-<td>0101</td>
-<td>5</td>
-<td>5</td>
-</tr>
-<tr class="odd">
-<td>6</td>
-<td>0110</td>
-<td>6</td>
-<td>6</td>
-</tr>
-<tr class="even">
-<td>7</td>
-<td>0111</td>
-<td>7</td>
-<td>7</td>
-</tr>
-<tr class="odd">
-<td>8</td>
-<td>1000</td>
-<td>10</td>
-<td>8</td>
-</tr>
-<tr class="even">
-<td>9</td>
-<td>1001</td>
-<td>11</td>
-<td>9</td>
-</tr>
-<tr class="odd">
-<td>A</td>
-<td>1010</td>
-<td>12</td>
-<td>10</td>
-</tr>
-<tr class="even">
-<td>B</td>
-<td>1011</td>
-<td>13</td>
-<td>11</td>
-</tr>
-<tr class="odd">
-<td>C</td>
-<td>1100</td>
-<td>14</td>
-<td>12</td>
-</tr>
-<tr class="even">
-<td>D</td>
-<td>1101</td>
-<td>15</td>
-<td>13</td>
-</tr>
-<tr class="odd">
-<td>E</td>
-<td>1110</td>
-<td>16</td>
-<td>14</td>
-</tr>
-<tr class="even">
-<td>F</td>
-<td>1111</td>
-<td>17</td>
-<td>15</td>
-</tr>
-</tbody>
-</table>
-<div id="hexadecimal-to-decimal-conversion" class="section level4">
-<h4><span class="header-section-number">1.2.5.1</span> Hexadecimal-to-Decimal Conversion</h4>
-<p><strong>Example 1: Convert the following octal numbers to their decimal equivalent</strong></p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(C7_{16}\)</span></li>
-<li><span class="math inline">\(2F_{16}\)</span></li>
-</ol>
-<p><img src="figure/NSbox14-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="decimal-to-hexadecimal-conversion" class="section level4">
-<h4><span class="header-section-number">1.2.5.2</span> Decimal-to-Hexadecimal Conversion</h4>
-<ul>
-<li>To convert decimal numbers to their hexadecimal equivalent, the following procedures are employed:</li>
-</ul>
-<div id="whole-number-conversion-repeated-division-by-16" class="section level5">
-<h5><span class="header-section-number">1.2.5.2.1</span> Whole number conversion: Repeated division by 16</h5>
-<p><strong>Example 1: Convert the decimal number 245 to Hexadecimal equivalent</strong></p>
-<p><img src="figure/NSbox15-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="fractional-number-conversion-repeated-multiplication-by-16" class="section level5">
-<h5><span class="header-section-number">1.2.5.2.2</span> Fractional number conversion: Repeated multiplication by 16</h5>
-<p><strong>Example 2: Convert the decimal fraction 0.0738 to Hexadecimal equivalent</strong></p>
-<p><img src="figure/NSbox16-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><strong>Example 3: Convert the decimal number 420.0095 to Hexadecimal equivalent</strong></p>
-<p><img src="figure/NSbox17-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-</div>
-<div id="hexadecimal-to-binary-conversion" class="section level4">
-<h4><span class="header-section-number">1.2.5.3</span> Hexadecimal-to-Binary Conversion</h4>
-<ul>
-<li>To convert from Hexadecimal to binary, simply replace each Hexadecimal digit with the corresponding four-digit binary number.</li>
-</ul>
-<p><strong>Example 1: Convert the following Hexadecimal numbers to their binary equivalent</strong></p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(7B_{16}\)</span></li>
-<li><span class="math inline">\(6D.8C_{16}\)</span></li>
-</ol>
-<p><img src="figure/NSbox18-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="binary-to-hexadecimal-conversion" class="section level4">
-<h4><span class="header-section-number">1.2.5.4</span> Binary-to-Hexadecimal Conversion</h4>
-<ul>
-<li>To convert from binary to Hexadecimal, subdivide the number into groups of four bits. The hexadecimal representation of each group then gives the hexadecimal representation.</li>
-</ul>
-<p><strong>Example 1: Convert the binary number 11010101.01101 to its Hexadecimal equivalent</strong></p>
-<p><img src="figure/NSbox19-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="octal-to-hexadecimal-conversion" class="section level4">
-<h4><span class="header-section-number">1.2.5.5</span> Octal-to-Hexadecimal Conversion</h4>
-<ul>
-<li>First convert octal to binary, and then convert binary to hexadecimal.</li>
-</ul>
-<p><strong>Example 1: Convert the octal number 365.52 to its Hexadecimal equivalent</strong></p>
-<p><img src="figure/NSbox20-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="hexadecimal-to-octal-conversion" class="section level4">
-<h4><span class="header-section-number">1.2.5.6</span> Hexadecimal-to-octal conversion</h4>
-<ul>
-<li>First convert Hexadecimal to binary, and then convert binary to octal.</li>
-</ul>
-<p><strong>Example 1: Convert the octal number D2B.284 to its Hexadecimal equivalent</strong></p>
-<p><img src="figure/NSbox21-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-</div>
-<div id="binary-arithmetic" class="section level3">
-<h3><span class="header-section-number">1.2.6</span> Binary Arithmetic</h3>
-<p>The arithmetic operations: addition, subtraction, multiplication and division of binary numbers follow the rules as summarized below</p>
-<table>
-<thead>
-<tr class="header">
-<th>Addition</th>
-<th>Subtraction</th>
-<th>Multiplication</th>
-<th>Division</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(0+0 = 0\)</span></td>
-<td><span class="math inline">\(0-0=0\)</span></td>
-<td><span class="math inline">\(0\times0=0\)</span></td>
-<td><span class="math inline">\(\frac{0}{1} = 0\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(0+1 = 1\)</span></td>
-<td><span class="math inline">\(1-0=1\)</span></td>
-<td><span class="math inline">\(0\times1=0\)</span></td>
-<td><span class="math inline">\(\frac{1}{1} = 1\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(1+0 = 1\)</span></td>
-<td><span class="math inline">\(1-1 = 0\)</span></td>
-<td><span class="math inline">\(1\times0=0\)</span></td>
-<td><span class="math inline">\(\frac{0}{0} = undefined\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(1+1 = 10\)</span></td>
-<td><span class="math inline">\(1-0 = 10-1 =1\)</span></td>
-<td><span class="math inline">\(1\times1=1\)</span></td>
-<td><span class="math inline">\(\frac{1}{0} = undefined\)</span></td>
-</tr>
-</tbody>
-</table>
-<div id="binary-addition" class="section level4">
-<h4><span class="header-section-number">1.2.6.1</span> Binary Addition</h4>
-<p><strong>Example 1: Add (a) 111 and 101 (b) 1010, 1001 and 1101</strong></p>
-<p><img src="figure/NSbox22-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="binary-subtraction" class="section level4">
-<h4><span class="header-section-number">1.2.6.2</span> Binary Subtraction</h4>
-<p><strong>Example 1: Perform the following subtractions</strong></p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(11- 01\)</span> (b) <span class="math inline">\(11-10\)</span> (c) <span class="math inline">\(100-011\)</span></li>
-</ol>
-<p><img src="figure/NSbox23-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<ul>
-<li>When subtracting a larger number from a smaller number, the output will be negative.</li>
-<li>To perform this subtraction, subtract the smaller number from the larger number and prefix the output with the sign of the larger number.</li>
-</ul>
-<p><strong>Example 2: Perform the following subtraction 101 - 111</strong></p>
-<p><img src="figure/NSbox24-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="binary-multiplication" class="section level4">
-<h4><span class="header-section-number">1.2.6.3</span> Binary multiplication</h4>
-<p><strong>Example 1: Multiply the following binary numbers</strong></p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(101\times11\)</span> (b) <span class="math inline">\(1101\times10\)</span> (c) <span class="math inline">\(1010\times101\)</span></li>
-<li><span class="math inline">\(1011\times1010\)</span></li>
-</ol>
-<p><img src="figure/NSbox25-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<ul>
-<li>Multiplication of factional numbers is perform in the same manner as with decimal factional numbers.</li>
-</ul>
-<p><strong>Example 2: Perform the binary multiplication</strong> <span class="math inline">\(0.01\times11\)</span></p>
-<p><img src="figure/NSbox26-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="binary-division" class="section level4">
-<h4><span class="header-section-number">1.2.6.4</span> Binary Division</h4>
-<p><strong>Example 1: Perform the following binary division</strong></p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(110\div11\)</span> (b) <span class="math inline">\(1100\div11\)</span> (c) <span class="math inline">\(1111\div110\)</span> (d) <span class="math inline">\(1100\div101\)</span></li>
-</ol>
-<p><img src="figure/NSbox27-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><img src="figure/NSbox28-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-</div>
-</div>
-<div id="references" class="section level2 unnumbered">
-<h2>References</h2>
+<div id="references-9" class="section level1 unnumbered">
+<h1>References</h1>
+<p>Acharjya, D. P. (2009). Fundamental approach to discrete mathematics. New Age International.</p>
+<p>Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., &amp; Harris, M. (2007). <em>Australasian business statistics</em>. John Wiley &amp; Sons.</p>
 <p>Butenko, S., &amp; Pardalos, P. M. (2014). Numerical methods and optimization: An introduction. CRC Press</p>
+<p>Casella, G., &amp; Berger, R. L. (2002). Statistical inference (Vol. 2, pp. 337-472).Pacific Grove, CA: Duxbury</p>
 <p>Dass, H. K. (2008). ‘Complex Numbers’, Advanced Engineering Mathematics. S. Chand Publishing. pp. 474-520.</p>
+<p>Lipschutz, S. (2000). Schaum’s Outline of Probability. McGraw Hill Professional.</p>
+<p>Mendelson, E. (1970). Boolean algebra and switching circuits. McGraw-Hill Edition 2004.</p>
+<p>Mood, A.M., Graybill, F.A. and Boes, D.C. (2007): Introduction to the Theory of Statistics, 3rd Edn. (Reprint). Tata McGraw-Hill Pub. Co. Ltd.</p>
+<p>Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman &amp; Company.</p>
+<p>Spiegel, M. R., &amp; Stephens, L. J. (2017). Schaum’s outline of statistics. McGraw Hill Professional.</p>
+<p>Stewart, J. (2003). Calculus: Early Transcendentals. Thomson Learning. Inc., Belmont, CA.</p>
 
 </div>
-</div>
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sequences-and-series.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="correlation-and-regression.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -965,7 +363,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-Number_Systems.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/11-references.Rmd",
 "text": "Edit"
 },
 "history": {

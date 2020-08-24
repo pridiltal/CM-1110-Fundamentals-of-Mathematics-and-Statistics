@@ -1,6 +1,8 @@
 `r if (knitr:::is_html_output()) '
-# References {-}
 '`
+
+\newpage
+# References {-}
 
 Acharjya, D. P. (2009). Fundamental approach to discrete mathematics. New Age International.
 

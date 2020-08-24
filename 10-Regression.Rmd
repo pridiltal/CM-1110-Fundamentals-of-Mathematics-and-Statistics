@@ -1,1 +1,245 @@
 #  Correlation and Regression
+
+## Introduction to Correlation and Regression
+
+- In many practical situations we want to identify various types of relationships between variables.
+- Sometimes we want to estimate how one variable is related to or affected by some other variables.
+- **Regression analysis** is a statistical technique for investigating and **modeling the relationship between variables*.
+- There are numerous applications of regression in many fields. 
+
+*Examples*
+   - A production company may need to determine how its sales related to advertising
+   - How the growth of the bacteria is related to moisture level of the environment.
+   - The relationship between blood pressure and the age of a person.
+   - the relationship between transaction time and transaction amount in fraud detection.
+
+<!-- Business statistics black e all page 499 3rd paragraph-->
+
+- Usually, the first step in regression analysis is to construct a scatter plot (or scatter matrix).
+- Graphing the data in a scatter plot yields preliminary information about the *shape* and *spread* if the data.
+
+#### Scatter plot
+
+- A scatter plot is a two dimensional graph of pairs of points from **two numerical** variables
+-  In a quantitative bi-variate dataset, we have a $(x,y)$ pair for each sampling unit, where $x$ denotes the independent variable and $y$ denotes the dependent variable.
+- Each $(x,y)$ pair can be considered as a point on the Cartesian plan.
+- Scatter plot is a plot of all the $(x,y)$ pairs in the dataset.
+- The purpose of scatter plot is to illustrate any relationship between  two quantitative variables.
+   - If the variables are related, what kind of relationship it is, linear or nonlinear?
+   - If the relationship is linear, the scatter plot will show whether it is negative or positive. - The scatter plot gives some idea of how well a regression line fits the data.
+
+
+**Example:** *Palmer Archipelago (Antarctica) Penguin Data*
+
+The palmerpenguins data (available through `palmerpenguins` R package) contains size measurements for three penguin species observed on three islands in the Palmer Archipelago, Antarctica.
+<!--https://allisonhorst.github.io/palmerpenguins/articles/intro.html-->
+
+
+```{r scatterplot10, out.width='80%', fig.asp=.75, fig.align='center' }
+
+library(palmerpenguins)
+library(tidyverse)
+
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  theme(aspect.ratio = 1)+
+  xlab("Flipper length (in millimeters)")+
+  ylab("Body mass (grams)")
+```
+
+Penguin flipper length and body mass show a positive association for the 3 species.
+
+#### Correlation
+
+- Correlation is a measure of the degree of relatedness of two or more variables. 
+- Several measures of correlation are available , the selection of which depends mostly on the level of data being analysed. 
+- Ideally, researchers would like to calculate $\rho$, the **population** coefficient of correlation. 
+- However, because researchers virtually always deal with sample data, this section introduces a widely used sample coefficient of correlation, $r$.
+- This measure is applicable **only if both variables being analysed have at least an interval level of data**
+
+
+**Pearson product-moment correlation coefficient** ($r$)
+
+- The statistic $r$ is the Pearson product-moment correlation coefficient, named after Karl Pearson (1857 - 1936).
+- The tern $r$ is a measure of the **linear** correlation of two variables.
+- It is a number that ranges from -1 to 0 to +1, representing th strength of the linear relationship between the variables. 
+- An $r$ value of $+1$ denotes a perfect **linear** positive relationship between two variables.
+- An $r$ value of $-1$ denotes a perfect **linear** negative relationship between two variables, which indicates an inverse relationship between two variables: as one variable gets larger, the other gets smaller.
+- An $r$ value of 0 means no **linear** relationship is present between the two variables. 
+
+
+
+\[ r = \frac{\sum(x-\bar{x})(y-\bar{y})}{\sqrt{\sum(x-\bar{x})^2\sum(y-\bar{y})^2}}\]
+
+\[ r = \frac{\sum{xy} - \frac{(\sum x\sum y)}{n}}{\sqrt{[\sum{x^2- \frac{(\sum{x})^2}{n}}][\sum y^2-\frac{(\sum y)^2}{n}]}}\]
+
+- Examples:  Following figure shows five different degrees of correlation: 
+
+```{r cor2, out.width='100%', fig.asp=1, fig.align='center'}
+set.seed(123)
+x <- rnorm(100,0,4)
+y <- (2 - 3*x) + rnorm(100, 0, 2)
+data1 <- data.frame(x, y ) 
+r1 <- round(cor(data1$x, data1$y),3)
+p1 <- ggplot(data1, aes(x,y))+
+  geom_point()+
+  theme(aspect.ratio = 1) +
+  ggtitle(paste("(a) Strong negative correlation (r=", r1, ")"))
+
+
+x <- rnorm(100,0,4)
+y <- (2 - 3*x) + rnorm(100, 0, 15)
+data2 <- data.frame(x, y ) 
+r2 <- round(cor(data2$x, data2$y),3)
+p2 <- ggplot(data2, aes(x,y))+
+  geom_point()+
+  theme(aspect.ratio = 1) +
+  ggtitle(paste("(b) Moderate negative correlation (r=", r2, ")"))
+
+
+x <- rnorm(100,0,4)
+y <- (2 + 3*x) + rnorm(100, 0, 3)
+data3 <- data.frame(x, y ) 
+r3 <- round(cor(data3$x, data3$y),3)
+p3 <- ggplot(data3, aes(x,y))+
+  geom_point()+
+  theme(aspect.ratio = 1) +
+  ggtitle(paste("(c) Strong positive correlation (r=", r3, ")"))
+
+
+x <- rnorm(100,0,4)
+y <- (2 + 3*x) + rnorm(100, 0, 15)
+data4 <- data.frame(x, y ) 
+r4 <- round(cor(data4$x, data4$y),3)
+p4 <- ggplot(data4, aes(x,y))+
+  geom_point()+
+  theme(aspect.ratio = 1) +
+  ggtitle(paste("(d) Moderate positive correlation (r=", r4, ")"))
+
+
+x <- rnorm(100,0,15)
+y <- rnorm(100,0,15)
+data5 <- data.frame(x, y ) 
+r5 <- round(cor(data5$x, data5$y),3)
+p5 <- ggplot(data5, aes(x,y))+
+  geom_point()+
+  theme(aspect.ratio = 1) +
+  ggtitle(paste("(e) Virtually no correlation (r=", r5, ")"))
+
+x <- rnorm(1000,0,4)
+y <- -(3*x^2) + rnorm(100, 0, 15)
+data6 <- data.frame(x, y ) 
+r6 <- round(cor(data6$x, data6$y),3)
+p6 <- ggplot(data6, aes(x,y))+
+  geom_point()+
+  theme(aspect.ratio = 1) +
+  ggtitle(paste("(e) Curvilinear relationship. (r=", r6, ")"))
+
+gridExtra::grid.arrange(p1,p2,p3,p4,p5,p6, ncol=2)
+
+
+```
+
+
+**NOTE**
+
+- When $r=0$, it signifies there is **no linear** relationship between the two variables. (There can be a non-linear relationship, Figure (e))
+- Figure (e): There is a very strong curvilinear relationship. But there is **no linear** relationship.
+
+## Simple Linear Regression
+
+- The most elementary regression model is called **simple linear regression**.
+- Is is also known as *bivariate linear regression, which means that it involves only two variables. 
+- On variable is predicted by another variable. 
+- The variable to to be predicted is called the *independent variable* an is denoted by $y$.
+- The *predictor* is called the *independent variable* or *explanatory variable* and is denoted by $x$
+- In simple *linear* regression analysis, only a strait-line relationship between two variables is examined.
+- Nonlinear relationships and regression models with more than one independent variable can be explored by using multiple regression models. 
+
+### Determining the equation of the regression line
+
+- The first step in determining the equation of the regression line that passes through he sample data is to establish the equation's form.
+
+- In mathematics, the equation of a line can be written as 
+$$y=mx+c$$
+where:
+   $m$ = slope of the line \newline 
+   $c$ =  $y$ intercept of the line.
+
+- In statistics, the slope-intercept form of the equation of the regression line through the population points is:
+ $$\hat{y} = \beta_0+\beta_1x$$
+where:
+   $\hat{y}$ = the predicted value of $y$ \newline
+   $\beta_0$ = the population  $y$ intercept \newline
+   $\beta_1$ = the population  slope.
+   
+- For any specific dependent variable value, $y_i$:
+ $$y_i = \beta_0+\beta_1x_i+\epsilon_i$$
+where:
+   $x_i$ = the value of the independent variable for the $i$th value \newline
+   $y_i$ = the value of the dependent variable for the $i$th value \newline
+   $\beta_0$ = the population  $y$ intercept \newline
+   $\beta_1$ = the population  slope \newline
+   $\epsilon_i$ = the error of prediction for the $i$th value.
+
+- Unless the points being fitted by the regression equation are in perfect alignment, the regression line will miss at least some of the points. 
+- In the above equation, $\epsilon_i$ represents the error of the regression line in fitting these points. If a point is on the regression line, $\epsilon_i = 0$
+
+### Deterministic models vs probabilistic models
+
+- These mathematical models can be either deterministic models or probabilistic models.
+
+**Deterministic models**
+
+- Deterministic models are *mathematical models that produces an* **exact** *output for a given input*
+- For example, consider the equation of a regression line is:
+$$\hat{y} =1.68 + 2.40x$$.
+
+For a value of $x=5,$ the exact predicted value of $y$ is 
+$$\hat{y} =1.68 + 2.40\times 5 = 13.68$$.
+- However, the most of the time the values of $y$ will not equal exactly the values yields by the equations.
+- Random  error will occur in the prediction of the $y$ values for values of $x$, because it is likely that the variable $x$ doe bot explain all the variability of the variable $y$. 
+
+*Example*
+
+- Suppose we want to predict the sales volume ($y$)  for a mobile phone company through regression analysis by using the annual amount of advertising (in Rupees) ($x$) as the predictor.
+- Although sales are often related to advertising, there can be other factors related to sales that are not accounted for by the amount of advertising. <!--reputation, quality, type-->
+- Therefore, a regression model to predict sales volume by the amount of advertising probably involves some error. 
+- For this reason, in regression, we present the general model as a probabilistic model.
+
+**Probabilistic models**
+
+- A probabilistic model is *one that includes an error term that allows for the* $y$ *values to vary for any given value of $x$.
+- The deterministic regression model is 
+$$y=\beta_0+\beta_1x$$
+- The probabilistic regression model is 
+$$y=\beta_0+\beta_1x+\epsilon.$$
+- $\beta_0+\beta_1x$ is the deterministic portion of the probabilistic model, $\beta_0+\beta_1x+\epsilon.$
+
+- In deterministic mode, all points are assumed to be on the line and in all cases $\epsilon$ is zero. 
+
+### Least squares estimation of the parameters
+
+- The parameters $\beta_0$ and $\beta_1$ are unknown and need to be estimated using *sample data*.
+- The equation of the regression line contains the sample $y$ intercept, $\hat{\beta_0}$, and the sample slope, $\hat{\beta_1}$.
+
+$$\hat{y} = \hat{\beta_0}+\hat{\beta_1}x$$
+where:
+   $\hat{y}$ = the predicted value of $y$ \newline
+   $\hat{\beta_0}$ = the sample  $y$ intercept \newline
+   $\hat{\beta_1}$ = the sample  slope
+
+- To determine the equation of the regression  line for a sample of data, the researcher must determine the values of $\hat{\beta_0}$ and  $\hat{\beta_1}.$
+- This process is sometimes referred to as **least squares analysis**.
+- Least squares analysis is a process whereby a regression model is developed by *producing the minimum sum of the squared error values.*
+- The least squares regression line is the **regression line that results in the smallest sum of error squared**. 
+
+\newpage
+<!-- Leave a page for the Derivation of the formula-->
+*Least square analysis contd.*
+
+
+\newpage
+## References {-}
+
+- Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., & Harris, M. (2007). *Australasian business statistics*. John Wiley & Sons.

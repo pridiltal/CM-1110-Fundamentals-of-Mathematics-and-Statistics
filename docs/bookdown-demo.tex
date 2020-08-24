@@ -88,7 +88,7 @@
 
 \title{CM 1110 Fundamentals of Mathematics and Statistics}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-08-17}
+\date{2020-08-24}
 
 \begin{document}
 \maketitle
@@ -1151,8 +1151,8 @@ where \(f\) is any function suitably defined on the non-negative integers.
   This is also know as the fundamental theorem of summation:
 \end{itemize}
 
-\hypertarget{infinite-sequences-and-series}{%
-\section{Infinite Sequences and Series}\label{infinite-sequences-and-series}}
+\hypertarget{infinite-sequences}{%
+\section{Infinite Sequences}\label{infinite-sequences}}
 
 \begin{itemize}
 \tightlist
@@ -1227,6 +1227,8 @@ The sequence \(\{r^n\}\) is convergent if \(-1 <r\leq1\) and divergent for all o
 
 A sequence \(\{a_n\}\) is called \textbf{increasing} if \(a_n<a_{n+1}\) for all \(n \geq 1,\) that is, \(a_1<a_2<a_3<\dots.\) It is called \textbf{decreasing} if \(a_n>a_{n+1}\) for all \(n\geq 1.\) It is called \textbf{monotonic} if it is either increasing or decreasing.
 
+\newpage
+
 \textbf{Definition}
 
 \begin{itemize}
@@ -1238,13 +1240,136 @@ A sequence \(\{a_n\}\) is called \textbf{increasing} if \(a_n<a_{n+1}\) for all 
   If the sequence is both bounded below and bounded above we call the sequence \textbf{bounded}.
 \end{itemize}
 
-\newpage
-
-Reading:
-- Stewart, J., Clegg, D. K., \& Watson, S. (2020). `Infinite Sequences and Series', \emph{Calculus: early transcendentals}. Cengage Learning.
+\hypertarget{infinite-series}{%
+\section{Infinite Series}\label{infinite-series}}
 
 \begin{itemize}
 \tightlist
+\item
+  Consider the infinite sequence \(\{a_n\}_{n=1}^\infty\).
+\item
+  Consider the \emph{partial sums}
+\end{itemize}
+
+\begin{align*}
+   s_1=a_1 \\
+   s_2=a_1+a_2 \\
+   s_3=a_1+a_2+a_3 \\
+   s_4=a_1+a_2+a_3+a_4 \\
+   &\vdots\\
+   s_n=a_1+a_2+a_3+a_4+\dots +a_n =\sum_{i=1}^na_i
+\end{align*}
+
+\begin{itemize}
+\item
+  These partial sums form a new sequence \(\{s_n\}_{n=1}^\infty,\) which may or may not have a limit.
+\item
+  Consider the limit of the sequence of partial sums, \(\{s_n\}_{n=1}^\infty.\)
+\end{itemize}
+
+\[\lim_{n\to\infty}s_n= \lim_{n\to\infty}\sum_{i=1}^na_i=\sum_{i=1}^\infty a_i\]
+
+\begin{itemize}
+\tightlist
+\item
+  This \(\sum_{i=1}^\infty a_i\) (\(=a_1+a_2+a_3+a_4+\dots +a_n \dots\)) is called an \textbf{infinite series}
+\end{itemize}
+
+\newpage
+
+\textbf{Definition}
+
+Consider the series \(\sum_{n=1}^\infty a_n= =a_1+a_2+a_3+\dots.\) Let \(s_n\) denote its \(n\)th partial sum:
+
+\[s_n= \sum_{i=1}^n a_i= a_1+a_2+\dots +a_n\]
+
+If the sequence \(\{s_n\}\) is convergent and \(\lim_{n\to \infty}s_n=s\) exist as a real number, then the series \(\sum_{i=1}^\infty a_i\) is called \textbf{convergent} and we write,
+
+\(a_1+a_2+\dots +a_n+\dots=s\) or \(\sum_{n=1}^\infty a_n=s\)
+
+The number \(s\) is called the \textbf{sum of the series}.
+If the sequence of partial sums is divergent then the infinite series is also
+called \textbf{divergent}.
+
+\textbf{Geometric Series}
+
+\begin{itemize}
+\tightlist
+\item
+  An important example of an infinite series is the \emph{geometric series}
+\end{itemize}
+
+\[\sum_{n=1}^\infty ar^{n-1}=a+ar+ar^2+\dots\]
+is convergent if \(|r|<1\) and its sum is
+\[\sum_{n=1}^\infty ar^{n-1}= \frac{a}{1-r}\qquad\qquad|r|<1\]
+
+If \(|r|\geq1,\) the geometric series is divergent.
+
+\newpage
+
+\textbf{Theorem}
+
+If the series \(\sum_{n=1}^\infty a_n\) is convergent, then \(\lim_{n\to \infty}a_n=0.\)
+
+\emph{Proof}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/seqbox3-1} \end{center}
+
+\textbf{Note 1}
+
+\begin{itemize}
+\item
+  Consider any series \(\sum a_n.\)
+\item
+  This associates two sequences
+
+  \begin{itemize}
+  \tightlist
+  \item
+    the sequence \(\{s_n\}\) of its \emph{partial sums}
+  \item
+    the sequence \(\{a_n\}\) of its \emph{terms}.
+  \end{itemize}
+\item
+  If \(\sum a_n\) is convergent, then
+
+  \begin{itemize}
+  \tightlist
+  \item
+    the limit of the sequence \(\{s_n\}\) is \(s\) (the sum of the series)
+  \item
+    the limit of the sequence \(\{a_n\}\) is 0.
+  \end{itemize}
+\end{itemize}
+
+\textbf{Note 2}
+- The converse of the above theorem is not true in general.
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/seqbox4-1} \end{center}
+
+\textbf{The Test for Divergence}
+
+If \(\lim_{n\to \infty}a_n\) does not exist or if \(\lim_{n\to \infty}a_n \neq0\), then the series \(\sum_{n=1}^\infty a_n\) is divergent.
+
+\textbf{Theorem}
+
+If \(\sum a_n\) and \(\sum b_n\) are convergent series, then
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  \(\sum_{n=1}^\infty ca_n= c\sum_{n=1}^\infty a_n \;\;\) \(c\) is a constant.
+\item
+  \(\sum_{n=1}^\infty (a_n+b_n)= \sum_{n=1}^\infty a_n+ \sum_{n=1}^\infty b_n\)
+\item
+  \(\sum_{n=1}^\infty (a_n-b_n)= \sum_{n=1}^\infty a_n- \sum_{n=1}^\infty b_n\)
+\end{enumerate}
+
+Reading:
+
+\begin{itemize}
+\item
+  Stewart, J., Clegg, D. K., \& Watson, S. (2020). `Infinite Sequences and Series', \emph{Calculus: early transcendentals}. Cengage Learning.
 \item
   Acharjya, D. P. (2009). Fundamental approach to discrete mathematics. New Age International.
 \end{itemize}
@@ -1348,7 +1473,7 @@ Reading:
 \item
   \(a_n= \frac{n}{n+1}\)
 \item
-  \(a_n = \frac{(-1)^n}{n}\)
+  \(a_n = \frac{(-1)^n}{n}\) 
 \item
   \(a_n = \frac{4n^2+2}{n^2+n}\)
 \item
@@ -1382,6 +1507,70 @@ Reading:
   \(\{(-1)^{n+1}\}_{n=1}^\infty\)
 \item
   \(\left\{ \frac{2}{n^2}\right\}_{n=5}^\infty\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Determine if the following series converges or diverges. If it converges determine its value.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  \(\sum_{n=1}^\infty n\) 
+\item
+  \(\sum_{n=1}^\infty (-1)^n\) 
+\item
+  \(\sum_{n=1}^\infty \frac{1}{3^{n-1}}\) 
+\item
+  \(5-\frac{10}{3}+\frac{20}{9}- \frac{40}{27}+\dots\) 
+\item
+  \(\sum_{n=1}^\infty 2^{2n}3^{1-n}\) 
+\item
+  \(\sum_{n=1}^\infty x^n,\) where \(|x| <1\) 
+\item
+  \(\sum_{n=1}^\infty\frac{1}{n(n+1)}\) 
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  Show that harmonic series
+  \[\sum_{n=1}^\infty \frac{1}{n} = 1+\frac{1}{2}+ \frac{1}{3} + \frac{1}{4}+\dots\] is divergent.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\item
+  Show that the series \(\sum_{n=1}^\infty\frac{n^2}{5n^2+4}\) diverges.
+\item
+  Determine whether the series is convergent or divergent. If it is convergent, find its sum.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  \(\sum_{n=1}^\infty\left(\frac{3}{n(n+1)+ }+\frac{1}{2^n}\right)\) 
+\item
+  \(\sum_{n=1}^\infty\left(\frac{3}{n(n+1)+ }+\frac{1}{2^n}\right)\) 
+\item
+  \(\sum_{n=1}^\infty \frac{1}{n^2+3n+2}\) 
+\item
+  \(\sum_{n=1}^\infty \frac{1}{n^2+4n+3}\) 
+\item
+  \(\sum_{n=1}^\infty 9^{-n+2}4^{n+1}\) 
+\item
+  \(\sum_{n=1}^\infty \frac{(-4)^{3n}}{5^{n-1}}\) 
+\item
+  \(\sum_{n=1}^\infty \left(\frac{1}{n^2+4n+3}- 9^{-n+2}4^{n+1}\right)\) 
 \end{enumerate}
 
 \hypertarget{introduction-to-logic}{%
@@ -6971,7 +7160,7 @@ where \(S_k\) = coefficient of skewness, \(M_d\) = median
 \item
   Measures of association are statistics that yeild information about the relatedness of numerical variables.
 \item
-  In this section, we discuss only one measure of association, correlation, and d so only for two numerical variables.
+  In this section, we discuss only one measure of association, correlation, and do so only for two numerical variables.
 \end{itemize}
 
 \hypertarget{scatter-plot}{%
@@ -9574,6 +9763,287 @@ Mood, A.M., Graybill, F.A. and Boes, D.C. (2007): Introduction to the Theory of 
 
 \hypertarget{correlation-and-regression}{%
 \chapter{Correlation and Regression}\label{correlation-and-regression}}
+
+\hypertarget{introduction-to-correlation-and-regression}{%
+\section{Introduction to Correlation and Regression}\label{introduction-to-correlation-and-regression}}
+
+\begin{itemize}
+\tightlist
+\item
+  In many practical situations we want to identify various types of relationships between variables.
+\item
+  Sometimes we want to estimate how one variable is related to or affected by some other variables.
+\item
+  \textbf{Regression analysis} is a statistical technique for investigating and **modeling the relationship between variables*.
+\item
+  There are numerous applications of regression in many fields.
+\end{itemize}
+
+\emph{Examples}
+- A production company may need to determine how its sales related to advertising
+- How the growth of the bacteria is related to moisture level of the environment.
+- The relationship between blood pressure and the age of a person.
+- the relationship between transaction time and transaction amount in fraud detection.
+
+\begin{itemize}
+\tightlist
+\item
+  Usually, the first step in regression analysis is to construct a scatter plot (or scatter matrix).
+\item
+  Graphing the data in a scatter plot yields preliminary information about the \emph{shape} and \emph{spread} if the data.
+\end{itemize}
+
+\hypertarget{scatter-plot-1}{%
+\subsubsection{Scatter plot}\label{scatter-plot-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  A scatter plot is a two dimensional graph of pairs of points from \textbf{two numerical} variables
+\item
+  In a quantitative bi-variate dataset, we have a \((x,y)\) pair for each sampling unit, where \(x\) denotes the independent variable and \(y\) denotes the dependent variable.
+\item
+  Each \((x,y)\) pair can be considered as a point on the Cartesian plan.
+\item
+  Scatter plot is a plot of all the \((x,y)\) pairs in the dataset.
+\item
+  The purpose of scatter plot is to illustrate any relationship between two quantitative variables.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    If the variables are related, what kind of relationship it is, linear or nonlinear?
+  \item
+    If the relationship is linear, the scatter plot will show whether it is negative or positive. - The scatter plot gives some idea of how well a regression line fits the data.
+  \end{itemize}
+\end{itemize}
+
+\textbf{Example:} \emph{Palmer Archipelago (Antarctica) Penguin Data}
+
+The palmerpenguins data (available through \texttt{palmerpenguins} R package) contains size measurements for three penguin species observed on three islands in the Palmer Archipelago, Antarctica.
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/scatterplot10-1} \end{center}
+
+Penguin flipper length and body mass show a positive association for the 3 species.
+
+\hypertarget{correlation-1}{%
+\subsubsection{Correlation}\label{correlation-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  Correlation is a measure of the degree of relatedness of two or more variables.
+\item
+  Several measures of correlation are available , the selection of which depends mostly on the level of data being analysed.
+\item
+  Ideally, researchers would like to calculate \(\rho\), the \textbf{population} coefficient of correlation.
+\item
+  However, because researchers virtually always deal with sample data, this section introduces a widely used sample coefficient of correlation, \(r\).
+\item
+  This measure is applicable \textbf{only if both variables being analysed have at least an interval level of data}
+\end{itemize}
+
+\textbf{Pearson product-moment correlation coefficient} (\(r\))
+
+\begin{itemize}
+\tightlist
+\item
+  The statistic \(r\) is the Pearson product-moment correlation coefficient, named after Karl Pearson (1857 - 1936).
+\item
+  The tern \(r\) is a measure of the \textbf{linear} correlation of two variables.
+\item
+  It is a number that ranges from -1 to 0 to +1, representing th strength of the linear relationship between the variables.
+\item
+  An \(r\) value of \(+1\) denotes a perfect \textbf{linear} positive relationship between two variables.
+\item
+  An \(r\) value of \(-1\) denotes a perfect \textbf{linear} negative relationship between two variables, which indicates an inverse relationship between two variables: as one variable gets larger, the other gets smaller.
+\item
+  An \(r\) value of 0 means no \textbf{linear} relationship is present between the two variables.
+\end{itemize}
+
+\[ r = \frac{\sum(x-\bar{x})(y-\bar{y})}{\sqrt{\sum(x-\bar{x})^2\sum(y-\bar{y})^2}}\]
+
+\[ r = \frac{\sum{xy} - \frac{(\sum x\sum y)}{n}}{\sqrt{[\sum{x^2- \frac{(\sum{x})^2}{n}}][\sum y^2-\frac{(\sum y)^2}{n}]}}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Examples: Following figure shows five different degrees of correlation:
+\end{itemize}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/cor2-1} \end{center}
+
+\textbf{NOTE}
+
+\begin{itemize}
+\tightlist
+\item
+  When \(r=0\), it signifies there is \textbf{no linear} relationship between the two variables. (There can be a non-linear relationship, Figure (e))
+\item
+  Figure (e): There is a very strong curvilinear relationship. But there is \textbf{no linear} relationship.
+\end{itemize}
+
+\hypertarget{simple-linear-regression}{%
+\section{Simple Linear Regression}\label{simple-linear-regression}}
+
+\begin{itemize}
+\tightlist
+\item
+  The most elementary regression model is called \textbf{simple linear regression}.
+\item
+  Is is also known as *bivariate linear regression, which means that it involves only two variables.
+\item
+  On variable is predicted by another variable.
+\item
+  The variable to to be predicted is called the \emph{independent variable} an is denoted by \(y\).
+\item
+  The \emph{predictor} is called the \emph{independent variable} or \emph{explanatory variable} and is denoted by \(x\)
+\item
+  In simple \emph{linear} regression analysis, only a strait-line relationship between two variables is examined.
+\item
+  Nonlinear relationships and regression models with more than one independent variable can be explored by using multiple regression models.
+\end{itemize}
+
+\hypertarget{determining-the-equation-of-the-regression-line}{%
+\subsection{Determining the equation of the regression line}\label{determining-the-equation-of-the-regression-line}}
+
+\begin{itemize}
+\item
+  The first step in determining the equation of the regression line that passes through he sample data is to establish the equation's form.
+\item
+  In mathematics, the equation of a line can be written as
+  \[y=mx+c\]
+  where:
+  \(m\) = slope of the line \newline 
+  \(c\) = \(y\) intercept of the line.
+\item
+  In statistics, the slope-intercept form of the equation of the regression line through the population points is:
+  \[\hat{y} = \beta_0+\beta_1x\]
+  where:
+  \(\hat{y}\) = the predicted value of \(y\) \newline
+  \(\beta_0\) = the population \(y\) intercept \newline
+  \(\beta_1\) = the population slope.
+\item
+  For any specific dependent variable value, \(y_i\):
+  \[y_i = \beta_0+\beta_1x_i+\epsilon_i\]
+  where:
+  \(x_i\) = the value of the independent variable for the \(i\)th value \newline
+  \(y_i\) = the value of the dependent variable for the \(i\)th value \newline
+  \(\beta_0\) = the population \(y\) intercept \newline
+  \(\beta_1\) = the population slope \newline
+  \(\epsilon_i\) = the error of prediction for the \(i\)th value.
+\item
+  Unless the points being fitted by the regression equation are in perfect alignment, the regression line will miss at least some of the points.
+\item
+  In the above equation, \(\epsilon_i\) represents the error of the regression line in fitting these points. If a point is on the regression line, \(\epsilon_i = 0\)
+\end{itemize}
+
+\hypertarget{deterministic-models-vs-probabilistic-models}{%
+\subsection{Deterministic models vs probabilistic models}\label{deterministic-models-vs-probabilistic-models}}
+
+\begin{itemize}
+\tightlist
+\item
+  These mathematical models can be either deterministic models or probabilistic models.
+\end{itemize}
+
+\textbf{Deterministic models}
+
+\begin{itemize}
+\tightlist
+\item
+  Deterministic models are \emph{mathematical models that produces an} \textbf{exact} \emph{output for a given input}
+\item
+  For example, consider the equation of a regression line is:
+  \[\hat{y} =1.68 + 2.40x\].
+\end{itemize}
+
+For a value of \(x=5,\) the exact predicted value of \(y\) is
+\[\hat{y} =1.68 + 2.40\times 5 = 13.68\].
+- However, the most of the time the values of \(y\) will not equal exactly the values yields by the equations.
+- Random error will occur in the prediction of the \(y\) values for values of \(x\), because it is likely that the variable \(x\) doe bot explain all the variability of the variable \(y\).
+
+\emph{Example}
+
+\begin{itemize}
+\tightlist
+\item
+  Suppose we want to predict the sales volume (\(y\)) for a mobile phone company through regression analysis by using the annual amount of advertising (in Rupees) (\(x\)) as the predictor.
+\item
+  Although sales are often related to advertising, there can be other factors related to sales that are not accounted for by the amount of advertising. 
+\item
+  Therefore, a regression model to predict sales volume by the amount of advertising probably involves some error.
+\item
+  For this reason, in regression, we present the general model as a probabilistic model.
+\end{itemize}
+
+\textbf{Probabilistic models}
+
+\begin{itemize}
+\item
+  A probabilistic model is \emph{one that includes an error term that allows for the} \(y\) *values to vary for any given value of \(x\).
+\item
+  The deterministic regression model is
+  \[y=\beta_0+\beta_1x\]
+\item
+  The probabilistic regression model is
+  \[y=\beta_0+\beta_1x+\epsilon.\]
+\item
+  \(\beta_0+\beta_1x\) is the deterministic portion of the probabilistic model, \(\beta_0+\beta_1x+\epsilon.\)
+\item
+  In deterministic mode, all points are assumed to be on the line and in all cases \(\epsilon\) is zero.
+\end{itemize}
+
+\hypertarget{least-squares-estimation-of-the-parameters}{%
+\subsection{Least squares estimation of the parameters}\label{least-squares-estimation-of-the-parameters}}
+
+\begin{itemize}
+\tightlist
+\item
+  The parameters \(\beta_0\) and \(\beta_1\) are unknown and need to be estimated using \emph{sample data}.
+\item
+  The equation of the regression line contains the sample \(y\) intercept, \(\hat{\beta_0}\), and the sample slope, \(\hat{\beta_1}\).
+\end{itemize}
+
+\[\hat{y} = \hat{\beta_0}+\hat{\beta_1}x\]
+where:
+\(\hat{y}\) = the predicted value of \(y\) \newline
+\(\hat{\beta_0}\) = the sample \(y\) intercept \newline
+\(\hat{\beta_1}\) = the sample slope
+
+\begin{itemize}
+\tightlist
+\item
+  To determine the equation of the regression line for a sample of data, the researcher must determine the values of \(\hat{\beta_0}\) and \(\hat{\beta_1}.\)
+\item
+  This process is sometimes referred to as \textbf{least squares analysis}.
+\item
+  Least squares analysis is a process whereby a regression model is developed by \emph{producing the minimum sum of the squared error values.}
+\item
+  The least squares regression line is the \textbf{regression line that results in the smallest sum of error squared}.
+\end{itemize}
+
+\newpage
+
+\emph{Least square analysis contd.}
+
+\newpage
+
+\hypertarget{references-8}{%
+\section*{References}\label{references-8}}
+\addcontentsline{toc}{section}{References}
+
+\begin{itemize}
+\tightlist
+\item
+  Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., \& Harris, M. (2007). \emph{Australasian business statistics}. John Wiley \& Sons.
+\end{itemize}
+
+\newpage
+
+\hypertarget{references-9}{%
+\chapter*{References}\label{references-9}}
+\addcontentsline{toc}{chapter}{References}
 
 Acharjya, D. P. (2009). Fundamental approach to discrete mathematics. New Age International.
 

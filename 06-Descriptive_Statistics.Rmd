@@ -1702,7 +1702,7 @@ knitr::include_graphics("figure/kurtosis.png")
 
 - Many times in business it is important to explore the relationship  between two numerical variables 
 - Measures of association are statistics that yeild information about the relatedness of numerical variables.
-- In this section, we discuss only one measure of association, correlation, and d so only for two numerical variables.
+- In this section, we discuss only one measure of association, correlation, and do so only for two numerical variables.
 
 #### Scatter plot
 
