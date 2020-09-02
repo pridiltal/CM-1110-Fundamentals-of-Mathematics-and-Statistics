@@ -1,5 +1,28 @@
 #  Correlation and Regression
 
+```{r initial10, echo = FALSE, cache = FALSE, include = FALSE}
+library(knitr)
+opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE,
+  fig.path = 'figure/',
+  cache.path = 'cache/',
+  fig.align = 'center',
+  fig.show = 'hold',
+  cache = FALSE,
+  external = TRUE,
+  dev = "png",
+  fig.height = 8,
+  fig.width = 12
+)
+
+
+library(tidyverse)
+
+```
+\pagenumbering{arabic}
+
 ## Introduction to Correlation and Regression
 
 - In many practical situations we want to identify various types of relationships between variables.
@@ -370,12 +393,12 @@ $$y=\beta_0+\beta_1 x_1+\beta_2 x_2+\beta_3 x_3+ \dots + \beta_k x_k+ \epsilon$$
 
 where
 
-  - $y = $ the value of the dependent variable 
-  - $\beta_0 = $ the regression constant, or intercept 
-  - $\beta_1 = $ the partial regression coefficient for independent variable 1 
-  - $\beta_2 = $ the partial regression coefficient for independent variable 2
-  - $\beta_k = $ the partial regression coefficient for independent variable k 
-  - $k = $ the number of independent variables. 
+  - $y =$ the value of the dependent variable 
+  - $\beta_0 =$ the regression constant, or intercept 
+  - $\beta_1 =$ the partial regression coefficient for independent variable 1 
+  - $\beta_2 =$ the partial regression coefficient for independent variable 2
+  - $\beta_k =$ the partial regression coefficient for independent variable k 
+  - $k =$ the number of independent variables. 
 
 More about regression analysis:
 
@@ -483,4 +506,4 @@ Annual income ('000) |   Weekly time on National Direct Calls ( minutes)
 a) Simple regression analysis
 b) Linear regression analysis
 c) A scatter diagram
-d) an error term
+d) An error term
