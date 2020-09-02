@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Priyanga D. Talagala" />
 
 
-<meta name="date" content="2020-08-24" />
+<meta name="date" content="2020-09-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,68 @@
 
 
 
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -284,8 +346,13 @@
 <li class="chapter" data-level="10.2.1" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#determining-the-equation-of-the-regression-line"><i class="fa fa-check"></i><b>10.2.1</b> Determining the equation of the regression line</a></li>
 <li class="chapter" data-level="10.2.2" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#deterministic-models-vs-probabilistic-models"><i class="fa fa-check"></i><b>10.2.2</b> Deterministic models vs probabilistic models</a></li>
 <li class="chapter" data-level="10.2.3" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#least-squares-estimation-of-the-parameters"><i class="fa fa-check"></i><b>10.2.3</b> Least squares estimation of the parameters</a></li>
+<li class="chapter" data-level="10.2.4" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#residual-analysis"><i class="fa fa-check"></i><b>10.2.4</b> Residual analysis</a></li>
+<li class="chapter" data-level="10.2.5" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#coefficient-of-determination"><i class="fa fa-check"></i><b>10.2.5</b> Coefficient of determination</a></li>
+<li class="chapter" data-level="10.2.6" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#relationship-between-r-and-r2"><i class="fa fa-check"></i><b>10.2.6</b> Relationship between <span class="math inline">\(r\)</span> and <span class="math inline">\(R^2\)</span></a></li>
 </ul></li>
+<li class="chapter" data-level="10.3" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#multiple-linear-regression"><i class="fa fa-check"></i><b>10.3</b> Multiple Linear Regression</a></li>
 <li class="chapter" data-level="" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#references-8"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#tutorial-7"><i class="fa fa-check"></i>Tutorial</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references-9.html"><a href="references-9.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
@@ -373,13 +440,14 @@
 <li>When <span class="math inline">\(r=0\)</span>, it signifies there is <strong>no linear</strong> relationship between the two variables. (There can be a non-linear relationship, Figure (e))</li>
 <li>Figure (e): There is a very strong curvilinear relationship. But there is <strong>no linear</strong> relationship.</li>
 </ul>
+<!-- Black et al. page 498-->
 </div>
 </div>
 <div id="simple-linear-regression" class="section level2">
 <h2><span class="header-section-number">10.2</span> Simple Linear Regression</h2>
 <ul>
 <li>The most elementary regression model is called <strong>simple linear regression</strong>.</li>
-<li>Is is also known as *bivariate linear regression, which means that it involves only two variables.</li>
+<li>Is is also known as <em>bivariate linear regression</em>, which means that it involves only two variables.</li>
 <li>On variable is predicted by another variable.</li>
 <li>The variable to to be predicted is called the <em>independent variable</em> an is denoted by <span class="math inline">\(y\)</span>.</li>
 <li>The <em>predictor</em> is called the <em>independent variable</em> or <em>explanatory variable</em> and is denoted by <span class="math inline">\(x\)</span></li>
@@ -437,7 +505,7 @@ where:
 </ul>
 <p><strong>Probabilistic models</strong></p>
 <ul>
-<li>A probabilistic model is <em>one that includes an error term that allows for the</em> <span class="math inline">\(y\)</span> *values to vary for any given value of <span class="math inline">\(x\)</span>.</li>
+<li>A probabilistic model is <em>one that includes an error term that allows for the</em> <span class="math inline">\(y\)</span> <em>values to vary for any given value of</em> <span class="math inline">\(x\)</span>.</li>
 <li>The deterministic regression model is
 <span class="math display">\[y=\beta_0+\beta_1x\]</span></li>
 <li>The probabilistic regression model is
@@ -448,6 +516,9 @@ where:
 </div>
 <div id="least-squares-estimation-of-the-parameters" class="section level3">
 <h3><span class="header-section-number">10.2.3</span> Least squares estimation of the parameters</h3>
+<!-- Proof Regression analysis STA 204 2.0 pri note
+
+Note is from Black et. al page 501-->
 <ul>
 <li>The parameters <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are unknown and need to be estimated using <em>sample data</em>.</li>
 <li>The equation of the regression line contains the sample <span class="math inline">\(y\)</span> intercept, <span class="math inline">\(\hat{\beta_0}\)</span>, and the sample slope, <span class="math inline">\(\hat{\beta_1}\)</span>.</li>
@@ -466,14 +537,438 @@ where:
 <div style="page-break-after: always;"></div>
 <!-- Leave a page for the Derivation of the formula-->
 <p><em>Least square analysis contd.</em></p>
-<div style="page-break-after: always;"></div>
+<!-- Discuss Tutorial Question 2 and 3-->
 </div>
+<div id="residual-analysis" class="section level3">
+<h3><span class="header-section-number">10.2.4</span> Residual analysis</h3>
+<!-- very important https://rpubs.com/iabrady/residual-analysis
+
+this not is saved in CM 1110 Material regression folder as well-->
+<ul>
+<li>Each difference between the actual <span class="math inline">\(y\)</span> values and the predicted <span class="math inline">\(y\)</span> values is the error of the regression line at a given point, <span class="math inline">\(y-\hat{y},\)</span> and is referred to as the <strong>residual</strong>.</li>
+</ul>
+<p><em>Example</em>
+<!-- Black et al page 509--></p>
+<table>
+<colgroup>
+<col width="30%" />
+<col width="28%" />
+<col width="22%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Number of CD sales (’000) <span class="math inline">\(x\)</span></th>
+<th>Concert attendance (’000) <span class="math inline">\(y\)</span></th>
+<th>Predicted value <span class="math inline">\(\hat{y}\)</span></th>
+<th>Residual <span class="math inline">\(y-\hat{y}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>61</td>
+<td>4.280</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>63</td>
+<td>4.080</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>67</td>
+<td>4.420</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>69</td>
+<td>4.170</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>70</td>
+<td>4.480</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>74</td>
+<td>4.300</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>76</td>
+<td>4.820</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>81</td>
+<td>4.700</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>86</td>
+<td>5.110</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>91</td>
+<td>5.130</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>95</td>
+<td>5.640</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>97</td>
+<td>5.560</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Except for rounding error, the sum of the residuals is approximately zero</p></li>
+<li>The analysis of residuals plays an important role in validating the regression model.</li>
+<li>Residual analysis plots are a very useful tool for assessing aspects of accuracy of a linear regression model on a particular dataset and testing that the attributes of a dataset meet the requirements for linear regression.</li>
+<li><p>The following are the assumptions of simple linear regression analysis</p></li>
+</ul>
+<!-- Pri regression analysis second year note, black note page 510
+
+The relationship between $X$ and $Y$ is a straight line relationship.-->
+<ol style="list-style-type: decimal">
+<li>The model is linear.</li>
+<li>The error terms have constant variances. (<em>The assumption of constant variance is called homoskedasticity. If the error variances are not constant, it is called heteroskedasticity.</em>)</li>
+<li>The error terms are independent.</li>
+<li>The error terms are normally distributed.</li>
+</ol>
+<ul>
+<li>Four standard plots can be accessed using the <code>plot()</code> function in R with the fit variable once the model is generated.</li>
+<li>These can be used to show if there are problems with the dataset and the model produced that need to be considered in looking at the validity of the model.</li>
+</ul>
+<pre><code>## 
+## Call:
+## lm(formula = concert_attendance ~ record_sales)
+## 
+## Coefficients:
+##  (Intercept)  record_sales  
+##       1.5698        0.0407</code></pre>
+<p><img src="figure/q2-1.png" width="0.8\textwidth" style="display: block; margin: auto;" /></p>
+<div style="page-break-after: always;"></div>
+<p><em>Residual analysis</em></p>
+<div style="page-break-after: always;"></div>
+<!-- black page 518. Also check schaum's statistics and econometrics book page 132-->
+</div>
+<div id="coefficient-of-determination" class="section level3">
+<h3><span class="header-section-number">10.2.5</span> Coefficient of determination</h3>
+<ul>
+<li>A widely used measure of fit for regression ,models is the <strong>coefficient of determination</strong> <span class="math inline">\((R^2)\)</span></li>
+<li>The coefficient of determination is the proportion of variability of the dependent variable (<span class="math inline">\(y\)</span>) accounted for, or explained by, the independent variable (<span class="math inline">\(x\)</span>)</li>
+<li>The coefficient of determination ranges from 0 to 1.</li>
+<li>An <span class="math inline">\(R^2\)</span> of zero means that the predictor accounts for none of the variability of the dependent variable and that there is no regression prediction of <span class="math inline">\(y\)</span> by <span class="math inline">\(x\)</span>.</li>
+<li>An <span class="math inline">\(R^2\)</span> of 1 means perfect prediction of <span class="math inline">\(y\)</span> by <span class="math inline">\(x\)</span> and that <span class="math inline">\(100\%\)</span> of the variability of <span class="math inline">\(y\)</span> is accounted for by <span class="math inline">\(x\)</span></li>
+<li>The dependent variable, <span class="math inline">\(y\)</span>, being predicted in a regression model has a variation that is measured by the total sum of squares of <span class="math inline">\(y\)</span> (<span class="math inline">\(SS_{yy}\)</span>):</li>
+</ul>
+<p><span class="math display">\[SS_{yy} = \sum(y-\bar{y})^2= \sum y^2 - \frac{(\sum y)^2}{n}\]</span></p>
+<p>and is the sum of the squared deviations of the y values from the mean value of y.</p>
+<ul>
+<li>This variation can be broken into two additive variations: the <em>explained variation</em>, measure by the sum of squares of regression (<span class="math inline">\(SSR\)</span>), and the <em>unexplained variation</em>, measured by the sum of squares of error (<span class="math inline">\(SSE\)</span>).</li>
+<li>The relationship can be expressed in equation from as:
+<span class="math display">\[SS_{yy}=SSR+SSE\]</span>
+where <span class="math inline">\(SSR = \sum (\hat{y} -\bar{y})^2\)</span> and <span class="math inline">\(SSE= \sum (y-\hat{y})^2\)</span>.</li>
+<li>If each term in the equation is divided by <span class="math inline">\(SS_{yy},\)</span> the resulting equation is:
+<span class="math display">\[1=\frac{SSR}{SS{yy}}+ \frac{SSE}{SS{yy}}.\]</span></li>
+<li>The term <span class="math inline">\(R^2\)</span> is the proportion of the <span class="math inline">\(y\)</span> variability that is explained by the regression model and represented here as :
+<span class="math display">\[R^2= \frac{SSR}{SS{yy}}.\]</span></li>
+<li>Substituting this equation into the preceding relationship gives:
+<span class="math display">\[1=R^2+ \frac{SSE}{SS{yy}}.\]</span></li>
+<li>Solving for <span class="math inline">\(R^2\)</span> gives
+<span class="math display">\[R^2=1- \frac{SSE}{SS{yy}}= 1-\frac{SSE}{\sum{y^2}- \frac{(\sum y)^2}{n}}.\]</span></li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1">reg &lt;-<span class="st"> </span><span class="kw">lm</span>(concert_attendance <span class="op">~</span><span class="st"> </span>record_sales)</a>
+<a class="sourceLine" id="cb15-2" title="2"><span class="kw">summary</span>(reg)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = concert_attendance ~ record_sales)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.28171 -0.14938  0.04101  0.13162  0.22741 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  1.569793   0.338083   4.643 0.000917 ***
+## record_sales 0.040702   0.004312   9.439 2.69e-06 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.1772 on 10 degrees of freedom
+## Multiple R-squared:  0.8991, Adjusted R-squared:  0.889 
+## F-statistic: 89.09 on 1 and 10 DF,  p-value: 2.692e-06</code></pre>
+</div>
+<div id="relationship-between-r-and-r2" class="section level3">
+<h3><span class="header-section-number">10.2.6</span> Relationship between <span class="math inline">\(r\)</span> and <span class="math inline">\(R^2\)</span></h3>
+<ul>
+<li>Let <span class="math inline">\(r\)</span> be the coefficient of correlation.</li>
+<li>The coefficient of determination (<span class="math inline">\(R^2\)</span>) is the square of the coefficient of correlation</li>
+</ul>
+<p><span class="math display">\[r = \sqrt{R^2}\]</span>
+- The researcher must examine the sign of the slope of the regression line to determine whether a positive or negative relationship exists between the variables and then assign the same sign to the correlation value.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1">r &lt;-<span class="st"> </span><span class="kw">cor</span>(concert_attendance, record_sales)</a>
+<a class="sourceLine" id="cb17-2" title="2">r<span class="op">^</span><span class="dv">2</span></a></code></pre></div>
+<pre><code>## [1] 0.8990839</code></pre>
+</div>
+</div>
+<div id="multiple-linear-regression" class="section level2">
+<h2><span class="header-section-number">10.3</span> Multiple Linear Regression</h2>
+<!--https://www.investopedia.com/terms/m/mlr.asp-->
+<ul>
+<li>Multiple regression is an extension of ordinary least-squares (OLS) regression that involves more than one explanatory variable.</li>
+<li>Multiple linear regression (MLR) is a statistical technique that uses several explanatory variables to predict the outcome of a response variable.</li>
+<li>The goal of multiple linear regression (MLR) is to model the <strong>linear</strong> relationship between the explanatory (independent) variables and response (dependent) variable.</li>
+</ul>
+<p><em>Formula of Multiple Linear Regression</em></p>
+<p><span class="math display">\[y=\beta_0+\beta_1 x_1+\beta_2 x_2+\beta_3 x_3+ \dots + \beta_k x_k+ \epsilon\]</span></p>
+<p>where</p>
+<ul>
+<li>$y = $ the value of the dependent variable</li>
+<li>$_0 = $ the regression constant, or intercept</li>
+<li>$_1 = $ the partial regression coefficient for independent variable 1</li>
+<li>$_2 = $ the partial regression coefficient for independent variable 2</li>
+<li>$_k = $ the partial regression coefficient for independent variable k</li>
+<li>$k = $ the number of independent variables.</li>
+</ul>
+<p>More about regression analysis:</p>
 </div>
 <div id="references-8" class="section level2 unnumbered">
 <h2>References</h2>
 <ul>
-<li>Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., &amp; Harris, M. (2007). <em>Australasian business statistics</em>. John Wiley &amp; Sons.</li>
+<li><p>Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., &amp; Harris, M. (2007). <em>Australasian business statistics</em>. John Wiley &amp; Sons.</p></li>
+<li><p>Montgomery, D. C., Peck, E. A., &amp; Vining, G. G. (2012). Introduction to linear regression analysis (Vol. 821). John Wiley &amp; Sons.</p></li>
+<li><p>Salvatore, D., &amp; Reagle, D. (2002). Statistics and Econometrics, Schaum’s Outline Series.</p></li>
 </ul>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="tutorial-7" class="section level2 unnumbered">
+<h2>Tutorial</h2>
+<!--Salvatore, D., & Reagle, D. (2002). Statistics and Econometrics, Schaum’s Outline Series. page 134 Q 6.2-->
+<!-- Black et all page 499, page 502-->
+<ol style="list-style-type: decimal">
+<li>The data in the table are the twelve observations corresponding to concert attendance (in thousand) and total worldwide CD sales by the performing artist (or band) in the previous year (also in thousand). Draw a scatter diagram for the data and determine by inspection if there exists an approximate linear relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>Number of CD sales (’000)</th>
+<th>Concert attendance (’000)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>61</td>
+<td>4.280</td>
+</tr>
+<tr class="even">
+<td>63</td>
+<td>4.080</td>
+</tr>
+<tr class="odd">
+<td>67</td>
+<td>4.420</td>
+</tr>
+<tr class="even">
+<td>69</td>
+<td>4.170</td>
+</tr>
+<tr class="odd">
+<td>70</td>
+<td>4.480</td>
+</tr>
+<tr class="even">
+<td>74</td>
+<td>4.300</td>
+</tr>
+<tr class="odd">
+<td>76</td>
+<td>4.820</td>
+</tr>
+<tr class="even">
+<td>81</td>
+<td>4.700</td>
+</tr>
+<tr class="odd">
+<td>86</td>
+<td>5.110</td>
+</tr>
+<tr class="even">
+<td>91</td>
+<td>5.130</td>
+</tr>
+<tr class="odd">
+<td>95</td>
+<td>5.640</td>
+</tr>
+<tr class="even">
+<td>97</td>
+<td>5.560</td>
+</tr>
+</tbody>
+</table>
+<ol start="2" style="list-style-type: decimal">
+<li>Use the data in Question 1 to develop a regression model to predict concert attendance by CD sales.</li>
+</ol>
+<p><code>R code</code></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" title="1">record_sales &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">61</span>,<span class="dv">63</span>,<span class="dv">67</span>,<span class="dv">69</span>,<span class="dv">70</span>,<span class="dv">74</span>,<span class="dv">76</span>,<span class="dv">81</span>, <span class="dv">86</span>,<span class="dv">91</span>,<span class="dv">95</span>,<span class="dv">97</span>)</a>
+<a class="sourceLine" id="cb19-2" title="2">concert_attendance &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">4.28</span>,<span class="fl">4.08</span>,<span class="fl">4.42</span>,<span class="fl">4.17</span>,<span class="fl">4.48</span>,<span class="fl">4.3</span>,<span class="fl">4.82</span>,<span class="fl">4.7</span>,<span class="fl">5.11</span>,<span class="fl">5.13</span>,<span class="fl">5.64</span>,<span class="fl">5.56</span>)</a>
+<a class="sourceLine" id="cb19-3" title="3"></a>
+<a class="sourceLine" id="cb19-4" title="4"><span class="co"># plot(x, y)</span></a>
+<a class="sourceLine" id="cb19-5" title="5"><span class="kw">plot</span>(concert_attendance, record_sales)</a>
+<a class="sourceLine" id="cb19-6" title="6"></a>
+<a class="sourceLine" id="cb19-7" title="7"><span class="co"># lm(y ~ x)</span></a>
+<a class="sourceLine" id="cb19-8" title="8">reg &lt;-<span class="st"> </span><span class="kw">lm</span>(concert_attendance <span class="op">~</span><span class="st"> </span>record_sales)</a>
+<a class="sourceLine" id="cb19-9" title="9">reg</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = concert_attendance ~ record_sales)
+## 
+## Coefficients:
+##  (Intercept)  record_sales  
+##       1.5698        0.0407</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" title="1"><span class="kw">summary</span>(reg)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = concert_attendance ~ record_sales)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.28171 -0.14938  0.04101  0.13162  0.22741 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  1.569793   0.338083   4.643 0.000917 ***
+## record_sales 0.040702   0.004312   9.439 2.69e-06 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.1772 on 10 degrees of freedom
+## Multiple R-squared:  0.8991, Adjusted R-squared:  0.889 
+## F-statistic: 89.09 on 1 and 10 DF,  p-value: 2.692e-06</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" title="1"><span class="co">#Add a regression line</span></a>
+<a class="sourceLine" id="cb23-2" title="2"><span class="kw">plot</span>(concert_attendance <span class="op">~</span><span class="st"> </span>record_sales) <span class="op">+</span><span class="st"> </span><span class="kw">abline</span>(reg)</a></code></pre></div>
+<pre><code>## integer(0)</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" title="1"><span class="kw">par</span>(<span class="dt">mfrow =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb25-2" title="2"><span class="kw">plot</span>(reg)</a></code></pre></div>
+<p><img src="figure/q1-1.png" width="0.8\textwidth" style="display: block; margin: auto;" /><img src="figure/q1-2.png" width="0.8\textwidth" style="display: block; margin: auto;" /><img src="figure/q1-3.png" width="0.8\textwidth" style="display: block; margin: auto;" /></p>
+<!-- residual analysis
+
+https://online.stat.psu.edu/stat462/node/123/
+
+
+https://www.theanalysisfactor.com/linear-models-r-diagnosing-regression-model/
+
+The first plot (residuals vs. fitted values) is a simple scatterplot between residuals and predicted values.  It should look more or less random.
+
+This is more or less what what we see here, with the exception of a single outlier in the bottom right corner.
+
+The second plot (normal Q-Q) is a normal probability plot.  It will give a straight line if the errors are distributed normally, but points 4, 5 and 6 deviate from the straight line.
+
+The third plot (Scale-Location), like the the first, should look random.  No patterns.  Ours does not–we have a strange V-shaped pattern.
+
+The last plot (Cook’s distance) tells us which points have the greatest influence on the regression (leverage points). We see that points 2, 4 and 6 have great influence on the model.
+
+Next time we will see what happens to the model if we remove one of these outliers..-->
+<!-- Black et all page 499, page 504, intercept is not meaningful-->
+<ol start="3" style="list-style-type: decimal">
+<li>An executive at a telecommunications company is interested in the relationship between an individual’s income and their mobile-phone usage. In particular, to help him in pricing and marketing strategies, he is interested in ascertaining whether he can us an individual’s gross annual income to predict how much time they will spend on making National Direct Calls from their mobile phone per week. He surveyed 12 mobile-phone users and recorded their annual income and time (in minutes) spent each week making National Direct Calls.</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>Annual income (’000)</th>
+<th>Weekly time on National Direct Calls ( minutes)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>23</td>
+<td>69</td>
+</tr>
+<tr class="even">
+<td>29</td>
+<td>95</td>
+</tr>
+<tr class="odd">
+<td>29</td>
+<td>102</td>
+</tr>
+<tr class="even">
+<td>35</td>
+<td>118</td>
+</tr>
+<tr class="odd">
+<td>42</td>
+<td>126</td>
+</tr>
+<tr class="even">
+<td>46</td>
+<td>125</td>
+</tr>
+<tr class="odd">
+<td>50</td>
+<td>138</td>
+</tr>
+<tr class="even">
+<td>54</td>
+<td>178</td>
+</tr>
+<tr class="odd">
+<td>64</td>
+<td>156</td>
+</tr>
+<tr class="even">
+<td>66</td>
+<td>184</td>
+</tr>
+<tr class="odd">
+<td>76</td>
+<td>176</td>
+</tr>
+<tr class="even">
+<td>78</td>
+<td>225</td>
+</tr>
+</tbody>
+</table>
+<!-- black page 516 for SSE, page 519 -->
+<ol start="4" style="list-style-type: decimal">
+<li>Compute coefficient of determination (<span class="math inline">\(R^2\)</span>) for Question 2 (CD-concert question). Discuss the value of <span class="math inline">\(R^2\)</span> obtained.</li>
+</ol>
+<!-- black page 520 problem 13.1 -->
+<ol start="5" style="list-style-type: decimal">
+<li>Compute the coefficient of determination (<span class="math inline">\(R^2\)</span>)for question 3 in which a regression model was developed to predict weekly mobile phone call times by a person’s income. Discuss the value of <span class="math inline">\(R^2\)</span> obtained.</li>
+</ol>
+<!--Salvatore, D., & Reagle, D. (2002). Statistics and Econometrics, Schaum’s Outline Series. page 134 Q 6.1-->
+<ol start="6" style="list-style-type: decimal">
+<li>What is meant by and what is the function of</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Simple regression analysis</li>
+<li>Linear regression analysis</li>
+<li>A scatter diagram</li>
+<li>an error term</li>
+</ol>
 
 <div style="page-break-after: always;"></div>
 </div>

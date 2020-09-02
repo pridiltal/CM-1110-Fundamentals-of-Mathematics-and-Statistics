@@ -34,6 +34,46 @@
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 % Fix footnotes in tables (requires footnote package)
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
@@ -88,7 +128,7 @@
 
 \title{CM 1110 Fundamentals of Mathematics and Statistics}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-08-24}
+\date{2020-09-01}
 
 \begin{document}
 \maketitle
@@ -1560,7 +1600,7 @@ Reading:
 \item
   \(\sum_{n=1}^\infty\left(\frac{3}{n(n+1)+ }+\frac{1}{2^n}\right)\) 
 \item
-  \(\sum_{n=1}^\infty\left(\frac{3}{n(n+1)+ }+\frac{1}{2^n}\right)\) 
+  \(\sum_{n=1}^\infty\left(\frac{3}{n(n+3)+ }+\frac{5}{4^n}\right)\) 
 \item
   \(\sum_{n=1}^\infty \frac{1}{n^2+3n+2}\) 
 \item
@@ -3368,7 +3408,7 @@ Mendelson, E. (1970). Boolean algebra and switching circuits. McGraw-Hill Editio
 \setcounter{enumi}{19}
 \tightlist
 \item
-  \emph{Uniqueness of the complement}: Show that \(y=x^\prime\), when \(x \lor y=1\) and \(x\land y = 0\)
+  \emph{Uniqueness of the complement}: Show that \(y=x^\prime\), when \(x \lor y=1\) antgvd \(x\land y = 0\)
 \end{enumerate}
 
 \hypertarget{differentiation-and-integration}{%
@@ -9891,7 +9931,7 @@ Penguin flipper length and body mass show a positive association for the 3 speci
 \item
   The most elementary regression model is called \textbf{simple linear regression}.
 \item
-  Is is also known as *bivariate linear regression, which means that it involves only two variables.
+  Is is also known as \emph{bivariate linear regression}, which means that it involves only two variables.
 \item
   On variable is predicted by another variable.
 \item
@@ -9981,7 +10021,7 @@ For a value of \(x=5,\) the exact predicted value of \(y\) is
 
 \begin{itemize}
 \item
-  A probabilistic model is \emph{one that includes an error term that allows for the} \(y\) *values to vary for any given value of \(x\).
+  A probabilistic model is \emph{one that includes an error term that allows for the} \(y\) \emph{values to vary for any given value of} \(x\).
 \item
   The deterministic regression model is
   \[y=\beta_0+\beta_1x\]
@@ -10027,17 +10067,517 @@ where:
 
 \emph{Least square analysis contd.}
 
+\hypertarget{residual-analysis}{%
+\subsection{Residual analysis}\label{residual-analysis}}
+
+\begin{itemize}
+\tightlist
+\item
+  Each difference between the actual \(y\) values and the predicted \(y\) values is the error of the regression line at a given point, \(y-\hat{y},\) and is referred to as the \textbf{residual}.
+\end{itemize}
+
+\emph{Example}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+\begin{minipage}[b]{0.27\columnwidth}\raggedright
+Number of CD sales ('000) \(x\)\strut
+\end{minipage} & \begin{minipage}[b]{0.25\columnwidth}\raggedright
+Concert attendance ('000) \(y\)\strut
+\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright
+Predicted value \(\hat{y}\)\strut
+\end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\raggedright
+Residual \(y-\hat{y}\)\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.27\columnwidth}\raggedright
+61\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+4.280\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.27\columnwidth}\raggedright
+63\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+4.080\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.27\columnwidth}\raggedright
+67\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+4.420\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.27\columnwidth}\raggedright
+69\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+4.170\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.27\columnwidth}\raggedright
+70\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+4.480\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.27\columnwidth}\raggedright
+74\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+4.300\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.27\columnwidth}\raggedright
+76\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+4.820\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.27\columnwidth}\raggedright
+81\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+4.700\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.27\columnwidth}\raggedright
+86\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+5.110\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.27\columnwidth}\raggedright
+91\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+5.130\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.27\columnwidth}\raggedright
+95\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+5.640\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.27\columnwidth}\raggedright
+97\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+5.560\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\item
+  Except for rounding error, the sum of the residuals is approximately zero
+\item
+  The analysis of residuals plays an important role in validating the regression model.
+\item
+  Residual analysis plots are a very useful tool for assessing aspects of accuracy of a linear regression model on a particular dataset and testing that the attributes of a dataset meet the requirements for linear regression.
+\item
+  The following are the assumptions of simple linear regression analysis
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The model is linear.
+\item
+  The error terms have constant variances. (\emph{The assumption of constant variance is called homoskedasticity. If the error variances are not constant, it is called heteroskedasticity.})
+\item
+  The error terms are independent.
+\item
+  The error terms are normally distributed.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Four standard plots can be accessed using the \texttt{plot()} function in R with the fit variable once the model is generated.
+\item
+  These can be used to show if there are problems with the dataset and the model produced that need to be considered in looking at the validity of the model.
+\end{itemize}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = concert_attendance ~ record_sales)
+## 
+## Coefficients:
+##  (Intercept)  record_sales  
+##       1.5698        0.0407
+\end{verbatim}
+
+\begin{center}\includegraphics[width=0.8\textwidth]{figure/q2-1} \end{center}
+
 \newpage
+
+\emph{Residual analysis}
+
+\newpage
+
+\hypertarget{coefficient-of-determination}{%
+\subsection{Coefficient of determination}\label{coefficient-of-determination}}
+
+\begin{itemize}
+\tightlist
+\item
+  A widely used measure of fit for regression ,models is the \textbf{coefficient of determination} \((R^2)\)
+\item
+  The coefficient of determination is the proportion of variability of the dependent variable (\(y\)) accounted for, or explained by, the independent variable (\(x\))
+\item
+  The coefficient of determination ranges from 0 to 1.
+\item
+  An \(R^2\) of zero means that the predictor accounts for none of the variability of the dependent variable and that there is no regression prediction of \(y\) by \(x\).
+\item
+  An \(R^2\) of 1 means perfect prediction of \(y\) by \(x\) and that \(100\%\) of the variability of \(y\) is accounted for by \(x\)
+\item
+  The dependent variable, \(y\), being predicted in a regression model has a variation that is measured by the total sum of squares of \(y\) (\(SS_{yy}\)):
+\end{itemize}
+
+\[SS_{yy} = \sum(y-\bar{y})^2= \sum y^2 - \frac{(\sum y)^2}{n}\]
+
+and is the sum of the squared deviations of the y values from the mean value of y.
+
+\begin{itemize}
+\tightlist
+\item
+  This variation can be broken into two additive variations: the \emph{explained variation}, measure by the sum of squares of regression (\(SSR\)), and the \emph{unexplained variation}, measured by the sum of squares of error (\(SSE\)).
+\item
+  The relationship can be expressed in equation from as:
+  \[SS_{yy}=SSR+SSE\]
+  where \(SSR = \sum (\hat{y} -\bar{y})^2\) and \(SSE= \sum (y-\hat{y})^2\).
+\item
+  If each term in the equation is divided by \(SS_{yy},\) the resulting equation is:
+  \[1=\frac{SSR}{SS{yy}}+ \frac{SSE}{SS{yy}}.\]
+\item
+  The term \(R^2\) is the proportion of the \(y\) variability that is explained by the regression model and represented here as :
+  \[R^2= \frac{SSR}{SS{yy}}.\]
+\item
+  Substituting this equation into the preceding relationship gives:
+  \[1=R^2+ \frac{SSE}{SS{yy}}.\]
+\item
+  Solving for \(R^2\) gives
+  \[R^2=1- \frac{SSE}{SS{yy}}= 1-\frac{SSE}{\sum{y^2}- \frac{(\sum y)^2}{n}}.\]
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{reg <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(concert_attendance }\OperatorTok{~}\StringTok{ }\NormalTok{record_sales)}
+\KeywordTok{summary}\NormalTok{(reg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = concert_attendance ~ record_sales)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.28171 -0.14938  0.04101  0.13162  0.22741 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)  1.569793   0.338083   4.643 0.000917 ***
+## record_sales 0.040702   0.004312   9.439 2.69e-06 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.1772 on 10 degrees of freedom
+## Multiple R-squared:  0.8991, Adjusted R-squared:  0.889 
+## F-statistic: 89.09 on 1 and 10 DF,  p-value: 2.692e-06
+\end{verbatim}
+
+\hypertarget{relationship-between-r-and-r2}{%
+\subsection{\texorpdfstring{Relationship between \(r\) and \(R^2\)}{Relationship between r and R\^{}2}}\label{relationship-between-r-and-r2}}
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(r\) be the coefficient of correlation.
+\item
+  The coefficient of determination (\(R^2\)) is the square of the coefficient of correlation
+\end{itemize}
+
+\[r = \sqrt{R^2}\]
+- The researcher must examine the sign of the slope of the regression line to determine whether a positive or negative relationship exists between the variables and then assign the same sign to the correlation value.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{r <-}\StringTok{ }\KeywordTok{cor}\NormalTok{(concert_attendance, record_sales)}
+\NormalTok{r}\OperatorTok{^}\DecValTok{2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.8990839
+\end{verbatim}
+
+\hypertarget{multiple-linear-regression}{%
+\section{Multiple Linear Regression}\label{multiple-linear-regression}}
+
+\begin{itemize}
+\tightlist
+\item
+  Multiple regression is an extension of ordinary least-squares (OLS) regression that involves more than one explanatory variable.
+\item
+  Multiple linear regression (MLR) is a statistical technique that uses several explanatory variables to predict the outcome of a response variable.
+\item
+  The goal of multiple linear regression (MLR) is to model the \textbf{linear} relationship between the explanatory (independent) variables and response (dependent) variable.
+\end{itemize}
+
+\emph{Formula of Multiple Linear Regression}
+
+\[y=\beta_0+\beta_1 x_1+\beta_2 x_2+\beta_3 x_3+ \dots + \beta_k x_k+ \epsilon\]
+
+where
+
+\begin{itemize}
+\tightlist
+\item
+  \$y = \$ the value of the dependent variable
+\item
+  \$\beta\_0 = \$ the regression constant, or intercept
+\item
+  \$\beta\_1 = \$ the partial regression coefficient for independent variable 1
+\item
+  \$\beta\_2 = \$ the partial regression coefficient for independent variable 2
+\item
+  \$\beta\_k = \$ the partial regression coefficient for independent variable k
+\item
+  \$k = \$ the number of independent variables.
+\end{itemize}
+
+More about regression analysis:
 
 \hypertarget{references-8}{%
 \section*{References}\label{references-8}}
 \addcontentsline{toc}{section}{References}
 
 \begin{itemize}
-\tightlist
 \item
   Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., \& Harris, M. (2007). \emph{Australasian business statistics}. John Wiley \& Sons.
+\item
+  Montgomery, D. C., Peck, E. A., \& Vining, G. G. (2012). Introduction to linear regression analysis (Vol. 821). John Wiley \& Sons.
+\item
+  Salvatore, D., \& Reagle, D. (2002). Statistics and Econometrics, Schaum's Outline Series.
 \end{itemize}
+
+\newpage
+
+\hypertarget{tutorial-7}{%
+\section*{Tutorial}\label{tutorial-7}}
+\addcontentsline{toc}{section}{Tutorial}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The data in the table are the twelve observations corresponding to concert attendance (in thousand) and total worldwide CD sales by the performing artist (or band) in the previous year (also in thousand). Draw a scatter diagram for the data and determine by inspection if there exists an approximate linear relationship between \(X\) and \(Y\)
+\end{enumerate}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Number of CD sales ('000) & Concert attendance ('000)\tabularnewline
+\midrule
+\endhead
+61 & 4.280\tabularnewline
+63 & 4.080\tabularnewline
+67 & 4.420\tabularnewline
+69 & 4.170\tabularnewline
+70 & 4.480\tabularnewline
+74 & 4.300\tabularnewline
+76 & 4.820\tabularnewline
+81 & 4.700\tabularnewline
+86 & 5.110\tabularnewline
+91 & 5.130\tabularnewline
+95 & 5.640\tabularnewline
+97 & 5.560\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Use the data in Question 1 to develop a regression model to predict concert attendance by CD sales.
+\end{enumerate}
+
+\texttt{R\ code}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{record_sales <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{61}\NormalTok{,}\DecValTok{63}\NormalTok{,}\DecValTok{67}\NormalTok{,}\DecValTok{69}\NormalTok{,}\DecValTok{70}\NormalTok{,}\DecValTok{74}\NormalTok{,}\DecValTok{76}\NormalTok{,}\DecValTok{81}\NormalTok{, }\DecValTok{86}\NormalTok{,}\DecValTok{91}\NormalTok{,}\DecValTok{95}\NormalTok{,}\DecValTok{97}\NormalTok{)}
+\NormalTok{concert_attendance <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\FloatTok{4.28}\NormalTok{,}\FloatTok{4.08}\NormalTok{,}\FloatTok{4.42}\NormalTok{,}\FloatTok{4.17}\NormalTok{,}\FloatTok{4.48}\NormalTok{,}\FloatTok{4.3}\NormalTok{,}\FloatTok{4.82}\NormalTok{,}\FloatTok{4.7}\NormalTok{,}\FloatTok{5.11}\NormalTok{,}\FloatTok{5.13}\NormalTok{,}\FloatTok{5.64}\NormalTok{,}\FloatTok{5.56}\NormalTok{)}
+
+\CommentTok{# plot(x, y)}
+\KeywordTok{plot}\NormalTok{(concert_attendance, record_sales)}
+
+\CommentTok{# lm(y ~ x)}
+\NormalTok{reg <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(concert_attendance }\OperatorTok{~}\StringTok{ }\NormalTok{record_sales)}
+\NormalTok{reg}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = concert_attendance ~ record_sales)
+## 
+## Coefficients:
+##  (Intercept)  record_sales  
+##       1.5698        0.0407
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{summary}\NormalTok{(reg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = concert_attendance ~ record_sales)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.28171 -0.14938  0.04101  0.13162  0.22741 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)  1.569793   0.338083   4.643 0.000917 ***
+## record_sales 0.040702   0.004312   9.439 2.69e-06 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.1772 on 10 degrees of freedom
+## Multiple R-squared:  0.8991, Adjusted R-squared:  0.889 
+## F-statistic: 89.09 on 1 and 10 DF,  p-value: 2.692e-06
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#Add a regression line}
+\KeywordTok{plot}\NormalTok{(concert_attendance }\OperatorTok{~}\StringTok{ }\NormalTok{record_sales) }\OperatorTok{+}\StringTok{ }\KeywordTok{abline}\NormalTok{(reg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## integer(0)
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mfrow =} \KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{2}\NormalTok{))}
+\KeywordTok{plot}\NormalTok{(reg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\textwidth]{figure/q1-1} \includegraphics[width=0.8\textwidth]{figure/q1-2} \includegraphics[width=0.8\textwidth]{figure/q1-3} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  An executive at a telecommunications company is interested in the relationship between an individual's income and their mobile-phone usage. In particular, to help him in pricing and marketing strategies, he is interested in ascertaining whether he can us an individual's gross annual income to predict how much time they will spend on making National Direct Calls from their mobile phone per week. He surveyed 12 mobile-phone users and recorded their annual income and time (in minutes) spent each week making National Direct Calls.
+\end{enumerate}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Annual income ('000) & Weekly time on National Direct Calls ( minutes)\tabularnewline
+\midrule
+\endhead
+23 & 69\tabularnewline
+29 & 95\tabularnewline
+29 & 102\tabularnewline
+35 & 118\tabularnewline
+42 & 126\tabularnewline
+46 & 125\tabularnewline
+50 & 138\tabularnewline
+54 & 178\tabularnewline
+64 & 156\tabularnewline
+66 & 184\tabularnewline
+76 & 176\tabularnewline
+78 & 225\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Compute coefficient of determination (\(R^2\)) for Question 2 (CD-concert question). Discuss the value of \(R^2\) obtained.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Compute the coefficient of determination (\(R^2\))for question 3 in which a regression model was developed to predict weekly mobile phone call times by a person's income. Discuss the value of \(R^2\) obtained.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  What is meant by and what is the function of
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  Simple regression analysis
+\item
+  Linear regression analysis
+\item
+  A scatter diagram
+\item
+  an error term
+\end{enumerate}
 
 \newpage
 
@@ -10057,9 +10597,13 @@ Dass, H. K. (2008). `Complex Numbers', Advanced Engineering Mathematics. S. Chan
 
 Lipschutz, S. (2000). Schaum's Outline of Probability. McGraw Hill Professional.
 
+Montgomery, D. C., Peck, E. A., \& Vining, G. G. (2012). Introduction to linear regression analysis (Vol. 821). John Wiley \& Sons.
+
 Mendelson, E. (1970). Boolean algebra and switching circuits. McGraw-Hill Edition 2004.
 
 Mood, A.M., Graybill, F.A. and Boes, D.C. (2007): Introduction to the Theory of Statistics, 3rd Edn. (Reprint). Tata McGraw-Hill Pub. Co.~Ltd.
+
+Salvatore, D., \& Reagle, D. (2002). Statistics and Econometrics, Schaum's Outline Series.
 
 Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman \& Company.
 

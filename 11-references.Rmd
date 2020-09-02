@@ -16,9 +16,13 @@ Dass, H. K. (2008). ‘Complex Numbers’, Advanced Engineering Mathematics. S. 
 
 Lipschutz, S. (2000). Schaum’s Outline of Probability. McGraw Hill Professional.
 
+Montgomery, D. C., Peck, E. A., & Vining, G. G. (2012). Introduction to linear regression analysis (Vol. 821). John Wiley & Sons.
+
 Mendelson, E. (1970). Boolean algebra and switching circuits. McGraw-Hill Edition 2004.
 
 Mood, A.M., Graybill, F.A. and Boes, D.C. (2007): Introduction to the Theory of Statistics, 3rd Edn. (Reprint). Tata McGraw-Hill Pub. Co. Ltd.
+
+Salvatore, D., & Reagle, D. (2002). Statistics and Econometrics, Schaum’s Outline Series.
 
 Shenk, A. (1988). Calculus and analytic geometry. Scott Foresman & Company.
 

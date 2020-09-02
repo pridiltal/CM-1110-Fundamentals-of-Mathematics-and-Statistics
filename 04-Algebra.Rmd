@@ -582,7 +582,7 @@ knitr::include_graphics("figure/networkQ9.png")
   b) $Y = x y^\prime z+xz^\prime +y^\prime z$
 
 \newpage
-<!-- Fundamentals approach to Discrete mathematics book page 160 example 12-->
+<!-- Fundamentals approach to Discrete mathematics book page 164 example 12-->
 13.  Show that the combinatorial circuits (a) and (b) are equivalent.
 
 ```{r   out.width = "80%", echo = FALSE, fig.align='center', fig.cap="(a)"}
@@ -594,7 +594,7 @@ knitr::include_graphics("figure/networkQ12b.png")
 ```
 
 
-<!-- Fundamentals approach to Discrete mathematics book page 160 example 13-->
+<!-- Fundamentals approach to Discrete mathematics book page 165 example 13-->
 14. Reduce the following Boolean products to either 0 or a fundamental product
 
  (a) $x.y.x^\prime.z$
@@ -652,5 +652,5 @@ knitr::include_graphics("figure/networkQ18.png")
  
 
 <!--schaum bool page 53 Theorem 3.1)-->
-20. *Uniqueness of the complement*: Show that $y=x^\prime$, when $x \lor y=1$ and $x\land y = 0$
+20. *Uniqueness of the complement*: Show that $y=x^\prime$, when $x \lor y=1$ antgvd $x\land y = 0$
 

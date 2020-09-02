@@ -146,10 +146,12 @@ gridExtra::grid.arrange(p1,p2,p3,p4,p5,p6, ncol=2)
 - When $r=0$, it signifies there is **no linear** relationship between the two variables. (There can be a non-linear relationship, Figure (e))
 - Figure (e): There is a very strong curvilinear relationship. But there is **no linear** relationship.
 
+
+<!-- Black et al. page 498-->
 ## Simple Linear Regression
 
 - The most elementary regression model is called **simple linear regression**.
-- Is is also known as *bivariate linear regression, which means that it involves only two variables. 
+- Is is also known as *bivariate linear regression*, which means that it involves only two variables. 
 - On variable is predicted by another variable. 
 - The variable to to be predicted is called the *independent variable* an is denoted by $y$.
 - The *predictor* is called the *independent variable* or *explanatory variable* and is denoted by $x$
@@ -209,7 +211,7 @@ $$\hat{y} =1.68 + 2.40\times 5 = 13.68$$.
 
 **Probabilistic models**
 
-- A probabilistic model is *one that includes an error term that allows for the* $y$ *values to vary for any given value of $x$.
+- A probabilistic model is *one that includes an error term that allows for the* $y$ *values to vary for any given value of* $x$.
 - The deterministic regression model is 
 $$y=\beta_0+\beta_1x$$
 - The probabilistic regression model is 
@@ -219,6 +221,10 @@ $$y=\beta_0+\beta_1x+\epsilon.$$
 - In deterministic mode, all points are assumed to be on the line and in all cases $\epsilon$ is zero. 
 
 ### Least squares estimation of the parameters
+
+<!-- Proof Regression analysis STA 204 2.0 pri note
+
+Note is from Black et. al page 501-->
 
 - The parameters $\beta_0$ and $\beta_1$ are unknown and need to be estimated using *sample data*.
 - The equation of the regression line contains the sample $y$ intercept, $\hat{\beta_0}$, and the sample slope, $\hat{\beta_1}$.
@@ -239,7 +245,242 @@ where:
 *Least square analysis contd.*
 
 
+<!-- Discuss Tutorial Question 2 and 3-->
+
+### Residual analysis
+
+
+<!-- very important https://rpubs.com/iabrady/residual-analysis
+
+this not is saved in CM 1110 Material regression folder as well-->
+
+- Each difference between the actual $y$  values and the predicted $y$ values is the error of the regression line at a given point, $y-\hat{y},$ and is referred to as the **residual**.
+
+*Example*
+<!-- Black et al page 509-->
+
+Number of CD sales ('000) $x$ | Concert attendance ('000) $y$| Predicted value $\hat{y}$ | Residual $y-\hat{y}$
+--------------------------|------------------------|-------------------|----------------
+61   |  4.280 |   | 
+63   |  4.080 |   | 
+67   |  4.420 |   | 
+69   |  4.170 |   | 
+70   |  4.480 |   | 
+74   |  4.300 |   | 
+76   |  4.820 |   | 
+81   |  4.700 |   | 
+86   |  5.110 |   | 
+91   |  5.130 |   | 
+95   |  5.640 |   | 
+97   |  5.560 |   | 
+
+- Except for rounding error, the sum of the residuals is approximately zero
+
+- The analysis of residuals plays an important role in validating the regression model.
+- Residual analysis plots are a very useful tool for assessing aspects of accuracy of a linear regression model on a particular dataset and testing that the attributes of a dataset meet the requirements for linear regression.
+- The following are the assumptions of simple linear regression analysis
+
+<!-- Pri regression analysis second year note, black note page 510
+
+The relationship between $X$ and $Y$ is a straight line relationship.-->
+
+  1. The model is linear. 
+  2. The error terms have constant variances. (*The assumption of constant variance is called homoskedasticity. If the error variances are not constant, it is called heteroskedasticity.*)
+  3. The error terms are independent.
+  4. The error terms are normally distributed.
+  
+- Four standard plots can be accessed using the `plot()` function in R with the fit variable once the model is generated. 
+- These can be used to show if there are problems with the dataset and the model produced that need to be considered in looking at the validity of the model. 
+
+```{r  q2, echo = FALSE}
+record_sales <- c(61,63,67,69,70,74,76,81, 86,91,95,97)
+concert_attendance <- c(4.28,4.08,4.42,4.17,4.48,4.3,4.82,4.7,5.11,5.13,5.64,5.56)
+# lm(y ~ x)
+reg <- lm(concert_attendance ~ record_sales)
+reg
+
+par(mfrow = c(2,2))
+plot(reg)
+
+```
+
 \newpage
+*Residual analysis*
+
+
+\newpage
+<!-- black page 518. Also check schaum's statistics and econometrics book page 132-->
+### Coefficient of determination
+
+- A widely used measure of fit for regression ,models is the **coefficient of determination** $(R^2)$
+- The  coefficient of determination is the proportion of variability of the dependent variable ($y$) accounted for, or explained by, the independent variable ($x$)
+- The coefficient of determination ranges from 0 to 1.
+- An $R^2$ of zero means that the predictor accounts for none of the variability of the dependent variable and that there is no regression prediction of $y$ by $x$.
+- An $R^2$ of 1 means perfect prediction of $y$ by $x$ and that $100\%$ of the variability of $y$ is accounted for by $x$
+- The dependent variable, $y$, being predicted in a regression model has a variation that is measured by the total sum of squares of $y$ ($SS_{yy}$):
+
+$$SS_{yy} = \sum(y-\bar{y})^2= \sum y^2 - \frac{(\sum y)^2}{n}$$
+
+and is the sum of the squared deviations of the y values from the mean value of y.
+
+- This variation can be broken into two additive variations: the *explained variation*, measure by the sum of squares of regression ($SSR$), and the *unexplained variation*, measured by the sum of squares of error ($SSE$).
+- The relationship can be expressed in equation from as:
+$$SS_{yy}=SSR+SSE$$
+where $SSR = \sum (\hat{y} -\bar{y})^2$ and $SSE= \sum (y-\hat{y})^2$.
+- If each term in the equation is divided by $SS_{yy},$ the resulting equation is:
+$$1=\frac{SSR}{SS{yy}}+ \frac{SSE}{SS{yy}}.$$
+- The term $R^2$ is the proportion of the $y$ variability that is explained by the regression model and represented here as :
+$$R^2= \frac{SSR}{SS{yy}}.$$
+- Substituting this equation into the preceding relationship gives:
+$$1=R^2+ \frac{SSE}{SS{yy}}.$$
+- Solving for $R^2$ gives
+$$R^2=1- \frac{SSE}{SS{yy}}= 1-\frac{SSE}{\sum{y^2}- \frac{(\sum y)^2}{n}}.$$
+
+
+```{r echo=TRUE}
+reg <- lm(concert_attendance ~ record_sales)
+summary(reg)
+```
+
+
+### Relationship between $r$ and $R^2$
+
+- Let $r$ be the coefficient of correlation.
+- The coefficient of determination ($R^2$) is the square of the coefficient of correlation
+
+$$r = \sqrt{R^2}$$
+- The researcher must examine the sign of the slope of the regression line to determine whether a positive or negative relationship exists between the variables and then assign the same sign to the correlation value.
+
+```{r echo=TRUE}
+r <- cor(concert_attendance, record_sales)
+r^2
+```
+
+## Multiple Linear Regression
+
+<!--https://www.investopedia.com/terms/m/mlr.asp-->
+
+- Multiple regression is an extension of ordinary least-squares (OLS) regression that involves more than one explanatory variable.
+- Multiple linear regression (MLR) is a statistical technique that uses several explanatory variables to predict the outcome of a response variable.
+- The goal of multiple linear regression (MLR) is to model the **linear** relationship between the explanatory (independent) variables and response (dependent) variable.
+
+*Formula of Multiple Linear Regression*
+
+$$y=\beta_0+\beta_1 x_1+\beta_2 x_2+\beta_3 x_3+ \dots + \beta_k x_k+ \epsilon$$
+
+where
+
+  - $y = $ the value of the dependent variable 
+  - $\beta_0 = $ the regression constant, or intercept 
+  - $\beta_1 = $ the partial regression coefficient for independent variable 1 
+  - $\beta_2 = $ the partial regression coefficient for independent variable 2
+  - $\beta_k = $ the partial regression coefficient for independent variable k 
+  - $k = $ the number of independent variables. 
+
+More about regression analysis:
+
 ## References {-}
 
 - Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., & Harris, M. (2007). *Australasian business statistics*. John Wiley & Sons.
+
+- Montgomery, D. C., Peck, E. A., & Vining, G. G. (2012). Introduction to linear regression analysis (Vol. 821). John Wiley & Sons.
+
+- Salvatore, D., & Reagle, D. (2002). Statistics and Econometrics, Schaum’s Outline Series.
+
+\newpage
+## Tutorial {-}
+<!--Salvatore, D., & Reagle, D. (2002). Statistics and Econometrics, Schaum’s Outline Series. page 134 Q 6.2-->
+
+<!-- Black et all page 499, page 502-->
+
+1. The data in the table are the twelve observations corresponding to concert attendance (in thousand) and total worldwide CD sales by the performing artist (or band) in the previous year (also in thousand). Draw a scatter diagram for the data and determine by inspection if there exists an approximate linear relationship between $X$ and $Y$
+
+Number of CD sales ('000) | Concert attendance ('000)
+--------------------------|------------------------
+61   |  4.280
+63   |  4.080
+67   |  4.420
+69   |  4.170
+70   |  4.480
+74   |  4.300
+76   |  4.820
+81   |  4.700
+86   |  5.110
+91   |  5.130
+95   |  5.640
+97   |  5.560
+
+2. Use the data in Question 1 to develop a regression model to predict concert attendance by CD sales.
+
+`R code`
+```{r  q1, echo = TRUE}
+record_sales <- c(61,63,67,69,70,74,76,81, 86,91,95,97)
+concert_attendance <- c(4.28,4.08,4.42,4.17,4.48,4.3,4.82,4.7,5.11,5.13,5.64,5.56)
+
+# plot(x, y)
+plot(concert_attendance, record_sales)
+
+# lm(y ~ x)
+reg <- lm(concert_attendance ~ record_sales)
+reg
+summary(reg)
+
+#Add a regression line
+plot(concert_attendance ~ record_sales) + abline(reg)
+
+par(mfrow = c(2,2))
+plot(reg)
+
+```
+
+<!-- residual analysis
+
+https://online.stat.psu.edu/stat462/node/123/
+
+
+https://www.theanalysisfactor.com/linear-models-r-diagnosing-regression-model/
+
+The first plot (residuals vs. fitted values) is a simple scatterplot between residuals and predicted values.  It should look more or less random.
+
+This is more or less what what we see here, with the exception of a single outlier in the bottom right corner.
+
+The second plot (normal Q-Q) is a normal probability plot.  It will give a straight line if the errors are distributed normally, but points 4, 5 and 6 deviate from the straight line.
+
+The third plot (Scale-Location), like the the first, should look random.  No patterns.  Ours does not–we have a strange V-shaped pattern.
+
+The last plot (Cook’s distance) tells us which points have the greatest influence on the regression (leverage points). We see that points 2, 4 and 6 have great influence on the model.
+
+Next time we will see what happens to the model if we remove one of these outliers..-->
+
+
+<!-- Black et all page 499, page 504, intercept is not meaningful-->
+3. An executive at a telecommunications company is interested in the relationship between an individual's income and their mobile-phone usage. In particular, to help him in pricing and marketing strategies, he is interested in ascertaining whether he can us an individual's gross annual income to predict how much time they will spend on making National Direct Calls from their mobile phone per week. He surveyed 12 mobile-phone users and recorded their annual income and time (in minutes) spent each week making National Direct Calls. 
+
+Annual income ('000) |   Weekly time on National Direct Calls ( minutes)
+--------------------------|------------------------
+23   |  69
+29   |  95
+29   |  102
+35   |  118
+42   |  126
+46   |  125
+50   |  138
+54   |  178
+64   |  156
+66   |  184
+76   |  176
+78   |  225
+
+<!-- black page 516 for SSE, page 519 -->
+4. Compute coefficient of determination ($R^2$) for Question 2 (CD-concert question). Discuss the value of $R^2$ obtained.
+
+<!-- black page 520 problem 13.1 -->
+5. Compute the coefficient of determination  ($R^2$)for question 3 in which a regression model was developed to predict weekly mobile phone call times by a person's income. Discuss the value of $R^2$ obtained.
+
+<!--Salvatore, D., & Reagle, D. (2002). Statistics and Econometrics, Schaum’s Outline Series. page 134 Q 6.1-->
+6. What is meant by and what is the function of
+
+a) Simple regression analysis
+b) Linear regression analysis
+c) A scatter diagram
+d) an error term
