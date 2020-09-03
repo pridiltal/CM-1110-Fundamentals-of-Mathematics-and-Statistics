@@ -331,7 +331,9 @@ plot(reg)
 *Residual analysis*
 
 
+
 \newpage
+
 <!-- black page 518. Also check schaum's statistics and econometrics book page 132-->
 ### Coefficient of determination
 
