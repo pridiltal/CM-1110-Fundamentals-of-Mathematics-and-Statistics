@@ -20,7 +20,7 @@ header-includes:
 - \usepackage{floatrow}
 - \floatplacement{figure}{H}
 - \floatplacement{table}{H}
-- \makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+#- \makeatletter\renewcommand*{\fps@figure}{H}\makeatother
 - \usepackage{amsmath}
 ---
 

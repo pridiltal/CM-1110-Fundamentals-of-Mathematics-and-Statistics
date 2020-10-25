@@ -49,7 +49,8 @@ library(tidyverse)
 - Scatter plot is a plot of all the $(x,y)$ pairs in the dataset.
 - The purpose of scatter plot is to illustrate any relationship between  two quantitative variables.
    - If the variables are related, what kind of relationship it is, linear or nonlinear?
-   - If the relationship is linear, the scatter plot will show whether it is negative or positive. - The scatter plot gives some idea of how well a regression line fits the data.
+   - If the relationship is linear, the scatter plot will show whether it is negative or positive. 
+   - The scatter plot gives some idea of how well a regression line fits the data.
 
 
 **Example:** *Palmer Archipelago (Antarctica) Penguin Data*
@@ -176,7 +177,7 @@ gridExtra::grid.arrange(p1,p2,p3,p4,p5,p6, ncol=2)
 - The most elementary regression model is called **simple linear regression**.
 - Is is also known as *bivariate linear regression*, which means that it involves only two variables. 
 - On variable is predicted by another variable. 
-- The variable to to be predicted is called the *independent variable* an is denoted by $y$.
+- The variable to be predicted is called the *dependent variable* an is denoted by $y$.
 - The *predictor* is called the *independent variable* or *explanatory variable* and is denoted by $x$
 - In simple *linear* regression analysis, only a strait-line relationship between two variables is examined.
 - Nonlinear relationships and regression models with more than one independent variable can be explored by using multiple regression models. 

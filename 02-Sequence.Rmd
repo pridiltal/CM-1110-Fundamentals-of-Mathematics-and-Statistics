@@ -358,7 +358,7 @@ Reading:
 (b) $\{1,1,2,3,5,8,13,21,\dots\}$
 (c)  $\left\{\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \dots \right\}$
 (d)  $\left\{2,7,12,17, \dots \right\}$
-(e)  $\left\{1,-\frac{2}{3}, \frac{4}{9} , -\frac{8}{27}, \dots \right\}$
+(e)  $\left\{1,-\frac{2}{3}, \frac{4}{9} , -\frac{8}{27}, \dots \right\}$ <!-- page 711-->
 
 2. Show that 
 \[\sum_{r=1}^n(6r^2+4r-1) = n(n+2)(2n+1)\]
